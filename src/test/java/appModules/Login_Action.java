@@ -9,8 +9,6 @@ import pageObjects.Login_Page;
 public class Login_Action {
 	//Method to perform login action
 	public static void Execute(WebDriver driver, String sEmail, String sPassword) {
-		//Verify page title of the Home page
-		Assert.assertTrue(driver.getTitle().matches("Online Trading Platform.*"));
 		//Click on the login button in home page
 		Home_Page.btn_Login(driver).click();
 		//Clear the text field for Email
