@@ -36,6 +36,7 @@
                    <useUnlimitedThreads>true</useUnlimitedThreads>
                    <threadCount>80</threadCount>
                   <perCoreThreadCount>true</perCoreThreadCount>
+                  <skipafterfailure>1</skipafterfailure>
 				</configuration>
   		</plugin>
   	</plugins>
