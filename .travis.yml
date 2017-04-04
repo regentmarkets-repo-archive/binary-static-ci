@@ -25,4 +25,10 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
 notifications:
-    email: false
+  email:
+    recipients:
+      - ashkan@binary.com
+      - mohammad@binary.com
+      - bijan@binary.com
+    on_success: never
+    on_failure: always
