@@ -23,4 +23,10 @@ Each test will be automatically triggered by Travis CI upon each code push to th
 
 Currently tests are running on Chrome Headless Browser using xvfb (X Virtual Framebuffer) provided by Travis CI.
 
+<b>Integration with binary-static</b>
+
+Whenever any change is pushed to binary-static/gh-pages it automatically submits a commit to binary-static-ci and triggers the tests here.
+
+Tests are running against binary staging site and whenever any tests fail on binary-static-ci it will send an email notification to concerned persons.Front-end team will make the fix the issues in staging itself before any release to production.
+
 
