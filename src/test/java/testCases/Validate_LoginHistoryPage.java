@@ -6,7 +6,7 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.AssertJUnit;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.Login_History;
@@ -19,26 +19,40 @@ import appModules.Login_Action;
 public class Validate_LoginHistoryPage {
 	public WebDriver driver;
 	  //Test Method to login into the site
-	  @Test(priority=0)
+	@Test(priority=0) 
+	public void A_Login_IncorrectPassword() {
+		  	String password = "Pass1234";
+		  	Login_Action.Execute(driver,Constant.Email,password);
+		  	driver.navigate().to(Constant.URL);
+	  } 
+	@Test(priority=1)
 	  public void Login() {
 		  	Login_Action.Execute(driver,Constant.Email,Constant.Password);
 	  } 
 	  //Test Method to navigate to Login HIstory page
-	  @Test(priority=1)
+	  @Test(priority=2)
 	  public void NavigateToLoginHistoryPage() {
 		  	MainAccount_Menu.link_MainAccount(driver).click();
 			MainAccount_Menu.link_Security(driver).click();
 			Security_Page.link_LoginHistoryPage(driver).click();
 	  }
 	  //Check Login history page is load properly 
-	  @Test(priority=2)
+	  @Test(priority=3)
 	  public void CheckPageLoad() {
-		  AssertJUnit.assertTrue(Login_History.title_page(driver).isDisplayed());
+		  Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
 		  LoginHistory_Action.Execute(driver);
 	  }
-	  @Test(priority=3)
+	  //Check new entries
+	  @Test(priority=4)
+	  public void Check_NewEntries() {
+		  Assert.assertTrue(Login_History.first_row(driver).isDisplayed());
+		  Assert.assertTrue(Login_History.second_row(driver).isDisplayed());
+		  LoginHistory_Action.ExecuteCheckLatest(driver);
+	  }
+	 //Check number of records 
+	  @Test(priority=5)
 	  public void CheckTotalRows() {
-		  AssertJUnit.assertTrue(Login_History.title_page(driver).isDisplayed());
+		  Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
 		  LoginHistory_Action.ExecuteCount(driver);
 		 
 	  }
