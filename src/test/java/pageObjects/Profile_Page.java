@@ -13,7 +13,7 @@ public class Profile_Page {
 	public static WebElement link_PersonalDetails(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,10);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_Container']/div/div[1]/div[2]/h4/a")));
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[1]/div[2]/h4/a")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
@@ -26,4 +26,3 @@ public class Profile_Page {
 		return element;
 	}
 }
-
