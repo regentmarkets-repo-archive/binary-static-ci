@@ -24,4 +24,15 @@ public class Constant {
 	public static final String income_source = "Investments & Dividends";
 	public static final String annual_income = "$100,001 - $500,000";
 	public static final String net_worth = "$250,001 - $500,000";
+	public static final String birth_place = "in";
+	public static final String tax_residence= "India";
+	public static final String tax_id_number= "ATREWQ3400";
+	public static final String address_line1= "Street 1/A";
+	public static final String address_line2= "MG Road";
+	public static final String address_city= "Mumbai";
+	public static final String address_state= "Maharashtra";
+	public static final String zip_code= "400101";
+	public static final String telephone_number= "0402012311";
+	public static final String success_message= "Your settings have been updated successfully.";
+	public static final String nochange_message= "You did not change anything.";
 }
