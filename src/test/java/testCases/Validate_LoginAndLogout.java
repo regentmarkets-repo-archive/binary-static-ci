@@ -1,14 +1,18 @@
 //TestCase to Login to the site and then Logout with valid user credentials
 package testCases;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import pageObjects.Home_Page;
 import utility.Constant;
 import appModules.Login_Action;
@@ -39,7 +43,7 @@ public WebDriver driver;
   @Test
   public void C_Logout() {
 		Logout_Action.Execute(driver);
-		AssertJUnit.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
+		Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
   }
   //Test Method to close the browser session
   @AfterTest
