@@ -111,7 +111,7 @@ public class PersonalDetails_Page {
 		public static WebElement btn_Update(WebDriver driver)
 		{
 			WebDriverWait wait = new WebDriverWait(driver,10);
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='btn_login']")));
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='btn_update']")));
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}

@@ -37,4 +37,11 @@ public class MainAccount_Menu {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
+		//Method to find scroll up button
+		public static WebElement btn_ScrollUp(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='scrollup']")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
 }
