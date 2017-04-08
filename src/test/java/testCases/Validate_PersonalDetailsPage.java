@@ -27,11 +27,16 @@ public class Validate_PersonalDetailsPage {
 	}
 	//Test Method to navigate to personal details page
 	@Test(priority=1)
-	  public void NavigateToPersonalDetailsPage() {
+	 public void NavigateToPersonalDetailsPage() {
 		  	MainAccount_Menu.link_MainAccount(driver).click();
 			MainAccount_Menu.link_Profile(driver).click();
 			Profile_Page.link_PersonalDetails(driver).click();
 	  }
+	@Test(priority=2)
+	public void Test_PageLoad() {
+		
+	}
+	//Test Method to test error message when invalid chars are entered in Address Line1
 	@Test(priority=2)
 	public void Test_AddressLine1_InvalidChars() {
 		//Clear & Enter value for Address Line1
@@ -42,6 +47,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_AddressLine1(driver).getText(), "Only letters, numbers, space, hyphen, period, and apostrophe are allowed.");
 	}
+	//Test Method to test error message when Address Line1 is left empty
 	@Test(priority=3)
 	public void Test_AddressLine1_EmptyField() {
 		//Clear & Enter value for Address Line1
@@ -52,6 +58,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_AddressLine1(driver).getText(), "This field is required.");
 	}
+	//Test Method to test error message when invalid chars are entered in Address City
 	@Test(priority=4)
 	public void Test_AddressCity_InvalidChars() {
 		//Clear & Enter value for Address City
@@ -62,6 +69,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_AddressCity(driver).getText(), "Only letters, space, hyphen, period, and apostrophe are allowed.");
 	}
+	//Test Method to test error message when Address City is left empty
 	@Test(priority=5)
 	public void Test_AddressCity_EmptyField() {
 		//Clear & Enter value for Address City
@@ -72,6 +80,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_AddressCity(driver).getText(), "This field is required.");
 	}
+	//Test Method to test error message when invalid chars are entered in Zip Code
 	@Test(priority=6)
 	public void Test_ZipCode_InvalidChars() {
 		//Clear & Enter value for Zip Code
@@ -82,6 +91,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_AddressZipCode(driver).getText(), "Only letters, numbers, space, and hyphen are allowed.");
 	}
+	//Test Method to test error message when invalid chars are entered in Telephone
 	@Test(priority=7)
 	public void Test_Telephone_InvalidChars() {
 		//Clear & Enter value for telephone number
@@ -92,6 +102,7 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_TelephoneNumber(driver).getText(), "Only numbers and spaces are allowed.");
 	}
+	//Test Method to test error message when Telephone is left empty
 	@Test(priority=8)
 	public void Test_Telephone_EmptyField() {
 		//Clear & Enter value for telephone number
