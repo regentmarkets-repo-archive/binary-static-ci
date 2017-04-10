@@ -10,6 +10,14 @@ import org.testng.Assert;
 public class PersonalDetails_Page {
 	
 	private static WebElement element = null;
+	//Method to find email address value
+	public static WebElement value_emailaddress(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='lbl_email']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
 	//Method to find place of birth select dropdown
 	public static WebElement select_PlaceOfBirth(WebDriver driver)
 	{
@@ -34,15 +42,6 @@ public class PersonalDetails_Page {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
-		//Method to find Tax Residence country
-		public static WebElement select_TaxResidence_Country(WebDriver driver)
-		{
-			WebDriverWait wait = new WebDriverWait(driver,10);
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.linkText("India")));
-			Assert.assertTrue(element.isDisplayed());
-			return element;
-		}
-		
 		//Method to find Tax Identification Number textbox
 		public static WebElement txt_TaxIdNumber(WebDriver driver)
 		{
@@ -112,6 +111,14 @@ public class PersonalDetails_Page {
 		{
 			WebDriverWait wait = new WebDriverWait(driver,10);
 			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='btn_update']")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find error message for Tax Residence
+		public static WebElement error_TaxResidence(WebDriver driver)
+		{
+			WebDriverWait wait = new WebDriverWait(driver,10);
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frmPersonalDetails']/fieldset[2]/div[1]/div[2]/div")));
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
