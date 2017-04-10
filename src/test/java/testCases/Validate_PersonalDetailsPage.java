@@ -160,12 +160,6 @@ public class Validate_PersonalDetailsPage {
 				System.out.println(PersonalDetails_Page.msg_Success(driver).getText());
 			}
 	  }
-	 //Test Method to logout
-	 @Test(priority=13)
-	  public void Logout() {
-			Logout_Action.Execute(driver);
-			Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
-	  }
 	 //Test Method to start browser session and launch binary site
 	 @BeforeTest
 	  public void launchApplication() {
