@@ -102,7 +102,7 @@ public class APIToken_Page {
     //Method to find error message same token name
     public static WebElement nameerror_msg(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='token_message']/p")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='msg_form']")));
         Assert.assertTrue(element.isDisplayed());
         return element; 
     }

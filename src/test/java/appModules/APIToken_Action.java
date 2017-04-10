@@ -29,16 +29,8 @@ public class APIToken_Action {
         //Method to submit duplicate token Name
         APIToken_Page.token_name(driver).clear();
         APIToken_Page.token_name(driver).sendKeys(sv_Name);
+        APIToken_Page.read_scope(driver).click();
         APIToken_Page.create_token(driver).click();
-        boolean checkstatus= APIToken_Page.succes_msg(driver).isDisplayed();
-        if (checkstatus==true){
-            System.out.println("Token should NOT be added"); 
-        }
-        else
-        {
-            System.out.println("Total Record After Add New Token: " + APIToken_Page.count_rows(driver));
-        }
-        Assert.assertFalse(checkstatus);
     }
     //Method to submit a token name
     public static void Validation(WebDriver driver, String sv_Name){
@@ -53,8 +45,7 @@ public class APIToken_Action {
         boolean checkstatus;
         checkstatus= APIToken_Page.read_scope(driver).isSelected();
         if (checkstatus==true){
-            APIToken_Page.read_scope(driver).click();
-            System.out.println("Checkbox is already unchecked"); 
+            APIToken_Page.read_scope(driver).click(); 
         }
         else
         {
@@ -63,6 +54,7 @@ public class APIToken_Action {
     }
     //Method to calculate total token after the test
     public static void ExecuteCount(WebDriver driver){
+        driver.navigate().refresh();
         System.out.println("Total Records After Test : " + APIToken_Page.count_rows(driver));
     }
 
