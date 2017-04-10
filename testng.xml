@@ -26,9 +26,9 @@
   	    <class name="testCases.Validate_LoginHistoryPage"/>
 	 </classes>
   </test>
-     <test name="ChangePasswordPage">
+     <test name="CheckPersonalDetailsPage">
 	 <classes>
-  	    <class name="testCases.Validate_ChangePasswordPage"/>
+  	    <class name="testCases.Validate_PersonalDetailsPage"/>
 	 </classes>
   </test>
 </suite>
