@@ -21,14 +21,14 @@
       <class name="testCases.Validate_FinancialAssessmentFields"/>
       </classes>
   </test> 
+  <test name="CheckPersonalDetailsPage">
+	 <classes>
+  	    <class name="testCases.Validate_PersonalDetailsPage"/>
+	 </classes>
+  </test>
    <test name="CheckLoginHistoryPage">
 	 <classes>
   	    <class name="testCases.Validate_LoginHistoryPage"/>
-	 </classes>
-  </test>
-     <test name="CheckPersonalDetailsPage">
-	 <classes>
-  	    <class name="testCases.Validate_PersonalDetailsPage"/>
 	 </classes>
   </test>
 </suite>

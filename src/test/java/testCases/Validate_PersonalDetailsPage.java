@@ -2,12 +2,17 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import pageObjects.Home_Page;
 import pageObjects.MainAccount_Menu;
 import pageObjects.PersonalDetails_Page;
@@ -32,12 +37,34 @@ public class Validate_PersonalDetailsPage {
 			MainAccount_Menu.link_Profile(driver).click();
 			Profile_Page.link_PersonalDetails(driver).click();
 	  }
+	//Test Method to test error message when Tax Residence field is left empty
 	@Test(priority=2)
-	public void Test_PageLoad() {
-		
+	public void Test_TaxResidence_EmptyField() {
+		//Clear & Enter value for Tax Residence
+		PersonalDetails_Page.txt_TaxResidence(driver).clear();
+		PersonalDetails_Page.txt_TaxResidence(driver).sendKeys("");
+		//Submit the form
+		PersonalDetails_Page.txt_Phone(driver).submit();
+		if((PersonalDetails_Page.value_emailaddress(driver).getText().contains("mlt"))||(PersonalDetails_Page.value_emailaddress(driver).getText().contains("mf"))){
+			//Check error message displayed for the field
+			Assert.assertEquals(PersonalDetails_Page.error_TaxResidence(driver).getText(), "This field is required.");
+		}
 	}
+	//Test Method to test error message when Tax Id field is left empty
+		@Test(priority=3)
+		public void Test_TaxId_EmptyField() {
+			//Clear & Enter value for Tax Id
+			PersonalDetails_Page.txt_TaxIdNumber(driver).clear();
+			PersonalDetails_Page.txt_TaxIdNumber(driver).sendKeys("");
+			//Submit the form
+			PersonalDetails_Page.txt_Phone(driver).submit();
+			if((PersonalDetails_Page.value_emailaddress(driver).getText().contains("mlt"))||(PersonalDetails_Page.value_emailaddress(driver).getText().contains("mf"))){
+				//Check error message displayed for the field
+				Assert.assertEquals(PersonalDetails_Page.error_TaxId(driver).getText(), "This field is required.");
+			}
+		}
 	//Test Method to test error message when invalid chars are entered in Address Line1
-	@Test(priority=2)
+	@Test(priority=4)
 	public void Test_AddressLine1_InvalidChars() {
 		//Clear & Enter value for Address Line1
 		PersonalDetails_Page.txt_AddressLine1(driver).clear();
@@ -48,7 +75,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_AddressLine1(driver).getText(), "Only letters, numbers, space, hyphen, period, and apostrophe are allowed.");
 	}
 	//Test Method to test error message when Address Line1 is left empty
-	@Test(priority=3)
+	@Test(priority=5)
 	public void Test_AddressLine1_EmptyField() {
 		//Clear & Enter value for Address Line1
 		PersonalDetails_Page.txt_AddressLine1(driver).clear();
@@ -59,7 +86,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_AddressLine1(driver).getText(), "This field is required.");
 	}
 	//Test Method to test error message when invalid chars are entered in Address City
-	@Test(priority=4)
+	@Test(priority=6)
 	public void Test_AddressCity_InvalidChars() {
 		//Clear & Enter value for Address City
 		PersonalDetails_Page.txt_AddressCity(driver).clear();
@@ -70,7 +97,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_AddressCity(driver).getText(), "Only letters, space, hyphen, period, and apostrophe are allowed.");
 	}
 	//Test Method to test error message when Address City is left empty
-	@Test(priority=5)
+	@Test(priority=7)
 	public void Test_AddressCity_EmptyField() {
 		//Clear & Enter value for Address City
 		PersonalDetails_Page.txt_AddressCity(driver).clear();
@@ -81,7 +108,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_AddressCity(driver).getText(), "This field is required.");
 	}
 	//Test Method to test error message when invalid chars are entered in Zip Code
-	@Test(priority=6)
+	@Test(priority=8)
 	public void Test_ZipCode_InvalidChars() {
 		//Clear & Enter value for Zip Code
 		PersonalDetails_Page.txt_AddressZipCode(driver).clear();
@@ -92,7 +119,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_AddressZipCode(driver).getText(), "Only letters, numbers, space, and hyphen are allowed.");
 	}
 	//Test Method to test error message when invalid chars are entered in Telephone
-	@Test(priority=7)
+	@Test(priority=9)
 	public void Test_Telephone_InvalidChars() {
 		//Clear & Enter value for telephone number
 		PersonalDetails_Page.txt_Phone(driver).clear();
@@ -103,7 +130,7 @@ public class Validate_PersonalDetailsPage {
 		Assert.assertEquals(PersonalDetails_Page.error_TelephoneNumber(driver).getText(), "Only numbers and spaces are allowed.");
 	}
 	//Test Method to test error message when Telephone is left empty
-	@Test(priority=8)
+	@Test(priority=10)
 	public void Test_Telephone_EmptyField() {
 		//Clear & Enter value for telephone number
 		PersonalDetails_Page.txt_Phone(driver).clear();
@@ -113,8 +140,19 @@ public class Validate_PersonalDetailsPage {
 		//Check error message displayed for the field
 		Assert.assertEquals(PersonalDetails_Page.error_TelephoneNumber(driver).getText(), "This field is required.");
 	}
+	//Test Method to test error message when value of Telephone is less than 6 chars
+		@Test(priority=11)
+		public void Test_Telephone_LessChars() {
+			//Clear & Enter value for telephone number
+			PersonalDetails_Page.txt_Phone(driver).clear();
+			PersonalDetails_Page.txt_Phone(driver).sendKeys(RandomStringUtils.randomNumeric(5));
+			//Submit the form
+			PersonalDetails_Page.txt_Phone(driver).submit();
+			//Check error message displayed for the field
+			Assert.assertEquals(PersonalDetails_Page.error_TelephoneNumber(driver).getText(), "You should enter 6-35 characters.");
+		}
 	//Test Method to set all personal details fields
-	 @Test(priority=9)
+	 @Test(priority=12)
 	 public void SetPersonalDetailsFields() {
 			SetPersonalDetails_Action.Execute(driver,Constant.birth_place,Constant.tax_residence,Constant.tax_id_number,Constant.address_line1,
 			Constant.address_line2,Constant.address_city,Constant.address_state,Constant.zip_code,Constant.telephone_number);
@@ -123,7 +161,7 @@ public class Validate_PersonalDetailsPage {
 			}
 	  }
 	 //Test Method to logout
-	 @Test(priority=10)
+	 @Test(priority=13)
 	  public void Logout() {
 			Logout_Action.Execute(driver);
 			Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
