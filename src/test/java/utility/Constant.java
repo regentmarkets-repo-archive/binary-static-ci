@@ -37,4 +37,5 @@ public class Constant {
 	public static final String telephone_number= RandomStringUtils.randomNumeric(10);
 	public static final String success_message= "Your settings have been updated successfully.";
 	public static final String nochange_message= "You did not change anything.";
+	public static final String cashierPass= "Abcd12345";
 }
