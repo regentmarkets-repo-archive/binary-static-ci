@@ -17,4 +17,12 @@ public class Security_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    //Method to find Cashier Password Page
+    public static WebElement cashierPassword_link(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='settings_container']/div/div[2]/div[1]/a/img")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
 }
