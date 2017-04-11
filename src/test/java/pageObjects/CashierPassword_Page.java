@@ -40,7 +40,7 @@ public class CashierPassword_Page {
     ///Method to find confirm cashier password text box
     public static WebElement updateButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("form_error")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='frm_cashier_password']/div[2]/div/button")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -65,11 +65,19 @@ public class CashierPassword_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-    //Method to check successful message 
+    //Method to find successful message 
     public static WebElement success_msg(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='form_message']")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    //Check find unlock title
+    public static WebElement unlock_title(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='frm_cashier_password']/div[1]/div/fieldset/legend")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+  
 }
