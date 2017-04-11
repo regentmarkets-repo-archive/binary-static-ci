@@ -1,5 +1,7 @@
 package utility;
 
+import org.apache.commons.lang3.RandomStringUtils;
+
 public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
@@ -24,4 +26,15 @@ public class Constant {
 	public static final String income_source = "Investments & Dividends";
 	public static final String annual_income = "$100,001 - $500,000";
 	public static final String net_worth = "$250,001 - $500,000";
+	public static final String birth_place = "in";
+	public static final String tax_residence= "India";
+	public static final String tax_id_number= RandomStringUtils.randomAlphanumeric(10);
+	public static final String address_line1= "Street 1/A";
+	public static final String address_line2= "MG Road";
+	public static final String address_city= "Mumbai";
+	public static final String address_state= "Maharashtra";
+	public static final String zip_code= RandomStringUtils.randomNumeric(6);
+	public static final String telephone_number= RandomStringUtils.randomNumeric(10);
+	public static final String success_message= "Your settings have been updated successfully.";
+	public static final String nochange_message= "You did not change anything.";
 }
