@@ -1,8 +1,6 @@
 package appModules;
 
 import org.openqa.selenium.WebDriver;
-import org.testng.Assert;
-
 import pageObjects.Home_Page;
 import pageObjects.Login_Page;
 
