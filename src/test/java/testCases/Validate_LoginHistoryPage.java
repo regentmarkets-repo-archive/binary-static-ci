@@ -4,6 +4,7 @@ package testCases;
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import java.util.concurrent.TimeUnit;
+import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
@@ -21,7 +22,7 @@ public class Validate_LoginHistoryPage {
     //Test Method to login into the site
     @Test(priority=0) 
     public void A_Login_IncorrectPassword() {
-        String password = "Pass1234";
+        String password = RandomStringUtils.randomAlphanumeric(6);
         Login_Action.Execute(driver,Constant.Email,password);
         driver.navigate().to(Constant.URL);
     } 
