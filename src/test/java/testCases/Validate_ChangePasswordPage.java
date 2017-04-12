@@ -75,9 +75,14 @@ public class Validate_ChangePasswordPage {
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_NewPassword(driver).getText(),"Password should have lower and uppercase letters with numbers.");
  }
 //Test Method to check error message when new password doesn't match repeat password
-@Test(enabled=false)
+@Test(priority=6)
 public void Test_DiffPasswords_Validation(){
-	 ChangePassword_Action.Execute(driver, Constant.Password,"New123","Rep12");
+	ChangePassword_Page.txt_oldPassword(driver).clear();
+	ChangePassword_Page.txt_oldPassword(driver).sendKeys(Constant.Password);
+	ChangePassword_Page.txt_newPassword(driver).clear();
+	ChangePassword_Page.txt_newPassword(driver).sendKeys("New123");
+	ChangePassword_Page.txt_repeatPassword(driver).clear();
+	ChangePassword_Page.txt_repeatPassword(driver).sendKeys("Rep123");
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_RepeatPassword(driver).getText(),"The two passwords that you entered do not match.");
 }
 //Test Method to check error message when incorrect old password is entered
