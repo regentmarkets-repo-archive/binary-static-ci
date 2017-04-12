@@ -39,7 +39,7 @@ public class Validate_SetFinancialAssessment {
 	//Test Method to set all financial assessment fields
 	 @Test
 	 public void C_Set_FinancialAssessment() {
-			SetFinancialAssessment_Action.Execute(driver, Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
+			SetFinancialAssessment_Action.Execute(driver, Constant.fx_trading_exerience,Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
