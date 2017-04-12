@@ -31,4 +31,9 @@
   	    <class name="testCases.Validate_LoginHistoryPage"/>
 	 </classes>
   </test>
+  <test name="ChangePasswordPage">
+	 <classes>
+  	    <class name="testCases.Validate_ChangePasswordPage"/>
+	 </classes>
+  </test>
 </suite>
