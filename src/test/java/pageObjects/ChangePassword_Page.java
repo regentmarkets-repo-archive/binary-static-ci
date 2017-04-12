@@ -80,6 +80,14 @@ public class ChangePassword_Page {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
+		//Method to find page title
+		public static WebElement PageTitle(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='content']/div[2]/h1")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		
 		
 
 }
