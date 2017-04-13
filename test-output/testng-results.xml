@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="9" passed="9">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17752" started-at="2017-04-12T09:41:56Z" finished-at="2017-04-12T09:42:14Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17752" started-at="2017-04-12T09:41:56Z" finished-at="2017-04-12T09:42:14Z">
+      <class name="testCases.Validate_SelfExclusionSyncLimits">
+        <test-method status="PASS" signature="launchApplication()[pri:0, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="launchApplication" is-config="true" duration-ms="3268" started-at="2017-04-12T17:41:56Z" finished-at="2017-04-12T17:42:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- launchApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Login" duration-ms="8865" started-at="2017-04-12T17:42:00Z" finished-at="2017-04-12T17:42:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToPersonalDetailsPage()[pri:1, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="NavigateToPersonalDetailsPage" duration-ms="1977" started-at="2017-04-12T17:42:09Z" finished-at="2017-04-12T17:42:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToPersonalDetailsPage -->
+        <test-method status="PASS" signature="Test_Exceed_MaxAccountBalance()[pri:2, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Exceed_MaxAccountBalance" duration-ms="1381" started-at="2017-04-12T17:42:11Z" finished-at="2017-04-12T17:42:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Exceed_MaxAccountBalance -->
+        <test-method status="PASS" signature="Test_Lower_MaxAccountBalance()[pri:3, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Lower_MaxAccountBalance" duration-ms="744" started-at="2017-04-12T17:42:12Z" finished-at="2017-04-12T17:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Lower_MaxAccountBalance -->
+        <test-method status="PASS" signature="Test_Exceed_MaxOpenPos()[pri:4, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Exceed_MaxOpenPos" duration-ms="242" started-at="2017-04-12T17:42:13Z" finished-at="2017-04-12T17:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Exceed_MaxOpenPos -->
+        <test-method status="PASS" signature="Test_Lower_MaxOpenPos()[pri:5, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Lower_MaxOpenPos" duration-ms="151" started-at="2017-04-12T17:42:13Z" finished-at="2017-04-12T17:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Lower_MaxOpenPos -->
+        <test-method status="PASS" signature="NavigateToLimitsPage()[pri:6, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="NavigateToLimitsPage" duration-ms="208" started-at="2017-04-12T17:42:13Z" finished-at="2017-04-12T17:42:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToLimitsPage -->
+        <test-method status="PASS" signature="Test_Limits_MaxAccountBalance()[pri:7, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Limits_MaxAccountBalance" duration-ms="692" started-at="2017-04-12T17:42:13Z" finished-at="2017-04-12T17:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Limits_MaxAccountBalance -->
+        <test-method status="PASS" signature="Test_Limits_MaxOpenPosition()[pri:8, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="Test_Limits_MaxOpenPosition" duration-ms="105" started-at="2017-04-12T17:42:14Z" finished-at="2017-04-12T17:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Limits_MaxOpenPosition -->
+        <test-method status="PASS" signature="endSession()[pri:0, instance:testCases.Validate_SelfExclusionSyncLimits@6e1ec318]" name="endSession" is-config="true" duration-ms="98" started-at="2017-04-12T17:42:14Z" finished-at="2017-04-12T17:42:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- testCases.Validate_SelfExclusionSyncLimits -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

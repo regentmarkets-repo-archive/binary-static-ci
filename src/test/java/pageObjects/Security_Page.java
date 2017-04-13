@@ -17,6 +17,21 @@ public class Security_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    public static WebElement link_APITokenPage(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='settings_container']/div/div[6]/div[1]/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+  //Method to find Account Password link
+    public static WebElement link_AccountPassword(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='change_password']/div[2]/h4/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
     //Method to find Self Exclusion link
     public static WebElement link_SelfExclusion(WebDriver driver)
     {
@@ -34,3 +49,4 @@ public class Security_Page {
         return element;
     }
 }
+	
