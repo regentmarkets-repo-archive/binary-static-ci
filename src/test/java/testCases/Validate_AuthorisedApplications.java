@@ -48,7 +48,7 @@ public class Validate_AuthorisedApplications {
         driver.switchTo().alert().accept();
         driver.navigate().refresh();
     }
-    
+
     //Test method to check login
     @Test(priority=4)
     public void login() {
@@ -64,16 +64,15 @@ public class Validate_AuthorisedApplications {
     //Test method to check reject permission page
     @Test(priority=6)
     public void reject() {
-        AuthorisedApplications_page.cancel_btn(driver).click();
+        AuthorisedApplications_Action.cancelPermission(driver);
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
     }   
     //Test method to check grant permission page
     @Test(priority=7)
     public void grant() {
-        AuthorisedApplications_page.grant_btn(driver).click();
-        Assert.assertEquals(AuthorisedApplications_page.sub_title(driver).getText(),"Keep track of your authorised applications.");
+        AuthorisedApplications_Action.grantPermission(driver);
     }
-    
+
     //Test Method to close browser session
     @BeforeTest
     public void launchApplication() {
