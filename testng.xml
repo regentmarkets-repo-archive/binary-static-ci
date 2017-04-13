@@ -34,6 +34,16 @@
   <test name="CheckSelfExclusionLimits">
 	 <classes>
   	    <class name="testCases.Validate_SelfExclusion_Limits"/>
+  	 </classes>
+  </test>
+     <test name="CheckAPItokenpage">
+	 <classes>
+  	    <class name="testCases.Validate_APITokenPage"/>
+	 </classes>
+  </test>
+  <test name="ChangePasswordPage">
+	 <classes>
+  	    <class name="testCases.Validate_ChangePasswordPage"/>
 	 </classes>
   </test>
 </suite>
