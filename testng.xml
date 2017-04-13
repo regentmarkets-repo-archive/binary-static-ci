@@ -33,7 +33,7 @@
   </test>
   <test name="CheckSelfExclusionLimits">
 	 <classes>
-  	    <class name="testCases.Validate_SelfExclusion_Limits"/>
+  	    <class name="testCases.Validate_SelfExlcusion_Limits"/>
   	 </classes>
   </test>
      <test name="CheckAPItokenpage">
