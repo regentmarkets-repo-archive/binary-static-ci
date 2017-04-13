@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="17713" started-at="2017-04-13T02:06:14Z" finished-at="2017-04-13T02:06:32Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="17713" started-at="2017-04-13T02:06:14Z" finished-at="2017-04-13T02:06:32Z">
+      <class name="testCases.Validate_LostPassword">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Validate_LostPassword@148080bb]" name="setUp" is-config="true" duration-ms="4706" started-at="2017-04-13T10:06:14Z" finished-at="2017-04-13T10:06:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="A_Launch()[pri:0, instance:testCases.Validate_LostPassword@148080bb]" name="A_Launch" duration-ms="1324" started-at="2017-04-13T10:06:19Z" finished-at="2017-04-13T10:06:20Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_Launch -->
+        <test-method status="PASS" signature="B_Lost_Password()[pri:0, instance:testCases.Validate_LostPassword@148080bb]" name="B_Lost_Password" duration-ms="11584" started-at="2017-04-13T10:06:20Z" finished-at="2017-04-13T10:06:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- B_Lost_Password -->
+        <test-method status="PASS" signature="endSession()[pri:0, instance:testCases.Validate_LostPassword@148080bb]" name="endSession" is-config="true" duration-ms="77" started-at="2017-04-13T10:06:32Z" finished-at="2017-04-13T10:06:32Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- endSession -->
+      </class> <!-- testCases.Validate_LostPassword -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
