@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<<<<<<< HEAD
 	<test name="LoginAndLogout">
 		<classes>
 			<class name="testCases.Validate_LoginAndLogout" />
@@ -34,6 +35,11 @@
 	<test name="CheckAPItokenpage">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
+		</classes>
+	</test>
+	<test name="ChangePasswordPage">
+		<classes>
+			<class name="testCases.Validate_ChangePasswordPage" />
 		</classes>
 	</test>
 	<test name="CheckCashierPassword">
