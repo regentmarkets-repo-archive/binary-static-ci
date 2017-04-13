@@ -31,4 +31,9 @@
   	    <class name="testCases.Validate_LoginHistoryPage"/>
 	 </classes>
   </test>
+   <test name="ValidateSelfExclusionInput">
+	 <classes>
+  	    <class name="testCases.Validate_SelfExclusionPage"/>
+	 </classes>
+  </test>
 </suite>
