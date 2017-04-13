@@ -36,7 +36,7 @@
   	    <class name="testCases.Validate_SelfExlcusion_Limits"/>
   	 </classes>
   </test>
-     <test name="CheckAPItokenpage">
+  <test name="CheckAPItokenpage">
 	 <classes>
   	    <class name="testCases.Validate_APITokenPage"/>
 	 </classes>
