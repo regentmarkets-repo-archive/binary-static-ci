@@ -25,7 +25,7 @@ public class Security_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-    //Method to find Self Exclusion link
+    //Method to find Limits link
     public static WebElement link_Limits(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
