@@ -34,6 +34,16 @@
   <test name="CheckLostPassword">
 	 <classes>
   	    <class name="testCases.Validate_LostPassword"/>
+  	 </classes>
+  </test>
+  <test name="CheckAPItokenpage">
+	 <classes>
+  	    <class name="testCases.Validate_APITokenPage"/>
+	 </classes>
+  </test>
+  <test name="ChangePasswordPage">
+	 <classes>
+  	    <class name="testCases.Validate_ChangePasswordPage"/>
 	 </classes>
   </test>
 </suite>
