@@ -23,7 +23,15 @@ public class AuthorisedApplications_Action {
     }
     //Method to check review page is loaded
     public static  void reviewPage(WebDriver driver) {
-       Assert.assertTrue(AuthorisedApplications_page.review_title(driver).isDisplayed());
-       Assert.assertTrue(AuthorisedApplications_page.scope_list(driver).isDisplayed());
+        Assert.assertTrue(AuthorisedApplications_page.review_title(driver).isDisplayed());
+        Assert.assertTrue(AuthorisedApplications_page.scope_list(driver).isDisplayed());
+    }
+    public static  void cancelPermission(WebDriver driver) {
+        AuthorisedApplications_page.cancel_btn(driver).click();
+    }
+    public static  void grantPermission(WebDriver driver) {
+        AuthorisedApplications_page.grant_btn(driver).click();
+        Assert.assertEquals(AuthorisedApplications_page.sub_title(driver).getText(),"Keep track of your authorised applications.");
+        
     }
 }

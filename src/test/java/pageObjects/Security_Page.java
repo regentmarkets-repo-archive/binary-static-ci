@@ -28,7 +28,7 @@ public class Security_Page {
     public static WebElement link_AuthorisedApplication(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='change_password']/div[2]/h4/a")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='settings_container']/div/div[7]/div[1]/a")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
