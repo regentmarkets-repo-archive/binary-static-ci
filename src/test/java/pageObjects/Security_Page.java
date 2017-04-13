@@ -17,4 +17,13 @@ public class Security_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    
+    //Method to find Self Exclusion link
+    public static WebElement link_SelfExclusionPage(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[3]/div[1]/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
 }
