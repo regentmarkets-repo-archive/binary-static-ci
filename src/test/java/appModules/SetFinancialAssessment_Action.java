@@ -2,8 +2,6 @@ package appModules;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
-import org.testng.Assert;
-
 import pageObjects.FinancialAssessment_Page;
 
 public class SetFinancialAssessment_Action {
