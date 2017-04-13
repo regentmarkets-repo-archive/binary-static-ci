@@ -44,11 +44,7 @@ public class Validate_CashierPassword {
     //Check empty field validation
     @Test(priority=3)
     public void check_emptyField() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys("");
-        CashierPassword_Page.confirmPassword(driver).clear();
-        CashierPassword_Page.confirmPassword(driver).sendKeys("");
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.Execute(driver, Constant.emptyString, Constant.emptyString);
         //Check the error message 
         Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"This field is required.");
         Assert.assertEquals(CashierPassword_Page.errMsg_2(driver).getText(),"This field is required.");
@@ -56,59 +52,39 @@ public class Validate_CashierPassword {
     //Check validation for minimum cashier password
     @Test(priority=4)
     public void check_minpass() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys("a");
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.Execute(driver, Constant.minInput, Constant.minInput);
         Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"You should enter 6-25 characters.");  
     }
     //Check validation for invalid cashier password 
     @Test(priority=5)
     public void check_invPass() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys("sssssssss");
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.Execute(driver, Constant.weakInput, Constant.weakInput);
         Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"Password should have lower and uppercase letters with numbers.");  
     }
     //Check validation for different cashier password
     @Test(priority=6)
     public void check_diffPass() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys("Abcd1234");
-        CashierPassword_Page.confirmPassword(driver).clear();
-        CashierPassword_Page.confirmPassword(driver).sendKeys("Abcd1235");
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.Execute(driver, Constant.inv_cashierPass, Constant.cashierPass);   
         Assert.assertEquals(CashierPassword_Page.errMsg_2(driver).getText(),"The two passwords that you entered do not match.");  
     }
 
     @Test(priority=7)
     //Check validation for same cashier page and password
     public void check_samePass() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys(Constant.Password);
-        CashierPassword_Page.confirmPassword(driver).clear();
-        CashierPassword_Page.confirmPassword(driver).sendKeys(Constant.Password);
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.Execute(driver, Constant.Password, Constant.Password);   
         Assert.assertEquals(CashierPassword_Page.errMsg_3(driver).getText(),"Please use a different password than your login password.");  
     }
     @Test(priority=8)
     //Update cashier password
     public void update_cshrPass() {
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.confirmPassword(driver).clear();
         CashierPassword_Action.Execute(driver, Constant.cashierPass, Constant.cashierPass);
-        if(CashierPassword_Page.success_msg(driver).isDisplayed()){
-            Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
-            System.out.println("Cashier Page Locked");
-        }
+        Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
+        System.out.println("Cashier Page Locked");
     }
     @Test(priority=9)
     //Check deposit/withdraw cashier lock ]
     public void check_depositLock() {
-        MainMenu_Tab.click_cashiermenu(driver).click();
-        Assert.assertTrue(Cashier_Page.page_title(driver).isDisplayed());
-        Assert.assertTrue(Cashier_Page.sub_title(driver).isDisplayed());
-        Cashier_Page.deposit(driver).click();
-        Assert.assertEquals(Cashier_Page.title(driver).getText(),"Deposit");
+        CashierPassword_Action.depositPage(driver);
         if(Cashier_Page.lock_msg(driver).isDisplayed()){
             Assert.assertEquals(Cashier_Page.lock_msg(driver).getText(),"Your cashier is locked as per your request - to unlock it, please click here.");  
             System.out.println("Deposit Page is Locked");
@@ -117,25 +93,18 @@ public class Validate_CashierPassword {
     @Test(priority=10)
     //Check deposit/withdraw cashier lock ]
     public void check_withdrawlock() {
-        MainMenu_Tab.click_cashiermenu(driver).click();
-        Assert.assertTrue(Cashier_Page.page_title(driver).isDisplayed());
-        Assert.assertTrue(Cashier_Page.sub_title(driver).isDisplayed());
-        Cashier_Page.withdraw(driver).click();
-        Assert.assertEquals(Cashier_Page.title(driver).getText(),"Withdraw");
+        CashierPassword_Action.withdrawPage(driver);
         if(Cashier_Page.lock_msg(driver).isDisplayed()){
             Assert.assertEquals(Cashier_Page.lock_msg(driver).getText(),"Your cashier is locked as per your request - to unlock it, please click here.");  
             System.out.println("Withdraw Page is Locked");
         }
         Cashier_Page.unlock_link(driver).click();
     }
-    
+
     @Test(priority=11)
     //Update cashier password
     public void unlock() {
-        Assert.assertEquals(CashierPassword_Page.unlock_title(driver).getText(),"Unlock Cashier");
-        CashierPassword_Page.cashierPassword(driver).clear();
-        CashierPassword_Page.cashierPassword(driver).sendKeys(Constant.cashierPass);
-        CashierPassword_Page.updateButton(driver).click();
+        CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
         if(CashierPassword_Page.success_msg(driver).isDisplayed()){
             Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
             System.out.println("Cashier Page Unlocked");
