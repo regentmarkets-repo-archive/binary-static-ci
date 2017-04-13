@@ -36,7 +36,7 @@ public class Validate_SelfExclusionSyncLimits {
 			MainAccount_Menu.link_Security(driver).click();
 			Security_Page.link_SelfExclusion(driver).click();
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to test error message when the new amount exceed the current amount
 	@Test(priority=2)
 	public void Test_Exceed_MaxAccountBalance() {
 		//If there is no value added, skip this test		
@@ -55,7 +55,7 @@ public class Validate_SelfExclusionSyncLimits {
 			}
 		}
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to test whether the update is saved when the new amount less than the current amount
 	@Test(priority=3)
 	public void Test_Lower_MaxAccountBalance() {
 		//If there is no value added, skip this test		
@@ -75,7 +75,7 @@ public class Validate_SelfExclusionSyncLimits {
 			}
 		}
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to test error message when the new number exceed the current number
 	@Test(priority=4)
 	public void Test_Exceed_MaxOpenPos() {
 		//If there is no value added, skip this test		
@@ -94,7 +94,7 @@ public class Validate_SelfExclusionSyncLimits {
 			}
 		}
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to test whether the update is saved when the new number less than the current number
 	@Test(priority=5)
 	public void Test_Lower_MaxOpenPos() {
 		//If there is no value added, skip this test		
@@ -114,14 +114,14 @@ public class Validate_SelfExclusionSyncLimits {
 			}
 		}
 	}
-	//Test Method to navigate to self exclusion page
+	//Test Method to navigate to limits page
 	@Test(priority=6)
 	public void NavigateToLimitsPage() {
 			MainAccount_Menu.link_MainAccount(driver).click();
 			MainAccount_Menu.link_Security(driver).click();
 			Security_Page.link_Limits(driver).click();
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to check whether the amount displayed correctly
 	@Test(priority=7)
 	public void Test_Limits_MaxAccountBalance() {
 		Limits.select_MaxAccCashBal(driver).getText();
@@ -138,7 +138,7 @@ public class Validate_SelfExclusionSyncLimits {
 			}
 		}
 	}
-	//Test Method to test error message when Tax Residence field is left empty
+	//Test Method to check whether the number displayed correctly
 	@Test(priority=8)
 	public void Test_Limits_MaxOpenPosition() {
 		Limits.select_MaxOpenPos(driver).getText();
