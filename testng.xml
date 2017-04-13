@@ -26,9 +26,14 @@
   	    <class name="testCases.Validate_PersonalDetailsPage"/>
 	 </classes>
   </test>
-   <test name="CheckLoginHistoryPage">
+  <test name="CheckLoginHistoryPage">
 	 <classes>
   	    <class name="testCases.Validate_LoginHistoryPage"/>
+	 </classes>
+  </test>
+  <test name="CheckSelfExclusionLimits">
+	 <classes>
+  	    <class name="testCases.Validate_SelfExclusion_Limits"/>
 	 </classes>
   </test>
 </suite>
