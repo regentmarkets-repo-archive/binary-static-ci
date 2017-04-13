@@ -62,8 +62,4 @@ public class Self_Exclusion {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> 8a88575010d98ecbef45740764a2b6c85131aad4
