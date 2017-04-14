@@ -2,24 +2,15 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
-import pageObjects.Home_Page;
-import pageObjects.MainAccount_Menu;
 import pageObjects.PersonalDetails_Page;
-import pageObjects.Profile_Page;
 import utility.Constant;
-import appModules.Login_Action;
-import appModules.Logout_Action;
 import appModules.Navigation_Action;
 import appModules.SetPersonalDetails_Action;
 
