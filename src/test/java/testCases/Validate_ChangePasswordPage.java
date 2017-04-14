@@ -1,9 +1,7 @@
 package testCases;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -11,14 +9,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import pageObjects.ChangePassword_Page;
-import pageObjects.MainAccount_Menu;
-import pageObjects.Security_Page;
 import utility.Constant;
 import appModules.ChangePassword_Action;
-import appModules.Login_Action;
-import appModules.Logout_Action;
 import appModules.Navigation_Action;
 
 public class Validate_ChangePasswordPage {
@@ -61,8 +54,7 @@ public class Validate_ChangePasswordPage {
  //Test Method to check error message when less than 6 characters are entered
  @Test(priority=3)
  public void Test_MinChars_Validation() {
-	 String minPassword=RandomStringUtils.randomNumeric(5);
-	 ChangePassword_Action.Execute(driver, minPassword,minPassword,minPassword);
+	 ChangePassword_Action.Execute(driver, Constant.minPassword,Constant.minPassword,Constant.minPassword);
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_CurrentPassword(driver).getText(),"You should enter 6-25 characters.");
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_NewPassword(driver).getText(),"You should enter 6-25 characters.");
  }
@@ -74,8 +66,7 @@ public class Validate_ChangePasswordPage {
  //Test Method to check error message when weak password is entered
  @Test(priority=5)
  public void Test_WeakPassword_Validation(){
-	 String weakPassword=RandomStringUtils.randomAlphabetic(6);
-	 ChangePassword_Action.Execute(driver, Constant.Password,weakPassword,weakPassword);
+	 ChangePassword_Action.Execute(driver, Constant.Password,Constant.weakPassword,Constant.weakPassword);
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_NewPassword(driver).getText(),"Password should have lower and uppercase letters with numbers.");
  }
 //Test Method to check error message when new password doesn't match repeat password
@@ -102,7 +93,7 @@ public void Test_ChangeCurrentPassword() throws InterruptedException{
 	ChangePassword_Action.Execute(driver,Constant.Password, Constant.NewPassword,Constant.NewPassword);
 	Assert.assertEquals(ChangePassword_Page.msg_Success(driver).getText(), "Your password has been changed. Please log in again.");
 	System.out.println(ChangePassword_Page.msg_Success(driver).getText());
-	Logout_Action.Execute(driver);
+	Navigation_Action.Navigate_To_LogoutPage(driver);
 }
 //Test Method to change to original password
 @Test(priority=9)
