@@ -11,11 +11,9 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.Login_History;
-import pageObjects.MainAccount_Menu;
-import pageObjects.Security_Page;
 import utility.Constant;
 import appModules.LoginHistory_Action;
-import appModules.Login_Action;
+import appModules.Navigation_Action;
 
 public class Validate_LoginHistoryPage {
     public WebDriver driver;
@@ -23,35 +21,28 @@ public class Validate_LoginHistoryPage {
     @Test(priority=0) 
     public void A_Login_IncorrectPassword() {
         String password = RandomStringUtils.randomAlphanumeric(6);
-        Login_Action.Execute(driver,Constant.Email,password);
-        driver.navigate().to(Constant.URL);
+		 Navigation_Action.Navigate_To_LoginPage(driver);
+		 Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,password);
     } 
     @Test(priority=1)
     public void Login() {
-        Login_Action.Execute(driver,Constant.Email,Constant.Password);
+    	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
     } 
     //Test Method to navigate to Login HIstory page
     @Test(priority=2)
     public void NavigateToLoginHistoryPage() {
-        MainAccount_Menu.link_MainAccount(driver).click();
-        MainAccount_Menu.link_Security(driver).click();
-        Security_Page.link_LoginHistoryPage(driver).click();
-    }
-    //Check Login history page is load properly 
-    @Test(priority=3)
-    public void CheckPageLoad() {
-        Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
-        LoginHistory_Action.Execute(driver);
+    	Navigation_Action.Navigate_To_SecurityPage(driver);
+    	Navigation_Action.Navigate_To_LoginHistoryPage(driver);
     }
     //Check new entries
-    @Test(priority=4)
+    @Test(priority=3)
     public void Check_NewEntries() {
         Assert.assertTrue(Login_History.first_row(driver).isDisplayed());
         Assert.assertTrue(Login_History.second_row(driver).isDisplayed());
         LoginHistory_Action.ExecuteCheckLatest(driver);
     }
     //Check number of records 
-    @Test(priority=5)
+    @Test(priority=4)
     public void CheckTotalRows() {
         Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
         LoginHistory_Action.ExecuteCount(driver); 
@@ -62,7 +53,7 @@ public class Validate_LoginHistoryPage {
         ChromeDriverManager.getInstance().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            driver.get(Constant.URL);
+            Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
     }
     //Test Method to close browser session
     @AfterTest
