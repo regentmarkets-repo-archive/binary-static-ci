@@ -2,21 +2,16 @@ package testCases;
 
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import static org.testng.Assert.assertTrue;
-
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import pageObjects.AuthorisedApplications_page;
 import pageObjects.MainAccount_Menu;
 import pageObjects.Security_Page;
 import utility.Constant;
-
 import appModules.AuthorisedApplications_Action;
 import appModules.Login_Action;
 
@@ -73,7 +68,7 @@ public class Validate_AuthorisedApplications {
         AuthorisedApplications_Action.grantPermission(driver);
     }
 
-    //Test Method to close browser session
+    //Test Method to start browser session and launch binary site
     @BeforeTest
     public void launchApplication() {
         ChromeDriverManager.getInstance().setup();
