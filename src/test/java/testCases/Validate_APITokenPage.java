@@ -9,33 +9,23 @@ import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.APIToken_Page;
-import pageObjects.MainAccount_Menu;
-import pageObjects.Security_Page;
 import utility.Constant;
 import appModules.APIToken_Action;
-import appModules.Login_Action;
-
-
+import appModules.Navigation_Action;
 
 public class Validate_APITokenPage {
     public WebDriver driver;
     //Test method to login 
     @Test(priority=0)
     public void Login() {
-        Login_Action.Execute(driver,Constant.Email,Constant.Password);
+		Navigation_Action.Navigate_To_LoginPage(driver);
+	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
     } 
     //Test Method to navigate to API Token page
     @Test(priority=1)
     public void NavigateToAPITokenPage() {
-        MainAccount_Menu.link_MainAccount(driver).click();
-        MainAccount_Menu.link_Security(driver).click();
-        Security_Page.link_APITokenPage(driver).click();
-    }
-    //Test method to check API Token Page is loaded 
-    @Test(priority=2)
-    public void CheckPageLoad() {
-        Assert.assertTrue(APIToken_Page.title_page(driver).isDisplayed());
-        APIToken_Action.checkTitle(driver);
+    	Navigation_Action.Navigate_To_SecurityPage(driver);
+    	Navigation_Action.Navigate_To_APITokenPage(driver);
     }
     //Test method to check form validation for minimum token name
     @Test (dependsOnMethods = { "CheckScopeValidation"})
@@ -103,7 +93,7 @@ public class Validate_APITokenPage {
         ChromeDriverManager.getInstance().setup();
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get(Constant.URL);
+        Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
     }
     //Test Method to close browser session
     @AfterTest

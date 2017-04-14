@@ -1,14 +1,11 @@
 package appModules;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.Home_Page;
 import pageObjects.Login_Page;
 
 public class Login_Action {
 	//Method to perform login action
 	public static void Execute(WebDriver driver, String sEmail, String sPassword) {
-		//Click on the login button in home page
-		Home_Page.btn_Login(driver).click();
 		//Clear the text field for Email
 		Login_Page.txt_Email(driver).clear();
 		//Enter value in the Email text field
