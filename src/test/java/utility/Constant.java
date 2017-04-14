@@ -44,7 +44,7 @@ public class Constant {
 	public static final String nochange_message= "You did not change anything.";
 	public static final String cashierPass= "Abcd12345";
 	public static final String emptyString= "";
-	public static final String minInput= RandomStringUtils.random(1);
-	public static final String weakInput=RandomStringUtils.random(7);
+	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
+	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
 }
