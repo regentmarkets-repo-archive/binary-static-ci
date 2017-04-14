@@ -63,7 +63,7 @@ public class Navigation_Action {
         LoginHistory_Action.Execute(driver);
 	}
 	public static void Navigate_To_CashierPasswordPage(WebDriver driver){
-	    Security_Page.link_CashierPassword(driver).click();
+	    Security_Page.link_LoginHistoryPage(driver).click();
         Assert.assertTrue(CashierPassword_Page.title_page(driver).isDisplayed());
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
