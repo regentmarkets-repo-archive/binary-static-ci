@@ -22,7 +22,8 @@ public class Security_Page {
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[3]/div[1]/a")));
-
+        Assert.assertTrue(element.isDisplayed());
+        return element;
     }
     //Method to find Cashier Password Page
     public static WebElement cashierPassword_link(WebDriver driver)
