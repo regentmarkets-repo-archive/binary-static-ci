@@ -6,9 +6,11 @@ import org.testng.Assert;
 import pageObjects.APIToken_Page;
 import pageObjects.CashierPassword_Page;
 import pageObjects.ChangePassword_Page;
+import pageObjects.FinancialAssessment_Page;
 import pageObjects.Home_Page;
 import pageObjects.Login_History;
 import pageObjects.MainAccount_Menu;
+import pageObjects.PersonalDetails_Page;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
 
@@ -34,6 +36,8 @@ public class Navigation_Action {
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
+		System.out.println("The title of the page is : "+FinancialAssessment_Page.PageTitle(driver).getText());
+		Assert.assertEquals(FinancialAssessment_Page.PageTitle(driver).getText(), "Financial Assessment");
 	}
 	public static void Navigate_To_PersonalDetailsPage(WebDriver driver){
 		Profile_Page.link_PersonalDetails(driver).click();
