@@ -7,11 +7,14 @@
 - Travis CI for continuous integration
 - Headless Browser Testing
 
-<b>Currently the following tests are covered for Binary site:</b>
-- Login and Logout
-- Login with Incorrect Passsword
-- Set Financial Assessment
-- Validate fields in Financial Assessment form
+<b>Currently automated tests are already developed for following pages in binary.com:</b>
+- Login Page
+- Financial Assessment Page
+- Personal Details Page
+- Login History Page
+- Change Password Page
+- Cashier Password Page
+- API Token Page
 
 <b>Running the tests:</b>
 
