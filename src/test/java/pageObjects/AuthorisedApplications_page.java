@@ -30,11 +30,6 @@ public class AuthorisedApplications_page {
         int element= driver.findElements(By.xpath("//*[@id='applications-table']/tbody/tr[*]")).size();
         return element;
     }
-    //Method to calculate number of records in login history 
-    public static int count_column(WebDriver driver){
-        int element= driver.findElements(By.xpath("//*[@id='applications-table']/tbody/tr[1]/td[*]")).size();
-        return element;
-    }
     
     //Method to find authorize application name element 
     public static WebElement App_Name(WebDriver driver)
@@ -76,7 +71,7 @@ public class AuthorisedApplications_page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-    //Method check grant button   element  
+    //Method check grant button element  
     public static WebElement grant_btn(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,30);
@@ -84,7 +79,7 @@ public class AuthorisedApplications_page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-    //Method check grant button   element  
+    //Method check cancel button element  
     public static WebElement cancel_btn(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,30);
