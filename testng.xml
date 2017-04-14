@@ -1,36 +1,51 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test name="LoginAndLogout">
-    <classes>
-      <class name="testCases.Validate_LoginAndLogout"/>
-      </classes>
-  </test>
-  <test name="LoginWithIncorrectPassword">
-    <classes>
-      <class name="testCases.Validate_LoginWithIncorrectPassword"/>
-      </classes>
-  </test>  
-   <test name="SetFinancialAssessment">
-    <classes>
-      <class name="testCases.Validate_SetFinancialAssessment"/>
-      </classes>
-  </test> 
-      <test name="FinancialAssessmentFields">
-    <classes>
-      <class name="testCases.Validate_FinancialAssessmentFields"/>
-      </classes>
-  </test> 
-  <test name="CheckPersonalDetailsPage">
-	 <classes>
-  	    <class name="testCases.Validate_PersonalDetailsPage"/>
-	 </classes>
-  </test>
-   <test name="CheckLoginHistoryPage">
-	 <classes>
-  	    <class name="testCases.Validate_LoginHistoryPage"/>
-	 </classes>
-  </test>
+	<test name="LoginAndLogout">
+		<classes>
+			<class name="testCases.Validate_LoginAndLogout" />
+		</classes>
+	</test>
+	<test name="LoginWithIncorrectPassword">
+		<classes>
+			<class name="testCases.Validate_LoginWithIncorrectPassword" />
+		</classes>
+	</test>
+	<test name="SetFinancialAssessment">
+		<classes>
+			<class name="testCases.Validate_SetFinancialAssessment" />
+		</classes>
+	</test>
+	<test name="FinancialAssessmentFields">
+		<classes>
+			<class name="testCases.Validate_FinancialAssessmentFields" />
+		</classes>
+	</test>
+	<test name="CheckPersonalDetailsPage">
+		<classes>
+			<class name="testCases.Validate_PersonalDetailsPage" />
+		</classes>
+	</test>
+	<test name="CheckLoginHistoryPage">
+		<classes>
+			<class name="testCases.Validate_LoginHistoryPage" />
+		</classes>
+	</test>
+	<test name="CheckAPItokenpage">
+		<classes>
+			<class name="testCases.Validate_APITokenPage" />
+		</classes>
+	</test>
+	<test name="ChangePasswordPage">
+		<classes>
+			<class name="testCases.Validate_ChangePasswordPage" />
+		</classes>
+	</test>
+	<test name="CheckCashierPassword">
+		<classes>
+			<class name="testCases.Validate_CashierPassword" />
+		</classes>
+	</test>
    <test name="ValidateSelfExclusionInput">
 	 <classes>
   	    <class name="testCases.Validate_SelfExclusionPage"/>
