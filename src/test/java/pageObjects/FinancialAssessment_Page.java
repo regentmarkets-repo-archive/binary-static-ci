@@ -282,12 +282,6 @@ public class FinancialAssessment_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for heading text field
-	public static WebElement PageTitle(WebDriver driver){
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='heading']")));
-		Assert.assertTrue(element.isDisplayed());
-		return element;
-	}
+	
 
 }
