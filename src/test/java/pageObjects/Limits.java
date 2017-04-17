@@ -12,14 +12,28 @@ public class Limits {
 	//Method to find Maximum account cash balance select field in 
 	public static WebElement select_MaxAccCashBal(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[1]/td[2]")));
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[2]/td[2]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find maximum number of open positions field
 	public static WebElement select_MaxOpenPos(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[2]/td[2]")));
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[1]/td[2]")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find the banner message
+	public static WebElement select_AuthMsg(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='msg_notification']/a")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find the limits message
+	public static WebElement select_LimitMsg_1(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[2]/div/p[1]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}

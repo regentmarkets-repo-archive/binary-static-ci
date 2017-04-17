@@ -31,9 +31,9 @@
   	    <class name="testCases.Validate_LoginHistoryPage"/>
 	 </classes>
   </test>
-  <test name="CheckSelfExclusionLimits">
+  <test name="CheckLimits">
 	 <classes>
-  	    <class name="testCases.Validate_SelfExlcusion_Limits"/>
+  	    <class name="testCases.Validate_Limits"/>
   	 </classes>
   </test>
   <test name="CheckAPItokenpage">
