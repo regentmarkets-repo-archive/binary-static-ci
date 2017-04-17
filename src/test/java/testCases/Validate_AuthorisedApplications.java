@@ -9,11 +9,10 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.AuthorisedApplications_page;
-import pageObjects.MainAccount_Menu;
-import pageObjects.Security_Page;
 import utility.Constant;
 import appModules.AuthorisedApplications_Action;
 import appModules.Login_Action;
+import appModules.Navigation_Action;
 
 
 
@@ -22,14 +21,14 @@ public class Validate_AuthorisedApplications {
     //Test method to login 
     @Test(priority=0)
     public void Login() {
+        Navigation_Action.Navigate_To_LoginPage(driver);
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
     } 
     //Test Method to navigate to Authorised Application  page
     @Test(priority=1)
     public void NavigateToAuthorisedAppsPage() {
-        MainAccount_Menu.link_MainAccount(driver).click();
-        MainAccount_Menu.link_Security(driver).click();
-        Security_Page.link_AuthorisedApplication(driver).click();
+        Navigation_Action.Navigate_To_SecurityPage(driver);
+        Navigation_Action.Navigate_To_AuthorisedApplicationsPage(driver);
     }
     //Test method to check API Token Page is loaded 
     @Test(priority=2)
@@ -47,6 +46,7 @@ public class Validate_AuthorisedApplications {
     //Test method to check login
     @Test(priority=4)
     public void login() {
+        Navigation_Action.Navigate_To_LoginPage(driver);
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
 
     }
@@ -60,6 +60,7 @@ public class Validate_AuthorisedApplications {
     @Test(priority=6)
     public void reject() {
         AuthorisedApplications_Action.cancelPermission(driver);
+        Navigation_Action.Navigate_To_LoginPage(driver);
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
     }   
     //Test method to check grant permission page
