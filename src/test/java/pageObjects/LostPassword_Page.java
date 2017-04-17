@@ -28,4 +28,13 @@ public class LostPassword_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
+	
+	// Method to find error message for empty email
+	public static WebElement errorEmail(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error-msg")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
 }

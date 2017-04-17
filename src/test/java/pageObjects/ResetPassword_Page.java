@@ -95,7 +95,46 @@ public class ResetPassword_Page {
 	public static WebElement link_retry(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[text() = 'Click here to retry']")));
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[text() = 'Click here to retry']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	
+	// Method to find error message
+	public static WebElement errorReset(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error-msg")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	
+	// Method to validate new password
+	public static WebElement errorNewPassword(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		String xpath = ".//*[@id='frm_reset_password']/fieldset/div[2]/div[2]/div";
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	
+	// Method to check for error message for unmatched password
+	public static WebElement errorMatchPassword(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		String xpath = ".//*[@id='frm_reset_password']/fieldset[1]/div[3]/div[2]/div";
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	
+	// Method to check for error message for short token
+	public static WebElement errorShortToken(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,10);
+		String xpath = ".//*[@id='frm_reset_password']/fieldset/div[1]/div[2]/div[2]";
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(xpath)));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
