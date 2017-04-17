@@ -2,24 +2,16 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
-import pageObjects.Home_Page;
-import pageObjects.MainAccount_Menu;
 import pageObjects.PersonalDetails_Page;
-import pageObjects.Profile_Page;
 import utility.Constant;
-import appModules.Login_Action;
-import appModules.Logout_Action;
+import appModules.Navigation_Action;
 import appModules.SetPersonalDetails_Action;
 
 public class Validate_PersonalDetailsPage {
@@ -28,14 +20,14 @@ public class Validate_PersonalDetailsPage {
 	//Test Method to Login to binary site
 	@Test(priority=0)
 	public void Login() {
-		  	Login_Action.Execute(driver,Constant.Email,Constant.Password);
+		  Navigation_Action.Navigate_To_LoginPage(driver);
+		  Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
 	}
 	//Test Method to navigate to personal details page
 	@Test(priority=1)
 	 public void NavigateToPersonalDetailsPage() {
-		  	MainAccount_Menu.link_MainAccount(driver).click();
-			MainAccount_Menu.link_Profile(driver).click();
-			Profile_Page.link_PersonalDetails(driver).click();
+		  Navigation_Action.Navigate_To_ProfilePage(driver);
+		  Navigation_Action.Navigate_To_PersonalDetailsPage(driver);
 	  }
 	//Test Method to test error message when Tax Residence field is left empty
 	@Test(priority=2)
@@ -166,7 +158,7 @@ public class Validate_PersonalDetailsPage {
 		 	ChromeDriverManager.getInstance().setup();
 	    	driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.get(Constant.URL);
+			Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
 	  }
   //Test Method to close the browser session
   @AfterTest
