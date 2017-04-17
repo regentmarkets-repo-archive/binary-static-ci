@@ -9,10 +9,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.FinancialAssessment_Page;
-import pageObjects.MainAccount_Menu;
-import pageObjects.Profile_Page;
 import utility.Constant;
-import appModules.Login_Action;
+import appModules.Navigation_Action;
 import appModules.SetFinancialAssessment_Action;
 
 public class Validate_FinancialAssessmentFields {
@@ -20,14 +18,14 @@ public class Validate_FinancialAssessmentFields {
 	  //Test Method to login into the site
 	  @Test(priority=0)
 	  public void Login() {
-		  	Login_Action.Execute(driver,Constant.Email,Constant.Password);
+		  	Navigation_Action.Navigate_To_LoginPage(driver);
+		  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
 	  } 
 	  //Test Method to navigate to Financial Assessment page
 	  @Test(priority=1)
 	  public void NavigateToFinancialAssessmentPage() {
-		  	MainAccount_Menu.link_MainAccount(driver).click();
-			MainAccount_Menu.link_Profile(driver).click();
-			Profile_Page.link_FinancialAssessment(driver).click();
+		  	Navigation_Action.Navigate_To_ProfilePage(driver);
+		  	Navigation_Action.Navigate_To_FinancialAssessmentPage(driver);
 	  }
 	  //Test Method to test the error message displayed when forex trading experience field is not set
 	  @Test(priority=2)
@@ -239,7 +237,7 @@ public class Validate_FinancialAssessmentFields {
 		  	ChromeDriverManager.getInstance().setup();
 	    	driver = new ChromeDriver();
 	    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.get(Constant.URL);
+			Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
 	  }
 	  //Test Method to close browser session
 	  @AfterTest
