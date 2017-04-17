@@ -68,6 +68,7 @@ public class Navigation_Action {
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
 	}
+	// navigates to self exclution page
     public static void Navigate_To_SelfExclusionPage(WebDriver driver) {
         MainAccount_Menu.link_MainAccount(driver).click();
         MainAccount_Menu.link_Security(driver).click();
