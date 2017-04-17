@@ -32,7 +32,14 @@ public class Security_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-  //Method to find Account Password link
+  //Method to find Authorized Application link
+    public static WebElement link_AuthorisedApplication(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='settings_container']/div/div[7]/div[1]/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
     public static WebElement link_AccountPassword(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
