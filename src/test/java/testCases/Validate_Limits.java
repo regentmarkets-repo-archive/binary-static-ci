@@ -12,6 +12,7 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import appModules.Login_Action;
+import appModules.Navigation_Action;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 import pageObjects.Authentication;
 import pageObjects.ChangePassword_Page;
@@ -26,17 +27,18 @@ import utility.Constant;
 public class Validate_Limits {
 	public WebDriver driver;
 	int getAccBal , getMaxPos;
+	boolean authCheck;
 	//Test Method to login into the site
 	@Test(priority=0)
 	public void Login() {
+		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Login_Action.Execute(driver,Constant.Email,Constant.Password);
 	}
 	//Test Method to navigate to self exclusion page
 	@Test(priority=1)
 	public void NavigateToPersonalDetailsPage() {
-		  	MainAccount_Menu.link_MainAccount(driver).click();
-			MainAccount_Menu.link_Security(driver).click();
-			Security_Page.link_SelfExclusion(driver).click();
+		Navigation_Action.Navigate_To_SecurityPage(driver);
+		Navigation_Action.Navigate_To_SelfExclusionPage(driver);
 	}
 	//Test Method to test error message when the new amount exceed the current amount
 	@Test(priority=2)
@@ -126,20 +128,18 @@ public class Validate_Limits {
 			}
 		}
 	}
-	//Test Method to navigate to limits page
+	//Test Method to check is it authenticated and navigate to limits page
 	@Test(priority=6)
 	public void NavigateToLimitsPage() {
-		boolean authCheck;
-		driver.get("https://staging.binary.com/en/user/authenticate.html");
-		if(Authentication.txt_AuthedMsg(driver).isDisplayed()){
-			authCheck = true;
-		}else if(Authentication.txt_nonAuthedMsg(driver).isDisplayed()){
+		Navigation_Action.Navigate_To_AuthenticationPage(driver);
+		if(Authentication.txt_nonAuthedMsg(driver).isDisplayed()){
 			authCheck = false;
+		}else if(Authentication.txt_AuthedMsg(driver).isDisplayed()){
+			authCheck = true;
 		}
 		
-		MainAccount_Menu.link_MainAccount(driver).click();
-		MainAccount_Menu.link_Security(driver).click();
-		Security_Page.link_Limits(driver).click();
+		Navigation_Action.Navigate_To_SecurityPage(driver);
+		Navigation_Action.Navigate_To_LimitsPage(driver);
 	}
 	//Test Method to check whether the amount displayed correctly
 	@Test(priority=7)
@@ -179,24 +179,21 @@ public class Validate_Limits {
 	@Test(priority=9)
 	public void Test_Limits_Message() {
 		MainAccount_Menu.link_MainAccount(driver).click();
-		/*if((MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mlt"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mf"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mx"))){
-			if(!Limits.select_AuthMsg(driver).isDisplayed()){
+		if((MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mlt"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mf"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mx"))){
+			if(authCheck){
 				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your account is fully authenticated and your withdrawal limits have been lifted.");
 				
-			}else{
+			}else if(!authCheck){
 				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is EUR 2,300 (or equivalent in other currency).");
 			}
 		}else{
-			if(!Limits.select_AuthMsg(driver).isDisplayed()){
+			if(authCheck){
 				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your account is fully authenticated and your withdrawal limits have been lifted.");
-			}else{
+			}else if(!authCheck){
 				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is USD 10,000.");
 				
 			}
-		}*/
-//		Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is USD 10,000.");
-		//*[@id="msg_notification"]
-		System.out.println(MainAccount_Menu.link_ActiveAccount(driver).getText());
+		}
 	} 
 	//Test Method to start browser session and launch site
 	@BeforeTest

@@ -68,6 +68,15 @@ public class Navigation_Action {
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
 	}
+	public static void Navigate_To_AuthenticationPage(WebDriver driver){
+		driver.get("https://staging.binary.com/en/user/authenticate.html");
+	}
+	public static void Navigate_To_LimitsPage(WebDriver driver){
+		Security_Page.link_Limits(driver).click();
+	}
+	public static void Navigate_To_SelfExclusionPage(WebDriver driver){
+		Security_Page.link_SelfExclusion(driver).click();
+	}
 	
 	
 	
