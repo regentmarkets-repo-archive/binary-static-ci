@@ -13,6 +13,7 @@ import pageObjects.Security_Page;
 import utility.Constant;
 import appModules.SetSelfExclusionPage_Action;
 import appModules.Login_Action;
+import appModules.Navigation_Action;
 
 public class Validate_SelfExclusionPage {
 	public WebDriver driver;
@@ -20,6 +21,7 @@ public class Validate_SelfExclusionPage {
     //Test Method to login into the site
     @Test(priority=0) 
     public void Login() {
+    	Navigation_Action.Navigate_To_LoginPage(driver);
         Login_Action.Execute(driver, Constant.Email, Constant.Password);
         driver.navigate().to(Constant.URL);
     } 
@@ -27,9 +29,7 @@ public class Validate_SelfExclusionPage {
     //Test Method to navigate to Self Exclusion page
     @Test(priority=1)
     public void NavigateToSelfExclusionPage() {
-        MainAccount_Menu.link_MainAccount(driver).click();
-        MainAccount_Menu.link_Security(driver).click();
-        Security_Page.link_SelfExclusionPage(driver).click();
+    	Navigation_Action.Navigate_To_SelfExclusionPage(driver);
     }
     
     @Test(priority=2)
