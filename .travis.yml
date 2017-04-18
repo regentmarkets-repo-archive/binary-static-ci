@@ -30,5 +30,6 @@ notifications:
       - ashkan@binary.com
       - mohammad@binary.com
       - bijan@binary.com
+      - x-qa@binary.com
     on_success: never
     on_failure: always
