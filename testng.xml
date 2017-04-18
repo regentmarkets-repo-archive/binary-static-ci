@@ -46,4 +46,9 @@
 			<class name="testCases.Validate_Limits" />
 		</classes>
 	</test>
+	<test name="CheckAuthorisedApplication">
+		<classes>
+			<class name="testCases.Validate_AuthorisedApplications" />
+		</classes>
+	</test>
 </suite>
