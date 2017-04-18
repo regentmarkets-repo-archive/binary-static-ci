@@ -14,12 +14,13 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 
 import utility.Constant;
-import pageObjects.FinancialAssessment_Page;
+
 import pageObjects.Home_Page;
 import pageObjects.Login_Page;
 import pageObjects.LostPassword_Page;
-import pageObjects.PersonalDetails_Page;
 import pageObjects.ResetPassword_Page;
+
+import appModules.Navigation_Action;
 import appModules.LossPassword_Action;
 
 public class Validate_LostPassword {
@@ -31,7 +32,7 @@ public class Validate_LostPassword {
     	ChromeDriverManager.getInstance().setup();
     	driver = new ChromeDriver(); 
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    	driver.get(Constant.URL_Binary);
+    	Navigation_Action.Navigate_To_HomePage(driver, Constant.URL_Binary);
     }
 	
 	//Test to navigate to lost password page
@@ -39,10 +40,10 @@ public class Validate_LostPassword {
 	public void navigateToLostPasswordPage() {
 		
 		//Click on the login button in home page
-		Home_Page.btn_Login(driver).click();
+		Navigation_Action.Navigate_To_LoginPage(driver);
 		
 		// Click on 'Lost Password?'
-		Login_Page.lost_password(driver).click();
+		Navigation_Action.Navigate_To_LostPassword(driver);
 	}
 	
 	// Test method to check if the email field is empty
