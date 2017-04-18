@@ -4,6 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 
 import pageObjects.APIToken_Page;
+import pageObjects.AuthorisedApplications_page;
 import pageObjects.CashierPassword_Page;
 import pageObjects.ChangePassword_Page;
 import pageObjects.FinancialAssessment_Page;
@@ -77,8 +78,9 @@ public class Navigation_Action {
 	public static void Navigate_To_SelfExclusionPage(WebDriver driver){
 		Security_Page.link_SelfExclusion(driver).click();
 	}
-	
-	
-	
-
+	public static void Navigate_To_AuthorisedApplicationsPage(WebDriver driver){
+        Security_Page.link_AuthorisedApplication(driver).click();
+        Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
+        Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
+    }
 }
