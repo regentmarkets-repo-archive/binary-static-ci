@@ -29,7 +29,7 @@ public class LostPassword_Page {
 		return element;
 	}
 	
-	// Method to find error message for empty email
+	// Method to find error message for empty email box
 	public static WebElement errorEmail(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,10);
