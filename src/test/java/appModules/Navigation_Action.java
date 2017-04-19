@@ -12,6 +12,7 @@ import pageObjects.Login_History;
 import pageObjects.MainAccount_Menu;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
+import utility.Constant;
 
 public class Navigation_Action {
 		
@@ -74,5 +75,8 @@ public class Navigation_Action {
         MainAccount_Menu.link_MainAccount(driver).click();
         MainAccount_Menu.link_Security(driver).click();
         Security_Page.link_SelfExclusionPage(driver).click();
+    }
+    public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
+    	driver.get(URL);
     }
 }
