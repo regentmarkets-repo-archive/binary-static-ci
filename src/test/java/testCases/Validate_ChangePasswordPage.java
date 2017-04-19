@@ -28,6 +28,7 @@ public class Validate_ChangePasswordPage {
    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 	Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
 	ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+
  }
  //Test Method to close browser session
  @AfterTest
@@ -39,6 +40,7 @@ public class Validate_ChangePasswordPage {
  public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+		Navigation_Action.Navigate_To_TradingPage(driver);
  }
  //Test Method to navigate to the Change Password page
  @Test(priority=1)

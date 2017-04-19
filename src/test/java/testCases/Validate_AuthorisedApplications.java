@@ -27,7 +27,8 @@ public class Validate_AuthorisedApplications {
     @Test(priority=0)
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
-        Login_Action.Execute(driver,Constant.Email,Constant.Password);
+        Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+		Navigation_Action.Navigate_To_TradingPage(driver);
     } 
     //Test Method to navigate to Authorised Application  page
     @Test(priority=1)
@@ -82,6 +83,7 @@ public class Validate_AuthorisedApplications {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
 		ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+
     }
     //Test Method to close browser session
     @AfterTest
