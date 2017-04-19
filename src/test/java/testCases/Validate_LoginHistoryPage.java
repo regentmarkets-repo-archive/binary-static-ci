@@ -2,16 +2,21 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.concurrent.TimeUnit;
+
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import pageObjects.Login_History;
 import utility.Constant;
+import appModules.ChangeAPIEndpoint_Action;
 import appModules.LoginHistory_Action;
 import appModules.Navigation_Action;
 
@@ -53,7 +58,8 @@ public class Validate_LoginHistoryPage {
         ChromeDriverManager.getInstance().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-            Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
+			Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
+			ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
     }
     //Test Method to close browser session
     @AfterTest

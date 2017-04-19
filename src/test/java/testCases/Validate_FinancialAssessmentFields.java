@@ -2,14 +2,19 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import pageObjects.FinancialAssessment_Page;
 import utility.Constant;
+import appModules.ChangeAPIEndpoint_Action;
 import appModules.Navigation_Action;
 import appModules.SetFinancialAssessment_Action;
 
@@ -48,7 +53,7 @@ public class Validate_FinancialAssessmentFields {
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
 					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth);
 			if(FinancialAssessment_Page.error_ForexTradingFrequency(driver).isDisplayed()){
-				System.out.println("Field validation for forex trading frquency is working");
+				System.out.println("Field validation for forex trading frequency is working");
 			}
 	  }
 	//Test Method to test the error message displayed when indices trading experience field is not set
@@ -60,7 +65,7 @@ public class Validate_FinancialAssessmentFields {
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
 					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth);
 			if(FinancialAssessment_Page.error_IndicesTradingExperience(driver).isDisplayed()){
-				System.out.println("Field validation for forex trading frquency is working");
+				System.out.println("Field validation for Indices trading Experience is working");
 			}
 	  }
 	//Test Method to test the error message displayed when indices trading frequency field is not set
@@ -237,7 +242,8 @@ public class Validate_FinancialAssessmentFields {
 		  	ChromeDriverManager.getInstance().setup();
 	    	driver = new ChromeDriver();
 	    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
+			Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
+			ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
 	  }
 	  //Test Method to close browser session
 	  @AfterTest
