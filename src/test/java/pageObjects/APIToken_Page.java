@@ -95,7 +95,7 @@ public class APIToken_Page {
     //Method to find delete button
     public static WebElement delete_btn(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='new']/td[*]/button")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='tokens_table']/tbody/tr[contains(.,'TestToken')]/td[5]/button")));
         Assert.assertTrue(element.isDisplayed());
         return element;    
     }
