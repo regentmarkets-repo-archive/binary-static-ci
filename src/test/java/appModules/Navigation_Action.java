@@ -78,4 +78,7 @@ public class Navigation_Action {
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
+    public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
+    	driver.get(URL);
+    }
 }
