@@ -53,7 +53,7 @@ public class Validate_FinancialAssessmentFields {
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
 					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth);
 			if(FinancialAssessment_Page.error_ForexTradingFrequency(driver).isDisplayed()){
-				System.out.println("Field validation for forex trading frquency is working");
+				System.out.println("Field validation for forex trading frequency is working");
 			}
 	  }
 	//Test Method to test the error message displayed when indices trading experience field is not set
@@ -65,7 +65,7 @@ public class Validate_FinancialAssessmentFields {
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
 					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth);
 			if(FinancialAssessment_Page.error_IndicesTradingExperience(driver).isDisplayed()){
-				System.out.println("Field validation for forex trading frquency is working");
+				System.out.println("Field validation for Indices trading Experience is working");
 			}
 	  }
 	//Test Method to test the error message displayed when indices trading frequency field is not set
