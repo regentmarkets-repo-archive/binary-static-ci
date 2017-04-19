@@ -44,4 +44,11 @@ public class MainAccount_Menu {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
+	      //Method try check authentication message 
+        public static WebElement auth_msg(WebDriver driver){
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='msg_notification']")));
+            Assert.assertTrue(element.isDisplayed());
+            return element;
+        }
 }

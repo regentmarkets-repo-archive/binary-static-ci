@@ -28,11 +28,18 @@ public class Security_Page {
     //Method to find API Token Page
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='settings_container']/div/div[6]/div[1]/a")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[6]/div[1]/a")));
+        Assert.assertTrue(element.isDisplayed());   
+        return element;
+    }
+  //Method to find Authorized Application link
+    public static WebElement link_AuthorisedApplication(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,10);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='settings_container']/div/div[7]/div[1]/a")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-  //Method to find Account Password link
     public static WebElement link_AccountPassword(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,10);
