@@ -12,6 +12,7 @@ import pageObjects.Login_History;
 import pageObjects.MainAccount_Menu;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
+import utility.Constant;
 
 public class Navigation_Action {
 		
@@ -77,5 +78,8 @@ public class Navigation_Action {
         Security_Page.link_AuthorisedApplication(driver).click();
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
+    }
+    public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
+    	driver.get(URL);
     }
 }
