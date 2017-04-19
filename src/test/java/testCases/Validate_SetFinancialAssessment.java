@@ -28,6 +28,7 @@ public class Validate_SetFinancialAssessment {
 	public void A_Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+	  	Navigation_Action.Navigate_To_TradingPage(driver);
 	}
 	//Test Method to navigate to financial assessment page
 	@Test
@@ -61,6 +62,7 @@ public class Validate_SetFinancialAssessment {
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 			Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
 			ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+			
 	  }
   //Test Method to close the browser session
   @AfterTest

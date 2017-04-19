@@ -33,12 +33,14 @@ public WebDriver driver;
   public void A_Launch(){
 	  Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
 	  ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+	  
   }
   //Test Method to login to the site with valid credentials
   @Test
   public void B_Login() {
 	  Navigation_Action.Navigate_To_LoginPage(driver);
 	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
+	  Navigation_Action.Navigate_To_TradingPage(driver);
   }
   //Test Method to logout from the site and validate login button is present
   @Test

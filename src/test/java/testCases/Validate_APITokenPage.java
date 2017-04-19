@@ -25,6 +25,7 @@ public class Validate_APITokenPage {
     public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+	  	Navigation_Action.Navigate_To_TradingPage(driver);
     } 
     //Test Method to navigate to API Token page
     @Test(priority=1)
@@ -52,7 +53,7 @@ public class Validate_APITokenPage {
         APIToken_Action.deleteToken(driver);
     }
     //Test method to check scope validation 
-    @Test(priority=5)
+    @Test(enabled=false)
     public void CheckScopeValidation() {
         APIToken_Action.ScopeValidation(driver);
         if(APIToken_Page.scoperror_field(driver).isDisplayed()){
@@ -70,7 +71,7 @@ public class Validate_APITokenPage {
         Assert.assertEquals(APIToken_Page.error_field(driver).getText(), "You should enter 2-32 characters.");
     }
     //Test method to check duplicate Token name
-    @Test (priority=7)
+    @Test (enabled=false)
     public void DuplicateName() {
         APIToken_Action.ExecuteDuplicate(driver, Constant.DuplicateName);
         if(APIToken_Page.nameerror_msg(driver).isDisplayed()){
@@ -95,6 +96,7 @@ public class Validate_APITokenPage {
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
 		ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+		
     }
     //Test Method to close browser session
     @AfterTest
