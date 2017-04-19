@@ -61,6 +61,6 @@ public class SetFinancialAssessment_Action {
 		Select oSelect_net_worth = new Select(FinancialAssessment_Page.select_NetWorth(driver));
 		oSelect_net_worth.selectByValue(net_worth);
 		//Click on Update button
-		FinancialAssessment_Page.btn_Update(driver).click();
+		FinancialAssessment_Page.select_NetWorth(driver).submit();
 	}
 }

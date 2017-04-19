@@ -23,14 +23,16 @@ public class APIToken_Action {
         APIToken_Page.trade_scope(driver).click();
         APIToken_Page.payments_scope(driver).click();
         APIToken_Page.admin_scope(driver).click();
-        APIToken_Page.create_token(driver).click();
+        APIToken_Page.admin_scope(driver).submit();
+        //APIToken_Page.create_token(driver).click();
     } 
     public static void ExecuteDuplicate(WebDriver driver, String sv_Name) {
         //Method to submit duplicate token Name
         APIToken_Page.token_name(driver).clear();
         APIToken_Page.token_name(driver).sendKeys(sv_Name);
         APIToken_Page.read_scope(driver).click();
-        APIToken_Page.create_token(driver).click();
+        APIToken_Page.admin_scope(driver).submit();
+        //APIToken_Page.create_token(driver).click();
     }
     //Method to submit a token name
     public static void Validation(WebDriver driver, String sv_Name){
