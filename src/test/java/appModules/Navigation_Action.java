@@ -61,7 +61,6 @@ public class Navigation_Action {
 				.click()
 				.build();
 		clickAPIToken.perform();
-	    //Security_Page.link_APITokenPage(driver).click();
         Assert.assertTrue(APIToken_Page.title_page(driver).isDisplayed());
         APIToken_Action.checkTitle(driver);
     }
@@ -72,7 +71,6 @@ public class Navigation_Action {
 				.click()
 				.build();
 		clickLoginHistory.perform();
-        //Security_Page.link_LoginHistoryPage(driver).click();
         Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
         LoginHistory_Action.Execute(driver);
     }
@@ -89,7 +87,6 @@ public class Navigation_Action {
 				.click()
 				.build();
 		clickAuthorizedApps.perform();
-        //Security_Page.link_AuthorisedApplication(driver).click();
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
