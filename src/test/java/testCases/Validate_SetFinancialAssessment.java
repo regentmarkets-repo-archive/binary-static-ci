@@ -28,7 +28,6 @@ public class Validate_SetFinancialAssessment {
 	public void A_Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
-	  	Navigation_Action.Navigate_To_TradingPage(driver);
 	}
 	//Test Method to navigate to financial assessment page
 	@Test

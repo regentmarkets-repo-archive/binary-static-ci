@@ -32,7 +32,6 @@ public class Validate_LoginHistoryPage {
     @Test(priority=1)
     public void Login() {
     	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
-    	  Navigation_Action.Navigate_To_TradingPage(driver);
     } 
     //Test Method to navigate to Login HIstory page
     @Test(priority=2)

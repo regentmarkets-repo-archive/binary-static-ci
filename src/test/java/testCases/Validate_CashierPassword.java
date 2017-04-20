@@ -27,7 +27,6 @@ public class Validate_CashierPassword {
     public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
-		Navigation_Action.Navigate_To_TradingPage(driver);
     } 
     //Test Method to navigate to cashier password page
     @Test(priority=1)

@@ -40,7 +40,6 @@ public class Validate_ChangePasswordPage {
  public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
-		Navigation_Action.Navigate_To_TradingPage(driver);
  }
  //Test Method to navigate to the Change Password page
  @Test(priority=1)

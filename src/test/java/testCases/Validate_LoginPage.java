@@ -40,7 +40,6 @@ public WebDriver driver;
   public void B_Login() {
 	  Navigation_Action.Navigate_To_LoginPage(driver);
 	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
-	  Navigation_Action.Navigate_To_TradingPage(driver);
   }
   //Test Method to logout from the site and validate login button is present
   @Test
