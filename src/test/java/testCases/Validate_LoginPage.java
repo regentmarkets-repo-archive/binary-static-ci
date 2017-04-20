@@ -31,8 +31,7 @@ public WebDriver driver;
   //Test Method to launch site and print page title
   @Test
   public void A_Launch(){
-	  Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
-	  ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+	  driver.get(Constant.URL);
 	  
   }
   //Test Method to login to the site with valid credentials
