@@ -58,9 +58,7 @@ public class Validate_LoginHistoryPage {
         ChromeDriverManager.getInstance().setup();
             driver = new ChromeDriver();
             driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
-			ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
-			
+            driver.get(Constant.URL);
     }
     //Test Method to close browser session
     @AfterTest
