@@ -24,16 +24,17 @@ public WebDriver driver;
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         }
   //Test Method to launch site and print page title
-  @Test
+  @Test(priority=1)
   public void A_Launch(){
       Navigation_Action.Navigate_To_HomePage(driver,Constant.URL);
   }
-  //Test Method to login to the site with valid credentials
-  @Test
+  //Test Method to count footer menu links
+  @Test(priority=2)
   public void checkFooter() {
       FooterMenu_Action.ExecuteCount(driver);
 
   } 
+//Test Method to navigate each of links and check the URL
   @Test
   public void listAllLink() {
       FooterMenu_Action.ListLinks(driver);
