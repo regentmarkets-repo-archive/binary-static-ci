@@ -2,21 +2,16 @@
 package testCases;
 
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.apache.commons.lang3.RandomStringUtils;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import pageObjects.Login_History;
 import utility.Constant;
-import appModules.ChangeAPIEndpoint_Action;
 import appModules.LoginHistory_Action;
 import appModules.Navigation_Action;
 
