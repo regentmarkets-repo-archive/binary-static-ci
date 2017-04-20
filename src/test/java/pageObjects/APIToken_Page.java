@@ -5,6 +5,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
 public class APIToken_Page {
@@ -26,6 +27,7 @@ public class APIToken_Page {
     public static WebElement token_name(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("txt_name")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -33,6 +35,7 @@ public class APIToken_Page {
     public static WebElement read_scope(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='chk_scopes_read']")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -40,6 +43,7 @@ public class APIToken_Page {
     public static WebElement trade_scope(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.elementToBeClickable(By.id("chk_scopes_trade")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -47,6 +51,7 @@ public class APIToken_Page {
     public static WebElement payments_scope(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.elementToBeClickable(By.id("chk_scopes_payments")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -54,6 +59,7 @@ public class APIToken_Page {
     public static WebElement admin_scope(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.elementToBeClickable(By.id("chk_scopes_admin")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -61,6 +67,7 @@ public class APIToken_Page {
     public static WebElement newly_addedToken(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("new")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -68,6 +75,7 @@ public class APIToken_Page {
     public static WebElement create_token(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_submit")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -75,6 +83,7 @@ public class APIToken_Page {
     public static WebElement error_field(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='token_form']/form/fieldset/div[1]/div[2]/div")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -82,6 +91,7 @@ public class APIToken_Page {
     public static WebElement scoperror_field(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='token_form']/form/fieldset/div[2]/div[2]/div")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -89,13 +99,15 @@ public class APIToken_Page {
     public static WebElement succes_msg(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='msg_form']/ul/li")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
     //Method to find delete button
     public static WebElement delete_btn(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@class='new']/td[*]/button")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='tokens_table']/tbody/tr[contains(.,'TestToken')]/td[5]/button")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;    
     }
@@ -103,6 +115,7 @@ public class APIToken_Page {
     public static WebElement nameerror_msg(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='msg_form']")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element; 
     }

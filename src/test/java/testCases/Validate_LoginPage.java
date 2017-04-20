@@ -3,19 +3,14 @@ package testCases;
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
-
 import pageObjects.Login_Page;
 import utility.Constant;
-import appModules.ChangeAPIEndpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_LoginPage {
@@ -31,8 +26,8 @@ public WebDriver driver;
   //Test Method to launch site and print page title
   @Test
   public void A_Launch(){
-	  Navigation_Action.Navigate_To_ChangeAPIEndpointPage(driver,Constant.Endpoint_url);
-	  ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
+	  driver.get(Constant.URL);
+	  
   }
   //Test Method to login to the site with valid credentials
   @Test
