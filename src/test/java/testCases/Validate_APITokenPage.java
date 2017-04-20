@@ -78,9 +78,6 @@ public class Validate_APITokenPage {
     @Test (priority=7)
     public void AddNewToken() {
         APIToken_Action.ExecuteAddToken(driver, Constant.v_tokenName);
-        if(APIToken_Page.succes_msg(driver).isDisplayed()){
-            System.out.println(APIToken_Page.succes_msg(driver).getText());
-        }
         Assert.assertEquals(APIToken_Page.succes_msg(driver).getText(), "New token created.");
         System.out.println("Total Records After Add New Token : " + APIToken_Page.count_rows(driver));
     }
