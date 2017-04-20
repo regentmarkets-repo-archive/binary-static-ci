@@ -11,7 +11,7 @@ public class FooterMenu_Action {
         System.out.println("Total Footer Menu: " + Footer_Menu.footer(driver));
     }
     //Get the array of footer links
-    public static void ListLinks(WebDriver driver){
+    public static void ListLinks(WebDriver driver ){
         String[] links = new String[Footer_Menu.footerString(driver).size()];
         for(int i=0;i<Footer_Menu.footerString(driver).size(); i++)
         {
