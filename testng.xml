@@ -6,6 +6,11 @@
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
+		<test name="CheckLoginHistoryPage">
+		<classes>
+			<class name="testCases.Validate_LoginHistoryPage" />
+		</classes>
+	</test>
 	<test name="SetFinancialAssessment">
 		<classes>
 			<class name="testCases.Validate_SetFinancialAssessment" />
@@ -19,11 +24,6 @@
 	<test name="CheckPersonalDetailsPage">
 		<classes>
 			<class name="testCases.Validate_PersonalDetailsPage" />
-		</classes>
-	</test>
-	<test name="CheckLoginHistoryPage">
-		<classes>
-			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
 	</test>
 	<test name="ChangePasswordPage">
