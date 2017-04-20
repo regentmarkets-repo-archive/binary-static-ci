@@ -26,11 +26,6 @@
 			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
 	</test>
-	<test name="CheckAPItokenpage">
-		<classes>
-			<class name="testCases.Validate_APITokenPage" />
-		</classes>
-	</test>
 	<test name="ChangePasswordPage">
 		<classes>
 			<class name="testCases.Validate_ChangePasswordPage" />
@@ -41,9 +36,21 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
+
 	<test name="CheckFooterMenu">
 		<classes>
 			<class name="testCases.Validate_FooterMenu" />
+		</classes>
+	</test>
+	<test name="CheckAuthorisedApplication">
+		<classes>
+			<class name="testCases.Validate_AuthorisedApplications" />
+		</classes>
+	</test>
+	<test name="checkTokenAPI">
+		<classes>
+			<class name="testCases.Validate_APITokenPage" />
+
 		</classes>
 	</test>
 </suite>
