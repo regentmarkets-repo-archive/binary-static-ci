@@ -54,7 +54,8 @@ public class Validate_SetFinancialAssessment {
 		 	ChromeDriverManager.getInstance().setup();
 	    	driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
+			driver.get(Constant.URL);
+			
 	  }
   //Test Method to close the browser session
   @AfterTest

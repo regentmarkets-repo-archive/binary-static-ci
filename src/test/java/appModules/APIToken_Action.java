@@ -1,7 +1,6 @@
 package appModules;
 
 import org.openqa.selenium.WebDriver;
-
 import org.testng.Assert;
 
 import pageObjects.APIToken_Page;
@@ -23,14 +22,14 @@ public class APIToken_Action {
         APIToken_Page.trade_scope(driver).click();
         APIToken_Page.payments_scope(driver).click();
         APIToken_Page.admin_scope(driver).click();
-        APIToken_Page.create_token(driver).click();
+        APIToken_Page.admin_scope(driver).submit();
     } 
     public static void ExecuteDuplicate(WebDriver driver, String sv_Name) {
         //Method to submit duplicate token Name
         APIToken_Page.token_name(driver).clear();
         APIToken_Page.token_name(driver).sendKeys(sv_Name);
         APIToken_Page.read_scope(driver).click();
-        APIToken_Page.create_token(driver).click();
+        APIToken_Page.admin_scope(driver).submit();
     }
     //Method to submit a token name
     public static void Validation(WebDriver driver, String sv_Name){
@@ -39,12 +38,11 @@ public class APIToken_Action {
     //Method to delete a token
     public static void deleteToken(WebDriver driver) {
         APIToken_Page.delete_btn(driver).click();
+        driver.switchTo().alert().accept();
     }
     //Method to check scope validation
     public static void ScopeValidation(WebDriver driver){
-        boolean checkstatus;
-        checkstatus= APIToken_Page.read_scope(driver).isSelected();
-        if (checkstatus==true){
+        if(APIToken_Page.read_scope(driver).getAttribute("checked")!="checked") {
             APIToken_Page.read_scope(driver).click(); 
         }
         else

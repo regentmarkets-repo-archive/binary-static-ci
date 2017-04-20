@@ -26,7 +26,8 @@ public WebDriver driver;
   //Test Method to launch site and print page title
   @Test
   public void A_Launch(){
-	  Navigation_Action.Navigate_To_HomePage(driver,Constant.URL);
+	  driver.get(Constant.URL);
+	  
   }
   //Test Method to login to the site with valid credentials
   @Test
