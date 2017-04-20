@@ -1,5 +1,7 @@
 package appModules;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -96,6 +98,7 @@ public class Navigation_Action {
     }
     public static void Navigate_To_TradingPage(WebDriver driver){
     	MainMenu_Tab.link_TradeMenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 
 

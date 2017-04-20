@@ -42,7 +42,6 @@ public class APIToken_Action {
     }
     //Method to check scope validation
     public static void ScopeValidation(WebDriver driver){
-        String checkstatus;
         if(APIToken_Page.read_scope(driver).getAttribute("checked")!="checked") {
             APIToken_Page.read_scope(driver).click(); 
         }
