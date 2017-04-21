@@ -17,4 +17,10 @@ public class MainMenu_Tab {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    public static WebElement link_TradeMenu(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='topMenuTrading']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
 }
