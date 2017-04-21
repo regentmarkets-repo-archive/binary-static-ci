@@ -11,6 +11,7 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import appModules.Limits_Action;
 import appModules.Login_Action;
 import appModules.Navigation_Action;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
@@ -23,178 +24,78 @@ import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
 import pageObjects.Self_Exclusion;
 import utility.Constant;
+import utility.CommonFunctions;
 
 public class Validate_Limits {
 	public WebDriver driver;
-	int getAccBal , getMaxPos;
-	boolean authCheck;
+	int getMaxPos, getAccBal;
+	
 	//Test Method to login into the site
 	@Test(priority=0)
 	public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Login_Action.Execute(driver,Constant.Email,Constant.Password);
 	}
+	
 	//Test Method to navigate to self exclusion page
 	@Test(priority=1)
 	public void NavigateToPersonalDetailsPage() {
 		Navigation_Action.Navigate_To_SecurityPage(driver);
 		Navigation_Action.Navigate_To_SelfExclusionPage(driver);
 	}
+	
 	//Test Method to test error message when the new amount exceed the current amount
 	@Test(priority=2)
 	public void Test_Exceed_MaxAccountBalance() {
-		//If there is no value added, skip this test		
-		if(Self_Exclusion.txt_MaxAccCashBal(driver).getAttribute("value").equals("")){
-			throw new SkipException("Skipping this exception");}
-		else{
-			//Increase the current value
-			int temp;
-			temp = Integer.parseInt(Self_Exclusion.txt_MaxAccCashBal(driver).getAttribute("value"));
-			getAccBal = temp + 1;
-			Self_Exclusion.txt_MaxAccCashBal(driver).clear();
-			Self_Exclusion.txt_MaxAccCashBal(driver).sendKeys(Integer.toString(getAccBal));
-			//If the error message is shown
-			Assert.assertEquals(Self_Exclusion.err_MaxAccBal(driver).getText(),"Should be between 0 and "+ temp);
-		}
+		Limits_Action.checkExMaxAccBal(driver);
 	}
+	
 	//Test Method to test whether the update is saved when the new amount less than the current amount
 	@Test(priority=3)
 	public void Test_Lower_MaxAccountBalance() {
-		//If there is no value added, skip this test		
-		if(Self_Exclusion.txt_MaxAccCashBal(driver).getAttribute("value").equals("")){
-			throw new SkipException("Skipping this exception");}
-		else{
-			//Decrease the current value
-			int temp;
-			temp = Integer.parseInt(Self_Exclusion.txt_MaxAccCashBal(driver).getAttribute("value"));
-			getAccBal = temp - 2;
-				if (getAccBal <= 0){
-					getAccBal = 1;
-					Self_Exclusion.txt_MaxAccCashBal(driver).clear();
-					Self_Exclusion.txt_MaxAccCashBal(driver).sendKeys(Integer.toString(getAccBal));
-					//If the error message is shown
-					Self_Exclusion.txt_ExcludeUntil(driver).submit();
-					Assert.assertEquals(Self_Exclusion.msg_confirmMsg(driver).getText(),"You did not change anything.");
-				}else{
-				Self_Exclusion.txt_MaxAccCashBal(driver).clear();
-				Self_Exclusion.txt_MaxAccCashBal(driver).sendKeys(Integer.toString(getAccBal));
-				//If the error message is shown
-				Self_Exclusion.txt_ExcludeUntil(driver).submit();
-				Assert.assertEquals(Self_Exclusion.msg_confirmMsg(driver).getText(),"Your changes have been updated.");
-				}
-			}
+		getAccBal = Limits_Action.checkLowMaxAccBal(driver);
 	}
+	
 	//Test Method to test error message when the new number exceed the current number
 	@Test(priority=4)
 	public void Test_Exceed_MaxOpenPos() {
-		//If there is no value added, skip this test		
-		if(Self_Exclusion.txt_MaxOpenPos(driver).getAttribute("value").equals("")){
-			throw new SkipException("Skipping this exception");}
-		else{
-			//Increase the current value
-			int temp;
-			temp = Integer.parseInt(Self_Exclusion.txt_MaxOpenPos(driver).getAttribute("value"));
-			getMaxPos = temp + 1;
-			Self_Exclusion.txt_MaxOpenPos(driver).clear();
-			Self_Exclusion.txt_MaxOpenPos(driver).sendKeys(Integer.toString(getMaxPos));
-			//If the error message is shown
-			Assert.assertEquals(Self_Exclusion.err_MaxOpenPos(driver).getText(),"Should be between 0 and "+ temp);
-			}
-		}
+		Limits_Action.checkExMaxOpPo(driver);
+	}
+	
 	//Test Method to test whether the update is saved when the new number less than the current number
 	@Test(priority=5)
 	public void Test_Lower_MaxOpenPos() {
-		//If there is no value added, skip this test		
-		if(Self_Exclusion.txt_MaxOpenPos(driver).getAttribute("value").equals("")){
-			throw new SkipException("Skipping this exception");}
-		else{
-			//Decrease the current value
-			int temp;
-			temp = Integer.parseInt(Self_Exclusion.txt_MaxOpenPos(driver).getAttribute("value"));
-			getMaxPos = temp - 2;
-				if (getMaxPos <= 0){
-					getMaxPos = 1;
-					Self_Exclusion.txt_MaxOpenPos(driver).clear();
-					Self_Exclusion.txt_MaxOpenPos(driver).sendKeys(Integer.toString(getMaxPos));
-					//If the error message is shown
-					Self_Exclusion.txt_ExcludeUntil(driver).submit();
-					Assert.assertEquals(Self_Exclusion.msg_confirmMsg(driver).getText(),"You did not change anything.");
-				}else{
-				Self_Exclusion.txt_MaxOpenPos(driver).clear();
-				Self_Exclusion.txt_MaxOpenPos(driver).sendKeys(Integer.toString(getMaxPos));
-				//If the error message is shown
-				Self_Exclusion.txt_ExcludeUntil(driver).submit();
-				Assert.assertEquals(Self_Exclusion.msg_confirmMsg(driver).getText(),"Your changes have been updated.");
-			}
-		}
+		getMaxPos = Limits_Action.checkLowMaxOpPo(driver);
 	}
+	
 	//Test Method to check is it authenticated and navigate to limits page
 	@Test(priority=6)
 	public void NavigateToLimitsPage() {
 		Navigation_Action.Navigate_To_AuthenticationPage(driver);
-		if(Authentication.txt_nonAuthedMsg(driver).isDisplayed()){
-			authCheck = false;
-		}else if(Authentication.txt_AuthedMsg(driver).isDisplayed()){
-			authCheck = true;
-		}
+		Limits_Action.checkAuth(driver);
 		
 		Navigation_Action.Navigate_To_SecurityPage(driver);
 		Navigation_Action.Navigate_To_LimitsPage(driver);
 	}
+	
 	//Test Method to check whether the amount displayed correctly
 	@Test(priority=7)
 	public void Test_Limits_MaxAccountBalance() {	
-		String tempGAB = intTostr(getAccBal);
-		
-		if(getAccBal>=300000){
-			String tempNum = intTostr(300000);
-			tempGAB = tempNum;
-			if(Limits.select_MaxAccCashBal(driver).getText().equals(tempGAB)){
-				System.out.println("Amount in Self-exclusion more than 300000, 300000 is shown");
-			}
-		}
-		else{
-			if(Limits.select_MaxAccCashBal(driver).getText().equals(tempGAB)){
-				System.out.println("Amount in limits is same with self exclusion");
-			}
-		}
+		Limits_Action.limit_accbal(driver, getAccBal);
 	}
+	
 	//Test Method to check whether the number displayed correctly
 	@Test(priority=8)
 	public void Test_Limits_MaxOpenPosition() {
-		
-		if(getMaxPos>=60){
-			getMaxPos = 60;
-			if(Limits.select_MaxOpenPos(driver).getText().equals(Integer.toString(getMaxPos))){
-				System.out.println("Positions in Self-exclusion more than 60, 60 is shown");
-			}
-		}
-		else{
-			if(Limits.select_MaxOpenPos(driver).getText().equals(Integer.toString(getMaxPos))){
-				System.out.println("Number in limits is same with self exclusion");
-			}
-		}
+		Limits_Action.limit_openpo(driver, getMaxPos);
 	}
+	
 	//Test Method to check whether the limits message displayed correctly
 	@Test(priority=9)
 	public void Test_Limits_Message() {
-		MainAccount_Menu.link_MainAccount(driver).click();
-		if((MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mlt"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mf"))||(MainAccount_Menu.link_ActiveAccount(driver).getText().contains("mx"))){
-			if(authCheck){
-				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your account is fully authenticated and your withdrawal limits have been lifted.");
-				
-			}else if(!authCheck){
-				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is EUR 2,300 (or equivalent in other currency).");
-			}
-		}else{
-			if(authCheck){
-				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your account is fully authenticated and your withdrawal limits have been lifted.");
-			}else if(!authCheck){
-				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is USD 10,000.");
-				
-			}
-		}
+		Limits_Action.test_msg(driver);
 	} 
+	
 	//Test Method to start browser session and launch site
 	@BeforeTest
 	public void launchApplication() {
@@ -203,16 +104,10 @@ public class Validate_Limits {
 	   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		driver.get(Constant.URL);
 	}
-	//Test Method to close browser session
+	
+	//Method to close browser session
 	@AfterTest
-	public void endSession() {
-		driver.quit();
-	}
-	// function to convert integer to string with comma
-	public String intTostr(int a) {
-		int temp1 = Integer.parseInt(Integer.toString(a).substring(0, 3));
-		int temp2 = Integer.parseInt(Integer.toString(a).substring(3, 6));
-		String tempStr = (temp1+","+temp2);
-		return tempStr;
+	public void logout() {
+		CommonFunctions.endSession(driver);
 	}
 }
