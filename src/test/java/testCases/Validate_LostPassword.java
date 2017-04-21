@@ -32,19 +32,8 @@ public class Validate_LostPassword {
     	ChromeDriverManager.getInstance().setup();
     	driver = new ChromeDriver(); 
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-    	Navigation_Action.Navigate_To_HomePage(driver, Constant.URL_Binary);
+    	Navigation_Action.Navigate_To_HomePage(driver, Constant.URL_LostPass);
     }
-	
-	//Test to navigate to lost password page
-	@Test(priority=0)
-	public void navigateToLostPasswordPage() {
-		
-		//Click on the login button in home page
-		Navigation_Action.Navigate_To_LoginPage(driver);
-		
-		// Click on 'Lost Password?'
-		Navigation_Action.Navigate_To_LostPassword(driver);
-	}
 	
 	// Test method to check if the email field is empty
 	@Test(priority=1)

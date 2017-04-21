@@ -5,7 +5,7 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
-	public static final String URL_Binary = "https://binary.com";
+	public static final String URL_LostPass = "https://staging.binary.com/en/user/lost_passwordws.html";
 	public static final String Email = "bijan+vi@binary.com";
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
