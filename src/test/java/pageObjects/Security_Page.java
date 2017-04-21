@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -12,38 +13,43 @@ public class Security_Page {
     //Method to find Login History link
     public static WebElement link_LoginHistoryPage(WebDriver driver)
     {
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[5]/div[1]/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
     //Method to find Cashier Password Page
     public static WebElement link_CashierPassword(WebDriver driver)
     {
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='settings_container']/div/div[2]/div[1]/a/img")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         return element;
     }
     public static WebElement link_APITokenPage(WebDriver driver)
     //Method to find API Token Page
     {
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[6]/div[1]/a")));
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[6]/div[2]/h4/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());   
         return element;
     }
   //Method to find Authorized Application link
     public static WebElement link_AuthorisedApplication(WebDriver driver)
     {
-        WebDriverWait wait = new WebDriverWait(driver,10);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='settings_container']/div/div[7]/div[1]/a")));
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='settings_container']/div/div[7]/div[2]/h4/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
     public static WebElement link_AccountPassword(WebDriver driver)
     {
-        WebDriverWait wait = new WebDriverWait(driver,10);
+        WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='change_password']/div[2]/h4/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
