@@ -28,9 +28,6 @@ public class Navigation_Action {
 	public static void Navigate_To_LoginPage(WebDriver driver){ 
 		Home_Page.btn_Login(driver).click();
 	}
-	public static void Navigate_To_LostPassword(WebDriver driver){
-		Login_Page.lost_password(driver).click();
-	}
 	public static void Navigate_To_MainPage(WebDriver driver,String Email,String Password){
 		Login_Action.Execute(driver,Email,Password);
 	}
