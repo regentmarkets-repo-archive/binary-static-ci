@@ -63,26 +63,26 @@ public class SetSelfExclusionPage_Action {
 		WebElement error_session_duraion_limit = SelfExclusionPage.error_SessionDurationLimit(driver);
 		
 		// Check errors displayed
-		logIsDisplayed(error_max_balance, "error for max balance");
-		logIsDisplayed(error_max_turnover, "error for max turnover");
-		logIsDisplayed(error_max_losses, "error for max losses");
-		logIsDisplayed(error_max_7day_turnover, "error for max turnover in 7 days");
-		logIsDisplayed(error_max_7day_losses, "error for max losses in 7 days");
-		logIsDisplayed(error_max_30day_turnover, "error for max turnover in 30 days");
-		logIsDisplayed(error_max_30day_losses, "error for max losses in 30 days");
-		logIsDisplayed(error_max_open_bets, "error for max open bets");
-		logIsDisplayed(error_session_duraion_limit, "error for session duration limit");
+		logAndAssertIsDisplayed(error_max_balance, "error for max balance");
+		logAndAssertIsDisplayed(error_max_turnover, "error for max turnover");
+		logAndAssertIsDisplayed(error_max_losses, "error for max losses");
+		logAndAssertIsDisplayed(error_max_7day_turnover, "error for max turnover in 7 days");
+		logAndAssertIsDisplayed(error_max_7day_losses, "error for max losses in 7 days");
+		logAndAssertIsDisplayed(error_max_30day_turnover, "error for max turnover in 30 days");
+		logAndAssertIsDisplayed(error_max_30day_losses, "error for max losses in 30 days");
+		logAndAssertIsDisplayed(error_max_open_bets, "error for max open bets");
+		logAndAssertIsDisplayed(error_session_duraion_limit, "error for session duration limit");
 		
 		// Check if it is valid error for non numberic values
-		logIsValidNumber(error_max_balance, "error for max balance");
-		logIsValidNumber(error_max_turnover, "error for max turnover");
-		logIsValidNumber(error_max_losses, "error for max losses");
-		logIsValidNumber(error_max_7day_turnover, "error for max turnover in 7 days");
-		logIsValidNumber(error_max_7day_losses, "error for max losses in 7 days");
-		logIsValidNumber(error_max_30day_turnover, "error for max turnover in 30 days");
-		logIsValidNumber(error_max_30day_losses, "error for max losses in 30 days");
-		logIsValidNumber(error_max_open_bets, "error for max open bets");
-		logIsValidNumber(error_session_duraion_limit, "error for session duration limit");
+		logAndAssertIsValidNumber(error_max_balance, "error for max balance");
+		logAndAssertIsValidNumber(error_max_turnover, "error for max turnover");
+		logAndAssertIsValidNumber(error_max_losses, "error for max losses");
+		logAndAssertIsValidNumber(error_max_7day_turnover, "error for max turnover in 7 days");
+		logAndAssertIsValidNumber(error_max_7day_losses, "error for max losses in 7 days");
+		logAndAssertIsValidNumber(error_max_30day_turnover, "error for max turnover in 30 days");
+		logAndAssertIsValidNumber(error_max_30day_losses, "error for max losses in 30 days");
+		logAndAssertIsValidNumber(error_max_open_bets, "error for max open bets");
+		logAndAssertIsValidNumber(error_session_duraion_limit, "error for session duration limit");
 	}
 	
 	// test the fields that would be required
@@ -99,15 +99,15 @@ public class SetSelfExclusionPage_Action {
 		// clear time field and check if date field error will appear
 		time.sendKeys(DateUtil.getCurrentTime());
 		WebElement error_date = SelfExclusionPage.error_TimeOutUntilDate(driver);
-		logIsDisplayed(error_date, "error for required date");
-		logIsRequiredErrorFieldShown(error_date, "error for required date");
+		logAndAssertIsDisplayed(error_date, "error for required date");
+		logAndAssertIsRequiredErrorFieldShown(error_date, "error for required date");
 		time.clear();
 		
 		// clear date field and check if time field error will appear
 		date.sendKeys(DateUtil.getTodayDate());
 		WebElement error_time = SelfExclusionPage.error_TimeOutUntilTime(driver);
-		logIsDisplayed(error_time, "error for required time");
-		logIsRequiredErrorFieldShown(error_time, "error for required time");
+		logAndAssertIsDisplayed(error_time, "error for required time");
+		logAndAssertIsRequiredErrorFieldShown(error_time, "error for required time");
 		date.clear();
 	}
 	
@@ -135,13 +135,13 @@ public class SetSelfExclusionPage_Action {
 		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
 		
 		// see if those errors are displayed
-		logIsDisplayed(error_date_timeout, "error of timeout date");
-		logIsDisplayed(error_time_timeout, "error of timeout time");
-		logIsDisplayed(error_date_exclusion, "error of exclusion date");
+		logAndAssertIsDisplayed(error_date_timeout, "error of timeout date");
+		logAndAssertIsDisplayed(error_time_timeout, "error of timeout time");
+		logAndAssertIsDisplayed(error_date_exclusion, "error of exclusion date");
 		
 		// see if error for valid date is shown or not
-		logIsValidDate(error_date_timeout, "error of timeout date is not date");
-		logIsValidDate(error_date_exclusion, "error of exclusion date is not date");
+		logAndAssertIsValidDate(error_date_timeout, "error of timeout date is not date");
+		logAndAssertIsValidDate(error_date_exclusion, "error of exclusion date is not date");
 		
 		// see if error for valid time is shown or not
 		if(error_time_timeout.getText().equals("Time out cannot be in the past.")){
@@ -169,9 +169,9 @@ public class SetSelfExclusionPage_Action {
 		// get error element
 		WebElement error_date_timeout = SelfExclusionPage.error_TimeOutUntilDate(driver);
 		
-		// log whether error is displayed and has correct 6 weeks timeout error
-		logIsDisplayed(error_date_timeout, "error of 6 weeks timeout");
-		logIsSixWeek_TimeOut(error_date_timeout, "error of 6 weeks timeout");
+		// logAndAssert whether error is displayed and has correct 6 weeks timeout error
+		logAndAssertIsDisplayed(error_date_timeout, "error of 6 weeks timeout");
+		logAndAssertIsSixWeek_TimeOut(error_date_timeout, "error of 6 weeks timeout");
 	}
 	
 	// test exclusion 6 months earlier date error
@@ -187,9 +187,9 @@ public class SetSelfExclusionPage_Action {
 		// get error element
 		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
 		
-		// log if error displayed and error lesser than 6 months appear
-		logIsDisplayed(error_date_exclusion, "error of 6 months lesser exclusion");
-		logIsSixMonthLesser_Exclusion(error_date_exclusion, "error of 6 months lesser exclusion");
+		// logAndAssert if error displayed and error lesser than 6 months appear
+		logAndAssertIsDisplayed(error_date_exclusion, "error of 6 months lesser exclusion");
+		logAndAssertIsSixMonthLesser_Exclusion(error_date_exclusion, "error of 6 months lesser exclusion");
 	}
 	
 	// test if date after 5 years appear in exclusion date field
@@ -205,9 +205,9 @@ public class SetSelfExclusionPage_Action {
 		// get error element
 		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
 		
-		// log if error displayed and date after 5 years error shown
-		logIsDisplayed(error_date_exclusion, "error of 5 yeears later exclusion");
-		logIsFiveYearMore_Exclusion(error_date_exclusion, "error of 5 yeears later exclusion");
+		// logAndAssert if error displayed and date after 5 years error shown
+		logAndAssertIsDisplayed(error_date_exclusion, "error of 5 yeears later exclusion");
+		logAndAssertIsFiveYearMore_Exclusion(error_date_exclusion, "error of 5 yeears later exclusion");
 	}
 	
 	// test if yesterdays date is inputed onto timeout field
@@ -229,13 +229,13 @@ public class SetSelfExclusionPage_Action {
 		WebElement error_date_timeout = SelfExclusionPage.error_TimeOutUntilDate(driver);
 		WebElement error_time_timeout = SelfExclusionPage.error_TimeOutUntilTime(driver);
 		
-		// log if errors displayed
-		logIsDisplayed(error_date_timeout, "error of yesterday date timeout");
-		logIsDisplayed(error_time_timeout, "error of yesterday time timeout");
+		// logAndAssert if errors displayed
+		logAndAssertIsDisplayed(error_date_timeout, "error of yesterday date timeout");
+		logAndAssertIsDisplayed(error_time_timeout, "error of yesterday time timeout");
 		
-		// log if correct error shown
-		logIsPassDate_Timeout(error_date_timeout, "error of yesterday date timeout");
-		logIsPassTime_Timeout(error_time_timeout, "error of yesterday time timeout");
+		// logAndAssert if correct error shown
+		logAndAssertIsPassDate_Timeout(error_date_timeout, "error of yesterday date timeout");
+		logAndAssertIsPassTime_Timeout(error_time_timeout, "error of yesterday time timeout");
 	}
 	
 	// test if time 5 minutes before now is inputed onto timeout
@@ -257,8 +257,8 @@ public class SetSelfExclusionPage_Action {
 		WebElement error_time_timeout = SelfExclusionPage.error_TimeOutUntilTime(driver);
 		
 		// check if time field error appear and pass time timeout error appeared
-		logIsDisplayed(error_time_timeout, "error of pass time timeout");
-		logIsPassTime_Timeout(error_time_timeout, "error of pass time timeout");
+		logAndAssertIsDisplayed(error_time_timeout, "error of pass time timeout");
+		logAndAssertIsPassTime_Timeout(error_time_timeout, "error of pass time timeout");
 	}
 	
 	public static void testNotMoreThanPrevious(WebDriver driver){
@@ -375,94 +375,108 @@ public class SetSelfExclusionPage_Action {
 		WebElement error_session_duraion_limit = SelfExclusionPage.error_SessionDurationLimit(driver);
 		
 		// Check errors displayed
-		logIsDisplayed(error_max_balance, "error for max balance need to be lesser");
-		logIsDisplayed(error_max_turnover, "error for max turnover to be lesser");
-		logIsDisplayed(error_max_losses, "error for max losses to be lesser");
-		logIsDisplayed(error_max_7day_turnover, "error for max turnover in 7 days to be lesser");
-		logIsDisplayed(error_max_7day_losses, "error for max losses in 7 days to be lesser");
-		logIsDisplayed(error_max_30day_turnover, "error for max turnover in 30 days to be lesser");
-		logIsDisplayed(error_max_30day_losses, "error for max losses in 30 days to be lesser");
-		logIsDisplayed(error_max_open_bets, "error for max open bets to be lesser");
-		logIsDisplayed(error_session_duraion_limit, "error for session duration limit to be lesser");
+		logAndAssertIsDisplayed(error_max_balance, "error for max balance need to be lesser");
+		logAndAssertIsDisplayed(error_max_turnover, "error for max turnover to be lesser");
+		logAndAssertIsDisplayed(error_max_losses, "error for max losses to be lesser");
+		logAndAssertIsDisplayed(error_max_7day_turnover, "error for max turnover in 7 days to be lesser");
+		logAndAssertIsDisplayed(error_max_7day_losses, "error for max losses in 7 days to be lesser");
+		logAndAssertIsDisplayed(error_max_30day_turnover, "error for max turnover in 30 days to be lesser");
+		logAndAssertIsDisplayed(error_max_30day_losses, "error for max losses in 30 days to be lesser");
+		logAndAssertIsDisplayed(error_max_open_bets, "error for max open bets to be lesser");
+		logAndAssertIsDisplayed(error_session_duraion_limit, "error for session duration limit to be lesser");
 
 		
 		// Check larger than original value errors displayed
-		logIsValueLargerThanItShuold(error_max_balance, "error for max balance need to be lesser");
-		logIsValueLargerThanItShuold(error_max_turnover, "error for max turnover to be lesser");
-		logIsValueLargerThanItShuold(error_max_losses, "error for max losses to be lesser");
-		logIsValueLargerThanItShuold(error_max_7day_turnover, "error for max turnover in 7 days to be lesser");
-		logIsValueLargerThanItShuold(error_max_7day_losses, "error for max losses in 7 days to be lesser");
-		logIsValueLargerThanItShuold(error_max_30day_turnover, "error for max turnover in 30 days to be lesser");
-		logIsValueLargerThanItShuold(error_max_30day_losses, "error for max losses in 30 days to be lesser");
-		logIsValueLargerThanItShuold(error_max_open_bets, "error for max open bets to be lesser");
-		logIsValueLargerThanItShuold(error_session_duraion_limit, "error for session duration limit to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_balance, "error for max balance need to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_turnover, "error for max turnover to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_losses, "error for max losses to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_7day_turnover, "error for max turnover in 7 days to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_7day_losses, "error for max losses in 7 days to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_30day_turnover, "error for max turnover in 30 days to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_30day_losses, "error for max losses in 30 days to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_max_open_bets, "error for max open bets to be lesser");
+		logAndAssertIsValueLargerThanItShuold(error_session_duraion_limit, "error for session duration limit to be lesser");
 	}
 	
-	// log if error displayed
-	private static void logIsDisplayed(WebElement element, String denoted_item){
-		if(element.isDisplayed()){
+	// logAndAssert if error displayed
+	private static void logAndAssertIsDisplayed(WebElement element, String denoted_item){
+		boolean toBeAssert = element.isDisplayed();
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Displayed : " + denoted_item + ".");
 		}else{
 			System.out.println("Not Displayed : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about valid number
-	private static void logIsValidNumber(WebElement element, String denoted_item){
-		if(element.getText().equals("Should be a valid number")){
+	// logAndAssert if error is about valid number
+	private static void logAndAssertIsValidNumber(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Should be a valid number");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Valid Error Shown : non-numeric " + denoted_item + ".");
 		}else{
 			System.out.println("Not Valid Error Shown : non-numeric " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is required field
-	private static void logIsRequiredErrorFieldShown(WebElement element, String denoted_item){
-		if(element.getText().equals("This field is required.")){
+	// logAndAssert if error is required field
+	private static void logAndAssertIsRequiredErrorFieldShown(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("This field is required.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Required Field Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not Required Field Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about valid date
-	private static void logIsValidDate(WebElement element, String denoted_item){
-		if(element.getText().equals("Please select a valid date.")){
+	// logAndAssert if error is about valid date
+	private static void logAndAssertIsValidDate(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Please select a valid date.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Valid Date Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Valid Date Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about timeout date is more than 6 weeks 
-	private static void logIsSixWeek_TimeOut(WebElement element, String denoted_item){
-		if(element.getText().equals("Time out cannot be more than 6 weeks.")){
+	// logAndAssert if error is about timeout date is more than 6 weeks 
+	private static void logAndAssertIsSixWeek_TimeOut(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Time out cannot be more than 6 weeks.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("6 weeks Timeout Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not 6 weeks Timeout Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about exclusion date lesser than 6 months
-	private static void logIsSixMonthLesser_Exclusion(WebElement element, String denoted_item){
-		if(element.getText().equals("Exclude time cannot be less than 6 months.")){
+	// logAndAssert if error is about exclusion date lesser than 6 months
+	private static void logAndAssertIsSixMonthLesser_Exclusion(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Exclude time cannot be less than 6 months.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("6 Month lesser Exlusion Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not 6 Month lesser Exlusion Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about exlcusion date more than 5 years
-	private static void logIsFiveYearMore_Exclusion(WebElement element, String denoted_item){
-		if(element.getText().equals("Exclude time cannot be for more than 5 years.")){
+	// logAndAssert if error is about exlcusion date more than 5 years
+	private static void logAndAssertIsFiveYearMore_Exclusion(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Exclude time cannot be for more than 5 years.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("5 years more Exlusion Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not 5 years more Exlusion Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if error is about timeout having date before today
-	private static void logIsPassDate_Timeout(WebElement element, String denoted_item){
+	// logAndAssert if error is about timeout having date before today
+	private static void logAndAssertIsPassDate_Timeout(WebElement element, String denoted_item){
 		if(element.getText().equals("Time out must be after today.")){
 			System.out.println("Pass date timeout Error Shown : " + denoted_item + ".");
 		}else{
@@ -470,18 +484,22 @@ public class SetSelfExclusionPage_Action {
 		}
 	}
 	
-	// log if error is about timeout having time in the past
-	private static void logIsPassTime_Timeout(WebElement element, String denoted_item){
-		if(element.getText().equals("Time out cannot be in the past.")){
+	// logAndAssert if error is about timeout having time in the past
+	private static void logAndAssertIsPassTime_Timeout(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().equals("Time out cannot be in the past.");
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Pass time Timeout Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not Pass time Timeout Error Shown : " + denoted_item + ".");
 		}
 	}
 	
-	// log if value is larger than it should
-	private static void logIsValueLargerThanItShuold(WebElement element, String denoted_item){
-		if(element.getText().toLowerCase().contains(("Should be between").toLowerCase())){
+	// logAndAssert if value is larger than it should
+	private static void logAndAssertIsValueLargerThanItShuold(WebElement element, String denoted_item){
+		boolean toBeAssert = element.getText().toLowerCase().contains(("Should be between").toLowerCase());
+		Assert.assertTrue(toBeAssert);
+		if(toBeAssert){
 			System.out.println("Value Larger Than Original Error Shown : " + denoted_item + ".");
 		}else{
 			System.out.println("Not Value Larger Than It Should  Error Shown : " + denoted_item + ".");
