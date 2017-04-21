@@ -41,12 +41,4 @@ public class Login_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find 'Lost Password?' link on the login page
-	public static WebElement lost_password(WebDriver driver)
-	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.id("lost-password")));
-		Assert.assertTrue(element.isDisplayed());
-		return element;
-	}
 }
