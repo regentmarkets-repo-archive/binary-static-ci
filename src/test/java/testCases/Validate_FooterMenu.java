@@ -35,11 +35,11 @@ public WebDriver driver;
 
   } 
 //Test Method to navigate each of links and check the URL
-  @Test
+  @Test(priority=3)
   public void listAllLink() {
       FooterMenu_Action.ListLinks(driver);
   }
-  
+
   //Test Method to close the browser session
   @AfterTest
   public void endSession() {
