@@ -4,13 +4,15 @@ package testCases;
 
 import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
+import pageObjects.Footer_Menu;
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import utility.Constant;
-import appModules.FooterMenu_Action;
+import appModules.VerifyLinks_Action;
 import appModules.Navigation_Action;
 
 public class Validate_FooterMenu {
@@ -31,13 +33,12 @@ public WebDriver driver;
   //Test Method to count footer menu links
   @Test(priority=2)
   public void checkFooter() {
-      FooterMenu_Action.ExecuteCount(driver);
-
+      VerifyLinks_Action.ExecuteCount(driver);
   } 
-//Test Method to navigate each of links and check the URL
+//Test Method to verify all list
   @Test(priority=3)
   public void listAllLink() {
-      FooterMenu_Action.ListLinks(driver);
+      VerifyLinks_Action.ListLinks(driver, Footer_Menu.footerString(driver));
   }
 
   //Test Method to close the browser session
