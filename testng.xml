@@ -6,7 +6,7 @@
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
-		<test name="CheckLoginHistoryPage">
+	<test name="CheckLoginHistoryPage">
 		<classes>
 			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
@@ -36,13 +36,13 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
-	<test name="CheckFooterMenu">
+	<test name="CheckLinks">
 		<classes>
-			<class name="testCases.Validate_FooterMenu" />
-</classes>
-</test>
+			<class name="testCases.Validate_Links" />
+		</classes>
+	</test>
 	<test name="CheckLimitsPage">
-	<classes>
+		<classes>
 			<class name="testCases.Validate_Limits" />
 		</classes>
 	</test>
@@ -54,7 +54,6 @@
 	<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
-
 		</classes>
 	</test>
 </suite>
