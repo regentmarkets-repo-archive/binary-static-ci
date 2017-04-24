@@ -36,7 +36,12 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
-		<test name="CheckAuthorisedApplication">
+	<test name="CheckLimitsPage">
+		<classes>
+			<class name="testCases.Validate_Limits" />
+		</classes>
+	</test>
+	<test name="CheckAuthorisedApplication">
 		<classes>
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
