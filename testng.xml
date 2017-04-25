@@ -46,12 +46,17 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
+	<test name="CheckLimitsPage">
+		<classes>
+			<class name="testCases.Validate_Limits" />
+		</classes>
+	</test>
 	<test name="CheckAuthorisedApplication">
 		<classes>
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
 	</test>
-		<test name="checkTokenAPI">
+	<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
