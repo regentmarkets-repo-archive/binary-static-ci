@@ -91,7 +91,7 @@ public class Navigation_Action {
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
 	  // navigates to self exclution page
-    public static void Navigate_To_SelfExclusionPage(WebDriver driver) {
+    public static void Navigate_To_SelfExclusionPage_ValidateInput(WebDriver driver) {
         MainAccount_Menu.link_MainAccount(driver).click();
         MainAccount_Menu.link_Security(driver).click();
         Security_Page.link_SelfExclusionPage(driver).click();
