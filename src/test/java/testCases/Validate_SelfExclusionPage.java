@@ -29,7 +29,7 @@ public class Validate_SelfExclusionPage {
     //Test Method to navigate to Self Exclusion page
     @Test(priority=1)
     public void NavigateToSelfExclusionPage() {
-    	Navigation_Action.Navigate_To_SelfExclusionPage(driver);
+    	Navigation_Action.Navigate_To_SelfExclusionPage_ValidateInput(driver);
     }
     
     @Test(priority=2)
