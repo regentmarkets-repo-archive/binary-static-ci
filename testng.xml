@@ -46,7 +46,6 @@
   	    <class name="testCases.Validate_SelfExclusionPage"/>
 	 </classes>
   </test>
-		<test name="CheckAuthorisedApplication">
 	<test name="CheckLimitsPage">
 		<classes>
 			<class name="testCases.Validate_Limits" />
@@ -57,7 +56,7 @@
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
 	</test>
-		<test name="checkTokenAPI">
+	<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
