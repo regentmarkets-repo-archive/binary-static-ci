@@ -79,7 +79,6 @@ public class Navigation_Action {
         Assert.assertTrue(CashierPassword_Page.title_page(driver).isDisplayed());
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
-	  }
 	}
 	public static void Navigate_To_AuthenticationPage(WebDriver driver){
 		driver.get("https://staging.binary.com/en/user/authenticate.html");
