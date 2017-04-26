@@ -4,14 +4,14 @@ import org.apache.commons.lang3.RandomStringUtils;
 
 public class Constant {
 	//Create constant variables
-	public static final String URL = "https://staging.binary.com";
+	public static final String URL = "https://binary-hamedanchi.github.io/binary-static/br_automation/";
 	public static final String Email = "bijan+vi@binary.com";
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
-	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
+	public static final String Endpoint_url = "https://binary-hamedanchi.github.io/binary-static/br_automation/en/endpoint.html";
 	//public static final String Endpoint_url = "https://negarn.github.io/binary-static/en/endpoint.html";
 	public static final String Server = "blue.binaryws.com";
-	public static final String AppID = "1098";
+	public static final String AppID = "1097";
 	public static final String select_value = "";
 	public static final String fx_trading_exerience = "Over 3 years";
 	public static final String fx_trading_frequency = "40 transactions or more in the past 12 months";
