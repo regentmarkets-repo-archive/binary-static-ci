@@ -1,6 +1,8 @@
 package appModules;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import pageObjects.APIToken_Page;
@@ -19,6 +21,7 @@ public class Navigation_Action {
 	
 	public static void Navigate_To_HomePage(WebDriver driver,String URL){
 		driver.get(URL); 
+		
 	}
 	public static void Navigate_To_LoginPage(WebDriver driver){ 
 		Home_Page.btn_Login(driver).click();
@@ -68,8 +71,12 @@ public class Navigation_Action {
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
 	}
-	
-	
+	/*// Test method to select English - Ehtesham added on April 17, 2017
+	public static void Navigate_To_LoginPageDateSelection(WebDriver driver){ 
+		Home_Page.btn_Login(driver).click();
+		Select language = new Select(Home_Page.lb_language(driver));
+		language.selectByValue("English");
+	}*/
 	
 
 }

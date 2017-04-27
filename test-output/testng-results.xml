@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="82726" started-at="2017-04-27T19:03:53Z" finished-at="2017-04-27T19:05:16Z">
+    <groups>
+    </groups>
+    <test name="Default test" duration-ms="82726" started-at="2017-04-27T19:03:53Z" finished-at="2017-04-27T19:05:16Z">
+      <class name="testCases.Validate_NewAccount">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Validate_NewAccount@4b952a2d]" name="setUp" is-config="true" duration-ms="7246" started-at="2017-04-28T00:03:53Z" finished-at="2017-04-28T00:04:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="SetServer()[pri:0, instance:testCases.Validate_NewAccount@4b952a2d]" name="SetServer" duration-ms="2143" started-at="2017-04-28T00:04:00Z" finished-at="2017-04-28T00:04:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetServer -->
+        <test-method status="PASS" signature="NewClientRegistration()[pri:1, instance:testCases.Validate_NewAccount@4b952a2d]" name="NewClientRegistration" duration-ms="73304" started-at="2017-04-28T00:04:02Z" finished-at="2017-04-28T00:05:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NewClientRegistration -->
+      </class> <!-- testCases.Validate_NewAccount -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

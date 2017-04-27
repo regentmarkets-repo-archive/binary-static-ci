@@ -17,4 +17,26 @@ private static WebElement element = null;
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
+	//method to go find logo 
+	public static WebElement logo(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,60);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.id("logo")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Email text box on home page
+	public static WebElement txt_Email(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,60);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find create free account button on home page
+	public static WebElement btn_CreateFreeAccount(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,60);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_verify_email")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
 }
