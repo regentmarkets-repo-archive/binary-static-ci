@@ -145,7 +145,7 @@ public class FinancialAssessment_Page {
 	//Method to find success message text field
 	public static WebElement msg_Success(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@id,'msg_form')]")));
+		element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[@id='msg_form']/ul/li")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
@@ -279,6 +279,20 @@ public class FinancialAssessment_Page {
 	public static WebElement error_NetWorth(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[18]/div[2]/div")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find  Anticipated Account Turnover field
+	public static WebElement select_AnticipatedAccountTurnover(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='account_turnover']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Anticipated Account Turnover error message text field
+	public static WebElement error_AnticipatedAccountTurnover(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[19]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
