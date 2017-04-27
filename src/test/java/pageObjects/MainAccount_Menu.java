@@ -23,6 +23,13 @@ public class MainAccount_Menu {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
+		//Method to find active account
+		public static WebElement link_ActiveAccount(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='all-accounts']/li/a/div[1]/div[2]")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
 		//Method to find logout link
 		public static WebElement link_Logout(WebDriver driver){
 			WebDriverWait wait = new WebDriverWait(driver,30);
@@ -44,4 +51,11 @@ public class MainAccount_Menu {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
+	      //Method try check authentication message 
+        public static WebElement auth_msg(WebDriver driver){
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='msg_notification']")));
+            Assert.assertTrue(element.isDisplayed());
+            return element;
+        }
 }

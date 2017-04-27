@@ -37,7 +37,7 @@ public class Validate_SetFinancialAssessment {
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
 			if(FinancialAssessment_Page.msg_Success(driver).isDisplayed()){
 				System.out.println(FinancialAssessment_Page.msg_Success(driver).getText());
 			}	
@@ -54,7 +54,8 @@ public class Validate_SetFinancialAssessment {
 		 	ChromeDriverManager.getInstance().setup();
 	    	driver = new ChromeDriver();
 			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			Navigation_Action.Navigate_To_HomePage(driver, Constant.URL);
+			driver.get(Constant.URL);
+			
 	  }
   //Test Method to close the browser session
   @AfterTest

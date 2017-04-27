@@ -8,6 +8,10 @@ public class Constant {
 	public static final String Email = "bijan+vi@binary.com";
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
+	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
+	//public static final String Endpoint_url = "https://negarn.github.io/binary-static/en/endpoint.html";
+	public static final String Server = "blue.binaryws.com";
+	public static final String AppID = "1098";
 	public static final String select_value = "";
 	public static final String fx_trading_exerience = "Over 3 years";
 	public static final String fx_trading_frequency = "40 transactions or more in the past 12 months";
@@ -27,6 +31,7 @@ public class Constant {
 	public static final String income_source = "Investments & Dividends";
 	public static final String annual_income = "$100,001 - $500,000";
 	public static final String net_worth = "$250,001 - $500,000";
+	public static final String anticipated_account = "$100,001 - $500,000";
 	public static final String v_tokenName = "TestToken";
 	public static final String inv_tokenName = "a";
 	public static final String inv_tokenName2 = "R12&%&";
