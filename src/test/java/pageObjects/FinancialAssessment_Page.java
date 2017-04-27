@@ -156,129 +156,143 @@ public class FinancialAssessment_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for forex trading experience error message text field
+	//Method to find forex trading experience error message text field
 	public static WebElement error_ForexTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[1]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for forex trading frequency error message text field
+	//Method to find forex trading frequency error message text field
 	public static WebElement error_ForexTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[2]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for indices trading experience error message text field
+	//Method to find indices trading experience error message text field
 	public static WebElement error_IndicesTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[3]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for indices trading frequency error message text field
+	//Method to find indices trading frequency error message text field
 	public static WebElement error_IndicesTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[4]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for commodities trading experience error message text field
+	//Method to find commodities trading experience error message text field
 	public static WebElement error_CommoditiesTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[5]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for commodities trading frequency error message text field
+	//Method to find commodities trading frequency error message text field
 	public static WebElement error_CommoditiesTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[6]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for stocks trading experience error message text field
+	//Method to find stocks trading experience error message text field
 	public static WebElement error_StocksTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[7]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for stocks trading frequency error message text field
+	//Method to find stocks trading frequency error message text field
 	public static WebElement error_StocksTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[8]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for other derivatives trading experience error message text field
+	//Method to find other derivatives trading experience error message text field
 	public static WebElement error_OtherDerivativesTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[9]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for other derivatives trading frequency error message text field
+	//Method to find  other derivatives trading frequency error message text field
 	public static WebElement error_OtherDerivativesTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[10]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for other trading experience error message text field
+	//Method to find other trading experience error message text field
 	public static WebElement error_OtherTradingExperience(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[11]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for other trading frequency error message text field
+	//Method to find other trading frequency error message text field
 	public static WebElement error_OtherTradingFrequency(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[12]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for industry employment error message text field
+	//Method to find industry employment error message text field
 	public static WebElement error_IndustryEmployment(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[13]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for occupation error message text field
+	//Method to find occupation error message text field
 	public static WebElement error_Occupation(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[14]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for education error message text field
+	//Method to find education error message text field
 	public static WebElement error_Education(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[15]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for source of income error message text field
+	//Method to find source of income error message text field
 	public static WebElement error_IncomeSource(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[16]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for annual income error message text field
+	//Method to find annual income error message text field
 	public static WebElement error_AnnualIncome(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[17]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	//Method to find  for net worth error message text field
+	//Method to find net worth error message text field
 	public static WebElement error_NetWorth(WebDriver driver){
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[18]/div[2]/div")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find  Anticipated Account Turnover field
+	public static WebElement select_AnticipatedAccountTurnover(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='account_turnover']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Anticipated Account Turnover error message text field
+	public static WebElement error_AnticipatedAccountTurnover(WebDriver driver){
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[19]/div[2]/div")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
