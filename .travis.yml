@@ -25,7 +25,7 @@ before_script:
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
   
-after_success:
+after_script:
   - cat target/surefire-reports/*.txt
   
 notifications:
