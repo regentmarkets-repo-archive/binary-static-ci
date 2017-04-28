@@ -35,5 +35,7 @@ notifications:
       - dmytro@binary.com
       - ehtesham@binary.com
       - parashuram@binary.com
+      - negar@binary.com
+      - kelly@binary.com
     on_success: never
     on_failure: always
