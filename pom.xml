@@ -58,7 +58,7 @@
 					<!--  Email subject -->
 					<subject>Test Automation Report</subject>
 					<!-- Fail the build if the mail doesnt reach -->
-					<failonerror>false</failonerror>
+					<failonerror>true</failonerror>
 					 <!-- Email Body Content -->
                           <htmlMessage>
                                     <![CDATA[
@@ -150,10 +150,5 @@
   		<artifactId>webdrivermanager</artifactId>
   		<version>1.6.0</version>
   	</dependency>
-    <dependency>
-    <groupId>com.relevantcodes</groupId>
-    <artifactId>extentreports</artifactId>
-    <version>2.40.2</version>
-	</dependency>
   </dependencies>
 </project>
