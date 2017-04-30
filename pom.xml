@@ -58,7 +58,7 @@
 					<!--  Email subject -->
 					<subject>Test Automation Report</subject>
 					<!-- Fail the build if the mail doesnt reach -->
-					<failonerror>true</failonerror>
+					<failonerror>false</failonerror>
 					 <!-- Email Body Content -->
                           <htmlMessage>
                                     <![CDATA[
