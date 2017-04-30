@@ -58,7 +58,6 @@
 					<!--  Email subject -->
 					<subject>Test Automation Report</subject>
 					<!-- Fail the build if the mail doesnt reach -->
-					<groovyCondition><![CDATA[errors < skipped]]></groovyCondition>
 					<failonerror>true</failonerror>
 					 <!-- Email Body Content -->
                           <htmlMessage>
@@ -73,7 +72,7 @@
 					<mailport>465</mailport>
 					<mailssl>true</mailssl>
 					<mailAltConfig>true</mailAltConfig>
-					<!-- Email Authentication(USername and Password) -->
+					<!-- Email Authentication(Username and Password) -->
 					<mailuser>autotest66@gmail.com</mailuser>
 					<mailpassword>B!n@ry99</mailpassword>
 					<receivers>
