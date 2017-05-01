@@ -26,7 +26,7 @@ before_script:
   - sleep 3 # give xvfb some time to start
   
 after_script:
-  - cat target/surefire-reports/*.txt
+  - cat target/surefire-reports/TestSuite.txt
   
 notifications:
   email:
