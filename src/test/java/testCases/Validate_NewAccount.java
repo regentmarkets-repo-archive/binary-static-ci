@@ -42,7 +42,7 @@ public void SetServer()
 	String sEmail = "autobinary"+helperutility.Get_CurrentTicks();//appened with current ticks
 	CreateFreeAccount_Action.CreateFreeAccount(driver,sEmail+"@mailinator.com");
     String token = helperutility.Get_VerificationToken(driver, sEmail);
-	//country code should be passed e.g for Pkaistan ,pk
+	//country code should be passed e.g for Pakistan ,pk
     CreateFreeAccount_Action.VerifyNewAccount(driver, token,Constant.Password,Constant.Password,"pk");
     //Logout newly created user
     Navigation_Action.Navigate_To_LogoutPage(driver);
@@ -59,19 +59,19 @@ public void SetServer()
 	 //assert error message
 	 NewAccount_Page.Err_Message(driver,"Invalid email address","Email field required error message do not displayed");
  }
- //create account with invalid verification token/paassword
+ //create account with invalid verification token/password
  @Test(priority=3)
  public void Validate_VerificationInfo()
  {
 	 CreateFreeAccount_Action.Refresh_Page(driver);
-	 String sEmail = "autobinary"+helperutility.Get_CurrentTicks();//appened with current ticks
+	 String sEmail = "autobinary"+helperutility.Get_CurrentTicks();//appended with current ticks to make eail unique
 	 CreateFreeAccount_Action.CreateFreeAccount(driver,sEmail+"@mailinator.com");//create account
 	 String token = helperutility.Get_VerificationToken(driver, sEmail);
 	 //enter invalid token
 	 CreateFreeAccount_Action.VerifyAccountValiation(driver, "7hg56fds",Constant.Password,Constant.Password,"pk");
 	 driver.get(Constant.URL+"/en/new_account/virtualws.html");
 	 CreateFreeAccount_Action.Refresh_Page(driver);
-	 //enter wrong password less than 6 charc 
+	 //enter wrong password less than 6 char 
 	 CreateFreeAccount_Action.VerifyAccountValiation(driver, token,"1234",Constant.Password,"pk");
 	 //assert error message
 	 NewAccount_Page.Err_Message(driver,"You should enter 6-25 characters.","password length issue");
