@@ -6,6 +6,7 @@ import pageObjects.Endpoint_Page;
 import pageObjects.Home_Page;
 
 public class Endpoint_Action {
+	//method to set server with end point
 	public static void SetServer(WebDriver driver, String server,String appId)
 	{
 		//clear the text field for server

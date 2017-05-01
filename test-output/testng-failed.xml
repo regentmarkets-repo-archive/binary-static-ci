@@ -5,7 +5,7 @@
     <classes>
       <class name="testCases.Validate_NewAccount">
         <methods>
-          <include name="NewClientRegistration"/>
+          <include name="Validate_VerificationInfo"/>
           <include name="setUp"/>
         </methods>
       </class> <!-- testCases.Validate_NewAccount -->

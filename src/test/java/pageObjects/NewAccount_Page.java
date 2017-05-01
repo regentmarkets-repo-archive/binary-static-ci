@@ -1,5 +1,7 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -59,5 +61,23 @@ public class NewAccount_Page {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
-		
+	//method to get email error message
+		public static void Err_Message(WebDriver driver,String Expectedmessage,String message)
+		{
+			List<WebElement> errorlist = null;
+			List<String> itemList = null;
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error-msg']")));
+			errorlist = driver.findElements(By.xpath("//div[@class='error-msg']"));
+			for(int i=0;i<=errorlist.size();i++)
+			{
+				if(errorlist.get(i).isDisplayed() && Expectedmessage.equals(errorlist.get(i).getText()))
+				{
+					Assert.assertTrue(true,message);
+					break;
+				}
+				//itemList.add(errorlist.get(i).getText());
+			}
+		}
+	
 }

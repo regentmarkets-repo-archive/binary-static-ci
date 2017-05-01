@@ -113,5 +113,10 @@ public class Navigation_Action {
     	MainMenu_Tab.link_TradeMenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+  //go to home page
+  	public static void Go_Home_Page(WebDriver driver)
+  	{
+  	    Home_Page.logo(driver).click();
+  	}
 
 }

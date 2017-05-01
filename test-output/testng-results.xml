@@ -1,24 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="82726" started-at="2017-04-27T19:03:53Z" finished-at="2017-04-27T19:05:16Z">
+  <suite name="Default suite" duration-ms="181958" started-at="2017-04-29T06:18:39Z" finished-at="2017-04-29T06:21:40Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="82726" started-at="2017-04-27T19:03:53Z" finished-at="2017-04-27T19:05:16Z">
+    <test name="Default test" duration-ms="181958" started-at="2017-04-29T06:18:39Z" finished-at="2017-04-29T06:21:40Z">
       <class name="testCases.Validate_NewAccount">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Validate_NewAccount@4b952a2d]" name="setUp" is-config="true" duration-ms="7246" started-at="2017-04-28T00:03:53Z" finished-at="2017-04-28T00:04:00Z">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Validate_NewAccount@6adede5]" name="setUp" is-config="true" duration-ms="6463" started-at="2017-04-29T11:18:39Z" finished-at="2017-04-29T11:18:45Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="SetServer()[pri:0, instance:testCases.Validate_NewAccount@4b952a2d]" name="SetServer" duration-ms="2143" started-at="2017-04-28T00:04:00Z" finished-at="2017-04-28T00:04:02Z">
+        <test-method status="PASS" signature="SetServer()[pri:0, instance:testCases.Validate_NewAccount@6adede5]" name="SetServer" duration-ms="2151" started-at="2017-04-29T11:18:45Z" finished-at="2017-04-29T11:18:47Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetServer -->
-        <test-method status="PASS" signature="NewClientRegistration()[pri:1, instance:testCases.Validate_NewAccount@4b952a2d]" name="NewClientRegistration" duration-ms="73304" started-at="2017-04-28T00:04:02Z" finished-at="2017-04-28T00:05:16Z">
+        <test-method status="PASS" signature="NewClientRegistration()[pri:1, instance:testCases.Validate_NewAccount@6adede5]" name="NewClientRegistration" duration-ms="79935" started-at="2017-04-29T11:18:47Z" finished-at="2017-04-29T11:20:07Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- NewClientRegistration -->
+        <test-method status="PASS" signature="Valiate_EmailField()[pri:2, instance:testCases.Validate_NewAccount@6adede5]" name="Valiate_EmailField" duration-ms="3794" started-at="2017-04-29T11:20:07Z" finished-at="2017-04-29T11:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Valiate_EmailField -->
+        <test-method status="PASS" signature="Validate_VerificationInfo()[pri:3, instance:testCases.Validate_NewAccount@6adede5]" name="Validate_VerificationInfo" duration-ms="89574" started-at="2017-04-29T11:20:11Z" finished-at="2017-04-29T11:21:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Validate_VerificationInfo -->
       </class> <!-- testCases.Validate_NewAccount -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
