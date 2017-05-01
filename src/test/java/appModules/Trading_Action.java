@@ -214,14 +214,17 @@ public class Trading_Action {
 			SelectEnterAmount(driver,"0.34",amount_type);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
 			SelectEnterAmount(driver,"51000",amount_type);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
 		}
 		else if (market=="Forex"){
 			SelectEnterAmount(driver,"0.49",amount_type);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
 			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
+			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
 			SelectEnterAmount(driver,"21000",amount_type);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
 			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
@@ -233,6 +236,7 @@ public class Trading_Action {
 			SelectEnterAmount(driver,"5100",amount_type);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
 		}
 	}
 	public static void ValidateBarrierField(WebDriver driver,String submarket,String amount_type){
