@@ -41,7 +41,7 @@
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
 	</test>
-		<test name="CheckTokenAPI">
+		<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
