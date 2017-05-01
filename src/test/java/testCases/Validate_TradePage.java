@@ -99,6 +99,7 @@ public class Validate_TradePage {
 	//Test Method to check error validation for payout amount fields
 	@Test(priority=9)
 	public void CheckErrorValidationForPayout() {
+		driver.navigate().refresh();
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
@@ -110,7 +111,6 @@ public class Validate_TradePage {
 	//Test Method to check error validation for barrier offset fields
 	@Test(priority=10)
 	public void CheckErrorValidationForBarrierOffset() {
-		driver.navigate().refresh();
 		Trading_Action.NavigateToTouchNoTouch(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateBarrierField(driver,"TouchNoTouch","Payout");
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 50 Index");
