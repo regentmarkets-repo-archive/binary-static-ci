@@ -1,16 +1,13 @@
 package testCases;
 
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import pageObjects.Home_Page;
 import utility.Constant;
 import appModules.Logout_Action;
@@ -113,6 +110,7 @@ public class Validate_TradePage {
 	//Test Method to check error validation for barrier offset fields
 	@Test(priority=10)
 	public void CheckErrorValidationForBarrierOffset() {
+		driver.navigate().refresh();
 		Trading_Action.NavigateToTouchNoTouch(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateBarrierField(driver,"TouchNoTouch","Payout");
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 50 Index");
