@@ -97,16 +97,12 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
-	@Test(enabled=false)
+	@Test(priority=11)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Commodities", "Gold/USD");
-		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
-
-		
+		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");		
 	}
 	//Test Method to check error validation for payout amount fields
 	@Test(priority=10)
