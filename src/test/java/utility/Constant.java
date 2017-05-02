@@ -32,6 +32,7 @@ public class Constant {
 	public static final String income_source = "Investments & Dividends";
 	public static final String annual_income = "$100,001 - $500,000";
 	public static final String net_worth = "$250,001 - $500,000";
+	public static final String anticipated_account = "$100,001 - $500,000";
 	public static final String v_tokenName = "TestToken";
 	public static final String inv_tokenName = "a";
 	public static final String inv_tokenName2 = "R12&%&";
