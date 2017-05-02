@@ -85,7 +85,7 @@ public class Trading_Action {
 	}
 	public static void SelectEnterAmount(WebDriver driver,String amount_value,String amount_type) {
 		//Select duration and Enter amount
-		SelectEnterDuration(driver,"1","d");
+		SelectEnterDuration(driver,"5","m");
 		Select oSelect = new Select(Trade_Page.select_AmountType(driver));
 		oSelect.selectByVisibleText(amount_type);
 		Actions builder = new Actions(driver);
@@ -212,31 +212,31 @@ public class Trading_Action {
 	public static void ValidateAmountField(WebDriver driver,String market,String amount_type){
 		if(market=="Volatility Indices"){
 			SelectEnterAmount(driver,"0.34",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
-			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
+			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
 			SelectEnterAmount(driver,"51000",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
-			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
+			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
+			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
 		}
 		else if (market=="Forex"){
 			SelectEnterAmount(driver,"0.49",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
-			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
 			SelectEnterAmount(driver,"21000",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 20,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 		}
 		else if (market=="Commodities"){
 			SelectEnterAmount(driver,"0.49",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			SelectEnterAmount(driver,"5100",amount_type);
-			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
-			Assert.assertEquals(Trade_Page.err_BottomPurchase(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
-			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
+			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
 		}
 	}
 	public static void ValidateBarrierField(WebDriver driver,String submarket,String amount_type){
