@@ -241,8 +241,15 @@ public class Trading_Action {
 	}
 	public static void ValidateBarrierField(WebDriver driver,String submarket,String amount_type){
 		if(submarket=="TouchNoTouch"){
-		SelectEnterAmount(driver,"10",amount_type);
-		Trade_Page.txt_BarrierOffset(driver).clear();
+			Select dSelect = new Select(Trade_Page.select_Duration(driver));
+			dSelect.selectByValue("duration");
+			Select tSelect = new Select(Trade_Page.select_DurationUnits(driver));
+			tSelect.selectByValue("d");
+			Actions action = new Actions(driver);
+			action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
+			Trade_Page.txt_DurationAmount(driver).sendKeys("1");
+			Trade_Page.txt_BarrierOffset(driver).click();
+			Trade_Page.txt_BarrierOffset(driver).clear();
 		Trade_Page.txt_BarrierOffset(driver).sendKeys("0");
 		Assert.assertEquals(Trade_Page.err_BarrierPipsTop(driver).getText(), "Barrier must be at least 2 pips away from the spot.");
 		Assert.assertEquals(Trade_Page.err_BarrierPipsTop(driver).getText(), "Barrier must be at least 2 pips away from the spot.");
@@ -252,7 +259,14 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeTop(driver).getText(), "Barrier is out of acceptable range.");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	} else if(submarket=="HigherLower"){
-		SelectEnterAmount(driver,"10",amount_type);
+		Select dSelect = new Select(Trade_Page.select_Duration(driver));
+		dSelect.selectByValue("duration");
+		Select tSelect = new Select(Trade_Page.select_DurationUnits(driver));
+		tSelect.selectByValue("d");
+		Actions action = new Actions(driver);
+		action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
+		Trade_Page.txt_DurationAmount(driver).sendKeys("1");
+		Trade_Page.txt_BarrierOffset(driver).click();
 		Trade_Page.txt_BarrierOffset(driver).clear();
 		Trade_Page.txt_BarrierOffset(driver).sendKeys("0");
 		Assert.assertEquals(Trade_Page.err_BarrierZeroTop(driver).getText(), "Absolute barrier cannot be zero");
