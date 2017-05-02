@@ -96,20 +96,8 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
-	//Test Method to check error validation for payout amount fields
-	@Test(priority=9)
-	public void CheckErrorValidationForPayout() {
-		driver.navigate().refresh();	
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
-		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
-		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
-		Trading_Action.ValidateAmountField(driver,"Commodities","Payout");
-
-	}
 	//Test Method to check error validation for barrier offset fields
-	@Test(priority=10)
+	@Test(priority=9)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
@@ -119,6 +107,18 @@ public class Validate_TradePage {
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
 		
 	}
+	//Test Method to check error validation for payout amount fields
+	@Test(priority=10)
+	public void CheckErrorValidationForPayout() {	
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
+		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
+		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
+		Trading_Action.ValidateAmountField(driver,"Commodities","Payout");
+
+	}
+
 	 //Test Method to logout
 	 @Test(priority=11)
 	  public void Logout() {
