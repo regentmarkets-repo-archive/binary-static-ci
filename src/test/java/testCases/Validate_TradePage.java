@@ -97,7 +97,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
-	@Test(priority=9)
+	@Test(enabled=false)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
@@ -108,7 +108,7 @@ public class Validate_TradePage {
 		
 	}
 	//Test Method to check error validation for payout amount fields
-	@Test(priority=10)
+	@Test(enabled=false)
 	public void CheckErrorValidationForPayout() {	
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
