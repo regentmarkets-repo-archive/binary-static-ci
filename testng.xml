@@ -11,6 +11,11 @@
 			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
 	</test>
+	<test name="LoginWithIncorrectPassword">
+		<classes>
+			<class name="testCases.Validate_LoginPage" />
+		</classes>
+	</test>
 	<test name="SetFinancialAssessment">
 		<classes>
 			<class name="testCases.Validate_SetFinancialAssessment" />
@@ -39,6 +44,11 @@
 	<test name="CheckLinks">
 		<classes>
 			<class name="testCases.Validate_Links" />
+		</classes>
+	</test>
+	<test name="ValidateSelfExclusionInput">
+		<classes>
+			<class name="testCases.Validate_SelfExclusionPage" />
 		</classes>
 	</test>
 	<test name="CheckLimitsPage">
