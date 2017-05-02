@@ -83,9 +83,9 @@ public class Trading_Action {
 		Trade_Page.txt_DurationAmount(driver).sendKeys(durationAmount);
 		Trade_Page.txt_Amount(driver).click();
 	}
-	public static void SelectEnterAmount(WebDriver driver,String amount_value,String amount_type) {
+	public static void SelectEnterAmount(WebDriver driver,String amount_value,String amount_type,String durationAmount,String durationUnits) {
 		//Select duration and Enter amount
-		SelectEnterDuration(driver,"5","m");
+		SelectEnterDuration(driver,durationAmount,durationUnits);
 		Select oSelect = new Select(Trade_Page.select_AmountType(driver));
 		oSelect.selectByVisibleText(amount_type);
 		Actions builder = new Actions(driver);
@@ -211,29 +211,29 @@ public class Trading_Action {
 	}
 	public static void ValidateAmountField(WebDriver driver,String market,String amount_type){
 		if(market=="Volatility Indices"){
-			SelectEnterAmount(driver,"0.34",amount_type);
+			SelectEnterAmount(driver,"0.34",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
-			SelectEnterAmount(driver,"51000",amount_type);
+			SelectEnterAmount(driver,"51000",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00");
 			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
 		}
 		else if (market=="Forex"){
-			SelectEnterAmount(driver,"0.49",amount_type);
+			SelectEnterAmount(driver,"0.49",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
-			SelectEnterAmount(driver,"21000",amount_type);
+			SelectEnterAmount(driver,"21000",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 		}
 		else if (market=="Commodities"){
-			SelectEnterAmount(driver,"0.49",amount_type);
+			SelectEnterAmount(driver,"0.49",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
-			SelectEnterAmount(driver,"5100",amount_type);
+			SelectEnterAmount(driver,"5100",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00");
 			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
@@ -241,37 +241,13 @@ public class Trading_Action {
 	}
 	public static void ValidateBarrierField(WebDriver driver,String submarket,String amount_type){
 		if(submarket=="TouchNoTouch"){
-			Select dSelect = new Select(Trade_Page.select_Duration(driver));
-			dSelect.selectByValue("duration");
-			Select tSelect = new Select(Trade_Page.select_DurationUnits(driver));
-			tSelect.selectByValue("d");
-			Actions action = new Actions(driver);
-			action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
-			Trade_Page.txt_DurationAmount(driver).sendKeys("1");
-			Trade_Page.txt_BarrierOffset(driver).click();
-			Trade_Page.txt_BarrierOffset(driver).clear();
-		Trade_Page.txt_BarrierOffset(driver).sendKeys("0");
-		Assert.assertEquals(Trade_Page.err_BarrierPipsTop(driver).getText(), "Barrier must be at least 2 pips away from the spot.");
-		Assert.assertEquals(Trade_Page.err_BarrierPipsTop(driver).getText(), "Barrier must be at least 2 pips away from the spot.");
-		SelectEnterAmount(driver,"10",amount_type);
+		SelectEnterAmount(driver,"10",amount_type,"15","m");
 		Trade_Page.txt_BarrierOffset(driver).clear();
 		Trade_Page.txt_BarrierOffset(driver).sendKeys("2");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeTop(driver).getText(), "Barrier is out of acceptable range.");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	} else if(submarket=="HigherLower"){
-		Select dSelect = new Select(Trade_Page.select_Duration(driver));
-		dSelect.selectByValue("duration");
-		Select tSelect = new Select(Trade_Page.select_DurationUnits(driver));
-		tSelect.selectByValue("d");
-		Actions action = new Actions(driver);
-		action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
-		Trade_Page.txt_DurationAmount(driver).sendKeys("1");
-		Trade_Page.txt_BarrierOffset(driver).click();
-		Trade_Page.txt_BarrierOffset(driver).clear();
-		Trade_Page.txt_BarrierOffset(driver).sendKeys("0");
-		Assert.assertEquals(Trade_Page.err_BarrierZeroTop(driver).getText(), "Absolute barrier cannot be zero");
-		Assert.assertEquals(Trade_Page.err_BarrierZeroTop(driver).getText(), "Absolute barrier cannot be zero");
-		SelectEnterAmount(driver,"10",amount_type);
+		SelectEnterAmount(driver,"10",amount_type,"15","m");
 		Trade_Page.txt_BarrierOffset(driver).clear();
 		Trade_Page.txt_BarrierOffset(driver).sendKeys("2");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeTop(driver).getText(), "Barrier is out of acceptable range.");

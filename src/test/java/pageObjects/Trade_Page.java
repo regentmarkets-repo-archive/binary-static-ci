@@ -367,7 +367,6 @@ public class Trade_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	
 	//Method to find Start Time dropdown
 	public static WebElement select_StartTime(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
@@ -382,6 +381,4 @@ public class Trade_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	
-
 }
