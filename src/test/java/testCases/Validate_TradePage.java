@@ -118,8 +118,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateAmountField(driver,"Commodities","Payout");
 
 	}
-
-	 //Test Method to logout
+	//Test Method to logout
 	 @Test(priority=11)
 	  public void Logout() {
 			Logout_Action.Execute(driver);
