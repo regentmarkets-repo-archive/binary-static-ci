@@ -88,6 +88,7 @@ public class SelfExclusionPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("timeout_until_date")));
+		element = element.findElement(By.className("ui-state-default"));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
