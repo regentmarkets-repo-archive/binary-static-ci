@@ -91,7 +91,6 @@ public class SetSelfExclusionPage_Action {
 		// get elements
 		WebElement date = SelfExclusionPage.date_TimeOutUntilDate(driver);
 		WebElement time = SelfExclusionPage.time_TimeOutUntilTime(driver);
-		WebElement todayDate = SelfExclusionPage.date_FindTodayDateViaPicker(driver);
 		
 		// clear them
 		date.clear();
@@ -99,6 +98,9 @@ public class SetSelfExclusionPage_Action {
 		
 		// clear date field and check if time field error will appear
 		date.click();
+
+		WebElement todayDate = SelfExclusionPage.date_FindTodayDateViaPicker(driver);
+		
 		todayDate.click();
 		WebElement error_time = SelfExclusionPage.error_TimeOutUntilTime(driver);
 		logAndAssertIsDisplayed(error_time, "error for required time");
