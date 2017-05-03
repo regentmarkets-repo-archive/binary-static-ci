@@ -91,174 +91,19 @@ public class SetSelfExclusionPage_Action {
 		// get elements
 		WebElement date = SelfExclusionPage.date_TimeOutUntilDate(driver);
 		WebElement time = SelfExclusionPage.time_TimeOutUntilTime(driver);
+		WebElement todayDate = SelfExclusionPage.date_FindTodayDateViaPicker(driver);
 		
 		// clear them
 		date.clear();
 		time.clear();
-
-		// clear time field and check if date field error will appear
-		time.sendKeys(DateUtil.getCurrentTime());
-		WebElement error_date = SelfExclusionPage.error_TimeOutUntilDate(driver);
-		logAndAssertIsDisplayed(error_date, "error for required date");
-		logAndAssertIsRequiredErrorFieldShown(error_date, "error for required date");
-		time.clear();
 		
 		// clear date field and check if time field error will appear
-		date.sendKeys(DateUtil.getTodayDate());
+		date.click();
+		todayDate.click();
 		WebElement error_time = SelfExclusionPage.error_TimeOutUntilTime(driver);
 		logAndAssertIsDisplayed(error_time, "error for required time");
 		logAndAssertIsRequiredErrorFieldShown(error_time, "error for required time");
 		date.clear();
-	}
-	
-	// test if the date fields error will appear if input non-valid dates
-	public static void testValidDate(WebDriver driver){
-		
-		// get elements
-		WebElement date_timeout = SelfExclusionPage.date_TimeOutUntilDate(driver);
-		WebElement time_timeout = SelfExclusionPage.time_TimeOutUntilTime(driver);
-		WebElement date_exclusion = SelfExclusionPage.date_ExcludeUntil(driver);
-		
-		// clear them all
-		date_timeout.clear();
-		time_timeout.clear();
-		date_exclusion.clear();
-		
-		// key in non date values
-		date_timeout.sendKeys(notDate);
-		time_timeout.sendKeys(notDate);
-		date_exclusion.sendKeys(notDate);
-		
-		//get error elements
-		WebElement error_date_timeout = SelfExclusionPage.error_TimeOutUntilDate(driver);
-		WebElement error_time_timeout = SelfExclusionPage.error_TimeOutUntilTime(driver);
-		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
-		
-		// see if those errors are displayed
-		logAndAssertIsDisplayed(error_date_timeout, "error of timeout date");
-		logAndAssertIsDisplayed(error_time_timeout, "error of timeout time");
-		logAndAssertIsDisplayed(error_date_exclusion, "error of exclusion date");
-		
-		// see if error for valid date is shown or not
-		logAndAssertIsValidDate(error_date_timeout, "error of timeout date is not date");
-		logAndAssertIsValidDate(error_date_exclusion, "error of exclusion date is not date");
-		
-		// see if error for valid time is shown or not
-		if(error_time_timeout.getText().equals("Time out cannot be in the past.")){
-			System.out.println("Valid Time Error Shown : error of timeout time.");
-		}else{
-			System.out.println("Not Valid Time Error Shown : error of timeout time.");
-		}
-	}
-	
-	// test if error will appear if inputed date after 6 weeks in timeout field
-	public static void testTimeOutSixWeekAfter_TimeOut(WebDriver driver){
-		
-		// get elements
-		WebElement date_timeout = SelfExclusionPage.date_TimeOutUntilDate(driver);
-		WebElement time_timeout = SelfExclusionPage.time_TimeOutUntilTime(driver);
-		
-		// clear them
-		date_timeout.clear();
-		time_timeout.clear();
-		
-		// key in date after 6 weeks and current time
-		date_timeout.sendKeys(DateUtil.getSixWeekLaterDate());
-		time_timeout.sendKeys(DateUtil.getCurrentTime());
-		
-		// get error element
-		WebElement error_date_timeout = SelfExclusionPage.error_TimeOutUntilDate(driver);
-		
-		// logAndAssert whether error is displayed and has correct 6 weeks timeout error
-		logAndAssertIsDisplayed(error_date_timeout, "error of 6 weeks timeout");
-		logAndAssertIsSixWeek_TimeOut(error_date_timeout, "error of 6 weeks timeout");
-	}
-	
-	// test exclusion 6 months earlier date error
-	public static void testSixMonthLesser_Exclusion(WebDriver driver){
-		
-		// get element and clear them
-		WebElement date_exclusion = SelfExclusionPage.date_ExcludeUntil(driver);
-		date_exclusion.clear();
-		
-		// send in date lesser than 6 months onto exclusion date field
-		date_exclusion.sendKeys(DateUtil.getSixMonthLesserDate());
-		
-		// get error element
-		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
-		
-		// logAndAssert if error displayed and error lesser than 6 months appear
-		logAndAssertIsDisplayed(error_date_exclusion, "error of 6 months lesser exclusion");
-		logAndAssertIsSixMonthLesser_Exclusion(error_date_exclusion, "error of 6 months lesser exclusion");
-	}
-	
-	// test if date after 5 years appear in exclusion date field
-	public static void testFiveYearLater_Exclusion(WebDriver driver){
-		
-		// get element and clear it
-		WebElement date_exclusion = SelfExclusionPage.date_ExcludeUntil(driver);
-		date_exclusion.clear();
-		
-		// send in date after five years onto exclusion date field
-		date_exclusion.sendKeys(DateUtil.getFiveYearLaterDate());
-		
-		// get error element
-		WebElement error_date_exclusion = SelfExclusionPage.error_ExcludeUntil(driver);
-		
-		// logAndAssert if error displayed and date after 5 years error shown
-		logAndAssertIsDisplayed(error_date_exclusion, "error of 5 yeears later exclusion");
-		logAndAssertIsFiveYearMore_Exclusion(error_date_exclusion, "error of 5 yeears later exclusion");
-	}
-	
-	// test if yesterdays date is inputed onto timeout field
-	public static void testYesterdayDate_Timeout(WebDriver driver){
-		
-		// get element
-		WebElement date_timeout = SelfExclusionPage.date_TimeOutUntilDate(driver);
-		WebElement time_timeout = SelfExclusionPage.time_TimeOutUntilTime(driver);
-
-		// clear them
-		date_timeout.clear();
-		time_timeout.clear();
-		
-		// send in yesterday date and current time onto timeout date and time field.
-		date_timeout.sendKeys(DateUtil.getYesterdayDate());
-		time_timeout.sendKeys(DateUtil.getCurrentTime());
-		
-		// get their error elements
-		WebElement error_date_timeout = SelfExclusionPage.error_TimeOutUntilDate(driver);
-		WebElement error_time_timeout = SelfExclusionPage.error_TimeOutUntilTime(driver);
-		
-		// logAndAssert if errors displayed
-		logAndAssertIsDisplayed(error_date_timeout, "error of yesterday date timeout");
-		logAndAssertIsDisplayed(error_time_timeout, "error of yesterday time timeout");
-		
-		// logAndAssert if correct error shown
-		logAndAssertIsPassDate_Timeout(error_date_timeout, "error of yesterday date timeout");
-		logAndAssertIsPassTime_Timeout(error_time_timeout, "error of yesterday time timeout");
-	}
-	
-	// test if time 5 minutes before now is inputed onto timeout
-	public static void testFiveMinuteAgo_Timeout(WebDriver driver){
-		
-		// get elements
-		WebElement date_timeout = SelfExclusionPage.date_TimeOutUntilDate(driver);
-		WebElement time_timeout = SelfExclusionPage.time_TimeOutUntilTime(driver);
-		
-		// clear them
-		date_timeout.clear();
-		time_timeout.clear();
-		
-		// send in today date onto timeout date field and time 5 minutes ago onto timeout time field
-		date_timeout.sendKeys(DateUtil.getTodayDate());
-		time_timeout.sendKeys(DateUtil.getFiveMinutesAgoTime());
-		
-		// get timeout time field error element
-		WebElement error_time_timeout = SelfExclusionPage.error_TimeOutUntilTime(driver);
-		
-		// check if time field error appear and pass time timeout error appeared
-		logAndAssertIsDisplayed(error_time_timeout, "error of pass time timeout");
-		logAndAssertIsPassTime_Timeout(error_time_timeout, "error of pass time timeout");
 	}
 	
 	public static void testNotMoreThanPrevious(WebDriver driver){

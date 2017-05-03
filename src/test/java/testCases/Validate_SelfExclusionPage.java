@@ -43,41 +43,11 @@ public class Validate_SelfExclusionPage {
     }
     
     @Test(priority=4)
-    public void TestValidDate(){
-    	SetSelfExclusionPage_Action.testValidDate(driver);
-    }
-    
-    @Test(priority=5)
-    public void TestTimeOutSixWeekAfter_TimeOut(){
-    	SetSelfExclusionPage_Action.testTimeOutSixWeekAfter_TimeOut(driver);
-    }
-    
-    @Test(priority=6)
-    public void TestSixMonthLesser_Exclusion(){
-    	SetSelfExclusionPage_Action.testSixMonthLesser_Exclusion(driver);
-    }
-    
-    @Test(priority=7)
-    public void TestFiveYearLater_Exclusion(){
-    	SetSelfExclusionPage_Action.testFiveYearLater_Exclusion(driver);
-    }
-    
-    @Test(priority=8)
-    public void TestYesterdayDate_Timeout(){
-    	SetSelfExclusionPage_Action.testYesterdayDate_Timeout(driver);
-    }
-    
-    @Test(priority=9)
-    public void TestFiveMinuteAgo_Timeout(){
-    	SetSelfExclusionPage_Action.testFiveMinuteAgo_Timeout(driver);
-    }
-    
-    @Test(priority=10)
     public void Refresh(){
     	driver.navigate().refresh();
     }
     
-    @Test(priority=10)
+    @Test(priority=5)
     public void TestNotMoreThanPrevious(){
     	SetSelfExclusionPage_Action.testNotMoreThanPrevious(driver);
     }
