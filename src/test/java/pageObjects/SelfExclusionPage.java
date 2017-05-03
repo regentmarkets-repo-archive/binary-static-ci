@@ -88,16 +88,14 @@ public class SelfExclusionPage {
 	{
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("timeout_until_date")));
-		element = element.findElement(By.className("ui-state-default"));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	
 	public static WebElement date_FindTodayDateViaPicker(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("ui-datepicker-today")));
-		Assert.assertTrue(element.isDisplayed());
+		element = driver.findElement(By.className("ui-datepicker-today"));
+		element = element.findElement(By.className("ui-state-default"));
 		return element;
 	}
 	

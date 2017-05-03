@@ -90,22 +90,18 @@ public class SetSelfExclusionPage_Action {
 		
 		// get elements
 		WebElement date = SelfExclusionPage.date_TimeOutUntilDate(driver);
-		WebElement time = SelfExclusionPage.time_TimeOutUntilTime(driver);
 		
-		// clear them
-		date.clear();
-		time.clear();
-		
-		// clear date field and check if time field error will appear
+		// get date picker to appear
 		date.click();
-
-		WebElement todayDate = SelfExclusionPage.date_FindTodayDateViaPicker(driver);
 		
+		// click today's date
+		WebElement todayDate = SelfExclusionPage.date_FindTodayDateViaPicker(driver);
 		todayDate.click();
+		
+		// get error and log it and asserts it.
 		WebElement error_time = SelfExclusionPage.error_TimeOutUntilTime(driver);
 		logAndAssertIsDisplayed(error_time, "error for required time");
 		logAndAssertIsRequiredErrorFieldShown(error_time, "error for required time");
-		date.clear();
 	}
 	
 	public static void testNotMoreThanPrevious(WebDriver driver){
