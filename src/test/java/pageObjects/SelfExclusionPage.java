@@ -92,6 +92,13 @@ public class SelfExclusionPage {
 		return element;
 	}
 	
+	public static WebElement date_FindTodayDateViaPicker(WebDriver driver)
+	{
+		element = driver.findElement(By.className("ui-datepicker-today"));
+		element = element.findElement(By.className("ui-state-default"));
+		return element;
+	}
+	
 	public static WebElement date_ExcludeUntil(WebDriver driver)
 	{
 		WebDriverWait wait = new WebDriverWait(driver,30);
@@ -215,14 +222,6 @@ public class SelfExclusionPage {
 		return element;
 	}
 	
-	public static WebElement error_ExcludeUntil(WebDriver driver)
-	{
-		element = GetUtil.getParent(date_ExcludeUntil(driver)).findElement(By.className("error-msg"));
-		WebDriverWait wait = new WebDriverWait(driver,10);
-		wait.until(ExpectedConditions.visibilityOf(element));
-		Assert.assertTrue(element.isDisplayed());
-		return element;
-	}
 	
 	public static WebElement error_Submit(WebDriver driver)
 	{
