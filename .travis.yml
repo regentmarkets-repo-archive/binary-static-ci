@@ -24,6 +24,10 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
+  
+after_script:
+  - cat target/surefire-reports/*.txt
+  
 notifications:
   email:
     recipients:

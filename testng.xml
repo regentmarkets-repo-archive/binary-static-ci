@@ -60,5 +60,5 @@
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
-	</test>
+		</test>
 </suite>
