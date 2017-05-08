@@ -15,30 +15,31 @@ import appModules.Navigation_Action;
 
 public class Validate_APITokenPage {
     public WebDriver driver;
-    //Test method to login 
+    //Test method to login
     @Test(priority=0)
     public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
-    } 
+    }
     //Test Method to navigate to API Token page
     @Test(priority=1)
     public void NavigateToAPITokenPage() {
     	Navigation_Action.Navigate_To_SecurityPage(driver);
     	Navigation_Action.Navigate_To_APITokenPage(driver);
+        System.out.println(driver.getCurrentUrl());
     }
     @Test(priority=2)
         public void CheckPageLoad() {
             APIToken_Action.checkTitle(driver);
         }
-    //Test method to check scope validation 
+    //Test method to check scope validation
     @Test(priority=3)
     public void CheckScopeValidation() {
         APIToken_Action.ScopeValidation(driver);
         if(APIToken_Page.scoperror_field(driver).isDisplayed()){
             System.out.println("Scope validation is working ");
             Assert.assertEquals(APIToken_Page.scoperror_field(driver).getText(), "Please select at least one scope");
-        }    
+        }
     }
 
     //Test method to check form validation for minimum token name
@@ -87,7 +88,7 @@ public class Validate_APITokenPage {
         driver = new ChromeDriver();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
         driver.get(Constant.URL);
-		
+
     }
     //Test Method to close browser session
     @AfterTest
