@@ -6,6 +6,16 @@
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
+	<test name="CheckLoginHistoryPage">
+		<classes>
+			<class name="testCases.Validate_LoginHistoryPage" />
+		</classes>
+	</test>
+	<test name="LoginWithIncorrectPassword">
+		<classes>
+			<class name="testCases.Validate_LoginPage" />
+		</classes>
+	</test>
 	<test name="SetFinancialAssessment">
 		<classes>
 			<class name="testCases.Validate_SetFinancialAssessment" />
@@ -21,11 +31,6 @@
 			<class name="testCases.Validate_PersonalDetailsPage" />
 		</classes>
 	</test>
-	<test name="CheckLoginHistoryPage">
-		<classes>
-			<class name="testCases.Validate_LoginHistoryPage" />
-		</classes>
-	</test>
 	<test name="ChangePasswordPage">
 		<classes>
 			<class name="testCases.Validate_ChangePasswordPage" />
@@ -36,12 +41,27 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
-		<test name="CheckAuthorisedApplication">
+	<test name="CheckLinks">
+		<classes>
+			<class name="testCases.Validate_Links" />
+		</classes>
+	</test>
+	<test name="ValidateSelfExclusionInput">
+		<classes>
+			<class name="testCases.Validate_SelfExclusionPage" />
+		</classes>
+	</test>
+	<test name="CheckLimitsPage">
+		<classes>
+			<class name="testCases.Validate_Limits" />
+		</classes>
+	</test>
+	<test name="CheckAuthorisedApplication">
 		<classes>
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
 	</test>
-		<test name="checkTokenAPI">
+	<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
