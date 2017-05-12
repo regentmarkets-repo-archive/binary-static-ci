@@ -13,6 +13,7 @@ import pageObjects.CashierPassword_Page;
 import pageObjects.ChangePassword_Page;
 import pageObjects.Home_Page;
 import pageObjects.Login_History;
+import pageObjects.Login_Page;
 import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Profile_Page;
