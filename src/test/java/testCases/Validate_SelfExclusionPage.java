@@ -47,7 +47,7 @@ public class Validate_SelfExclusionPage {
     	driver.navigate().refresh();
     }
     
-    @Test(priority=5)
+    @Test(enabled=false)
     public void TestNotMoreThanPrevious(){
     	SetSelfExclusionPage_Action.testNotMoreThanPrevious(driver);
     }

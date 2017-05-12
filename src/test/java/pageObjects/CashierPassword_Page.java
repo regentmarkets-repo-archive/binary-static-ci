@@ -19,7 +19,7 @@ public class CashierPassword_Page {
     //Method to find lock cashier form title 
     public static WebElement title_form(WebDriver driver) {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='frm_cashier_password']/div[1]/div/fieldset/legend")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_cashier_password']/fieldset/legend")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -37,24 +37,24 @@ public class CashierPassword_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-    ///Method to find confirm cashier password text box
+    ///Method to find update button
     public static WebElement updateButton(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='frm_cashier_password']/div[2]/div/button")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='btn_submit']")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
     ///Method to find error message of cashier password 
     public static WebElement errMsg_1(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='frm_cashier_password']/div[1]/div/fieldset/div[2]/div[2]/div[2]")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_cashier_password']/fieldset/div[2]/div[2]/div[2]")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
     ///Method to find error message of confirm cashier password 
     public static WebElement errMsg_2(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='repeat_password_row']/div[2]/div")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='frm_cashier_password']/fieldset/div[3]/div[2]/div")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -75,7 +75,7 @@ public class CashierPassword_Page {
     //Check find unlock title
     public static WebElement unlock_title(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='frm_cashier_password']/div[1]/div/fieldset/legend")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/h1")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
