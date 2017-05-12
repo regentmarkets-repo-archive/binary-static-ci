@@ -9,7 +9,6 @@ public class Constant {
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
 	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
-	//public static final String Endpoint_url = "https://negarn.github.io/binary-static/en/endpoint.html";
 	public static final String Server = "blue.binaryws.com";
 	public static final String AppID = "1098";
 	public static final String select_value = "";
