@@ -65,7 +65,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
 	//Test Method to check error validation for all mins duration fields
-	@Test(priority=6)
+	@Test(enabled=false)
 	public void CheckErrorValidationForDurationMins() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"m");
@@ -77,7 +77,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"m");
 	}
 	//Test Method to check error validation for all hours duration fields
-	@Test(priority=7)
+	@Test(enabled=false)
 	public void CheckErrorValidationForDurationHours() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"h");
