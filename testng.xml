@@ -36,11 +36,6 @@
 			<class name="testCases.Validate_ChangePasswordPage" />
 		</classes>
 	</test>
-	<test name="CheckCashierPassword">
-		<classes>
-			<class name="testCases.Validate_CashierPassword" />
-		</classes>
-	</test>
 	<test name="CheckLinks">
 		<classes>
 			<class name="testCases.Validate_Links" />
