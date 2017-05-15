@@ -65,7 +65,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
 	//Test Method to check error validation for all mins duration fields
-	@Test(enabled=false)
+	@Test(priority=6)
 	public void CheckErrorValidationForDurationMins() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"m");
@@ -77,7 +77,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"m");
 	}
 	//Test Method to check error validation for all hours duration fields
-	@Test(enabled=false)
+	@Test(priority=7)
 	public void CheckErrorValidationForDurationHours() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"h");
@@ -97,7 +97,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
-	@Test(priority=11)
+	@Test(priority=9)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
