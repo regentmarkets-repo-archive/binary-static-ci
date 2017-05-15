@@ -44,7 +44,7 @@ public class CreateFreeAccount_Action {
 		//check client landed on trade
 		Assert.assertEquals(NewAccount_Page.IsClientOnTrade(driver).getText(),"Trade");
 	}
-	public static void VerifyAccountValiation(WebDriver driver,String token,String pwd,String cPwd,String c)
+	public static void VerifyAccountValidation(WebDriver driver,String token,String pwd,String cPwd,String c)
 	{
 		//redirect to verification page from mailbox to create account
 		Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/new_account/virtualws.html");

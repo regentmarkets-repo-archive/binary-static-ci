@@ -73,11 +73,12 @@ public class NewAccount_Page {
 			{
 				if(errorlist.get(i).isDisplayed() && Expectedmessage.equals(errorlist.get(i).getText()))
 				{
-					Assert.assertTrue(true,message);
+					Assert.assertTrue(true);
 					break;
 				}
 				//itemList.add(errorlist.get(i).getText());
 			}
+			Assert.assertTrue(false,message);
 		}
 	
 }

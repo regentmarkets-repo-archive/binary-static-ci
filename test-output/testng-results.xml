@@ -1,33 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="4" passed="4">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="181958" started-at="2017-04-29T06:18:39Z" finished-at="2017-04-29T06:21:40Z">
+  <suite name="Default suite" duration-ms="230198" started-at="2017-05-12T03:02:50Z" finished-at="2017-05-12T03:06:41Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="181958" started-at="2017-04-29T06:18:39Z" finished-at="2017-04-29T06:21:40Z">
-      <class name="testCases.Validate_NewAccount">
-        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Validate_NewAccount@6adede5]" name="setUp" is-config="true" duration-ms="6463" started-at="2017-04-29T11:18:39Z" finished-at="2017-04-29T11:18:45Z">
+    <test name="Default test" duration-ms="230198" started-at="2017-05-12T03:02:50Z" finished-at="2017-05-12T03:06:41Z">
+      <class name="testCases.Dummy_Practice">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:testCases.Dummy_Practice@6adede5]" name="setUp" is-config="true" duration-ms="6254" started-at="2017-05-12T08:02:50Z" finished-at="2017-05-12T08:02:57Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="SetServer()[pri:0, instance:testCases.Validate_NewAccount@6adede5]" name="SetServer" duration-ms="2151" started-at="2017-04-29T11:18:45Z" finished-at="2017-04-29T11:18:47Z">
+        <test-method status="PASS" signature="DummyTestCookie()[pri:0, instance:testCases.Dummy_Practice@6adede5]" name="DummyTestCookie" duration-ms="223913" started-at="2017-05-12T08:02:57Z" finished-at="2017-05-12T08:06:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DummyTestCookie -->
+        <test-method status="PASS" signature="SetServer()[pri:0, instance:testCases.Dummy_Practice@6adede5]" name="SetServer" duration-ms="0" started-at="2017-05-12T08:06:41Z" finished-at="2017-05-12T08:06:41Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- SetServer -->
-        <test-method status="PASS" signature="NewClientRegistration()[pri:1, instance:testCases.Validate_NewAccount@6adede5]" name="NewClientRegistration" duration-ms="79935" started-at="2017-04-29T11:18:47Z" finished-at="2017-04-29T11:20:07Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- NewClientRegistration -->
-        <test-method status="PASS" signature="Valiate_EmailField()[pri:2, instance:testCases.Validate_NewAccount@6adede5]" name="Valiate_EmailField" duration-ms="3794" started-at="2017-04-29T11:20:07Z" finished-at="2017-04-29T11:20:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Valiate_EmailField -->
-        <test-method status="PASS" signature="Validate_VerificationInfo()[pri:3, instance:testCases.Validate_NewAccount@6adede5]" name="Validate_VerificationInfo" duration-ms="89574" started-at="2017-04-29T11:20:11Z" finished-at="2017-04-29T11:21:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Validate_VerificationInfo -->
-      </class> <!-- testCases.Validate_NewAccount -->
+      </class> <!-- testCases.Dummy_Practice -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

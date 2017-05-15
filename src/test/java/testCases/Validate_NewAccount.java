@@ -3,10 +3,12 @@ package testCases;
 import java.util.List;
 import java.util.concurrent.TimeUnit;
 
+import org.openqa.selenium.Cookie;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
+import java.util.Date;
 
 import appModules.CreateFreeAccount_Action;
 import appModules.Endpoint_Action;
@@ -68,21 +70,21 @@ public void SetServer()
 	 CreateFreeAccount_Action.CreateFreeAccount(driver,sEmail+"@mailinator.com");//create account
 	 String token = helperutility.Get_VerificationToken(driver, sEmail);
 	 //enter invalid token
-	 CreateFreeAccount_Action.VerifyAccountValiation(driver, "7hg56fds",Constant.Password,Constant.Password,"pk");
+	 CreateFreeAccount_Action.VerifyAccountValidation(driver, "7hg56fds",Constant.Password,Constant.Password,"pk");
 	 driver.get(Constant.URL+"/en/new_account/virtualws.html");
 	 CreateFreeAccount_Action.Refresh_Page(driver);
 	 //enter wrong password less than 6 char 
-	 CreateFreeAccount_Action.VerifyAccountValiation(driver, token,"1234",Constant.Password,"pk");
+	 CreateFreeAccount_Action.VerifyAccountValidation(driver, token,"1234",Constant.Password,"pk");
 	 //assert error message
 	 NewAccount_Page.Err_Message(driver,"You should enter 6-25 characters.","password length issue");
 	 driver.get(Constant.URL+"/en/new_account/virtualws.html");
-	 CreateFreeAccount_Action.VerifyAccountValiation(driver, token,"123456",Constant.Password,"pk");
+	 CreateFreeAccount_Action.VerifyAccountValidation(driver, token,"123456",Constant.Password,"pk");
 	 NewAccount_Page.Err_Message(driver,"Password should have lower and uppercase letters with numbers.","password format issue");
 	 driver.get(Constant.URL+"/en/new_account/virtualws.html");
-	 CreateFreeAccount_Action.VerifyAccountValiation(driver, token,Constant.Password,"123456","pk");
+	 CreateFreeAccount_Action.VerifyAccountValidation(driver, token,Constant.Password,"123456","pk");
 	 NewAccount_Page.Err_Message(driver,"The two passwords that you entered do not match.","password mismatch issue");
 	 driver.get(Constant.URL+"/en/new_account/virtualws.html");
-	 CreateFreeAccount_Action.VerifyAccountValiation(driver, token,Constant.Password,Constant.Password,"pk");
+	 CreateFreeAccount_Action.VerifyAccountValidation(driver, token,Constant.Password,Constant.Password,"pk");
 	 Navigation_Action.Navigate_To_LogoutPage(driver);
  }
  

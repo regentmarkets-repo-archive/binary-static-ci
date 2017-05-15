@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.Validate_NewAccount">
+      <class name="testCases.Dummy_Practice">
         <methods>
-          <include name="Validate_VerificationInfo"/>
+          <include name="DummyTestCookie"/>
           <include name="setUp"/>
         </methods>
-      </class> <!-- testCases.Validate_NewAccount -->
+      </class> <!-- testCases.Dummy_Practice -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
