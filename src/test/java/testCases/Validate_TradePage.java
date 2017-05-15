@@ -86,7 +86,7 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToInOutStaysInGoesOut(driver, "Volatility Indices", "Volatility 25 Index");
 		Trading_Action.ValidateDurationFields(driver,"h");
 	}
-	//Test Method to check error validation for all days duration fields
+	//Test Method to check error validation for all day duration fields
 	@Test(priority=8)
 	public void CheckErrorValidationForDurationDays() {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Indices", "Australian Index");
