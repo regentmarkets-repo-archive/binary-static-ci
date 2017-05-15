@@ -64,7 +64,7 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
-	//Test Method to check error validation for all mins duration fields
+	//Test Method to check error validation for all minutes duration fields
 	@Test(priority=6)
 	public void CheckErrorValidationForDurationMins() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
