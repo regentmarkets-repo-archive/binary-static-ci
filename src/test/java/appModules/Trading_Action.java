@@ -1,7 +1,5 @@
 package appModules;
 
-
-
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
@@ -12,6 +10,7 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
 import pageObjects.Trade_Page;
+import testCases.Validate_TradePage;
 import utility.ListsUtil;
 
 public class Trading_Action {
@@ -96,12 +95,15 @@ public class Trading_Action {
 		seriesofActions.perform();
 	}
 	public static void NavigateToUpDownRiseFall(WebDriver driver,String market,String asset) {
+		//Navigate to UpDown->Rise/Fall
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
 		aSelect.selectByVisibleText(asset);
 		Trade_Page.link_UpDown(driver).click();
 		Trade_Page.link_RiseFall(driver).click();
+		Select sSelect = new Select(Trade_Page.select_StartTime(driver));
+		sSelect.selectByValue("now");
 	}
 	public static void NavigateToUpDownHigherLower(WebDriver driver,String market,String asset) {
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
@@ -253,8 +255,33 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeTop(driver).getText(), "Barrier is out of acceptable range.");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
+}
+	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
+		SelectEnterDuration(driver,duration,durationType);
+		Trade_Page.btn_TopPurchase(driver).click();
+		Assert.assertEquals(Trade_Page.txt_ContractPurchaseHeading(driver).getText(), "Contract Confirmation");
+		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + durationType + " after contract start time.";
+		Assert.assertEquals(Trade_Page.txt_ContractPurchaseDescription(driver).getText(), purchaseDesc);
+		Assert.assertEquals(Trade_Page.txt_PotentialPayout(driver).getText(),amount);
+		String purchaseReference = Trade_Page.txt_ContractPurchaseReference(driver).getText();
+		String [] arrSplit = purchaseReference.split(" ");
+		String referenceNumber = arrSplit[4];
+		Trade_Page.btn_View(driver).click();
+		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
+		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver), purchaseDesc);
+		Assert.assertEquals(Trade_Page.txt_TradeDetailsReferenceId(driver).getText(), referenceNumber);
+		String entrySpot = Trade_Page.txt_TradeDetailsEntrySpot(driver).getText();
+		String exitSpot = Trade_Page.txt_TradeDetailsExitSpot(driver).getText();
+		Assert.assertEquals(Trade_Page.txt_TradeDetailsPayout(driver).getText(),amount);
+		if(Double.parseDouble(exitSpot) > Double.parseDouble(entrySpot)) {
+			Assert.assertTrue(Trade_Page.txt_TradeDetailsProfitLoss(driver).getAttribute("class")=="profit");	
+		}
+		else if(Double.parseDouble(exitSpot) < Double.parseDouble(entrySpot)){
+			Assert.assertTrue(Trade_Page.txt_TradeDetailsProfitLoss(driver).getAttribute("class")=="loss");
+		}
+		Double actualProfitLoss = Double.parseDouble(Trade_Page.txt_TradeDetailsPurchasePrice(driver).getText()) - Double.parseDouble(Trade_Page.txt_TradeDetailsIndicative(driver).getText());
+		Assert.assertEquals(Double.parseDouble(Trade_Page.txt_TradeDetailsProfitLoss(driver).getText()),actualProfitLoss);
 	}
-	
 }
 	
 
