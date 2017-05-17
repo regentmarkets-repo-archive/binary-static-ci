@@ -52,6 +52,9 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
-	public static final String server="blue.binaryws.com";
-	public static final String appId="1098";
+	public static final String targetserver="www.binaryqa12.com";
+	public static final String appId="1003";
+	public static final String qaserver_duoBypass = "4de0d8776777fef60279d5da1beb7301a5da1721f43d374323c12bd1ade1d748";
+	public static final String devQaServer = "dev.binaryqa12.com";
+	public static final String dev_duoBypass="355bbb6eaf2f0916ed528cc64f34ae289dbaf44907a5fba9d57f5488b441905c";
 }

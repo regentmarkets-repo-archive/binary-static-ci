@@ -49,7 +49,7 @@ public class NewAccount_Page {
 		public static WebElement btn_CreateAccount(WebDriver driver)
 		{
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='formlayout']/button")));
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='virtual-form']/div/button")));
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}

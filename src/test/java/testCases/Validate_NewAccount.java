@@ -35,7 +35,7 @@ public class Validate_NewAccount {
 @Test(priority=0)
 public void SetServer()
 {
-	Endpoint_Action.SetServer(driver,Constant.server,Constant.appId);
+	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
 }
 //create new account with valid data
  @Test(priority=1)

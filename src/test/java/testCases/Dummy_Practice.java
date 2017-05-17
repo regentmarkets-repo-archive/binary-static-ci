@@ -25,40 +25,47 @@ import utility.Constant;
 import utility.Helper;
 
 public class Dummy_Practice {
-	public WebDriver driver;
+	public WebDriver webdriver;
 	Helper helperutility;
 	List<WebElement> tempEmailSubj = new ArrayList<WebElement>();//to store email subjects
 	List<String> AllMailSubjactes = new ArrayList<String>();//to store all emails and then fetch last verify email msg# and go via command
 	List<String> texts = new ArrayList<String>();
 	//Test Method to start browser session
-		@BeforeTest
+		//@BeforeTest
 	    public void setUp() {
 	    	ChromeDriverManager.getInstance().setup();
-	    	driver = new ChromeDriver(); 
-	    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    	driver.manage().window().maximize();
-	    	Navigation_Action.Navigate_To_HomePage(driver,"https://dev.binaryqa12.com");
+	    	webdriver = new ChromeDriver(); 
+	    	webdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    	webdriver.manage().window().maximize();
+	    	Navigation_Action.Navigate_To_HomePage(webdriver,"https://dev.binaryqa12.com");
 	    	//helperutility = new Helper();//get current ticks
 	    	}
-		@Test(priority=0)
+		//@Test(priority=0)
 		public void SetServer()
 		{
 			//Endpoint_Action.SetServer(driver,"www.binaryqa12.com","1003");
 		}
-	@Test
-	 public void DummyTestCookie()
+	//@Test
+	 public String DummyTestCookie()
 	 {
-		 Cookie byPass = new Cookie.Builder("duo_bypass", "550b19dd8919f792976bcc5d85853d04493a05e7757bc4ff0da745926cab40a6")
+		ChromeDriverManager.getInstance().setup();
+		webdriver = new ChromeDriver(); 
+		webdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webdriver.manage().window().maximize();
+    	Navigation_Action.Navigate_To_HomePage(webdriver,"https://dev.binaryqa12.com");
+    	
+		String token = "";
+		 Cookie byPass = new Cookie.Builder("duo_bypass", "9747e0d241c08c196950273ca27746888e595ff3e41146d3bb2bd58216815dfd")
 				    .domain("dev.binaryqa12.com")
 				    .path("/")
 				    .build();
-				driver.manage().addCookie(byPass);
+		 webdriver.manage().addCookie(byPass);
 		//Cookie cfduid = new Cookie.Builder("_cfduid", "dbf3fb7709db0d2ab6cec0315fdbdeefa1494221395")
 			  //  .domain(".binaryqa12.com")
 			   // .path("/")
 			    //.build();
 			//driver.manage().addCookie(cfduid);
-				driver.get("https://dev.binaryqa12.com");
+		 webdriver.get("https://dev.binaryqa12.com");
 				//System.out.println("This is cookie "+cfduid.toString());
 		    try {
 				Thread.sleep(10000);
@@ -199,81 +206,73 @@ public class Dummy_Practice {
 		        	  binaryMails.add(curVal);
 		          }
 		        }
-		        //loop through verification emails
+		        //loop through verification emails 
 		        for (String curVal : binaryMails){
 			         System.out.println(curVal);
 			       }
 		        //get last mail of verification and extract mail number from it
-		        String lastMailtext = binaryMails.get(binaryMails.size()-1);
-		        lastMailtext = lastMailtext.trim().substring(0,lastMailtext.indexOf(' '));
-		        System.out.println("email number"+lastMailtext.trim());
-		        
-		        
-		        
-		        
-		        /*LoadALLMails();//method to get all emails subjects displayed on terminal
-		        boolean status = false;
-		        for(int i=0;i<texts.size();i++)
-		        {
-		        	String mailSubj = texts.get(i);
-		        	System.out.println("Email subject is"+mailSubj);
-		        	mailSubj = mailSubj.substring(mailSubj.lastIndexOf(')')+1);
-		        	System.out.println("Email trimmed subject is"+mailSubj.trim());
-		        	if(mailSubj.trim().equals("Verify your email address - Binaryqa12.com"))
-		        	{
-		        		robot.keyPress(KeyEvent.VK_ENTER);
-				        robot.delay(10);
+		        char[] charArray = StringExtractor(binaryMails.get(binaryMails.size()-1));
+		        //keys to to go to mail content
+		        	//robot.keyPress(KeyEvent.VK_ALT);
+	        		//robot.delay(10);
+	        		//DigitKey(charArray[0]);
+			        //robot.keyRelease(KeyEvent.VK_DOWN);
+		            for(int i=0;i<charArray.length;i++)
+		            {
+		            	DigitKey(charArray[i]);
+		            }
+		            try {
+						Thread.sleep(3000);
+						robot.keyPress(KeyEvent.VK_ENTER);
+		        		robot.delay(10);
 				        robot.keyRelease(KeyEvent.VK_ENTER);
-				        try {
-							Thread.sleep(4000);
-						} catch (InterruptedException e1) {
-							// TODO Auto-generated catch block
-							e1.printStackTrace();
-						}
-				        System.out.println("finding mail contents");
-						WebDriverWait wait = new WebDriverWait(driver, 30);
-				        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
-				        List<WebElement> mailContents = new ArrayList<WebElement>();
-				        mailContents = driver.findElements(By.cssSelector("span.aceterm-line-bg"));
-				        System.out.println("found mail content span");
-				        System.out.println("loading texts list");
-				        List<String> data = new ArrayList<String>();
-				        for (int j=0; j <mailContents.size(); j++){
-				        	
-				        	 try {
-									Thread.sleep(4000);
-									WebDriverWait wait2 = new WebDriverWait(driver, 30);
-									wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
-									//System.out.println("Line#"+i+" is:"+tempEmailSubj.get(i).getText());
-									data.add(mailContents.get(j).getText());
-									if(mailContents.get(j).getText().contains("Enter the following verification token into the form to create an account:"))
-									{
-										System.out.println("Finally the token is here"+mailContents.get(j+1).getText());
-										status = true;
-										break;
-									}
-									
-								} catch (InterruptedException e) {
-									// TODO Auto-generated catch block
-									e.printStackTrace();
+				        Thread.sleep(2000);
+				        robot.keyPress(KeyEvent.VK_ENTER);
+		        		robot.delay(10);
+				        robot.keyRelease(KeyEvent.VK_ENTER);
+					} catch (InterruptedException e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		            try {
+						Thread.sleep(4000);
+					} catch (InterruptedException e1) {
+						// TODO Auto-generated catch block
+						e1.printStackTrace();
+					}
+			        System.out.println("finding mail contents");
+					WebDriverWait wait = new WebDriverWait(webdriver, 30);
+			        wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
+			        List<WebElement> mailContents = new ArrayList<WebElement>();
+			        mailContents = webdriver.findElements(By.cssSelector("span.aceterm-line-bg"));
+			        System.out.println("found mail content span");
+			        System.out.println("loading texts list");
+			        for (int j=0; j <mailContents.size(); j++){
+			        	
+			        	 try {
+								Thread.sleep(3000);
+								WebDriverWait wait2 = new WebDriverWait(webdriver, 30);
+								wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
+								
+								if(mailContents.get(j).getText().contains("Enter the following verification token into the form to create an account:"))
+								{
+									//System.out.println("Finally the token is here:"+mailContents.get(j+2).getText().trim());
+									token = mailContents.get(j+2).getText().trim();
+									break;
 								}
-				        }
-				        if(status){break;}
-				        System.out.println("down key loop");
-		        		robot.keyPress(KeyEvent.VK_DOWN);
-		        		robot.delay(100);
-				        robot.keyRelease(KeyEvent.VK_DOWN);
-				        System.out.println("Loaded list of mails");
-		        	}
-		        	
-		        }
-		        System.out.println("Done");//last email of mailbox
-*/			} catch (AWTException e) {
+								
+							} catch (InterruptedException e) {
+								// TODO Auto-generated catch block
+								e.printStackTrace();
+							}
+			        }
+		        
+		 			} catch (AWTException e) {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    
-		    
+		    webdriver.quit();
+			return token;    
 	 }
 	private void LoadALLMails()
 	{
@@ -285,17 +284,17 @@ public class Dummy_Practice {
 		}
 		texts = new ArrayList<String>();
 		System.out.println("finding mail span");
-		WebDriverWait wait = new WebDriverWait(driver, 30);
+		WebDriverWait wait = new WebDriverWait(webdriver, 30);
         wait.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
         tempEmailSubj = new ArrayList<WebElement>();
-        tempEmailSubj = driver.findElements(By.cssSelector("span.aceterm-line-bg"));
+        tempEmailSubj = webdriver.findElements(By.cssSelector("span.aceterm-line-bg"));
         System.out.println("found mail span");
         System.out.println("loading texts list");
         for (int i=0; i <tempEmailSubj.size(); i++){
         	
         	 try {
 					Thread.sleep(10);
-					WebDriverWait wait2 = new WebDriverWait(driver, 30);
+					WebDriverWait wait2 = new WebDriverWait(webdriver, 30);
 					wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
 					//System.out.println("Line#"+i+" is:"+tempEmailSubj.get(i).getText());
 					texts.add(tempEmailSubj.get(i).getText());
@@ -307,5 +306,87 @@ public class Dummy_Practice {
 				}
         }
         System.out.println("Loaded list of mails");
+	}
+
+	private char[] StringExtractor(String input)
+	{
+		//String input = " 697     May 15 Binary.com      ( 665) Verify your email address - Binaryqa12.com";
+		String trimied = input.trim();
+		input = input.trim().substring(0,trimied.indexOf(' '));
+		System.out.println("My extracted output is:"+input);
+		char[] charArray = new char[input.length()];
+	    for(int i = 0; i < input.length(); i++)
+	    {
+	    	charArray[i] = input.charAt(i);
+	    }
+	    //System.out.println("My 1st value is:"+arr[0]);
+	    //System.out.println("My 2nd value is:"+arr[1]);
+	    //System.out.println("My 3rd value is:"+arr[2]);
+		return charArray;
+	}
+	private void DigitKey(char digit)
+	{
+		Robot robot;
+		try {
+			robot = new Robot();
+			switch(digit) {
+	        case '0' :
+	        	robot.keyPress(KeyEvent.VK_0);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_0);
+	           break;
+	        case '1' :
+	        	robot.keyPress(KeyEvent.VK_1);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_1);
+	           break;
+	        case '2' :
+	        	robot.keyPress(KeyEvent.VK_2);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_2);
+	           break;
+	        case '3' :
+	        	robot.keyPress(KeyEvent.VK_3);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_3);
+	           break;
+	        case '4' :
+	        	robot.keyPress(KeyEvent.VK_4);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_4);
+		        break;
+	        case '5' :
+	        	robot.keyPress(KeyEvent.VK_5);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_5);
+		        break;
+	        case '6' :
+	        	robot.keyPress(KeyEvent.VK_6);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_6);
+	           break;
+	        case '7' :
+	        	robot.keyPress(KeyEvent.VK_7);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_7);
+		        break;
+	        case '8' :
+	        	robot.keyPress(KeyEvent.VK_8);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_8);
+		        break;
+	        case '9' :
+	        	robot.keyPress(KeyEvent.VK_9);
+	    		robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_9);
+		        break;
+	        default :
+	           System.out.println("Invalid Key");
+	     }
+		} catch (AWTException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
 	}
 }
