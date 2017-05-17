@@ -79,7 +79,7 @@ public class Validate_Limits {
 	}
 	
 	//Test Method to check whether the amount displayed correctly
-	@Test(priority=7)
+	@Test(enabled=false)
 	public void Test_Limits_MaxAccountBalance() {	
 		Limits_Action.limit_accbal(driver, getAccBal);
 	}
