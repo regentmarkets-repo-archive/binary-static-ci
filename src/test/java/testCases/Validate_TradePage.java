@@ -89,11 +89,11 @@ public class Validate_TradePage {
 	//Test Method to check error validation for all day duration fields
 	@Test(priority=8)
 	public void CheckErrorValidationForDurationDays() {
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Indices", "Australian Index");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "OTC Stocks", "Airbus");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 25 Index");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
