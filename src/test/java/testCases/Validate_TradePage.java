@@ -47,8 +47,6 @@ public class Validate_TradePage {
 	public void CheckErrorValidationForDurationTicks() {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"t");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
-		Trading_Action.ValidateDurationFields(driver, "t");
 		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver, "t");
 		Trading_Action.NavigateToDigitsOverUnder(driver, "Volatility Indices", "Volatility 25 Index");
