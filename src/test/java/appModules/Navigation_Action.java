@@ -1,12 +1,10 @@
 package appModules;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
-
 import pageObjects.APIToken_Page;
 import pageObjects.AuthorisedApplications_page;
 import pageObjects.CashierPassword_Page;
@@ -17,7 +15,6 @@ import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
-import utility.Constant;
 
 public class Navigation_Action {
 		

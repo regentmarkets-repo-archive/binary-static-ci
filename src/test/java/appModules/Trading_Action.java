@@ -1,16 +1,12 @@
 package appModules;
 
-
-
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import pageObjects.Trade_Page;
 import utility.ListsUtil;
 
@@ -96,14 +92,18 @@ public class Trading_Action {
 		seriesofActions.perform();
 	}
 	public static void NavigateToUpDownRiseFall(WebDriver driver,String market,String asset) {
+		//Navigate to UpDown/RiseFall page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
 		aSelect.selectByVisibleText(asset);
 		Trade_Page.link_UpDown(driver).click();
 		Trade_Page.link_RiseFall(driver).click();
+		Select sSelect = new Select(Trade_Page.select_StartTime(driver));
+		sSelect.selectByValue("now");
 	}
 	public static void NavigateToUpDownHigherLower(WebDriver driver,String market,String asset) {
+		//Navigate to UpDown/HigherLower page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -112,6 +112,7 @@ public class Trading_Action {
 		Trade_Page.link_HigherLower(driver).click();
 	}
 	public static void NavigateToTouchNoTouch(WebDriver driver,String market,String asset) {
+		//Navigate to TouchNoTouch page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -119,6 +120,7 @@ public class Trading_Action {
 		Trade_Page.link_TouchNoTouch(driver).click();
 	}
 	public static void NavigateToInOutEndsInOut(WebDriver driver,String market,String asset) {
+		//Navigate to InOut/EndsInOut page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -127,6 +129,7 @@ public class Trading_Action {
 		Trade_Page.link_EndsInOut(driver).click();
 	}
 	public static void NavigateToInOutStaysInGoesOut(WebDriver driver,String market,String asset) {
+		//Navigate to InOut/StaysInGoesOut page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -135,6 +138,7 @@ public class Trading_Action {
 		Trade_Page.link_StaysInOut(driver).click();
 	}
 	public static void NavigateToAsians(WebDriver driver,String market,String asset) {
+		//Navigate to Asians page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -142,6 +146,7 @@ public class Trading_Action {
 		Trade_Page.link_Asians(driver).click();
 	}
 	public static void NavigateToDigitsMatchesDiffers(WebDriver driver,String market,String asset) {
+		//Navigate to Digits/MatchesDiffers page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -150,6 +155,7 @@ public class Trading_Action {
 		Trade_Page.link_MatchesDiffers(driver).click();
 	}
 	public static void NavigateToDigitsEvenOdd(WebDriver driver,String market,String asset) {
+		//Navigate to Digits/EvenOdd page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -158,6 +164,7 @@ public class Trading_Action {
 		Trade_Page.link_EvenOdd(driver).click();
 	}
 	public static void NavigateToDigitsOverUnder(WebDriver driver,String market,String asset) {
+		//Navigate to Digits/OverUnder page
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
@@ -166,6 +173,7 @@ public class Trading_Action {
 		Trade_Page.link_OverUnder(driver).click();
 	}
 	public static void ValidateDurationFields(WebDriver driver,String durationType){
+		//Method to validate duration fields
 		if(durationType=="t"){
 			SelectEnterDuration(driver,"2",durationType);
 			Assert.assertEquals(Trade_Page.err_TopPurchase(driver).getText(), "Number of ticks must be between 5 and 10.");
@@ -210,6 +218,7 @@ public class Trading_Action {
 		}
 	}
 	public static void ValidateAmountField(WebDriver driver,String market,String amount_type){
+		//Method to validate amount fields
 		if(market=="Volatility Indices"){
 			SelectEnterAmount(driver,"0.34",amount_type,"5","m");
 			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00.");
@@ -240,6 +249,7 @@ public class Trading_Action {
 		}
 	}
 	public static void ValidateBarrierField(WebDriver driver,String submarket,String amount_type){
+		//Method to validate barrier fields
 		if(submarket=="TouchNoTouch"){
 		SelectEnterAmount(driver,"10",amount_type,"15","m");
 		Trade_Page.txt_BarrierOffset(driver).clear();
@@ -253,8 +263,34 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeTop(driver).getText(), "Barrier is out of acceptable range.");
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
+}
+	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
+		//Method to validate top contract purchase
+		SelectEnterDuration(driver,duration,durationType);
+		Trade_Page.btn_TopPurchase(driver).click();
+		Assert.assertEquals(Trade_Page.txt_ContractPurchaseHeading(driver).getText(), "Contract Confirmation");
+		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + durationType + " after contract start time.";
+		Assert.assertEquals(Trade_Page.txt_ContractPurchaseDescription(driver).getText(), purchaseDesc);
+		Assert.assertEquals(Trade_Page.txt_PotentialPayout(driver).getText(),amount);
+		String purchaseReference = Trade_Page.txt_ContractPurchaseReference(driver).getText();
+		String [] arrSplit = purchaseReference.split(" ");
+		String referenceNumber = arrSplit[4];
+		Trade_Page.btn_View(driver).click();
+		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
+		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver), purchaseDesc);
+		Assert.assertEquals(Trade_Page.txt_TradeDetailsReferenceId(driver).getText(), referenceNumber);
+		String entrySpot = Trade_Page.txt_TradeDetailsEntrySpot(driver).getText();
+		String exitSpot = Trade_Page.txt_TradeDetailsExitSpot(driver).getText();
+		Assert.assertEquals(Trade_Page.txt_TradeDetailsPayout(driver).getText(),amount);
+		if(Double.parseDouble(exitSpot) > Double.parseDouble(entrySpot)) {
+			Assert.assertTrue(Trade_Page.txt_TradeDetailsProfitLoss(driver).getAttribute("class")=="profit");	
+		}
+		else if(Double.parseDouble(exitSpot) < Double.parseDouble(entrySpot)){
+			Assert.assertTrue(Trade_Page.txt_TradeDetailsProfitLoss(driver).getAttribute("class")=="loss");
+		}
+		Double actualProfitLoss = Double.parseDouble(Trade_Page.txt_TradeDetailsPurchasePrice(driver).getText()) - Double.parseDouble(Trade_Page.txt_TradeDetailsIndicative(driver).getText());
+		Assert.assertEquals(Double.parseDouble(Trade_Page.txt_TradeDetailsProfitLoss(driver).getText()),actualProfitLoss);
 	}
-	
 }
 	
 

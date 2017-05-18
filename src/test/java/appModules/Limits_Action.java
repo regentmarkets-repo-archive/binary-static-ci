@@ -153,7 +153,7 @@ public class Limits_Action {
 			if(authCheck){
 				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your account is fully authenticated and your withdrawal limits have been lifted.");
 			}else if(!authCheck){
-				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is USD 10,000.");
+				Assert.assertEquals(Limits.select_LimitMsg_1(driver).getText(),"Your withdrawal limit is USD 10,000.00.");
 				
 			}
 		}
