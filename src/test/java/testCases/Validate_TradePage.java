@@ -4,13 +4,10 @@ import io.github.bonigarcia.wdm.ChromeDriverManager;
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-import pageObjects.Home_Page;
 import utility.Constant;
-import appModules.Logout_Action;
 import appModules.Navigation_Action;
 import appModules.Trading_Action;
 
@@ -47,8 +44,6 @@ public class Validate_TradePage {
 	public void CheckErrorValidationForDurationTicks() {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"t");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
-		Trading_Action.ValidateDurationFields(driver, "t");
 		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver, "t");
 		Trading_Action.NavigateToDigitsOverUnder(driver, "Volatility Indices", "Volatility 25 Index");
@@ -64,8 +59,8 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
-	//Test Method to check error validation for all mins duration fields
-	@Test(enabled=false)
+	//Test Method to check error validation for all minutes duration fields
+	@Test(priority=6)
 	public void CheckErrorValidationForDurationMins() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"m");
@@ -77,7 +72,7 @@ public class Validate_TradePage {
 		Trading_Action.ValidateDurationFields(driver,"m");
 	}
 	//Test Method to check error validation for all hours duration fields
-	@Test(enabled=false)
+	@Test(priority=7)
 	public void CheckErrorValidationForDurationHours() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"h");
@@ -86,18 +81,18 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToInOutStaysInGoesOut(driver, "Volatility Indices", "Volatility 25 Index");
 		Trading_Action.ValidateDurationFields(driver,"h");
 	}
-	//Test Method to check error validation for all days duration fields
+	//Test Method to check error validation for all day duration fields
 	@Test(priority=8)
 	public void CheckErrorValidationForDurationDays() {
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Indices", "Australian Index");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "OTC Stocks", "Airbus");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 25 Index");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
-	@Test(priority=11)
+	@Test(priority=9)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
@@ -114,21 +109,14 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
 	}
-	//Test Method to logout
-	 @Test(priority=11)
-	  public void Logout() {
-			Logout_Action.Execute(driver);
-			Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
-	  }
-	 //Test Method to start browser session and launch binary site
-	 @BeforeTest
-	  public void launchApplication() {
-		 	ChromeDriverManager.getInstance().setup();
-	    	driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.get(Constant.URL);
-			
-	  }
+	//Test Method to start browser session and launch binary site
+	@BeforeTest
+	public void launchApplication() {
+		ChromeDriverManager.getInstance().setup();
+	    driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get(Constant.URL);
+	}
  //Test Method to close the browser session
  @AfterTest
  public void endSession() {

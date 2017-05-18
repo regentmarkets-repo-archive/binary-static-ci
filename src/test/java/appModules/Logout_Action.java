@@ -2,7 +2,6 @@ package appModules;
 
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
-
 import pageObjects.MainAccount_Menu;
 public class Logout_Action {
 	//Method to perform logout action

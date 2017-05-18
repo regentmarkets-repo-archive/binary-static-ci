@@ -381,4 +381,140 @@ public class Trade_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
+	//Method to find Contract Confirmation screen
+	public static WebElement screen_ContractConfirmation(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='confirmation_message']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find View button
+	public static WebElement btn_View(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_button']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Potential Payout text
+	public static WebElement txt_PotentialPayout(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_payout']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Total Cost text
+	public static WebElement txt_TotalCost(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_cost']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Potential Profit text
+	public static WebElement txt_PotentialProfit(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_profit']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Contract Purchase description text
+	public static WebElement txt_ContractPurchaseDescription(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_descr']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Contract Purchase heading text
+	public static WebElement txt_ContractPurchaseHeading(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_heading']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Contract Purchase balance text
+	public static WebElement txt_ContractPurchaseBalance(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_balance']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Contract Purchase reference text
+	public static WebElement txt_ContractPurchaseReference(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_purchase_reference']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Sell Popup window
+	public static WebElement window_SellPopup(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='sell_popup_container']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Sell Popup description
+	public static WebElement txt_SellPopupDescription(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='sell_bet_desc']']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Contract Id description
+	public static WebElement txt_TradeDetailsContractId(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_contract_id']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Potential Payout
+	public static WebElement txt_TradeDetailsPayout(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_contract_id']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Purchase Price
+	public static WebElement txt_TradeDetailsPurchasePrice(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_purchase_price']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Entry sPot
+	public static WebElement txt_TradeDetailsEntrySpot(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_entry_spot']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Exit Spot
+	public static WebElement txt_TradeDetailsExitSpot(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_current_spot']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Profit Loss
+	public static WebElement txt_TradeDetailsProfitLoss(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_profit_loss']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Reference Id
+	public static WebElement txt_TradeDetailsReferenceId(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_ref_id']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//Method to find Trade Details Indicative Price
+	public static WebElement txt_TradeDetailsIndicative(WebDriver driver) {
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='trade_details_indicative_price']")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	
+	
+	
 }

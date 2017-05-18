@@ -1,28 +1,15 @@
 package testCases;
 
 import java.util.concurrent.TimeUnit;
-import java.util.Random;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.Assert;
-import org.testng.SkipException;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
-
 import appModules.Limits_Action;
 import appModules.Login_Action;
 import appModules.Navigation_Action;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-import pageObjects.Authentication;
-import pageObjects.ChangePassword_Page;
-import pageObjects.Limits;
-import pageObjects.MainAccount_Menu;
-import pageObjects.PersonalDetails_Page;
-import pageObjects.Profile_Page;
-import pageObjects.Security_Page;
-import pageObjects.Self_Exclusion;
 import utility.Constant;
 import utility.CommonFunctions;
 
@@ -79,7 +66,7 @@ public class Validate_Limits {
 	}
 	
 	//Test Method to check whether the amount displayed correctly
-	@Test(priority=7)
+	@Test(enabled=false)
 	public void Test_Limits_MaxAccountBalance() {	
 		Limits_Action.limit_accbal(driver, getAccBal);
 	}
