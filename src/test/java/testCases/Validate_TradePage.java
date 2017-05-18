@@ -112,21 +112,14 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
 	}
-	//Test Method to logout
-	 @Test(priority=11)
-	  public void Logout() {
-			Logout_Action.Execute(driver);
-			Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
-	  }
-	 //Test Method to start browser session and launch binary site
-	 @BeforeTest
-	  public void launchApplication() {
-		 	ChromeDriverManager.getInstance().setup();
-	    	driver = new ChromeDriver();
-			driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-			driver.get(Constant.URL);
-			
-	  }
+	//Test Method to start browser session and launch binary site
+	@BeforeTest
+	public void launchApplication() {
+		ChromeDriverManager.getInstance().setup();
+	    driver = new ChromeDriver();
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.get(Constant.URL);
+	}
  //Test Method to close the browser session
  @AfterTest
  public void endSession() {
