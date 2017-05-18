@@ -1,16 +1,13 @@
 package appModules;
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import pageObjects.Trade_Page;
-import testCases.Validate_TradePage;
 import utility.ListsUtil;
 
 public class Trading_Action {
