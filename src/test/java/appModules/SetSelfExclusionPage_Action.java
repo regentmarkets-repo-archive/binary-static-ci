@@ -1,13 +1,9 @@
 package appModules;
-
 import java.math.BigInteger;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
-
 import pageObjects.SelfExclusionPage;
-import utility.DateUtil;
 
 // class to set values on self exclusion page
 public class SetSelfExclusionPage_Action {
