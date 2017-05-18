@@ -95,7 +95,6 @@ public class Trading_Action {
 		seriesofActions.perform();
 	}
 	public static void NavigateToUpDownRiseFall(WebDriver driver,String market,String asset) {
-		//Navigate to UpDown->Rise/Fall
 		Select mSelect = new Select(Trade_Page.select_Market(driver));
 		mSelect.selectByVisibleText(market);
 		Select aSelect = new Select(Trade_Page.select_Asset(driver));
