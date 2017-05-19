@@ -196,7 +196,7 @@ public class Trading_Action {
 			SelectEnterDuration(driver,"0",durationType);
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeTop(driver).getText(), "Expiry time cannot be equal to start time.");
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
-			SelectEnterDuration(driver,"1500",durationType);
+			SelectEnterDuration(driver,"9999",durationType);
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
@@ -204,7 +204,7 @@ public class Trading_Action {
 			SelectEnterDuration(driver,"0",durationType);
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeTop(driver).getText(), "Expiry time cannot be equal to start time.");
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
-			SelectEnterDuration(driver,"25",durationType);
+			SelectEnterDuration(driver,"999",durationType);
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
