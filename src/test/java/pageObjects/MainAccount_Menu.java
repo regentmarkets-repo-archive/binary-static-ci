@@ -40,7 +40,7 @@ public class MainAccount_Menu {
 		//Method to find Main Account link
 		public static WebElement link_MainAccount(WebDriver driver){
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='main-account']/li/a/div[2]")));
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='main-account']/li/a/div[1]")));
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
