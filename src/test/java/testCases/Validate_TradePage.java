@@ -11,8 +11,7 @@ import utility.Constant;
 import appModules.Navigation_Action;
 import appModules.Trading_Action;
 
-public class Validate_TradePage {
-	
+public class Validate_TradePage {	
 	public WebDriver driver;
 	//Test Method to Login to binary site
 	@Test(priority=0)
@@ -122,5 +121,4 @@ public class Validate_TradePage {
  public void endSession() {
 	  driver.quit();
  }
-
 }
