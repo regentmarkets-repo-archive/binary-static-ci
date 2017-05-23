@@ -28,10 +28,10 @@
 	</test>
 	<test name="ChangePasswordPage">
 		<classes>
-			<class name="testCases.Validate_ChangePassword" />
+			<class name="testCases.Validate_ChangePasswordPage" />
 		</classes>
 	</test>
-	<test name="CashierPasswordPage">
+	<test name="CashierPassword">
 		<classes>
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
