@@ -28,7 +28,12 @@
 	</test>
 	<test name="ChangePasswordPage">
 		<classes>
-			<class name="testCases.Validate_ChangePasswordPage" />
+			<class name="testCases.Validate_ChangePassword" />
+		</classes>
+	</test>
+	<test name="CashierPasswordPage">
+		<classes>
+			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
 	<test name="CheckLimits">
