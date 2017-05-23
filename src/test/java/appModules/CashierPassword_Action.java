@@ -25,7 +25,7 @@ public class CashierPassword_Action {
     }
     //Method to unlock cashier password 
     public static void unlockCashier(WebDriver driver, String sPass) {
-        Assert.assertEquals(CashierPassword_Page.unlock_title(driver).getText(),"Unlock Cashier");
+        Assert.assertEquals(CashierPassword_Page.title_form(driver).getText(),"Unlock Cashier");
         CashierPassword_Page.cashierPassword(driver).clear();
         CashierPassword_Page.cashierPassword(driver).sendKeys(sPass);
         CashierPassword_Page.updateButton(driver).click(); 
