@@ -50,7 +50,7 @@ public class Cashier_Page {
     //method to find cashier lock message 
     public static WebElement lock_msg(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='cashier_locked_message']")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='cashier_locked_message']")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
