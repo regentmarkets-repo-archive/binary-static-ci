@@ -1,12 +1,16 @@
 package appModules;
 
 import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
 import pageObjects.Trade_Page;
 import utility.ListsUtil;
 
@@ -267,6 +271,12 @@ public class Trading_Action {
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
 		SelectEnterDuration(driver,duration,durationType);
+		Actions builder = new Actions(driver);
+		Action seriesofActions = builder
+				.moveToElement(Trade_Page.btn_TopPurchase(driver))
+				.click()
+				.build();
+		seriesofActions.perform();
 		Trade_Page.btn_TopPurchase(driver).click();
 		Assert.assertEquals(Trade_Page.txt_ContractPurchaseHeading(driver).getText(), "Contract Confirmation");
 		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + durationType + " after contract start time.";
