@@ -248,41 +248,58 @@ public class Helper {
 		        robot.keyPress(KeyEvent.VK_ENTER);
 		        robot.delay(10);
 		        robot.keyRelease(KeyEvent.VK_ENTER);
-		        //loop to go end of mailbox
+		        //go to end of mailbox
+		        robot.keyPress(KeyEvent.VK_SHIFT);
+		        robot.delay(10);
+		        robot.keyPress(KeyEvent.VK_8);
+		        robot.delay(10);
+		        robot.keyRelease(KeyEvent.VK_8);
+		        robot.keyRelease(KeyEvent.VK_SHIFT);
+		        //fetch email from it
 		        String lastText = "";
-		        
-		        do {
-		        	LoadALLMails();//method to get all emails subjects displayed on terminal
-		        	System.out.println("Called once Load Mail");
-		            lastText = texts.get(texts.size()-2).toString();
-		        	System.out.println("got test in string");
-		        	lastText = lastText.substring(lastText.lastIndexOf('(')+1,lastText.lastIndexOf('(')+4);
-		        	System.out.println("got substring"+lastText);
-		        	if(!lastText.equals("end"))
-		        	{
-		        		System.out.println("if condition");
-		        		int size = texts.size();
-		        	for(int i=0;i<=size;i++)//loop to page down n times
-		        	{
-		        		//System.out.println("down key loop");
-		        		robot.keyPress(KeyEvent.VK_DOWN);
-		        		robot.delay(100);
-				        robot.keyRelease(KeyEvent.VK_DOWN);
-		        	}
-		        	}
-		       } while (!lastText.equals("end"));
+//		        
+//		        do {
+//		        	LoadALLMails();//method to get all emails subjects displayed on terminal
+//		        	System.out.println("Called once Load Mail");
+//		            lastText = texts.get(texts.size()-2).toString();
+//		        	System.out.println("got test in string");
+//		        	lastText = lastText.substring(lastText.lastIndexOf('(')+1,lastText.lastIndexOf('(')+4);
+//		        	System.out.println("got substring"+lastText);
+//		        	if(!lastText.equals("end"))
+//		        	{
+//		        		System.out.println("if condition");
+//		        		int size = texts.size();
+//		        	for(int i=0;i<=size;i++)//loop to page down n times
+//		        	{
+//		        		//System.out.println("down key loop");
+//		        		robot.keyPress(KeyEvent.VK_DOWN);
+//		        		robot.delay(100);
+//				        robot.keyRelease(KeyEvent.VK_DOWN);
+//		        	}
+//		        	}
+//		       } while (!lastText.equals("end"));
+		        List<String> binaryMails;
+		        do{
+		          LoadALLMails();//method to get all emails subjects displayed on terminal
 		        //get all verification email from mailbox
 		        String searchString = "Verify your email address - Binaryqa12.com";
-		        List<String> binaryMails = new ArrayList<String>();
+		         binaryMails = new ArrayList<String>();
 		        for (String curVal : AllMailSubjactes){
 		          if (curVal.contains(searchString)){
 		        	  binaryMails.add(curVal);
 		          }
 		        }
-		        //loop through verification emails 
-		        //for (String curVal : binaryMails){
-			         //System.out.println(curVal);
-			      // }
+		        if(binaryMails.size()==0)
+		        {
+		        	int size = texts.size();
+		        	for(int i=0;i<=size;i++)//loop to page down n times
+		        	{
+			        		robot.keyPress(KeyEvent.VK_UP);
+			        		robot.delay(100);
+					        robot.keyRelease(KeyEvent.VK_UP);
+			        	}
+		        }
+		        }while (binaryMails.size()==0);
 		        //get last mail of verification and extract mail number from it
 		        char[] charArray = StringExtractor(binaryMails.get(binaryMails.size()-1));
 		        //keys to to go to mail content
@@ -366,7 +383,7 @@ public class Helper {
        for (int i=0; i <tempEmailSubj.size(); i++){
        	
        	 try {
-					Thread.sleep(10);
+					Thread.sleep(20);
 					WebDriverWait wait2 = new WebDriverWait(webdriver, 30);
 					wait2.until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("span.aceterm-line-bg")));
 					//System.out.println("Line#"+i+" is:"+tempEmailSubj.get(i).getText());

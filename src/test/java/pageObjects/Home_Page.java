@@ -39,4 +39,12 @@ private static WebElement element = null;
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
+	//Method to find upgrade to a real account link on home page
+		public static WebElement link_UpgradeToRealAccount(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,60);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.id("topbar-msg")));
+			Assert.assertTrue(element.isDisplayed());
+			WebElement link = element.findElement(By.linkText("Upgrade to a Real Account"));
+			return link;
+		}
 }

@@ -4,6 +4,7 @@ import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -41,4 +42,8 @@ public class Validate_NewAccountOnQaServer {
 		    //Logout newly created user
 		    Navigation_Action.Navigate_To_LogoutPage(driver);
 		 }
+		@AfterTest
+		  public void endSession() {
+			  driver.quit();  
+		  }
 }

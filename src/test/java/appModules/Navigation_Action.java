@@ -118,5 +118,10 @@ public class Navigation_Action {
   	{
   	    Home_Page.logo(driver).click();
   	}
+  	//navigate to upgrade real account page
+  	public static void Navigate_To_UpgradeAccount(WebDriver driver)
+  	{
+  		Home_Page.link_UpgradeToRealAccount(driver).click();
+  	}
 
 }
