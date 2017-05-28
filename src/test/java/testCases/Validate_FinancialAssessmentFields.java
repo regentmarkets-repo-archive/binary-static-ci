@@ -2,33 +2,24 @@
 package testCases;
 
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import pageObjects.FinancialAssessment_Page;
 import utility.Constant;
 import appModules.Navigation_Action;
 import appModules.SetFinancialAssessment_Action;
 
-public class Validate_FinancialAssessmentFields {
-	public WebDriver driver;
-	  //Test Method to login into the site
-	  @Test(priority=0)
+public class Validate_FinancialAssessmentFields extends BaseClass{
+	
+	  @Test(priority=0,description="Test Method to login into the site")
 	  public void Login() {
 		  	Navigation_Action.Navigate_To_LoginPage(driver);
 		  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
 	  } 
-	  //Test Method to navigate to Financial Assessment page
-	  @Test(priority=1)
+	  @Test(priority=1,description="Test Method to navigate to Financial Assessment page")
 	  public void NavigateToFinancialAssessmentPage() {
 		  	Navigation_Action.Navigate_To_ProfilePage(driver);
 		  	Navigation_Action.Navigate_To_FinancialAssessmentPage(driver);
 	  }
-	  //Test Method to test the error message displayed when forex trading experience field is not set
-	  @Test(priority=2)
+	  @Test(priority=2,description="Test Method to test the error message displayed when forex trading experience field is not set")
 	  public void Test_ForexTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver, Constant.select_value,Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -39,8 +30,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for forex trading experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when forex trading frequency field is not set
-	  @Test(priority=3)
+	  @Test(priority=3,description="Test Method to test the error message displayed when forex trading frequency field is not set")
 	  public void Test_ForexTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.select_value, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -51,8 +41,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for forex trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when indices trading experience field is not set
-	  @Test(priority=4)
+	  @Test(priority=4,description="Test Method to test the error message displayed when indices trading experience field is not set")
 	  public void Test_IndicesTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.select_value, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -63,8 +52,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Indices trading Experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when indices trading frequency field is not set
-	  @Test(priority=5)
+	  @Test(priority=5,description="Test Method to test the error message displayed when indices trading frequency field is not set")
 	  public void Test_IndicesTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.select_value, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -75,8 +63,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Indices trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when commodities trading experience field is not set
-	  @Test(priority=6)
+	  @Test(priority=6,description="Test Method to test the error message displayed when commodities trading experience field is not set")
 	  public void Test_CommoditiesTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.select_value, Constant.commodities_trading_frequency, 
@@ -87,8 +74,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Commodities trading experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when commodities trading frequency field is not set
-	  @Test(priority=7)
+	  @Test(priority=7,description="Test Method to test the error message displayed when commodities trading frequency field is not set")
 	  public void Test_CommoditiesTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.select_value, 
@@ -99,8 +85,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Commodities trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when stocks trading experience field is not set
-	  @Test(priority=8)
+	  @Test(priority=8,description="Test Method to test the error message displayed when stocks trading experience field is not set")
 	  public void Test_StocksTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -111,8 +96,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Stocks trading experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when stocks trading frequency field is not set
-	  @Test(priority=9)
+	  @Test(priority=9,description="Test Method to test the error message displayed when stocks trading frequency field is not set")
 	  public void Test_StocksTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver, Constant.fx_trading_exerience,Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -123,8 +107,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Stocks trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when other trading experience field is not set
-	  @Test(priority=10)
+	  @Test(priority=10,description="Test Method to test the error message displayed when other trading experience field is not set")
 	  public void Test_OtherTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver, Constant.fx_trading_exerience,Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -135,8 +118,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Binary options or other financial derivatives trading experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when other trading frequency field is not set
-	  @Test(priority=11)
+	  @Test(priority=11,description="Test Method to test the error message displayed when other trading frequency field is not set")
 	  public void Test_OtherTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver, Constant.fx_trading_exerience,Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -147,8 +129,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Binary options or other financial derivatives trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when other derivatives trading experience field is not set
-	  @Test(priority=12)
+	  @Test(priority=12,description="Test Method to test the error message displayed when other derivatives trading experience field is not set")
 	  public void Test_OtherDerivativesTradingExperience() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -159,8 +140,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Other financial instruments trading experience is working");
 			}
 	  }
-	//Test Method to test the error message displayed when other derivatives trading frequency field is not set
-	  @Test(priority=13)
+	  @Test(priority=13,description="Test Method to test the error message displayed when other derivatives trading frequency field is not set")
 	  public void Test_OtherDerivatiesTradingFrequency() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -171,8 +151,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Other financial instruments trading frequency is working");
 			}
 	  }
-	//Test Method to test the error message displayed when Industry Employment field is not set
-	  @Test(priority=14)
+	  @Test(priority=14,description="Test Method to test the error message displayed when Industry Employment field is not set")
 	  public void Test_IndustryEmployment() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -183,8 +162,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Industry of Employment is working");
 			}
 	  }
-	//Test Method to test the error message displayed when occupation field is not set
-	  @Test(priority=15)
+	  @Test(priority=15,description="Test Method to test the error message displayed when occupation field is not set")
 	  public void Test_Occupation() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -195,8 +173,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Occupation is working");
 			}
 	  }
-	//Test Method to test the error message displayed when education field is not set
-	  @Test(priority=16)
+	  @Test(priority=16,description="Test Method to test the error message displayed when education field is not set")
 	  public void Test_Education() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -207,8 +184,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Education is working");
 			}
 	  }
-	//Test Method to test the error message displayed when annual income field is not set
-	  @Test(priority=17)
+	  @Test(priority=17,description="Test Method to test the error message displayed when annual income field is not set")
 	  public void Test_AnnualIncome() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -219,8 +195,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Annual Income is working");
 			}
 	  }
-	//Test Method to test the error message displayed when net worth field is not set
-	  @Test(priority=18)
+	  @Test(priority=18,description="Test Method to test the error message displayed when net worth field is not set")
 	  public void Test_NetWorth() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -231,8 +206,7 @@ public class Validate_FinancialAssessmentFields {
 				System.out.println("Field validation for Net Worth is working");
 			}
 	  }
-	//Test Method to test the error message displayed when anticipated income field is not set
-	  @Test(priority=19)
+	  @Test(priority=19,description="Test Method to test the error message displayed when anticipated income field is not set")
 	  public void Test_AnticipatedAccountTurnover() {
 		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
@@ -242,19 +216,5 @@ public class Validate_FinancialAssessmentFields {
 			if(FinancialAssessment_Page.error_AnticipatedAccountTurnover(driver).isDisplayed()){
 				System.out.println("Field validation for Anticipated Account Turnover is working");
 			}
-	  }
-	  //Test Method to start browser session and launch site
-	  @BeforeTest
-	  public void launchApplication() {
-		  	ChromeDriverManager.getInstance().setup();
-	    	driver = new ChromeDriver();
-	    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-	    	driver.get(Constant.URL);
-			
-	  }
-	  //Test Method to close browser session
-	  @AfterTest
-	  public void endSession() {
-		  driver.quit();
 	  }
 }

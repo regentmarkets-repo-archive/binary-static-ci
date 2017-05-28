@@ -1,18 +1,11 @@
 package testCases;
 
-import io.github.bonigarcia.wdm.ChromeDriverManager;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import utility.Constant;
 import appModules.Navigation_Action;
 import appModules.Trading_Action;
 
-public class Validate_TradePage {	
-	public WebDriver driver;
+public class Validate_TradePage extends BaseClass {	
 	//Test Method to Login to binary site
 	@Test(priority=0)
 	public void Login() {
@@ -108,17 +101,4 @@ public class Validate_TradePage {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
 	}
-	//Test Method to start browser session and launch binary site
-	@BeforeTest
-	public void launchApplication() {
-		ChromeDriverManager.getInstance().setup();
-	    driver = new ChromeDriver();
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-		driver.get(Constant.URL);
-	}
- //Test Method to close the browser session
- @AfterTest
- public void endSession() {
-	  driver.quit();
- }
 }
