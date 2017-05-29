@@ -1,7 +1,9 @@
 package appModules;
 
 import org.openqa.selenium.WebDriver;
+
 import pageObjects.Login_Page;
+import pageObjects.MainAccount_Menu;
 
 public class Login_Action {
 	//Method to perform login action
@@ -16,5 +18,9 @@ public class Login_Action {
 		Login_Page.txt_Password(driver).sendKeys(sPassword);
 		//Click on the Login button in login page
 		Login_Page.btn_Login(driver).click();
+	}
+	public static void SwitchToVirtualAccount(WebDriver driver) {
+		MainAccount_Menu.link_MainAccount(driver).click();
+		MainAccount_Menu.link_VirtualAccount(driver).click();
 	}
 }
