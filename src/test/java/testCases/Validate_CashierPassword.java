@@ -55,7 +55,7 @@ public class Validate_CashierPassword extends BaseClass {
         Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
         System.out.println("Cashier Page Locked");
     }
-    @Test(priority=8,description="Check deposit/withdraw cashier lock")
+    @Test(enabled=false,description="Check deposit/withdraw cashier lock")
     public void check_depositLock() {
         CashierPassword_Action.depositPage(driver);
         if(Cashier_Page.lock_msg(driver).isDisplayed()){
