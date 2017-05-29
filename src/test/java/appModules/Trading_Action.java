@@ -1,12 +1,14 @@
 package appModules;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
+
 import pageObjects.Trade_Page;
 import utility.ListsUtil;
 
@@ -205,8 +207,10 @@ public class Trading_Action {
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeTop(driver).getText(), "Expiry time cannot be equal to start time.");
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
 			SelectEnterDuration(driver,"999",durationType);
-			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
-			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
+			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
+			System.out.println(Trade_Page.err_BottomPurchase(driver).getText());
+			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
+			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
 		else if(durationType=="d"){
 			SelectEnterDuration(driver,"0",durationType);
@@ -267,6 +271,12 @@ public class Trading_Action {
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
 		SelectEnterDuration(driver,duration,durationType);
+		Actions builder = new Actions(driver);
+		Action seriesofActions = builder
+				.moveToElement(Trade_Page.btn_TopPurchase(driver))
+				.click()
+				.build();
+		seriesofActions.perform();
 		Trade_Page.btn_TopPurchase(driver).click();
 		Assert.assertEquals(Trade_Page.txt_ContractPurchaseHeading(driver).getText(), "Contract Confirmation");
 		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + durationType + " after contract start time.";
