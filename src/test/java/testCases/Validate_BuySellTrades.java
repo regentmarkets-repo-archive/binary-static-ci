@@ -20,22 +20,26 @@ public class Validate_BuySellTrades extends BaseClass {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
 	@Test(priority=2,description="Test Method to validate contract purchase for Forex")
-	public void validateContractPurchaseForForex(){
-		Trading_Action.NavigateToUpDownRiseFall(driver,"Forex", "AUD/JPY");
-		Trading_Action.ValidateContractTopPurchase(driver,"AUD/JPY","15","m","10");
-		Trading_Action.CloseViewPopup(driver);
-	}
-	@Test(priority=3,description="Test Method to validate contract purchase for VolatilityIndices")
-	public void validateContractPurchaseForVolatilityIndices(){
+	public void validateContractPurchase(){
 		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","1","h","10");
+		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","15","m","10");
 		Trading_Action.CloseViewPopup(driver);
 	}
-	@Test(priority=4,description="Test Method to validate contract sell for Volatility Indices")
-		public void validateContractSellForVolatilityIndices(){
+	@Test(priority=3,description="Test Method to validate contract sell for Volatility Indices")
+		public void validateContractSell(){
 			Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 100 Index");
 			Trading_Action.ValidateContractTopPurchase(driver,"Volatility 100 Index","1","h","10");
 			Trading_Action.ValidateContractSell(driver);
 			Trading_Action.CloseViewPopup(driver);
+	}
+	@Test(priority=4,description="Test Method to validate contract purchase for Volatility Indices Asians")
+	public void validateAsianContractsPurchase(){
+		Trading_Action.NavigateToAsians(driver, "Volatility Indices", "Volatility 25 Index");
+		Trading_Action.ValidateAsianContracts(driver,"Volatility 25 Index","5","t","10");
+	}
+	@Test(priority=5,description="Test Method to validate contract purchase for Volatility Indices Digits")
+	public void validateDigitsContractsPurchase(){
+		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
+		Trading_Action.ValidateDigitsContracts(driver,"Volatility 10 Index","5","t","10","5");
 	}
 }
