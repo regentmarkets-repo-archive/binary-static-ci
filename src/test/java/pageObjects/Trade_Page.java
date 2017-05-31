@@ -535,5 +535,19 @@ public class Trade_Page {
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
-	
+		//Method to find Asian graph
+		public static WebElement img_AsianContractGraph(WebDriver driver) {
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='highcharts.*]/svg")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find close button on Confirmation screen
+		public static WebElement btn_CloseConfirmationScreen(WebDriver driver) {
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='close_confirmation_container']")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		
 }

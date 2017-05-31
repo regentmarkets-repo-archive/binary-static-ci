@@ -268,8 +268,8 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
 }
-	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
-		//Method to validate top contract purchase
+	
+	public static void GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
 		Actions builder = new Actions(driver);
@@ -280,7 +280,9 @@ public class Trading_Action {
 		seriesofActions.perform();
 		Trade_Page.btn_TopPurchase(driver).click();
 		if(durationType=="m")
-			{durationUnits="minutes";}
+		{durationUnits="minutes";}
+		else if(durationType=="t")
+		{durationUnits="ticks";}
 		else if(durationType=="s")
 		{durationUnits="seconds";}
 		else if(durationType=="h")
@@ -293,6 +295,10 @@ public class Trading_Action {
 		String [] arrSplit = purchaseReference.split(" ");
 		String referenceNumber = arrSplit[4];
 		System.out.println("Transaction reference number is: " + referenceNumber);
+	}
+	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
+		//Method to validate top contract purchase
+		GetTradeConfirmationDetails(driver,submarket,duration,durationType,amount);
 		Trade_Page.btn_View(driver).click();
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
 		
@@ -321,6 +327,44 @@ public class Trading_Action {
 	}
 	public static void CloseViewPopup(WebDriver driver){
 		Trade_Page.btn_PopupCloseButton(driver).click();
+	}
+	public static void ValidateAsianContracts(WebDriver driver,String submarket,String duration,String durationType,String amount){
+		Actions action = new Actions(driver);
+		action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
+		Trade_Page.txt_DurationAmount(driver).sendKeys(duration);
+		Actions amountBuilder = new Actions(driver);
+		Action seriesofActions = amountBuilder
+				.doubleClick(Trade_Page.txt_Amount(driver))
+				.sendKeys(amount)
+				.build();
+		seriesofActions.perform();
+		Actions builder = new Actions(driver);
+		Action purchaseActions = builder
+				.moveToElement(Trade_Page.btn_TopPurchase(driver))
+				.click()
+				.build();
+		purchaseActions.perform();
+		Assert.assertTrue(Trade_Page.screen_ContractConfirmation(driver).isDisplayed());
+	}
+	public static void ValidateDigitsContracts(WebDriver driver,String submarket,String duration,String durationType,String amount,String digit){
+		Actions action = new Actions(driver);
+		action.doubleClick(Trade_Page.txt_DurationAmount(driver)).perform();
+		Trade_Page.txt_DurationAmount(driver).sendKeys(duration);
+		Select oSelect = new Select(Trade_Page.select_LastDigitPrediction(driver));
+		oSelect.selectByVisibleText(digit);
+		Actions amountBuilder = new Actions(driver);
+		Action seriesofActions = amountBuilder
+				.doubleClick(Trade_Page.txt_Amount(driver))
+				.sendKeys(amount)
+				.build();
+		seriesofActions.perform();
+		Actions builder = new Actions(driver);
+		Action purchaseActions = builder
+				.moveToElement(Trade_Page.btn_TopPurchase(driver))
+				.click()
+				.build();
+		purchaseActions.perform();
+		Assert.assertTrue(Trade_Page.screen_ContractConfirmation(driver).isDisplayed());
 	}
 }
 	
