@@ -38,6 +38,4 @@ public class Validate_BuySellTrades extends BaseClass {
 			Trading_Action.ValidateContractSell(driver);
 			Trading_Action.CloseViewPopup(driver);
 	}
-	
-
 }
