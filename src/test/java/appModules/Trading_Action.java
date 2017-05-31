@@ -270,6 +270,7 @@ public class Trading_Action {
 }
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
+		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
 		Actions builder = new Actions(driver);
 		Action seriesofActions = builder
@@ -278,16 +279,26 @@ public class Trading_Action {
 				.build();
 		seriesofActions.perform();
 		Trade_Page.btn_TopPurchase(driver).click();
+		if(durationType=="m")
+			{durationUnits="minutes";}
+		else if(durationType=="s")
+		{durationUnits="seconds";}
+		else if(durationType=="h")
+		{durationUnits="hour";}
+		else durationUnits="days";
 		Assert.assertEquals(Trade_Page.txt_ContractPurchaseHeading(driver).getText(), "Contract Confirmation");
-		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + durationType + " after contract start time.";
+		String purchaseDesc = "Win payout if " + submarket + " is strictly higher than entry spot at " + duration + " " + durationUnits + " after contract start time.";
 		Assert.assertEquals(Trade_Page.txt_ContractPurchaseDescription(driver).getText(), purchaseDesc);
-		Assert.assertEquals(Trade_Page.txt_PotentialPayout(driver).getText(),amount);
 		String purchaseReference = Trade_Page.txt_ContractPurchaseReference(driver).getText();
 		String [] arrSplit = purchaseReference.split(" ");
 		String referenceNumber = arrSplit[4];
+		System.out.println("Transaction reference number is: " + referenceNumber);
 		Trade_Page.btn_View(driver).click();
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
-		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver), purchaseDesc);
+		
+	}
+	public static void ValidateViewPopupWindow(WebDriver driver,String purchaseDesc,String referenceNumber,String amount){
+		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver).getText(), purchaseDesc);
 		Assert.assertEquals(Trade_Page.txt_TradeDetailsReferenceId(driver).getText(), referenceNumber);
 		String entrySpot = Trade_Page.txt_TradeDetailsEntrySpot(driver).getText();
 		String exitSpot = Trade_Page.txt_TradeDetailsExitSpot(driver).getText();
@@ -300,6 +311,16 @@ public class Trading_Action {
 		}
 		Double actualProfitLoss = Double.parseDouble(Trade_Page.txt_TradeDetailsPurchasePrice(driver).getText()) - Double.parseDouble(Trade_Page.txt_TradeDetailsIndicative(driver).getText());
 		Assert.assertEquals(Double.parseDouble(Trade_Page.txt_TradeDetailsProfitLoss(driver).getText()),actualProfitLoss);
+		
+	}
+	public static void ValidateContractSell(WebDriver driver){
+		Trade_Page.btn_SellAtMarket(driver).click();
+		Assert.assertTrue(Trade_Page.txt_ContractSellMessage(driver).isDisplayed());
+		System.out.println(Trade_Page.txt_ContractSellMessage(driver).getText());
+		
+	}
+	public static void CloseViewPopup(WebDriver driver){
+		Trade_Page.btn_PopupCloseButton(driver).click();
 	}
 }
 	
