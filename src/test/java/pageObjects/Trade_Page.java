@@ -514,7 +514,26 @@ public class Trade_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	
-	
+		//Method to find Trade Details Close button
+		public static WebElement btn_PopupCloseButton(WebDriver driver) {
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='sell_popup_container']/a")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find Sell At Market button
+		public static WebElement btn_SellAtMarket(WebDriver driver) {
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='sell_at_market']")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find Contract Sell Message
+		public static WebElement txt_ContractSellMessage(WebDriver driver) {
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='contract_sell_message']")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
 	
 }
