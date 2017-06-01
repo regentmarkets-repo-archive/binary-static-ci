@@ -40,6 +40,6 @@ public class Validate_BuySellTrades extends BaseClass {
 	@Test(priority=5,description="Test Method to validate contract purchase for Volatility Indices Digits")
 	public void validateDigitsContractsPurchase(){
 		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
-		Trading_Action.ValidateDigitsContracts(driver,"Volatility 10 Index","5","t","10","5");
+		Trading_Action.ValidateDigitsContracts(driver,"Volatility 10 Index","5","t","10","2");
 	}
 }
