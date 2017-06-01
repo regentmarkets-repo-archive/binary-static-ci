@@ -66,9 +66,4 @@
 			<class name="testCases.Validate_TradePage" />
 		</classes>
 		</test>
-	<test name="CheckBuySellTrades">
-		<classes>
-			<class name="testCases.Validate_BuySellTrades" />
-		</classes>
-		</test>
 </suite>
