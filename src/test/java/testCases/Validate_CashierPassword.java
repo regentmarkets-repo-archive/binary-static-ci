@@ -34,7 +34,6 @@ public class Validate_CashierPassword extends BaseClass {
     public void check_diffPass() {
     	CashierPassword_Action.checkErrorDiffPwd(driver);
     }
-
     @Test(priority=6,description="Check validation for same cashier page and password")
     public void check_samePass() {
     	CashierPassword_Action.checkErrorSamePwd(driver);
