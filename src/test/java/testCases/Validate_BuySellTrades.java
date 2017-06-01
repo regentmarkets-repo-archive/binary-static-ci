@@ -28,7 +28,7 @@ public class Validate_BuySellTrades extends BaseClass {
 	@Test(priority=3,description="Test Method to validate contract sell for Volatility Indices")
 		public void validateContractSell(){
 			Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 100 Index");
-			Trading_Action.ValidateContractTopPurchase(driver,"Volatility 100 Index","1","h","10");
+			Trading_Action.ValidateContractTopPurchase(driver,"Volatility 100 Index","15","m","10");
 			Trading_Action.ValidateContractSell(driver);
 			Trading_Action.CloseViewPopup(driver);
 	}
