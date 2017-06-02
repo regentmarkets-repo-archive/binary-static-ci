@@ -63,20 +63,16 @@ public class CashierPassword_Action {
             CashierPassword_Action.Execute(driver, Constant.emptyString, Constant.emptyString); 
             Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"This field is required.");
             Assert.assertEquals(CashierPassword_Page.errMsg_2(driver).getText(),"This field is required.");
-    	
     }
-    //Method to check error for min cashier password
+    //Method to check error for minimum cashier password
     public static void checkErrorMinChr(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.minPassword, Constant.minPassword);
             Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"You should enter 6-25 characters."); 
-    	
     }
     //Method to check error for weak password
     public static void checkErrorWeakPwd(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.weakPassword, Constant.weakPassword);
             Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"Password should have lower and uppercase letters with numbers.");  
-    	
-    	
     }
     //Method to check error for different password
     public static void checkErrorDiffPwd(WebDriver driver){
