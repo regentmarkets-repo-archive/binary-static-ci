@@ -61,7 +61,7 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 		</test>
-			<test name="CheckTradingPage">
+	<test name="CheckTradingPage">
 		<classes>
 			<class name="testCases.Validate_TradePage" />
 		</classes>
