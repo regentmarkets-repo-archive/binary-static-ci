@@ -56,7 +56,6 @@ public class CashierPassword_Action {
             Assert.assertEquals(Cashier_Page.lock_msg(driver).getText(),"Your cashier is locked as per your request - to unlock it, please click here.");  
             System.out.println("Withdraw Page is Locked");
         }
-        Cashier_Page.unlock_link(driver).click();
     }
     //Method to check error for empty fields
     public static void checkErrorEmptyFields(WebDriver driver){
