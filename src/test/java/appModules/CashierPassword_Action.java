@@ -17,7 +17,7 @@ public class CashierPassword_Action {
         CashierPassword_Page.confirmPassword(driver).sendKeys(sconfirmPass);
         CashierPassword_Page.updateButton(driver).click();
     }
-    //Method to check title page 
+    //Method to check title page
     public static void checkTitle(WebDriver driver) {
         String j= CashierPassword_Page.title_page(driver).getText();
         System.out.println("Result : "+ j);
@@ -55,7 +55,7 @@ public class CashierPassword_Action {
         if(Cashier_Page.lock_msg(driver).isDisplayed()){
             Assert.assertEquals(Cashier_Page.lock_msg(driver).getText(),"Your cashier is locked as per your request - to unlock it, please click here.");  
             System.out.println("Withdraw Page is Locked");
-        }
+      }
     }
     //Method to check error for empty fields
     public static void checkErrorEmptyFields(WebDriver driver){
@@ -67,27 +67,26 @@ public class CashierPassword_Action {
     public static void checkErrorMinChr(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.minPassword, Constant.minPassword);
             Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"You should enter 6-25 characters."); 
-    }
+      }
     //Method to check error for weak password
     public static void checkErrorWeakPwd(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.weakPassword, Constant.weakPassword);
             Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"Password should have lower and uppercase letters with numbers.");  
-    }
+  }
     //Method to check error for different password
     public static void checkErrorDiffPwd(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.inv_cashierPass, Constant.cashierPass);   
             Assert.assertEquals(CashierPassword_Page.errMsg_2(driver).getText(),"The two passwords that you entered do not match.");   
-    	
     }
     //Method to check error for same password
     public static void checkErrorSamePwd(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.Password, Constant.Password);   
             Assert.assertEquals(CashierPassword_Page.errMsg_3(driver).getText(),"Please use a different password than your login password.");   
-    }
+  }
     //Method to update cashier password
     public static void updateCashierPwd(WebDriver driver){
             CashierPassword_Action.Execute(driver, Constant.cashierPass, Constant.cashierPass);
             Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
             System.out.println("Cashier Page Locked");  
-    }
+  }
 }
