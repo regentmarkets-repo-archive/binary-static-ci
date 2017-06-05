@@ -2,6 +2,8 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
+import pageObjects.CashierPassword_Page;
 import utility.Constant;
 import appModules.CashierPassword_Action;
 import appModules.Navigation_Action;
@@ -20,10 +22,11 @@ public class Validate_CashierPassword extends BaseClass {
     }
     @Test(priority=2,description="Check empty field validation")
     public void check_emptyField() {
-         CashierPassword_Action.checkErrorEmptyFields(driver);
+    	 CashierPassword_Action.checkErrorEmptyFields(driver);
     }
     @Test(priority=3,description="Check validation for minimum cashier password")
     public void check_minpass() {
+    	
           CashierPassword_Action.checkErrorMinChr(driver);
     } 
     @Test(priority=4,description="Check validation for invalid cashier password")
