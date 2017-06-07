@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+<test name="NewAccountOnQaServer">
+		<classes>
+			<class name="testCases.Validate_NewAccountOnQaServer" />
+		</classes>
+	</test>
 	<test name="CheckLoginPage">
 		<classes>
 			<class name="testCases.Validate_LoginPage" />
@@ -36,11 +41,6 @@
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
-	<test name="CheckLimitsPage">
-		<classes>
-			<class name="testCases.Validate_Limits" />
-		</classes>
-	</test>
 	<test name="CheckAuthorisedApplication">
 		<classes>
 			<class name="testCases.Validate_AuthorisedApplications" />
@@ -49,6 +49,16 @@
 		<test name="checkTokenAPI">
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
+		</classes>
+	</test>
+	<test name="CheckLimitsPage">
+		<classes>
+			<class name="testCases.Validate_Limits" />
+		</classes>
+	</test>
+	<test name="NewAccountOnBlueServer">
+		<classes>
+			<class name="testCases.Validate_NewAccount" />
 		</classes>
 	</test>
 </suite>

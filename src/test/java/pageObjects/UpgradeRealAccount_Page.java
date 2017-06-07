@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -39,6 +40,14 @@ public class UpgradeRealAccount_Page {
 	{
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("date_of_birth")));
+		Assert.assertTrue(element.isDisplayed());
+		return element;
+	}
+	//method to get 12th day from calendar
+	public static WebElement DateValue(WebDriver driver)
+	{
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='ui-datepicker-div']/table/tbody/tr[1]/td[3]/a")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
@@ -122,4 +131,12 @@ public class UpgradeRealAccount_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
+	//method to find open account button
+		public static WebElement btn_OpenAccount(WebDriver driver)
+		{
+			WebDriverWait wait = new WebDriverWait(driver,30);
+			element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='frm_real']/div/button")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
 }

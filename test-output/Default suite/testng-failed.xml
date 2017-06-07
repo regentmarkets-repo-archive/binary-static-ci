@@ -6,7 +6,10 @@
       <class name="testCases.Validate_NewAccountOnQaServer">
         <methods>
           <include name="NewClientRegistrationOnQaServer"/>
+          <include name="GrantUpgradedUserPermissons"/>
+          <include name="endSession"/>
           <include name="setUp"/>
+          <include name="UpgradeToRealAccount"/>
         </methods>
       </class> <!-- testCases.Validate_NewAccountOnQaServer -->
     </classes>

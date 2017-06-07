@@ -11,6 +11,8 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.Login_Page;
 import utility.Constant;
+import utility.Helper;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_LoginPage {
@@ -19,25 +21,40 @@ public WebDriver driver;
 	//Test Method to start browser session
 	@BeforeTest
     public void setUp() {
-    	ChromeDriverManager.getInstance().setup();
-    	driver = new ChromeDriver(); 
+		if(Constant.testExeEnv.equals("Local"))
+    	{
+    		ChromeDriverManager.getInstance().setup();
+    		driver = new ChromeDriver();
+    	}
+    	else
+    	{
+    		driver = Helper.BrowserStackConfigurations();
+    	}
+    	driver.manage().window().maximize();
+		//driver = Helper.BrowserStackConfigurations();
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	}
   //Test Method to launch site and print page title
   @Test
   public void A_Launch(){
 
-  Navigation_Action.Navigate_To_HomePage(driver,Constant.URL);
+  //Navigation_Action.Navigate_To_HomePage(driver,Constant.URL);
 	
 
-	  driver.get(Constant.URL);
-
+	  //driver.get(Constant.URL);
+	Helper helperutility = new Helper();//get current ticks
+  	helperutility.AddCookieOfQaServer(driver);
+  	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+  	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+    driver.get(Constant.URL+"/en/endpoint.html");
+  //navigate to login page
+	Navigation_Action.Navigate_To_LoginPage(driver);
   }
    
   //Test Method to login to the site with valid credentials
   @Test
   public void B_Login() {
-	  Navigation_Action.Navigate_To_LoginPage(driver);
+	  //Navigation_Action.Navigate_To_LoginPage(driver);
 	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
   }
   //Test Method to logout from the site and validate login button is present
@@ -55,7 +72,7 @@ public WebDriver driver;
 	  	Assert.assertTrue(Login_Page.err_Login(driver).isDisplayed());
 		  if(Login_Page.err_Login(driver).isDisplayed()){
 			  System.out.println(Login_Page.err_Login(driver).getText());
-			  Assert.assertEquals("Incorrect email or password.",Login_Page.err_Login(driver).getText());
+			  Assert.assertEquals("Incorrect email or password.",Login_Page.err_Login(driver).getText());//Incorrect email or password.
   }}
 	
   //Test Method to close the browser session

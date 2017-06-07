@@ -66,19 +66,18 @@ public class NewAccount_Page {
 		{
 			List<WebElement> errorlist = null;
 			List<String> itemList = null;
-			WebDriverWait wait = new WebDriverWait(driver,30);
-			wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='error-msg']")));
-			errorlist = driver.findElements(By.xpath("//div[@class='error-msg']"));
+			//WebDriverWait wait = new WebDriverWait(driver,30);
+			//wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("error-msg")));
+			errorlist = driver.findElements(By.className("error-msg"));
 			for(int i=0;i<=errorlist.size();i++)
 			{
 				if(errorlist.get(i).isDisplayed() && Expectedmessage.equals(errorlist.get(i).getText()))
 				{
-					Assert.assertTrue(true);
+					Assert.assertEquals(errorlist.get(i).getText(), Expectedmessage,message);
 					break;
 				}
 				//itemList.add(errorlist.get(i).getText());
 			}
-			Assert.assertTrue(false,message);
 		}
 	
 }

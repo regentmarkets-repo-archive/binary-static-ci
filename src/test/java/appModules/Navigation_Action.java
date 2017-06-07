@@ -43,6 +43,12 @@ public class Navigation_Action {
 	public static void Navigate_To_SecurityPage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Security(driver).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
@@ -61,6 +67,12 @@ public class Navigation_Action {
 		Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
 	}
 	public static void Navigate_To_APITokenPage(WebDriver driver){
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Actions builder = new Actions(driver);
 		Action clickAPIToken = builder
 				.moveToElement(Security_Page.link_APITokenPage(driver))
@@ -103,8 +115,30 @@ public class Navigation_Action {
 				.click()
 				.build();
 		clickAuthorizedApps.perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
+    }
+    public static void NavigateToAuthorisedApplicationsPage(WebDriver driver){
+		Actions builder = new Actions(driver);
+		Action clickAuthorizedApps = builder
+				.moveToElement(Security_Page.link_AuthorisedApplication(driver))
+				.click()
+				.build();
+		clickAuthorizedApps.perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
+        Assert.assertTrue(AuthorisedApplications_page.subtitle(driver).isDisplayed());
     }
     public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
     	driver.get(URL);

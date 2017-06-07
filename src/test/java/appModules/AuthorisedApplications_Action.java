@@ -30,7 +30,16 @@ public class AuthorisedApplications_Action {
     //Method to grant permission
     public static  void grantPermission(WebDriver driver) {
         AuthorisedApplications_page.grant_btn(driver).click();
-        Assert.assertEquals(AuthorisedApplications_page.sub_title(driver).getText(),"Keep track of your authorised applications.");
+        Assert.assertEquals(AuthorisedApplications_page.sub_title(driver).getText(),"Applications");
         
+    }
+  //Method to grant permission from login
+    public static  void grantPermissionlogin(WebDriver driver) {
+        AuthorisedApplications_page.grant_btn(driver).click();
+    }
+    //mehotd to check is Grantbutton present
+    public static void grant(WebDriver driver)
+    {
+    	AuthorisedApplications_page.grant_btn(driver).click();
     }
 }

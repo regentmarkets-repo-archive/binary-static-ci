@@ -12,7 +12,9 @@ import org.testng.annotations.BeforeTest;
 import pageObjects.CashierPassword_Page;
 import pageObjects.Cashier_Page;
 import utility.Constant;
+import utility.Helper;
 import appModules.CashierPassword_Action;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_CashierPassword {
@@ -32,6 +34,8 @@ public class Validate_CashierPassword {
     //Check empty field validation
     @Test(priority=2)
     public void check_emptyField() {
+    	if(CashierPassword_Page.submitButtom(driver).getText().equals("Unlock Cashier"))
+    		UnlockCashier();
         CashierPassword_Action.Execute(driver, Constant.emptyString, Constant.emptyString);
         //Check the error message 
         Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"This field is required.");
@@ -88,7 +92,7 @@ public class Validate_CashierPassword {
         }
         Cashier_Page.unlock_link(driver).click();
     }
-
+  //unlock cashier password
     @Test(priority=10)
     //Update cashier password
     public void unlock() {
@@ -98,13 +102,30 @@ public class Validate_CashierPassword {
             System.out.println("Cashier Page Unlocked");
         }
     }
+    private void UnlockCashier()
+    {
+    	CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
+    }
     //Test Method to start browser session and launch site
     @BeforeTest
     public void launchApplication() {
-        ChromeDriverManager.getInstance().setup();
-        driver = new ChromeDriver();
+    	if(Constant.testExeEnv.equals("Local"))
+    	{
+    		ChromeDriverManager.getInstance().setup();
+    		driver = new ChromeDriver();
+    	}
+    	else
+    	{
+    		driver = Helper.BrowserStackConfigurations();
+    	}
+        driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get(Constant.URL);
+        //driver.get(Constant.URL);
+        Helper helperutility = new Helper();//get current ticks
+      	helperutility.AddCookieOfQaServer(driver);
+      	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+      	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+        driver.get(Constant.URL+"/en/endpoint.html");
 	
     }
     //Test Method to close browser session

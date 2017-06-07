@@ -55,11 +55,11 @@ function toggleAllBoxes() {
 <body>
 <h2 align='center'>CheckLoginHistoryPage</h2><table border='1' align="center">
 <tr>
-<td>Tests passed/Failed/Skipped:</td><td>3/2/0</td>
+<td>Tests passed/Failed/Skipped:</td><td>5/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Mon Apr 17 11:10:59 PKT 2017</td>
+<td>Started on:</td><td>Tue Jun 06 18:43:22 PKT 2017</td>
 </tr>
-<tr><td>Total time:</td><td>13 seconds (13573 ms)</td>
+<tr><td>Total time:</td><td>28 seconds (28909 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -67,102 +67,6 @@ function toggleAllBoxes() {
 </tr>
 </table><p/>
 <small><i>(Hover the method name to see the test class name)</i></small><p/>
-<table width='100%' border='1' class='invocation-failed'>
-<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='testCases.Validate_LoginHistoryPage.Check_NewEntries()'><b>Check_NewEntries</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
-<td><div><pre>java.lang.AssertionError: expected [Réussite] but found [Successful]
-	at appModules.LoginHistory_Action.ExecuteCheckLatest(LoginHistory_Action.java:18)
-	at testCases.Validate_LoginHistoryPage.Check_NewEntries(Validate_LoginHistoryPage.java:42)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1109020385", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1109020385'><pre>java.lang.AssertionError: expected [Réussite] but found [Successful]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at appModules.LoginHistory_Action.ExecuteCheckLatest(LoginHistory_Action.java:18)
-	at testCases.Validate_LoginHistoryPage.Check_NewEntries(Validate_LoginHistoryPage.java:42)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div></td>
-<td>0</td>
-<td>testCases.Validate_LoginHistoryPage@6b09bb57</td></tr>
-<tr>
-<td title='testCases.Validate_LoginHistoryPage.NavigateToLoginHistoryPage()'><b>NavigateToLoginHistoryPage</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
-<td><div><pre>java.lang.AssertionError: expected [Historique de connexion] but found [Login History]
-	at appModules.LoginHistory_Action.Execute(LoginHistory_Action.java:12)
-	at appModules.Navigation_Action.Navigate_To_LoginHistoryPage(Navigation_Action.java:63)
-	at testCases.Validate_LoginHistoryPage.NavigateToLoginHistoryPage(Validate_LoginHistoryPage.java:35)
-... Removed 31 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1501513951", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
-<div class='stack-trace' id='stack-trace1501513951'><pre>java.lang.AssertionError: expected [Historique de connexion] but found [Login History]
-	at org.testng.Assert.fail(Assert.java:94)
-	at org.testng.Assert.failNotEquals(Assert.java:513)
-	at org.testng.Assert.assertEqualsImpl(Assert.java:135)
-	at org.testng.Assert.assertEquals(Assert.java:116)
-	at org.testng.Assert.assertEquals(Assert.java:190)
-	at org.testng.Assert.assertEquals(Assert.java:200)
-	at appModules.LoginHistory_Action.Execute(LoginHistory_Action.java:12)
-	at appModules.Navigation_Action.Navigate_To_LoginHistoryPage(Navigation_Action.java:63)
-	at testCases.Validate_LoginHistoryPage.NavigateToLoginHistoryPage(Validate_LoginHistoryPage.java:35)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
-	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
-	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
-	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
-	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
-	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
-	at org.testng.TestRunner.privateRun(TestRunner.java:756)
-	at org.testng.TestRunner.run(TestRunner.java:610)
-	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
-	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
-	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
-	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
-	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
-	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
-	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
-	at org.testng.TestNG.runSuites(TestNG.java:1133)
-	at org.testng.TestNG.run(TestNG.java:1104)
-	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
-	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
-	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
-</pre></div></td>
-<td>2</td>
-<td>testCases.Validate_LoginHistoryPage@6b09bb57</td></tr>
-</table><p>
 <table width='100%' border='1' class='invocation-passed'>
 <tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
 <tr><td><b>Test method</b></td>
@@ -174,17 +78,27 @@ function toggleAllBoxes() {
 <td title='testCases.Validate_LoginHistoryPage.A_Login_IncorrectPassword()'><b>A_Login_IncorrectPassword</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
 <td></td>
 <td>3</td>
-<td>testCases.Validate_LoginHistoryPage@6b09bb57</td></tr>
+<td>testCases.Validate_LoginHistoryPage@57536d79</td></tr>
 <tr>
 <td title='testCases.Validate_LoginHistoryPage.CheckTotalRows()'><b>CheckTotalRows</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
 <td></td>
 <td>0</td>
-<td>testCases.Validate_LoginHistoryPage@6b09bb57</td></tr>
+<td>testCases.Validate_LoginHistoryPage@57536d79</td></tr>
+<tr>
+<td title='testCases.Validate_LoginHistoryPage.Check_NewEntries()'><b>Check_NewEntries</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
+<td></td>
+<td>0</td>
+<td>testCases.Validate_LoginHistoryPage@57536d79</td></tr>
 <tr>
 <td title='testCases.Validate_LoginHistoryPage.Login()'><b>Login</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
 <td></td>
-<td>1</td>
-<td>testCases.Validate_LoginHistoryPage@6b09bb57</td></tr>
+<td>3</td>
+<td>testCases.Validate_LoginHistoryPage@57536d79</td></tr>
+<tr>
+<td title='testCases.Validate_LoginHistoryPage.NavigateToLoginHistoryPage()'><b>NavigateToLoginHistoryPage</b><br>Test class: testCases.Validate_LoginHistoryPage</td>
+<td></td>
+<td>4</td>
+<td>testCases.Validate_LoginHistoryPage@57536d79</td></tr>
 </table><p>
 </body>
 </html>

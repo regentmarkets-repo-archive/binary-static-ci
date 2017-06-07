@@ -1,23 +1,27 @@
 package appModules;
 
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.interactions.*;
+import org.testng.Assert;
 
+import pageObjects.NewAccount_Page;
 import pageObjects.UpgradeRealAccount_Page;
 
 public class UpgradeRealAccount_Action {
 	//method to upgrade real account
-	public static void UpgradeAccount_Action(WebDriver driver,String title,String Fname,String lName,String DoB,String fAddress,String sAddress,String city,String state,String pCode,String phone,String sQuestion,String aSq)
+	public static void UpgradeAccount_Action(WebDriver driver,String title,String Fname,String lName,String fAddress,String sAddress,String city,String state,String pCode,String phone,String sQuestion,String aSq)
 	{
-		//navigate to upgrade account page
-		Navigation_Action.Navigate_To_UpgradeAccount(driver);
 	   //select title
 		UpgradeRealAccount_Page.dd_Title(driver).selectByValue(title);
 		//input FirstName
-		UpgradeRealAccount_Page.txt_FirstLineAddress(driver).sendKeys(Fname);
+		UpgradeRealAccount_Page.txt_FirstName(driver).sendKeys(Fname);
 		//input familyName
 		UpgradeRealAccount_Page.txt_FamilyName(driver).sendKeys(lName);
 		//input DOB
-		UpgradeRealAccount_Page.txt_DOB(driver).sendKeys(DoB);
+		UpgradeRealAccount_Page.txt_DOB(driver).click();
+		UpgradeRealAccount_Page.DateValue(driver).click();
 		//input FirstLine Address
 		UpgradeRealAccount_Page.txt_FirstLineAddress(driver).sendKeys(fAddress);
 		//input SecondLine Address
@@ -38,5 +42,15 @@ public class UpgradeRealAccount_Action {
 		UpgradeRealAccount_Page.chk_NotPEP(driver).click();
 		//accept Terms and Condition
 		UpgradeRealAccount_Page.chk_TnC(driver).click();
+		//open account
+		UpgradeRealAccount_Page.btn_OpenAccount(driver).click();
+		//check client landed on trade
+		Assert.assertEquals(NewAccount_Page.IsClientOnTrade(driver).getText(),"Trade");
+		try {
+			Thread.sleep(5000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		}
 }

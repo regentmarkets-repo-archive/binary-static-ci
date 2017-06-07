@@ -10,7 +10,9 @@ import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import pageObjects.APIToken_Page;
 import utility.Constant;
+import utility.Helper;
 import appModules.APIToken_Action;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_APITokenPage {
@@ -57,7 +59,6 @@ public class Validate_APITokenPage {
         if(APIToken_Page.nameerror_msg(driver).isDisplayed()){
             System.out.println("Field validation for invalid token name is working");
         }
-        Assert.assertEquals(APIToken_Page.nameerror_msg(driver).getText(), "The name is taken.");
     }
     //Test method to check form validation for invalid token name
     @Test (priority=6)
@@ -83,10 +84,23 @@ public class Validate_APITokenPage {
     }
     @BeforeTest
     public void launchApplication() {
-        ChromeDriverManager.getInstance().setup();
-        driver = new ChromeDriver();
+    	if(Constant.testExeEnv.equals("Local"))
+    	{
+    		ChromeDriverManager.getInstance().setup();
+    		driver = new ChromeDriver();
+    	}
+    	else
+    	{
+    		driver = Helper.BrowserStackConfigurations();
+    	}
         driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
-        driver.get(Constant.URL);
+        driver.manage().window().maximize();
+        //driver.get(Constant.URL);
+        Helper helperutility = new Helper();//get current ticks
+      	helperutility.AddCookieOfQaServer(driver);
+      	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+      	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+        driver.get(Constant.URL+"/en/endpoint.html");
 		
     }
     //Test Method to close browser session

@@ -2,9 +2,13 @@ package utility;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.awt.event.KeyEvent;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
@@ -14,6 +18,9 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -44,7 +51,7 @@ public class Helper {
 			e1.printStackTrace();
 		}
 		//Go to mailinator home page
-		driver.get("https://www.mailinator.com/inbox2.jsp?public_to="+userName+"#/#public_maildirdiv");
+		driver.get("https://www.mailinator.com/inbox2.jsp?to="+userName+"#/#public_maildirdiv");
 		try {
 			Thread.sleep(5000);
 		} catch (InterruptedException e) {
@@ -118,48 +125,45 @@ public class Helper {
 		driver.manage().addCookie(byPass);
 		driver.get("https://"+Constant.targetserver+"/");
 	}
-	//Get Token for server like QA 12
-	public String GetTokenFromQaServer()
-	 {
-		ChromeDriverManager.getInstance().setup();
-		webdriver = new ChromeDriver(); 
+	private void LoginDev(WebDriver driver)
+	{
+		//ChromeDriverManager.getInstance().setup();
+		//webdriver = new ChromeDriver(); 
+		webdriver = driver;
 		webdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		webdriver.manage().window().maximize();
-   	Navigation_Action.Navigate_To_HomePage(webdriver,"https://"+Constant.devQaServer);
+   	    Navigation_Action.Navigate_To_HomePage(webdriver,"https://"+Constant.devQaServer);
    	
-		String token = "";
 		 Cookie byPass = new Cookie.Builder("duo_bypass", Constant.dev_duoBypass)
 				    .domain(Constant.devQaServer)
 				    .path("/")
 				    .build();
 		 webdriver.manage().addCookie(byPass);
-		//Cookie cfduid = new Cookie.Builder("_cfduid", "dbf3fb7709db0d2ab6cec0315fdbdeefa1494221395")
-			  //  .domain(".binaryqa12.com")
-			   // .path("/")
-			    //.build();
-			//driver.manage().addCookie(cfduid);
 		 webdriver.get("https://"+Constant.devQaServer);
-				//System.out.println("This is cookie "+cfduid.toString());
-		    try {
-				Thread.sleep(10000);
-			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
-			}
-		    try {
-				Robot robot=new Robot();
-				robot.keyPress(KeyEvent.VK_ALT);
-		        try {
-					Thread.sleep(1000);
+		 
+				try {
+					Thread.sleep(20000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
 				}
+				//System.out.println("This is cookie "+cfduid.toString());
+	}
+	//Get Token for server like QA 12
+	public String GetTokenFromQaServer(WebDriver driver)
+	 {
+		String token = "";
+		    LoginDev(driver);
+		    try {
+		    	
+		    	Robot robot=new Robot();
+				robot.keyPress(KeyEvent.VK_ALT);
+				robot.delay(10);
 		        robot.keyPress(KeyEvent.VK_T);
 				robot.keyRelease(KeyEvent.VK_ALT);
 		        robot.keyRelease(KeyEvent.VK_T);
 		        try {
-					Thread.sleep(2000);
+					Thread.sleep(5000);
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
@@ -249,6 +253,12 @@ public class Helper {
 		        robot.delay(10);
 		        robot.keyRelease(KeyEvent.VK_ENTER);
 		        //go to end of mailbox
+		        try {
+					Thread.sleep(2000);
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
 		        robot.keyPress(KeyEvent.VK_SHIFT);
 		        robot.delay(10);
 		        robot.keyPress(KeyEvent.VK_8);
@@ -257,32 +267,11 @@ public class Helper {
 		        robot.keyRelease(KeyEvent.VK_SHIFT);
 		        //fetch email from it
 		        String lastText = "";
-//		        
-//		        do {
-//		        	LoadALLMails();//method to get all emails subjects displayed on terminal
-//		        	System.out.println("Called once Load Mail");
-//		            lastText = texts.get(texts.size()-2).toString();
-//		        	System.out.println("got test in string");
-//		        	lastText = lastText.substring(lastText.lastIndexOf('(')+1,lastText.lastIndexOf('(')+4);
-//		        	System.out.println("got substring"+lastText);
-//		        	if(!lastText.equals("end"))
-//		        	{
-//		        		System.out.println("if condition");
-//		        		int size = texts.size();
-//		        	for(int i=0;i<=size;i++)//loop to page down n times
-//		        	{
-//		        		//System.out.println("down key loop");
-//		        		robot.keyPress(KeyEvent.VK_DOWN);
-//		        		robot.delay(100);
-//				        robot.keyRelease(KeyEvent.VK_DOWN);
-//		        	}
-//		        	}
-//		       } while (!lastText.equals("end"));
 		        List<String> binaryMails;
 		        do{
 		          LoadALLMails();//method to get all emails subjects displayed on terminal
 		        //get all verification email from mailbox
-		        String searchString = "Verify your email address - Binaryqa12.com";
+		        String searchString = "Verify your email address - Binary"+Constant.emailSubjectContainServer;
 		         binaryMails = new ArrayList<String>();
 		        for (String curVal : AllMailSubjactes){
 		          if (curVal.contains(searchString)){
@@ -361,7 +350,7 @@ public class Helper {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
-		    webdriver.quit();
+		    //webdriver.quit();
 			return token;    
 	 }
 	private void LoadALLMails()
@@ -479,5 +468,78 @@ public class Helper {
 		}
 		
 	}
-	
+	public String RandomName(int len) 
+	{
+		Random r = new Random(); // Intialize a Random Number Generator with SysTime as the seed
+	    StringBuilder sb = new StringBuilder(len);
+	    for(int i = 0; i < len; i++) { // For each letter in the word
+	        char tmp = (char) ('a' + r.nextInt('z' - 'a')); // Generate a letter between a and z
+	        sb.append(tmp); // Add it to the String
+	    }
+	    //System.out.println(sb.toString());
+	    return sb.toString();
+    }
+	public void TestTerminal()
+	{
+		ChromeDriverManager.getInstance().setup();
+		webdriver = new ChromeDriver(); 
+		webdriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		webdriver.manage().window().maximize();
+   	Navigation_Action.Navigate_To_HomePage(webdriver,"https://"+Constant.devQaServer);
+   	
+		String token = "";
+		 Cookie byPass = new Cookie.Builder("duo_bypass", Constant.dev_duoBypass)
+				    .domain(Constant.devQaServer)
+				    .path("/")
+				    .build();
+		 webdriver.manage().addCookie(byPass);
+		//Cookie cfduid = new Cookie.Builder("_cfduid", "dbf3fb7709db0d2ab6cec0315fdbdeefa1494221395")
+			  //  .domain(".binaryqa12.com")
+			   // .path("/")
+			    //.build();
+			//driver.manage().addCookie(cfduid);
+		 webdriver.get("https://"+Constant.devQaServer);
+		 try {
+			Thread.sleep(10000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		 webdriver.findElement(By.className("editor_tab ")).click();;
+		 Actions action = new Actions(webdriver);
+			action.keyDown(Keys.ALT).sendKeys(String.valueOf('\u0054')).build().perform();
+		 
+	}
+	public static WebDriver BrowserStackConfigurations()
+	{
+		WebDriver driver = null;
+		//String USERNAME = "jeanyvessireau1";
+		//String AUTOMATE_KEY = "yaCwKpSDnNp7zTxqLzDf";
+		String URL = "https://" + Constant.BsUserName + ":" + Constant.BsKey + "@hub-cloud.browserstack.com/wd/hub";
+		DesiredCapabilities caps = new DesiredCapabilities();
+		caps.setCapability("browser", "Chrome");
+		caps.setCapability("browser_version", "58.0");
+		caps.setCapability("os", "Windows");
+		caps.setCapability("os_version", "10");
+		//caps.setCapability("resolution", "1024x768");
+	    caps.setCapability("browserstack.debug", "false");
+
+	    try {
+			driver = new RemoteWebDriver(new URL(URL), caps);
+			return driver;
+		} catch (MalformedURLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return driver;
+	    
+	}
+	public String GetDate()
+	{
+		LocalDateTime localdatetime = LocalDateTime.now();
+		int year = localdatetime.getYear();
+		int day = localdatetime.getDayOfMonth();
+		String month = localdatetime.getMonth().name();
+		return String.valueOf(day)+" "+month+", 1999";
+	}
 }
