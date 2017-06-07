@@ -17,7 +17,7 @@ import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
-import utility.Constant;
+
 
 public class Navigation_Action {
 		
@@ -111,5 +111,21 @@ public class Navigation_Action {
     public static void Navigate_To_TradingPage(WebDriver driver){
     	MainMenu_Tab.link_TradeMenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    
+    // Navigates to resources page
+    public static void Navigate_To_PlatformPage(WebDriver driver){
+        Home_Page.platformLink(driver).click();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    // Navigates to trade page to get main tab menu 
+    public static void Navigate_To_TradePage(WebDriver driver){
+        Home_Page.tradeNowLink(driver).click();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    // Navigates to Resources Page
+    public static void Navigate_To_ResourcesPage(WebDriver driver){
+        MainMenu_Tab.link_ResourcesMenu(driver).click();
+        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 }
