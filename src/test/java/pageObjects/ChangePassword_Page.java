@@ -34,7 +34,9 @@ public class ChangePassword_Page {
 		//Method to find change password button
 		public static WebElement btn_ChangePassword(WebDriver driver){
 			WebDriverWait wait = new WebDriverWait(driver,30);
+
 			element = wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_submit")));
+
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}

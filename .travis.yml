@@ -24,12 +24,22 @@ before_script:
   - "export DISPLAY=:99.0"
   - "sh -e /etc/init.d/xvfb start"
   - sleep 3 # give xvfb some time to start
+  
+after_script:
+  - cat target/surefire-reports/TestSuite.txt
+  
 notifications:
   email:
     recipients:
       - ashkan@binary.com
       - mohammad@binary.com
       - bijan@binary.com
-      - x-qa@binary.com
+      - ridho@binary.com
+      - izuan@binary.com
+      - dmytro@binary.com
+      - ehtesham@binary.com
+      - parashuram@binary.com
+      - negar@binary.com
+      - kelly@binary.com
     on_success: never
     on_failure: always

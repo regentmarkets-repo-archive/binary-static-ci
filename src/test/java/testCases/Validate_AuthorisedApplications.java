@@ -1,13 +1,7 @@
 package testCases;
 
 import org.testng.annotations.Test;
-import io.github.bonigarcia.wdm.ChromeDriverManager;
 import static org.testng.Assert.assertTrue;
-import java.util.concurrent.TimeUnit;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeTest;
 import pageObjects.AuthorisedApplications_page;
 import utility.Constant;
 import utility.Helper;
@@ -18,50 +12,42 @@ import appModules.Navigation_Action;
 
 
 
-public class Validate_AuthorisedApplications {
-    public WebDriver driver;
-    //Test method to login 
-    @Test(priority=0)
+public class Validate_AuthorisedApplications extends BaseClass {
+
+    @Test(priority=0,description="Test method to login")
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
     } 
-    //Test Method to navigate to Authorised Application  page
-    @Test(priority=1)
+    //
+    @Test(priority=1,description="Test Method to navigate to Authorised Application page")
     public void NavigateToAuthorisedAppsPage() {
     	if(AuthorisedApplications_page.BtnGrant(driver))
     		AuthorisedApplications_Action.grant(driver);
         Navigation_Action.Navigate_To_SecurityPage(driver);
         Navigation_Action.NavigateToAuthorisedApplicationsPage(driver);
     }
-    //Test method to check API Token Page is loaded 
-    @Test(priority=2)
+    @Test(priority=2,description="Test method to check API Token Page is loaded")
     public void CheckPageLoad() {
         AuthorisedApplications_Action.checkTitle(driver);
-    }
-    //Test method to revoke authorized application 
-    @Test(priority=3)
+    } 
+    @Test(priority=3,description="Test method to revoke authorized application")
     public void revoke_authapps() {
         AuthorisedApplications_Action.revoke(driver);
         driver.switchTo().alert().accept();
         driver.navigate().refresh();
     }
-
-    //Test method to check login
-    @Test(priority=4)
+    @Test(priority=4,description="Test method to check login")
     public void login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
-
     }
-    //Test method to check review permission page
-    @Test(priority=5)
+    @Test(priority=5,description="Test method to check review permission page")
     public void checkReviewPage() {
         AuthorisedApplications_Action.reviewPage(driver);
         assertTrue(AuthorisedApplications_page.scope_list(driver).isDisplayed());
     }
-    //Test method to check reject permission page
-    @Test(priority=6)
+    @Test(priority=6,description="Test method to check reject permission page")
     public void reject() {
         AuthorisedApplications_Action.cancelPermission(driver);
         Navigation_Action.Navigate_To_LoginPage(driver);
@@ -72,12 +58,12 @@ public class Validate_AuthorisedApplications {
 			e.printStackTrace();
 		}
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
-    }   
-    //Test method to check grant permission page
-    @Test(priority=7)
+    }  
+    @Test(priority=7,description="Test method to check grant permission page")
     public void grant() {
         AuthorisedApplications_Action.grantPermission(driver);
     }
+
 
     //Test Method to start browser session and launch binary site
     @BeforeTest
@@ -106,5 +92,6 @@ public class Validate_AuthorisedApplications {
     public void endSession() {
         driver.quit();
     }
+
 
 }

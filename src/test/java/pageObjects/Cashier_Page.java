@@ -15,19 +15,30 @@ public class Cashier_Page {
     //Method to find cashier page title   
     public static WebElement page_title(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
+
         element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='page_info']/title")));
         Assert.assertTrue(element.isEnabled());
+
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/h1")));
+        Assert.assertTrue(element.isDisplayed());
+
         return element;
     }
     //Method to find cashier page sub title   
     public static WebElement sub_title(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
+
         element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath("//*[@id='content']/div[2]/h1")));
         Assert.assertTrue(element.isEnabled());
+
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='content']/div[2]/div[3]/h3")));
+        Assert.assertTrue(element.isDisplayed());
+
         return element;
     }
-    //Method  find deposit button  button 
+    //Method  find deposit button
     public static WebElement deposit(WebDriver driver){
+
         //WebDriverWait wait = new WebDriverWait(driver,30);
         //element = wait.until(ExpectedConditions.elementToBeClickable(By.className("toggle.button.client_real")));
         //Assert.assertTrue(element.isDisplayed());
@@ -41,6 +52,19 @@ public class Cashier_Page {
         //Assert.assertTrue(element.isDisplayed());
     	List<WebElement> deposit = driver.findElements(By.cssSelector("a.toggle.button.client_real"));
         return deposit.get(1);
+
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='content']/div[2]/div[3]/div/div[3]/div[1]/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    //Method  find  withdraw button   
+    public static WebElement withdraw(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='content']/div[2]/div[3]/div/div[3]/div[2]/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+
     }
     
     //method to find deposit/withdrawal page title 
@@ -54,7 +78,7 @@ public class Cashier_Page {
     //method to find cashier lock message 
     public static WebElement lock_msg(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='cashier_locked_message']")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='cashier_locked_message']")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }

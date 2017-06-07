@@ -2,7 +2,6 @@ package appModules;
 
 
 import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
@@ -11,7 +10,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-
 import pageObjects.APIToken_Page;
 import pageObjects.AuthorisedApplications_page;
 import pageObjects.CashierPassword_Page;
@@ -22,7 +20,6 @@ import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
-import utility.Constant;
 
 public class Navigation_Action {
 		
@@ -124,6 +121,7 @@ public class Navigation_Action {
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
+
     public static void NavigateToAuthorisedApplicationsPage(WebDriver driver){
 		Actions builder = new Actions(driver);
 		Action clickAuthorizedApps = builder
@@ -139,6 +137,13 @@ public class Navigation_Action {
 		}
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.subtitle(driver).isDisplayed());
+
+	  // navigates to self exclution page
+    public static void Navigate_To_SelfExclusionPage_ValidateInput(WebDriver driver) {
+        MainAccount_Menu.link_MainAccount(driver).click();
+        MainAccount_Menu.link_Security(driver).click();
+        Security_Page.link_SelfExclusionPage(driver).click();
+
     }
     public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
     	driver.get(URL);

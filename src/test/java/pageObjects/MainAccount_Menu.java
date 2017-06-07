@@ -40,7 +40,7 @@ public class MainAccount_Menu {
 		//Method to find Main Account link
 		public static WebElement link_MainAccount(WebDriver driver){
 			WebDriverWait wait = new WebDriverWait(driver,30);
-			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='main-logout']")));
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='main-account']/li/a/div[2]")));
 			Assert.assertTrue(element.isDisplayed());
 			return element;
 		}
@@ -55,6 +55,13 @@ public class MainAccount_Menu {
         public static WebElement auth_msg(WebDriver driver){
             WebDriverWait wait = new WebDriverWait(driver,30);
             element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='msg_notification']")));
+            Assert.assertTrue(element.isDisplayed());
+            return element;
+        }
+	      //Method try check virtual account message 
+        public static WebElement link_VirtualAccount(WebDriver driver){
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='all-accounts']/li/ul/div[2]/div/a")));
             Assert.assertTrue(element.isDisplayed());
             return element;
         }
