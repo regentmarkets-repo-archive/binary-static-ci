@@ -66,4 +66,9 @@
 			<class name="testCases.Validate_TradePage" />
 		</classes>
 		</test>
+	<test name="CheckPortfolioPage">
+		<classes>
+			<class name="testCases.Validate_PortfolioPage" />
+		</classes>
+		</test>
 </suite>
