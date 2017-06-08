@@ -269,7 +269,7 @@ public class Trading_Action {
 	}
 }
 	
-	public static void GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
+	public static String GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
 		Actions builder = new Actions(driver);
@@ -295,6 +295,7 @@ public class Trading_Action {
 		String [] arrSplit = purchaseReference.split(" ");
 		String referenceNumber = arrSplit[4];
 		System.out.println("Transaction reference number is: " + referenceNumber);
+		return referenceNumber;
 	}
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
@@ -322,8 +323,6 @@ public class Trading_Action {
 	public static void ValidateContractSell(WebDriver driver){
 		Trade_Page.btn_SellAtMarket(driver).click();
 		Assert.assertTrue(Trade_Page.txt_ContractSellMessage(driver).isDisplayed());
-		System.out.println(Trade_Page.txt_ContractSellMessage(driver).getText());
-		
 	}
 	public static void CloseViewPopup(WebDriver driver){
 		Trade_Page.btn_PopupCloseButton(driver).click();

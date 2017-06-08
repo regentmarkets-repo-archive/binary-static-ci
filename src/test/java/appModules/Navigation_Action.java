@@ -1,10 +1,12 @@
 package appModules;
 
 import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.Assert;
+
 import pageObjects.APIToken_Page;
 import pageObjects.AuthorisedApplications_page;
 import pageObjects.CashierPassword_Page;
@@ -13,6 +15,7 @@ import pageObjects.Home_Page;
 import pageObjects.Login_History;
 import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
+import pageObjects.Portfolio_Page;
 import pageObjects.Profile_Page;
 import pageObjects.Security_Page;
 
@@ -96,7 +99,6 @@ public class Navigation_Action {
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
-	  // navigates to self exclution page
     public static void Navigate_To_SelfExclusionPage_ValidateInput(WebDriver driver) {
         MainAccount_Menu.link_MainAccount(driver).click();
         MainAccount_Menu.link_Security(driver).click();
@@ -108,5 +110,10 @@ public class Navigation_Action {
     public static void Navigate_To_TradingPage(WebDriver driver){
     	MainMenu_Tab.link_TradeMenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    public static void Navigate_To_PortfolioPage(WebDriver driver){
+    	MainMenu_Tab.link_Portfolio(driver).click();
+    	System.out.println(Portfolio_Page.txt_Header(driver).getText());
+    	Assert.assertTrue(Portfolio_Page.txt_Header(driver).getText().equals("Portfolio"));
     }
 }

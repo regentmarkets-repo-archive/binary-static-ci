@@ -2,8 +2,6 @@
 package testCases;
 
 import org.testng.annotations.Test;
-
-import pageObjects.CashierPassword_Page;
 import utility.Constant;
 import appModules.CashierPassword_Action;
 import appModules.Navigation_Action;
