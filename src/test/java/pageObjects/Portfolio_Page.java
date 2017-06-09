@@ -38,6 +38,4 @@ public class Portfolio_Page {
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
-	
-
 }

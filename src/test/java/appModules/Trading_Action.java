@@ -268,7 +268,6 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
 }
-	
 	public static String GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
@@ -302,7 +301,6 @@ public class Trading_Action {
 		GetTradeConfirmationDetails(driver,submarket,duration,durationType,amount);
 		Trade_Page.btn_View(driver).click();
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
-		
 	}
 	public static void ValidateViewPopupWindow(WebDriver driver,String purchaseDesc,String referenceNumber,String amount){
 		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver).getText(), purchaseDesc);
