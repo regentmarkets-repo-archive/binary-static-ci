@@ -208,7 +208,6 @@ public class Trading_Action {
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
 			SelectEnterDuration(driver,"999",durationType);
 			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
-			System.out.println(Trade_Page.err_BottomPurchase(driver).getText());
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
