@@ -4,12 +4,47 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 import pageObjects.ChangePassword_Page;
 import utility.Constant;
+import utility.Helper;
 import appModules.ChangePassword_Action;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_ChangePasswordPage extends BaseClass {
 	
+
+ public WebDriver driver;
+ //Test Method to start browser session and launch site
+ @BeforeTest
+ public void launchApplication() {
+	 if(Constant.testExeEnv.equals("Local"))
+ 	{
+ 		ChromeDriverManager.getInstance().setup();
+ 		driver = new ChromeDriver();
+ 	}
+ 	else
+ 	{
+ 		driver = Helper.BrowserStackConfigurations();
+ 	}
+   	driver.manage().window().maximize();
+   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+   	//driver.get(Constant.URL);
+   	Helper helperutility = new Helper();//get current ticks
+  	helperutility.AddCookieOfQaServer(driver);
+  	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+  	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+    driver.get(Constant.URL+"/en/endpoint.html");
+
+ }
+ //Test Method to close browser session
+ @AfterTest
+ public void endSession() {
+	  driver.quit();
+ }
+ //Test Method to login into the site
+ @Test(priority=0)
+
  @Test(priority=0,description="Test Method to login into the site")
+
  public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);

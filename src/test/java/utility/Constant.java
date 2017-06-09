@@ -5,7 +5,9 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
-	public static final String Email = "bijan+autotest@binary.com";
+
+	public static  String Email = "auto1496704650428@mailinator.com";//"autobinary1496464168835@binary.com";//"bijan+vi@binary.com"
+
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
 	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
@@ -51,4 +53,23 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
+	public static final String targetserver="www.binaryqa12.com";
+	public static final String emailSubjectContainServer = "qa12.com";//server name which ll be in subjectline
+	public static final String appId="1003";
+	public static final String qaserver_duoBypass = "a1b0d44f0c308b9882ee8dd9d107cbd737bf629becbd9e942300ec4b823f863b";
+	public static final String devQaServer = "dev.binaryqa12.com";
+	public static final String dev_duoBypass="7c75916319346a17422e593ce632f395857451d45b56cf4d52cd98314fca10c8";
+	public static final String countryCode = "pk";
+	public static final String UpgradeTitle = "Mr";
+	public static final String firstLineAddress = "FirstLine Address";
+	public static final String secondLineAddress = "Second Line Address";
+	public static final String city = "Lahore";
+	public static final String state = "PB";
+	public static final String zipCode = "54000";
+	public static final String phone = "3456755787";
+	public static final String securityQ = "Memorable town/city";
+	public static final String securityAns = "lahore";
+	public static final String BsUserName = "jeanyvessireau1";
+	public static final String BsKey = "yaCwKpSDnNp7zTxqLzDf";
+	public static final String testExeEnv = "Local";// BrowserStack to run tests on BS,and Local for local machine
 }

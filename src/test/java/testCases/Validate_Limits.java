@@ -1,10 +1,18 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
+
+import appModules.Endpoint_Action;
+
 import appModules.Limits_Action;
 import appModules.Login_Action;
 import appModules.Navigation_Action;
 import utility.Constant;
+
+import utility.Helper;
+import utility.CommonFunctions;
+
 
 public class Validate_Limits extends BaseClass {
 	int getMaxPos, getAccBal;
@@ -53,4 +61,27 @@ public class Validate_Limits extends BaseClass {
 	public void Test_Limits_Message() {
 		Limits_Action.test_msg(driver);
 	} 
+
+	
+	//Test Method to start browser session and launch site
+	@BeforeTest
+	public void launchApplication() {
+	 	ChromeDriverManager.getInstance().setup();
+	   	driver = new ChromeDriver();
+	   	driver.manage().window().maximize();
+	   	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		//driver.get(Constant.URL);
+	   	Helper helperutility = new Helper();//get current ticks
+	  	helperutility.AddCookieOfQaServer(driver);
+	  	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+	  	Endpoint_Action.SetServer(driver,Constant.Server,Constant.AppID);
+	    driver.get(Constant.URL+"/en/endpoint.html");
+	}
+	
+	//Method to close browser session
+	@AfterTest
+	public void logout() {
+		CommonFunctions.endSession(driver);
+	}
+
 }

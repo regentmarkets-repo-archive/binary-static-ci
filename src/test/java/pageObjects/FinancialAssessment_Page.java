@@ -144,6 +144,7 @@ public class FinancialAssessment_Page {
 	}
 	//Method to find success message text field
 	public static WebElement msg_Success(WebDriver driver) {
+		FinancialAssessment_Page.select_NetWorth(driver).submit();
 		WebDriverWait wait = new WebDriverWait(driver,30);
 		element = wait.until(ExpectedConditions.presenceOfElementLocated(By.xpath(".//*[contains(@id,'msg_form')]")));
 		Assert.assertTrue(element.isDisplayed());

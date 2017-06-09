@@ -4,7 +4,9 @@ import org.testng.annotations.Test;
 import static org.testng.Assert.assertTrue;
 import pageObjects.AuthorisedApplications_page;
 import utility.Constant;
+import utility.Helper;
 import appModules.AuthorisedApplications_Action;
+import appModules.Endpoint_Action;
 import appModules.Login_Action;
 import appModules.Navigation_Action;
 
@@ -20,8 +22,10 @@ public class Validate_AuthorisedApplications extends BaseClass {
     //
     @Test(priority=1,description="Test Method to navigate to Authorised Application page")
     public void NavigateToAuthorisedAppsPage() {
+    	if(AuthorisedApplications_page.BtnGrant(driver))
+    		AuthorisedApplications_Action.grant(driver);
         Navigation_Action.Navigate_To_SecurityPage(driver);
-        Navigation_Action.Navigate_To_AuthorisedApplicationsPage(driver);
+        Navigation_Action.NavigateToAuthorisedApplicationsPage(driver);
     }
     @Test(priority=2,description="Test method to check API Token Page is loaded")
     public void CheckPageLoad() {
@@ -47,11 +51,47 @@ public class Validate_AuthorisedApplications extends BaseClass {
     public void reject() {
         AuthorisedApplications_Action.cancelPermission(driver);
         Navigation_Action.Navigate_To_LoginPage(driver);
+        try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Login_Action.Execute(driver,Constant.Email,Constant.Password);
     }  
     @Test(priority=7,description="Test method to check grant permission page")
     public void grant() {
         AuthorisedApplications_Action.grantPermission(driver);
     }
+
+
+    //Test Method to start browser session and launch binary site
+    @BeforeTest
+    public void launchApplication() {
+    	if(Constant.testExeEnv.equals("Local"))
+    	{
+    		ChromeDriverManager.getInstance().setup();
+    		driver = new ChromeDriver();
+    	}
+    	else
+    	{
+    		driver = Helper.BrowserStackConfigurations();
+    	}
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        //driver.get(Constant.URL);
+        Helper helperutility = new Helper();//get current ticks
+      	helperutility.AddCookieOfQaServer(driver);
+      	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+      	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+        driver.get(Constant.URL+"/en/endpoint.html");
+
+    }
+    //Test Method to close browser session
+    @AfterTest
+    public void endSession() {
+        driver.quit();
+    }
+
 
 }

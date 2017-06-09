@@ -1,0 +1,2901 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 14 failed tests</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>C:\Users\ea\Documents\GitHub\binary-static-ci\testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">12 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">101 methods, 14 failed,   87 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="NavigateToLimitsPage">NavigateToLimitsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="NavigateToPersonalDetailsPage">NavigateToPersonalDetailsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Exceed_MaxAccountBalance">Test_Exceed_MaxAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Exceed_MaxOpenPos">Test_Exceed_MaxOpenPos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Limits_MaxAccountBalance">Test_Limits_MaxAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Limits_MaxOpenPosition">Test_Limits_MaxOpenPosition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Limits_Message">Test_Limits_Message</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Lower_MaxAccountBalance">Test_Lower_MaxAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Lower_MaxOpenPos">Test_Lower_MaxOpenPos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="checkReviewPage">checkReviewPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_depositLock">check_depositLock</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="grant">grant</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="reject">reject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="A_Launch">A_Launch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="A_Login">A_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="A_Login_IncorrectPassword">A_Login_IncorrectPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="AddNewToken">AddNewToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="B_Login">B_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="B_NavigateToFinancialAssessmentPage">B_NavigateToFinancialAssessmentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="C_Logout">C_Logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="C_Set_FinancialAssessment">C_Set_FinancialAssessment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckInvalidName">CheckInvalidName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckMinChar">CheckMinChar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="CheckPageLoad">CheckPageLoad</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckPageLoad">CheckPageLoad</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckScopeValidation">CheckScopeValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="CheckTotalRows">CheckTotalRows</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="Check_NewEntries">Check_NewEntries</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="D_Login_IncorrectPassword">D_Login_IncorrectPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="D_Logout">D_Logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="DeleteToken">DeleteToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="DuplicateName">DuplicateName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccountOnQaServer" hash-for-method="GrantUpgradedUserPermissons">GrantUpgradedUserPermissons</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="NavigateToAPITokenPage">NavigateToAPITokenPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="NavigateToAuthorisedAppsPage">NavigateToAuthorisedAppsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="NavigateToCashierPasswordPage">NavigateToCashierPasswordPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="NavigateToChangePasswordPage">NavigateToChangePasswordPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="NavigateToFinancialAssessmentPage">NavigateToFinancialAssessmentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="NavigateToLoginHistoryPage">NavigateToLoginHistoryPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="NavigateToPersonalDetailsPage">NavigateToPersonalDetailsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccount" hash-for-method="NewClientRegistration">NewClientRegistration</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccountOnQaServer" hash-for-method="NewClientRegistrationOnQaServer">NewClientRegistrationOnQaServer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="SetPersonalDetailsFields">SetPersonalDetailsFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccount" hash-for-method="SetServer">SetServer</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressCity_EmptyField">Test_AddressCity_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressCity_InvalidChars">Test_AddressCity_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressLine1_EmptyField">Test_AddressLine1_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressLine1_InvalidChars">Test_AddressLine1_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_AnnualIncome">Test_AnnualIncome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_AnticipatedAccountTurnover">Test_AnticipatedAccountTurnover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_ChangeCurrentPassword">Test_ChangeCurrentPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_ChangeToOriginalPassword">Test_ChangeToOriginalPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_CommoditiesTradingExperience">Test_CommoditiesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_CommoditiesTradingFrequency">Test_CommoditiesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_DiffPasswords_Validation">Test_DiffPasswords_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_Education">Test_Education</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_ForexTradingExperience">Test_ForexTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_ForexTradingFrequency">Test_ForexTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_HintMessage_Validation">Test_HintMessage_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_IncorrectOldPassword_Validation">Test_IncorrectOldPassword_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndicesTradingExperience">Test_IndicesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndicesTradingFrequency">Test_IndicesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndustryEmployment">Test_IndustryEmployment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_MinChars_Validation">Test_MinChars_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_NetWorth">Test_NetWorth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_Occupation">Test_Occupation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherDerivatiesTradingFrequency">Test_OtherDerivatiesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherDerivativesTradingExperience">Test_OtherDerivativesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherTradingExperience">Test_OtherTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherTradingFrequency">Test_OtherTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_RequiredFields_Validation">Test_RequiredFields_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_StocksTradingExperience">Test_StocksTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_StocksTradingFrequency">Test_StocksTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_TaxId_EmptyField">Test_TaxId_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_TaxResidence_EmptyField">Test_TaxResidence_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_EmptyField">Test_Telephone_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_InvalidChars">Test_Telephone_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_LessChars">Test_Telephone_LessChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_WeakPassword_Validation">Test_WeakPassword_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_ZipCode_InvalidChars">Test_ZipCode_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccountOnQaServer" hash-for-method="UpgradeToRealAccount">UpgradeToRealAccount</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccount" hash-for-method="Validate_EmailField">Validate_EmailField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_NewAccount" hash-for-method="Validate_VerificationInfo">Validate_VerificationInfo</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_diffPass">check_diffPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_emptyField">check_emptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_invPass">check_invPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_minpass">check_minpass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_samePass">check_samePass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_withdrawlock">check_withdrawlock</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="revoke_authapps">revoke_authapps</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="unlock">unlock</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="update_cshrPass">update_cshrPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Validate_Limits</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToLimitsPage">
+                  </a> <!-- NavigateToLimitsPage -->
+                  <span class="method-name">NavigateToLimitsPage</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id=&apos;not_authenticated&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Authentication.txt_nonAuthedMsg(Authentication.java:22)
+	at appModules.Limits_Action.checkAuth(Limits_Action.java:105)
+	at testCases.Validate_Limits.NavigateToLimitsPage(Validate_Limits.java:77)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: .//*[@id=&apos;not_authenticated&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToPersonalDetailsPage">
+                  </a> <!-- NavigateToPersonalDetailsPage -->
+                  <span class="method-name">NavigateToPersonalDetailsPage</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: .//*[@id=&apos;main-logout&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.MainAccount_Menu.link_MainAccount(MainAccount_Menu.java:43)
+	at appModules.Navigation_Action.Navigate_To_SecurityPage(Navigation_Action.java:44)
+	at testCases.Validate_Limits.NavigateToPersonalDetailsPage(Validate_Limits.java:45)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: .//*[@id=&apos;main-logout&apos;]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Exceed_MaxAccountBalance">
+                  </a> <!-- Test_Exceed_MaxAccountBalance -->
+                  <span class="method-name">Test_Exceed_MaxAccountBalance</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: max_balance (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Self_Exclusion.txt_MaxAccCashBal(Self_Exclusion.java:15)
+	at appModules.Limits_Action.checkExMaxAccBal(Limits_Action.java:18)
+	at testCases.Validate_Limits.Test_Exceed_MaxAccountBalance(Validate_Limits.java:52)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: max_balance
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Exceed_MaxOpenPos">
+                  </a> <!-- Test_Exceed_MaxOpenPos -->
+                  <span class="method-name">Test_Exceed_MaxOpenPos</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: max_open_bets (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Self_Exclusion.txt_MaxOpenPos(Self_Exclusion.java:22)
+	at appModules.Limits_Action.checkExMaxOpPo(Limits_Action.java:62)
+	at testCases.Validate_Limits.Test_Exceed_MaxOpenPos(Validate_Limits.java:64)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: max_open_bets
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Limits_MaxAccountBalance">
+                  </a> <!-- Test_Limits_MaxAccountBalance -->
+                  <span class="method-name">Test_Limits_MaxAccountBalance</span>
+                  <div class="stack-trace">java.lang.StringIndexOutOfBoundsException: String index out of range: 3
+	at java.lang.String.substring(Unknown Source)
+	at appModules.Limits_Action.intTostr(Limits_Action.java:164)
+	at appModules.Limits_Action.limit_accbal(Limits_Action.java:113)
+	at testCases.Validate_Limits.Test_Limits_MaxAccountBalance(Validate_Limits.java:86)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Limits_MaxOpenPosition">
+                  </a> <!-- Test_Limits_MaxOpenPosition -->
+                  <span class="method-name">Test_Limits_MaxOpenPosition</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//*[@id=&apos;content&apos;]/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[1]/td[2] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Limits.select_MaxOpenPos(Limits.java:22)
+	at appModules.Limits_Action.limit_openpo(Limits_Action.java:137)
+	at testCases.Validate_Limits.Test_Limits_MaxOpenPosition(Validate_Limits.java:92)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: .//*[@id=&apos;content&apos;]/div[2]/div[1]/div[1]/div[1]/table/tbody/tr[1]/td[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Limits_Message">
+                  </a> <!-- Test_Limits_Message -->
+                  <span class="method-name">Test_Limits_Message</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: .//*[@id=&apos;main-logout&apos;] (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Users\ea\AppData\Local\Temp\scoped_dir16612_23810}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.110, platform=WIN8_1, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 8d02bfc8b6f3c5e5e92fcbb97b00d8f4
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.MainAccount_Menu.link_MainAccount(MainAccount_Menu.java:43)
+	at appModules.Limits_Action.test_msg(Limits_Action.java:144)
+	at testCases.Validate_Limits.Test_Limits_Message(Validate_Limits.java:98)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Lower_MaxAccountBalance">
+                  </a> <!-- Test_Lower_MaxAccountBalance -->
+                  <span class="method-name">Test_Lower_MaxAccountBalance</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: max_balance (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Self_Exclusion.txt_MaxAccCashBal(Self_Exclusion.java:15)
+	at appModules.Limits_Action.checkLowMaxAccBal(Limits_Action.java:34)
+	at testCases.Validate_Limits.Test_Lower_MaxAccountBalance(Validate_Limits.java:58)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: max_balance
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Lower_MaxOpenPos">
+                  </a> <!-- Test_Lower_MaxOpenPos -->
+                  <span class="method-name">Test_Lower_MaxOpenPos</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.id: max_open_bets (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Self_Exclusion.txt_MaxOpenPos(Self_Exclusion.java:22)
+	at appModules.Limits_Action.checkLowMaxOpPo(Limits_Action.java:78)
+	at testCases.Validate_Limits.Test_Lower_MaxOpenPos(Validate_Limits.java:70)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.id: max_open_bets
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Validate_CashierPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_depositLock">
+                  </a> <!-- check_depositLock -->
+                  <span class="method-name">check_depositLock</span>
+                  <div class="stack-trace">org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=58.0.3029.81)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;185-129-69-96&apos;, ip: &apos;185.129.69.96&apos;, os.name: &apos;windows&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Windows\proxy\scoped_dir992_26727}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: fcbdb9dcfb93d08da5bc84002a79cf9b
+Command duration or timeout: 1.20 seconds
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:216)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:168)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:635)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:274)
+	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:148)
+	at appModules.CashierPassword_Action.depositPage(CashierPassword_Action.java:44)
+	at testCases.Validate_CashierPassword.check_depositLock(Validate_CashierPassword.java:79)
+Caused by: org.openqa.selenium.remote.ScreenshotException: Screen shot has been taken
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:142)
+	... 30 more
+Caused by: org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=58.0.3029.81)
+  (Driver info: chromedriver=2.29.461591 (62ebf098771772160f391d75e589dc567915b233),platform=Windows NT 10.0.14393 x86_64) (WARNING: The server did not provide any stacktrace information)
+Command duration or timeout: 8 milliseconds
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;2.53.0&apos;, revision: &apos;35ae25b&apos;, time: &apos;2016-03-15 17:00:58&apos;
+System info: host: &apos;185-129-69-96&apos;, ip: &apos;185.129.69.96&apos;, os.name: &apos;windows&apos;, os.arch: &apos;x86&apos;, os.version: &apos;10.0&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Windows\proxy\scoped_dir992_26727}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: fcbdb9dcfb93d08da5bc84002a79cf9b
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.ErrorHandler.createThrowable(ErrorHandler.java:206)
+	at org.openqa.selenium.remote.ErrorHandler.throwIfResponseFailed(ErrorHandler.java:158)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:678)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:327)
+	at org.openqa.selenium.remote.RemoteWebElement.isEnabled(RemoteWebElement.java:169)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement$1.invoke(EventFiringWebDriver.java:335)
+	at com.sun.proxy.$Proxy2.isEnabled(Unknown Source)
+	at org.openqa.selenium.support.events.EventFiringWebDriver$EventFiringWebElement.isEnabled(EventFiringWebDriver.java:381)
+	at org.openqa.selenium.remote.server.KnownElements$1.invoke(KnownElements.java:64)
+	at com.sun.proxy.$Proxy3.isEnabled(Unknown Source)
+	at org.openqa.selenium.remote.server.handler.GetElementEnabled.call(GetElementEnabled.java:31)
+	at org.openqa.selenium.remote.server.handler.GetElementEnabled.call(GetElementEnabled.java:1)
+	at java.util.concurrent.FutureTask.run(Unknown Source)
+	at org.openqa.selenium.remote.server.DefaultSession$1.run(DefaultSession.java:176)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+... Removed 39 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Validate_AuthorisedApplications</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkReviewPage">
+                  </a> <!-- checkReviewPage -->
+                  <span class="method-name">checkReviewPage</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: //*[@id=&apos;wrapper&apos;]/div[2]/h1 (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.AuthorisedApplications_page.review_title(AuthorisedApplications_page.java:75)
+	at appModules.AuthorisedApplications_Action.reviewPage(AuthorisedApplications_Action.java:23)
+	at testCases.Validate_AuthorisedApplications.checkReviewPage(Validate_AuthorisedApplications.java:60)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //*[@id=&apos;wrapper&apos;]/div[2]/h1
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="grant">
+                  </a> <!-- grant -->
+                  <span class="method-name">grant</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.name: confirm_scopes (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.AuthorisedApplications_page.grant_btn(AuthorisedApplications_page.java:91)
+	at appModules.AuthorisedApplications_Action.grantPermission(AuthorisedApplications_Action.java:32)
+	at testCases.Validate_AuthorisedApplications.grant(Validate_AuthorisedApplications.java:79)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.name: confirm_scopes
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.id: btn_login (tried for 60 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: org.openqa.selenium.remote.RemoteWebDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.29.461591 (62ebf098771772160f391d75e589dc567915b233), userDataDir=C:\Windows\proxy\scoped_dir4952_24278}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=58.0.3029.81, platform=XP, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, webdriver.remote.sessionid=7478cea4234323d34c95e6621f32100e8e352433, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 7478cea4234323d34c95e6621f32100e8e352433
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.Home_Page.btn_Login(Home_Page.java:16)
+	at appModules.Navigation_Action.Navigate_To_LoginPage(Navigation_Action.java:34)
+	at testCases.Validate_AuthorisedApplications.login(Validate_AuthorisedApplications.java:53)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reject">
+                  </a> <!-- reject -->
+                  <span class="method-name">reject</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.xpath: //*[@id=&apos;wrapper&apos;]/div[2]/form/div/button[2] (tried for 30 second(s) with 500 MILLISECONDS interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:257)
+	at pageObjects.AuthorisedApplications_page.cancel_btn(AuthorisedApplications_page.java:99)
+	at appModules.AuthorisedApplications_Action.cancelPermission(AuthorisedApplications_Action.java:28)
+	at testCases.Validate_AuthorisedApplications.reject(Validate_AuthorisedApplications.java:66)
+Caused by: org.openqa.selenium.NoSuchElementException: Cannot locate an element using By.xpath: //*[@id=&apos;wrapper&apos;]/div[2]/form/div/button[2]
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.1.0&apos;, revision: &apos;b94c902&apos;, time: &apos;2017-02-16 12:21:31 -0800&apos;
+System info: host: &apos;V2CLOUD-PC&apos;, ip: &apos;169.254.109.9&apos;, os.name: &apos;Windows 8.1&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;6.3&apos;, java.version: &apos;1.8.0_121&apos;
+Driver info: driver.version: unknown
+	at org.openqa.selenium.support.ui.ExpectedConditions.lambda$findElement$0(ExpectedConditions.java:896)
+	at java.util.Optional.orElseThrow(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.findElement(ExpectedConditions.java:895)
+	at org.openqa.selenium.support.ui.ExpectedConditions.access$000(ExpectedConditions.java:41)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:651)
+	at org.openqa.selenium.support.ui.ExpectedConditions$22.apply(ExpectedConditions.java:644)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:234)
+	... 28 more
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_PersonalDetailsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToPersonalDetailsPage">
+                  </a> <!-- NavigateToPersonalDetailsPage -->
+                  <span class="method-name">NavigateToPersonalDetailsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SetPersonalDetailsFields">
+                  </a> <!-- SetPersonalDetailsFields -->
+                  <span class="method-name">SetPersonalDetailsFields</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressCity_EmptyField">
+                  </a> <!-- Test_AddressCity_EmptyField -->
+                  <span class="method-name">Test_AddressCity_EmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressCity_InvalidChars">
+                  </a> <!-- Test_AddressCity_InvalidChars -->
+                  <span class="method-name">Test_AddressCity_InvalidChars</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressLine1_EmptyField">
+                  </a> <!-- Test_AddressLine1_EmptyField -->
+                  <span class="method-name">Test_AddressLine1_EmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressLine1_InvalidChars">
+                  </a> <!-- Test_AddressLine1_InvalidChars -->
+                  <span class="method-name">Test_AddressLine1_InvalidChars</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_TaxId_EmptyField">
+                  </a> <!-- Test_TaxId_EmptyField -->
+                  <span class="method-name">Test_TaxId_EmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_TaxResidence_EmptyField">
+                  </a> <!-- Test_TaxResidence_EmptyField -->
+                  <span class="method-name">Test_TaxResidence_EmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_EmptyField">
+                  </a> <!-- Test_Telephone_EmptyField -->
+                  <span class="method-name">Test_Telephone_EmptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_InvalidChars">
+                  </a> <!-- Test_Telephone_InvalidChars -->
+                  <span class="method-name">Test_Telephone_InvalidChars</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_LessChars">
+                  </a> <!-- Test_Telephone_LessChars -->
+                  <span class="method-name">Test_Telephone_LessChars</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ZipCode_InvalidChars">
+                  </a> <!-- Test_ZipCode_InvalidChars -->
+                  <span class="method-name">Test_ZipCode_InvalidChars</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_APITokenPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddNewToken">
+                  </a> <!-- AddNewToken -->
+                  <span class="method-name">AddNewToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckInvalidName">
+                  </a> <!-- CheckInvalidName -->
+                  <span class="method-name">CheckInvalidName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckMinChar">
+                  </a> <!-- CheckMinChar -->
+                  <span class="method-name">CheckMinChar</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckPageLoad">
+                  </a> <!-- CheckPageLoad -->
+                  <span class="method-name">CheckPageLoad</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckScopeValidation">
+                  </a> <!-- CheckScopeValidation -->
+                  <span class="method-name">CheckScopeValidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteToken">
+                  </a> <!-- DeleteToken -->
+                  <span class="method-name">DeleteToken</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DuplicateName">
+                  </a> <!-- DuplicateName -->
+                  <span class="method-name">DuplicateName</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToAPITokenPage">
+                  </a> <!-- NavigateToAPITokenPage -->
+                  <span class="method-name">NavigateToAPITokenPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_NewAccountOnQaServer</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="GrantUpgradedUserPermissons">
+                  </a> <!-- GrantUpgradedUserPermissons -->
+                  <span class="method-name">GrantUpgradedUserPermissons</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewClientRegistrationOnQaServer">
+                  </a> <!-- NewClientRegistrationOnQaServer -->
+                  <span class="method-name">NewClientRegistrationOnQaServer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="UpgradeToRealAccount">
+                  </a> <!-- UpgradeToRealAccount -->
+                  <span class="method-name">UpgradeToRealAccount</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_SetFinancialAssessment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Login">
+                  </a> <!-- A_Login -->
+                  <span class="method-name">A_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="B_NavigateToFinancialAssessmentPage">
+                  </a> <!-- B_NavigateToFinancialAssessmentPage -->
+                  <span class="method-name">B_NavigateToFinancialAssessmentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="C_Set_FinancialAssessment">
+                  </a> <!-- C_Set_FinancialAssessment -->
+                  <span class="method-name">C_Set_FinancialAssessment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="D_Logout">
+                  </a> <!-- D_Logout -->
+                  <span class="method-name">D_Logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_LoginHistoryPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Login_IncorrectPassword">
+                  </a> <!-- A_Login_IncorrectPassword -->
+                  <span class="method-name">A_Login_IncorrectPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckTotalRows">
+                  </a> <!-- CheckTotalRows -->
+                  <span class="method-name">CheckTotalRows</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Check_NewEntries">
+                  </a> <!-- Check_NewEntries -->
+                  <span class="method-name">Check_NewEntries</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToLoginHistoryPage">
+                  </a> <!-- NavigateToLoginHistoryPage -->
+                  <span class="method-name">NavigateToLoginHistoryPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_Limits</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_NewAccount</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="NewClientRegistration">
+                  </a> <!-- NewClientRegistration -->
+                  <span class="method-name">NewClientRegistration</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SetServer">
+                  </a> <!-- SetServer -->
+                  <span class="method-name">SetServer</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_EmailField">
+                  </a> <!-- Validate_EmailField -->
+                  <span class="method-name">Validate_EmailField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Validate_VerificationInfo">
+                  </a> <!-- Validate_VerificationInfo -->
+                  <span class="method-name">Validate_VerificationInfo</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_CashierPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToCashierPasswordPage">
+                  </a> <!-- NavigateToCashierPasswordPage -->
+                  <span class="method-name">NavigateToCashierPasswordPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_diffPass">
+                  </a> <!-- check_diffPass -->
+                  <span class="method-name">check_diffPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_emptyField">
+                  </a> <!-- check_emptyField -->
+                  <span class="method-name">check_emptyField</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_invPass">
+                  </a> <!-- check_invPass -->
+                  <span class="method-name">check_invPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_minpass">
+                  </a> <!-- check_minpass -->
+                  <span class="method-name">check_minpass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_samePass">
+                  </a> <!-- check_samePass -->
+                  <span class="method-name">check_samePass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_withdrawlock">
+                  </a> <!-- check_withdrawlock -->
+                  <span class="method-name">check_withdrawlock</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unlock">
+                  </a> <!-- unlock -->
+                  <span class="method-name">unlock</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update_cshrPass">
+                  </a> <!-- update_cshrPass -->
+                  <span class="method-name">update_cshrPass</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_ChangePasswordPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToChangePasswordPage">
+                  </a> <!-- NavigateToChangePasswordPage -->
+                  <span class="method-name">NavigateToChangePasswordPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ChangeCurrentPassword">
+                  </a> <!-- Test_ChangeCurrentPassword -->
+                  <span class="method-name">Test_ChangeCurrentPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ChangeToOriginalPassword">
+                  </a> <!-- Test_ChangeToOriginalPassword -->
+                  <span class="method-name">Test_ChangeToOriginalPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_DiffPasswords_Validation">
+                  </a> <!-- Test_DiffPasswords_Validation -->
+                  <span class="method-name">Test_DiffPasswords_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_HintMessage_Validation">
+                  </a> <!-- Test_HintMessage_Validation -->
+                  <span class="method-name">Test_HintMessage_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IncorrectOldPassword_Validation">
+                  </a> <!-- Test_IncorrectOldPassword_Validation -->
+                  <span class="method-name">Test_IncorrectOldPassword_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_MinChars_Validation">
+                  </a> <!-- Test_MinChars_Validation -->
+                  <span class="method-name">Test_MinChars_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_RequiredFields_Validation">
+                  </a> <!-- Test_RequiredFields_Validation -->
+                  <span class="method-name">Test_RequiredFields_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_WeakPassword_Validation">
+                  </a> <!-- Test_WeakPassword_Validation -->
+                  <span class="method-name">Test_WeakPassword_Validation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_FinancialAssessmentFields</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToFinancialAssessmentPage">
+                  </a> <!-- NavigateToFinancialAssessmentPage -->
+                  <span class="method-name">NavigateToFinancialAssessmentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AnnualIncome">
+                  </a> <!-- Test_AnnualIncome -->
+                  <span class="method-name">Test_AnnualIncome</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AnticipatedAccountTurnover">
+                  </a> <!-- Test_AnticipatedAccountTurnover -->
+                  <span class="method-name">Test_AnticipatedAccountTurnover</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_CommoditiesTradingExperience">
+                  </a> <!-- Test_CommoditiesTradingExperience -->
+                  <span class="method-name">Test_CommoditiesTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_CommoditiesTradingFrequency">
+                  </a> <!-- Test_CommoditiesTradingFrequency -->
+                  <span class="method-name">Test_CommoditiesTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Education">
+                  </a> <!-- Test_Education -->
+                  <span class="method-name">Test_Education</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ForexTradingExperience">
+                  </a> <!-- Test_ForexTradingExperience -->
+                  <span class="method-name">Test_ForexTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ForexTradingFrequency">
+                  </a> <!-- Test_ForexTradingFrequency -->
+                  <span class="method-name">Test_ForexTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndicesTradingExperience">
+                  </a> <!-- Test_IndicesTradingExperience -->
+                  <span class="method-name">Test_IndicesTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndicesTradingFrequency">
+                  </a> <!-- Test_IndicesTradingFrequency -->
+                  <span class="method-name">Test_IndicesTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndustryEmployment">
+                  </a> <!-- Test_IndustryEmployment -->
+                  <span class="method-name">Test_IndustryEmployment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_NetWorth">
+                  </a> <!-- Test_NetWorth -->
+                  <span class="method-name">Test_NetWorth</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Occupation">
+                  </a> <!-- Test_Occupation -->
+                  <span class="method-name">Test_Occupation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherDerivatiesTradingFrequency">
+                  </a> <!-- Test_OtherDerivatiesTradingFrequency -->
+                  <span class="method-name">Test_OtherDerivatiesTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherDerivativesTradingExperience">
+                  </a> <!-- Test_OtherDerivativesTradingExperience -->
+                  <span class="method-name">Test_OtherDerivativesTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherTradingExperience">
+                  </a> <!-- Test_OtherTradingExperience -->
+                  <span class="method-name">Test_OtherTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherTradingFrequency">
+                  </a> <!-- Test_OtherTradingFrequency -->
+                  <span class="method-name">Test_OtherTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_StocksTradingExperience">
+                  </a> <!-- Test_StocksTradingExperience -->
+                  <span class="method-name">Test_StocksTradingExperience</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_StocksTradingFrequency">
+                  </a> <!-- Test_StocksTradingFrequency -->
+                  <span class="method-name">Test_StocksTradingFrequency</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_LoginPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Launch">
+                  </a> <!-- A_Launch -->
+                  <span class="method-name">A_Launch</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="B_Login">
+                  </a> <!-- B_Login -->
+                  <span class="method-name">B_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="C_Logout">
+                  </a> <!-- C_Logout -->
+                  <span class="method-name">C_Logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="D_Login_IncorrectPassword">
+                  </a> <!-- D_Login_IncorrectPassword -->
+                  <span class="method-name">D_Login_IncorrectPassword</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_AuthorisedApplications</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckPageLoad">
+                  </a> <!-- CheckPageLoad -->
+                  <span class="method-name">CheckPageLoad</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToAuthorisedAppsPage">
+                  </a> <!-- NavigateToAuthorisedAppsPage -->
+                  <span class="method-name">NavigateToAuthorisedAppsPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="revoke_authapps">
+                  </a> <!-- revoke_authapps -->
+                  <span class="method-name">revoke_authapps</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">C:\Users\ea\Documents\GitHub\binary-static-ci\testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;NewAccountOnQaServer&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_NewAccountOnQaServer&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- NewAccountOnQaServer --&gt;
+  &lt;test name=&quot;CheckLoginPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_LoginPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLoginPage --&gt;
+  &lt;test name=&quot;SetFinancialAssessment&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_SetFinancialAssessment&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SetFinancialAssessment --&gt;
+  &lt;test name=&quot;FinancialAssessmentFields&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_FinancialAssessmentFields&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FinancialAssessmentFields --&gt;
+  &lt;test name=&quot;CheckPersonalDetailsPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_PersonalDetailsPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckPersonalDetailsPage --&gt;
+  &lt;test name=&quot;CheckLoginHistoryPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_LoginHistoryPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLoginHistoryPage --&gt;
+  &lt;test name=&quot;ChangePasswordPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_ChangePasswordPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ChangePasswordPage --&gt;
+  &lt;test name=&quot;CheckCashierPassword&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_CashierPassword&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckCashierPassword --&gt;
+  &lt;test name=&quot;CheckAuthorisedApplication&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_AuthorisedApplications&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckAuthorisedApplication --&gt;
+  &lt;test name=&quot;checkTokenAPI&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_APITokenPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- checkTokenAPI --&gt;
+  &lt;test name=&quot;CheckLimitsPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_Limits&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLimitsPage --&gt;
+  &lt;test name=&quot;NewAccountOnBlueServer&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_NewAccount&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- NewAccountOnBlueServer --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">NewAccountOnQaServer (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLoginPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SetFinancialAssessment (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FinancialAssessmentFields (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckPersonalDetailsPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLoginHistoryPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ChangePasswordPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckCashierPassword (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckAuthorisedApplication (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">checkTokenAPI (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLimitsPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">NewAccountOnBlueServer (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(101);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'NewClientRegistrationOnQaServer')
+data.setCell(0, 2, 'testCases.Validate_NewAccountOnQaServer')
+data.setCell(0, 3, 96192);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'Validate_VerificationInfo')
+data.setCell(1, 2, 'testCases.Validate_NewAccount')
+data.setCell(1, 3, 81657);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'NewClientRegistration')
+data.setCell(2, 2, 'testCases.Validate_NewAccount')
+data.setCell(2, 3, 76858);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'login')
+data.setCell(3, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(3, 3, 60202);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'NavigateToLimitsPage')
+data.setCell(4, 2, 'testCases.Validate_Limits')
+data.setCell(4, 3, 41497);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'checkReviewPage')
+data.setCell(5, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(5, 3, 40685);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'grant')
+data.setCell(6, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(6, 3, 40653);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'reject')
+data.setCell(7, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(7, 3, 40652);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Test_Limits_MaxOpenPosition')
+data.setCell(8, 2, 'testCases.Validate_Limits')
+data.setCell(8, 3, 40596);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Test_Lower_MaxOpenPos')
+data.setCell(9, 2, 'testCases.Validate_Limits')
+data.setCell(9, 3, 40584);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'NavigateToPersonalDetailsPage')
+data.setCell(10, 2, 'testCases.Validate_Limits')
+data.setCell(10, 3, 40565);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'Test_Exceed_MaxAccountBalance')
+data.setCell(11, 2, 'testCases.Validate_Limits')
+data.setCell(11, 3, 40563);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'Test_Lower_MaxAccountBalance')
+data.setCell(12, 2, 'testCases.Validate_Limits')
+data.setCell(12, 3, 40547);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'Test_Exceed_MaxOpenPos')
+data.setCell(13, 2, 'testCases.Validate_Limits')
+data.setCell(13, 3, 40547);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'Test_Limits_Message')
+data.setCell(14, 2, 'testCases.Validate_Limits')
+data.setCell(14, 3, 30147);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'NavigateToAPITokenPage')
+data.setCell(15, 2, 'testCases.Validate_APITokenPage')
+data.setCell(15, 3, 27274);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'NavigateToAuthorisedAppsPage')
+data.setCell(16, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(16, 3, 26212);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'UpgradeToRealAccount')
+data.setCell(17, 2, 'testCases.Validate_NewAccountOnQaServer')
+data.setCell(17, 3, 20875);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'CheckPageLoad')
+data.setCell(18, 2, 'testCases.Validate_APITokenPage')
+data.setCell(18, 3, 20264);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'Test_ChangeToOriginalPassword')
+data.setCell(19, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(19, 3, 12214);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'C_Set_FinancialAssessment')
+data.setCell(20, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(20, 3, 10169);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'B_NavigateToFinancialAssessmentPage')
+data.setCell(21, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(21, 3, 7792);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'A_Launch')
+data.setCell(22, 2, 'testCases.Validate_LoginPage')
+data.setCell(22, 3, 7779);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'Test_ForexTradingExperience')
+data.setCell(23, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(23, 3, 7460);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'Test_IndicesTradingFrequency')
+data.setCell(24, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(24, 3, 7071);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'NavigateToChangePasswordPage')
+data.setCell(25, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(25, 3, 6880);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'Test_IndustryEmployment')
+data.setCell(26, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(26, 3, 6810);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'Test_OtherDerivativesTradingExperience')
+data.setCell(27, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(27, 3, 6712);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'SetPersonalDetailsFields')
+data.setCell(28, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(28, 3, 6688);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'Test_IndicesTradingExperience')
+data.setCell(29, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(29, 3, 6392);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'Test_OtherDerivatiesTradingFrequency')
+data.setCell(30, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(30, 3, 6327);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'Test_StocksTradingExperience')
+data.setCell(31, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(31, 3, 6102);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'Test_ForexTradingFrequency')
+data.setCell(32, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(32, 3, 5985);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'Test_Occupation')
+data.setCell(33, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(33, 3, 5921);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'GrantUpgradedUserPermissons')
+data.setCell(34, 2, 'testCases.Validate_NewAccountOnQaServer')
+data.setCell(34, 3, 5868);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'Test_OtherTradingExperience')
+data.setCell(35, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(35, 3, 5852);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'Test_StocksTradingFrequency')
+data.setCell(36, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(36, 3, 5849);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'Test_NetWorth')
+data.setCell(37, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(37, 3, 5785);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'Test_AnticipatedAccountTurnover')
+data.setCell(38, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(38, 3, 5731);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'Test_CommoditiesTradingExperience')
+data.setCell(39, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(39, 3, 5704);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'Test_OtherTradingFrequency')
+data.setCell(40, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(40, 3, 5702);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'Test_Education')
+data.setCell(41, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(41, 3, 5650);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'Test_CommoditiesTradingFrequency')
+data.setCell(42, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(42, 3, 5551);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'Test_AnnualIncome')
+data.setCell(43, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(43, 3, 5530);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'NavigateToCashierPasswordPage')
+data.setCell(44, 2, 'testCases.Validate_CashierPassword')
+data.setCell(44, 3, 5301);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'A_Login')
+data.setCell(45, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(45, 3, 5102);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'Test_ChangeCurrentPassword')
+data.setCell(46, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(46, 3, 4616);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'update_cshrPass')
+data.setCell(47, 2, 'testCases.Validate_CashierPassword')
+data.setCell(47, 3, 4512);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'check_samePass')
+data.setCell(48, 2, 'testCases.Validate_CashierPassword')
+data.setCell(48, 3, 4497);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'check_emptyField')
+data.setCell(49, 2, 'testCases.Validate_CashierPassword')
+data.setCell(49, 3, 4481);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'NavigateToLoginHistoryPage')
+data.setCell(50, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(50, 3, 4253);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'Login')
+data.setCell(51, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(51, 3, 4240);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'D_Login_IncorrectPassword')
+data.setCell(52, 2, 'testCases.Validate_LoginPage')
+data.setCell(52, 3, 4212);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'check_invPass')
+data.setCell(53, 2, 'testCases.Validate_CashierPassword')
+data.setCell(53, 3, 4084);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'AddNewToken')
+data.setCell(54, 2, 'testCases.Validate_APITokenPage')
+data.setCell(54, 3, 3939);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'check_diffPass')
+data.setCell(55, 2, 'testCases.Validate_CashierPassword')
+data.setCell(55, 3, 3861);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'Login')
+data.setCell(56, 2, 'testCases.Validate_APITokenPage')
+data.setCell(56, 3, 3841);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'Login')
+data.setCell(57, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(57, 3, 3772);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'Login')
+data.setCell(58, 2, 'testCases.Validate_CashierPassword')
+data.setCell(58, 3, 3758);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'check_minpass')
+data.setCell(59, 2, 'testCases.Validate_CashierPassword')
+data.setCell(59, 3, 3672);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'B_Login')
+data.setCell(60, 2, 'testCases.Validate_LoginPage')
+data.setCell(60, 3, 3303);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'Login')
+data.setCell(61, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(61, 3, 3198);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'A_Login_IncorrectPassword')
+data.setCell(62, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(62, 3, 3159);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'Login')
+data.setCell(63, 2, 'testCases.Validate_Limits')
+data.setCell(63, 3, 3057);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'Login')
+data.setCell(64, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(64, 3, 3020);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'NavigateToPersonalDetailsPage')
+data.setCell(65, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(65, 3, 2951);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'Test_RequiredFields_Validation')
+data.setCell(66, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(66, 3, 2735);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'Test_IncorrectOldPassword_Validation')
+data.setCell(67, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(67, 3, 2648);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'unlock')
+data.setCell(68, 2, 'testCases.Validate_CashierPassword')
+data.setCell(68, 3, 2630);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'Login')
+data.setCell(69, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(69, 3, 2495);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'Test_TaxResidence_EmptyField')
+data.setCell(70, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(70, 3, 2367);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'NavigateToFinancialAssessmentPage')
+data.setCell(71, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(71, 3, 2336);
+data.setCell(72, 0, 72)
+data.setCell(72, 1, 'check_withdrawlock')
+data.setCell(72, 2, 'testCases.Validate_CashierPassword')
+data.setCell(72, 3, 2193);
+data.setCell(73, 0, 73)
+data.setCell(73, 1, 'DuplicateName')
+data.setCell(73, 2, 'testCases.Validate_APITokenPage')
+data.setCell(73, 3, 2113);
+data.setCell(74, 0, 74)
+data.setCell(74, 1, 'C_Logout')
+data.setCell(74, 2, 'testCases.Validate_LoginPage')
+data.setCell(74, 3, 2107);
+data.setCell(75, 0, 75)
+data.setCell(75, 1, 'SetServer')
+data.setCell(75, 2, 'testCases.Validate_NewAccount')
+data.setCell(75, 3, 2009);
+data.setCell(76, 0, 76)
+data.setCell(76, 1, 'Test_MinChars_Validation')
+data.setCell(76, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(76, 3, 1972);
+data.setCell(77, 0, 77)
+data.setCell(77, 1, 'Test_WeakPassword_Validation')
+data.setCell(77, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(77, 3, 1971);
+data.setCell(78, 0, 78)
+data.setCell(78, 1, 'check_depositLock')
+data.setCell(78, 2, 'testCases.Validate_CashierPassword')
+data.setCell(78, 3, 1793);
+data.setCell(79, 0, 79)
+data.setCell(79, 1, 'D_Logout')
+data.setCell(79, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(79, 3, 1774);
+data.setCell(80, 0, 80)
+data.setCell(80, 1, 'Validate_EmailField')
+data.setCell(80, 2, 'testCases.Validate_NewAccount')
+data.setCell(80, 3, 1758);
+data.setCell(81, 0, 81)
+data.setCell(81, 1, 'Test_DiffPasswords_Validation')
+data.setCell(81, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(81, 3, 1690);
+data.setCell(82, 0, 82)
+data.setCell(82, 1, 'revoke_authapps')
+data.setCell(82, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(82, 3, 1413);
+data.setCell(83, 0, 83)
+data.setCell(83, 1, 'CheckScopeValidation')
+data.setCell(83, 2, 'testCases.Validate_APITokenPage')
+data.setCell(83, 3, 1406);
+data.setCell(84, 0, 84)
+data.setCell(84, 1, 'Test_ZipCode_InvalidChars')
+data.setCell(84, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(84, 3, 1214);
+data.setCell(85, 0, 85)
+data.setCell(85, 1, 'Test_AddressCity_InvalidChars')
+data.setCell(85, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(85, 3, 1172);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'Test_AddressLine1_InvalidChars')
+data.setCell(86, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(86, 3, 1150);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'Test_Telephone_InvalidChars')
+data.setCell(87, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(87, 3, 1058);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'Test_TaxId_EmptyField')
+data.setCell(88, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(88, 3, 1007);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'CheckMinChar')
+data.setCell(89, 2, 'testCases.Validate_APITokenPage')
+data.setCell(89, 3, 1004);
+data.setCell(90, 0, 90)
+data.setCell(90, 1, 'Test_Telephone_LessChars')
+data.setCell(90, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(90, 3, 863);
+data.setCell(91, 0, 91)
+data.setCell(91, 1, 'Test_AddressCity_EmptyField')
+data.setCell(91, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(91, 3, 844);
+data.setCell(92, 0, 92)
+data.setCell(92, 1, 'Test_AddressLine1_EmptyField')
+data.setCell(92, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(92, 3, 842);
+data.setCell(93, 0, 93)
+data.setCell(93, 1, 'CheckInvalidName')
+data.setCell(93, 2, 'testCases.Validate_APITokenPage')
+data.setCell(93, 3, 774);
+data.setCell(94, 0, 94)
+data.setCell(94, 1, 'Test_Telephone_EmptyField')
+data.setCell(94, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(94, 3, 723);
+data.setCell(95, 0, 95)
+data.setCell(95, 1, 'Check_NewEntries')
+data.setCell(95, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(95, 3, 676);
+data.setCell(96, 0, 96)
+data.setCell(96, 1, 'DeleteToken')
+data.setCell(96, 2, 'testCases.Validate_APITokenPage')
+data.setCell(96, 3, 590);
+data.setCell(97, 0, 97)
+data.setCell(97, 1, 'CheckPageLoad')
+data.setCell(97, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(97, 3, 240);
+data.setCell(98, 0, 98)
+data.setCell(98, 1, 'Test_HintMessage_Validation')
+data.setCell(98, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(98, 3, 205);
+data.setCell(99, 0, 99)
+data.setCell(99, 1, 'CheckTotalRows')
+data.setCell(99, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(99, 3, 167);
+data.setCell(100, 0, 100)
+data.setCell(100, 1, 'Test_Limits_MaxAccountBalance')
+data.setCell(100, 2, 'testCases.Validate_Limits')
+data.setCell(100, 3, 1);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 19 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">0 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_NewAccountOnQaServer</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">NewClientRegistrationOnQaServer</span>
+                <span class="method-start">10805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">UpgradeToRealAccount</span>
+                <span class="method-start">107003 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">GrantUpgradedUserPermissons</span>
+                <span class="method-start">127881 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">133751 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_LoginPage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">134875 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">A_Launch</span>
+                <span class="method-start">141865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">B_Login</span>
+                <span class="method-start">149646 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">C_Logout</span>
+                <span class="method-start">152952 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">D_Login_IncorrectPassword</span>
+                <span class="method-start">155064 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">159278 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_SetFinancialAssessment</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">164700 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">A_Login</span>
+                <span class="method-start">183760 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">B_NavigateToFinancialAssessmentPage</span>
+                <span class="method-start">188864 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">C_Set_FinancialAssessment</span>
+                <span class="method-start">196660 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">D_Logout</span>
+                <span class="method-start">206830 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">208605 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_FinancialAssessmentFields</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">213992 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">229975 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToFinancialAssessmentPage</span>
+                <span class="method-start">233185 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ForexTradingExperience</span>
+                <span class="method-start">235524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ForexTradingFrequency</span>
+                <span class="method-start">242985 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndicesTradingExperience</span>
+                <span class="method-start">248974 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndicesTradingFrequency</span>
+                <span class="method-start">255372 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_CommoditiesTradingExperience</span>
+                <span class="method-start">262444 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_CommoditiesTradingFrequency</span>
+                <span class="method-start">268149 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_StocksTradingExperience</span>
+                <span class="method-start">273701 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_StocksTradingFrequency</span>
+                <span class="method-start">279804 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherTradingExperience</span>
+                <span class="method-start">285658 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherTradingFrequency</span>
+                <span class="method-start">291513 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherDerivativesTradingExperience</span>
+                <span class="method-start">297216 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherDerivatiesTradingFrequency</span>
+                <span class="method-start">303934 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndustryEmployment</span>
+                <span class="method-start">310262 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Occupation</span>
+                <span class="method-start">317075 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Education</span>
+                <span class="method-start">322997 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AnnualIncome</span>
+                <span class="method-start">328648 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_NetWorth</span>
+                <span class="method-start">334179 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AnticipatedAccountTurnover</span>
+                <span class="method-start">339965 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">345697 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_PersonalDetailsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">352355 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">371221 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToPersonalDetailsPage</span>
+                <span class="method-start">375464 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_TaxResidence_EmptyField</span>
+                <span class="method-start">378417 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_TaxId_EmptyField</span>
+                <span class="method-start">380786 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressLine1_InvalidChars</span>
+                <span class="method-start">381794 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressLine1_EmptyField</span>
+                <span class="method-start">382945 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressCity_InvalidChars</span>
+                <span class="method-start">383790 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressCity_EmptyField</span>
+                <span class="method-start">384962 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ZipCode_InvalidChars</span>
+                <span class="method-start">385807 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_InvalidChars</span>
+                <span class="method-start">387022 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_EmptyField</span>
+                <span class="method-start">388085 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_LessChars</span>
+                <span class="method-start">388809 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SetPersonalDetailsFields</span>
+                <span class="method-start">389674 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">396372 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_LoginHistoryPage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">402522 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">A_Login_IncorrectPassword</span>
+                <span class="method-start">414876 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">418036 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToLoginHistoryPage</span>
+                <span class="method-start">421059 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Check_NewEntries</span>
+                <span class="method-start">425313 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckTotalRows</span>
+                <span class="method-start">425994 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">426162 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_ChangePasswordPage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">431435 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">444166 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToChangePasswordPage</span>
+                <span class="method-start">446662 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_RequiredFields_Validation</span>
+                <span class="method-start">453543 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_MinChars_Validation</span>
+                <span class="method-start">456281 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_HintMessage_Validation</span>
+                <span class="method-start">458257 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_WeakPassword_Validation</span>
+                <span class="method-start">458463 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_DiffPasswords_Validation</span>
+                <span class="method-start">460436 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IncorrectOldPassword_Validation</span>
+                <span class="method-start">462127 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ChangeCurrentPassword</span>
+                <span class="method-start">464780 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ChangeToOriginalPassword</span>
+                <span class="method-start">469400 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">481615 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_CashierPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">488569 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">522435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToCashierPasswordPage</span>
+                <span class="method-start">526194 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_emptyField</span>
+                <span class="method-start">531496 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_minpass</span>
+                <span class="method-start">535978 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_invPass</span>
+                <span class="method-start">539652 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_diffPass</span>
+                <span class="method-start">543738 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_samePass</span>
+                <span class="method-start">547600 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update_cshrPass</span>
+                <span class="method-start">552100 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">check_depositLock</span>
+                <span class="method-start">556614 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_withdrawlock</span>
+                <span class="method-start">558414 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">unlock</span>
+                <span class="method-start">560618 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">563249 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_AuthorisedApplications</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">568793 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">583012 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToAuthorisedAppsPage</span>
+                <span class="method-start">586788 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckPageLoad</span>
+                <span class="method-start">613002 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">revoke_authapps</span>
+                <span class="method-start">613247 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">login</span>
+                <span class="method-start">614661 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">checkReviewPage</span>
+                <span class="method-start">674865 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">reject</span>
+                <span class="method-start">715564 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">grant</span>
+                <span class="method-start">756221 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">796886 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_APITokenPage</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">802679 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">822288 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToAPITokenPage</span>
+                <span class="method-start">826130 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckPageLoad</span>
+                <span class="method-start">853405 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckScopeValidation</span>
+                <span class="method-start">873670 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckMinChar</span>
+                <span class="method-start">875077 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DuplicateName</span>
+                <span class="method-start">876082 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckInvalidName</span>
+                <span class="method-start">878197 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddNewToken</span>
+                <span class="method-start">878972 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DeleteToken</span>
+                <span class="method-start">882912 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">883503 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_Limits</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">launchApplication</span>
+                <span class="method-start">889045 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">900495 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NavigateToPersonalDetailsPage</span>
+                <span class="method-start">903553 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Exceed_MaxAccountBalance</span>
+                <span class="method-start">944120 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Lower_MaxAccountBalance</span>
+                <span class="method-start">984687 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Exceed_MaxOpenPos</span>
+                <span class="method-start">1025236 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Lower_MaxOpenPos</span>
+                <span class="method-start">1065785 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">NavigateToLimitsPage</span>
+                <span class="method-start">1106377 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Limits_MaxAccountBalance</span>
+                <span class="method-start">1147876 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Limits_MaxOpenPosition</span>
+                <span class="method-start">1147878 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">Test_Limits_Message</span>
+                <span class="method-start">1188476 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">logout</span>
+                <span class="method-start">1218624 ms</span>
+              </div> <!-- configuration-test after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_NewAccount</div> <!-- chronological-class-name -->
+              <div class="configuration-test before">
+                <span class="method-name">setUp</span>
+                <span class="method-start">1219560 ms</span>
+              </div> <!-- configuration-test before -->
+              <div class="test-method">
+                <span class="method-name">SetServer</span>
+                <span class="method-start">1224320 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NewClientRegistration</span>
+                <span class="method-start">1226330 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Validate_EmailField</span>
+                <span class="method-start">1303189 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Validate_VerificationInfo</span>
+                <span class="method-start">1304949 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-test after">
+                <span class="method-name">endSession</span>
+                <span class="method-start">1386607 ms</span>
+              </div> <!-- configuration-test after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

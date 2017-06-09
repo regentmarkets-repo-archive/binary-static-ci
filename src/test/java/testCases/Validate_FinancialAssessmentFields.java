@@ -4,6 +4,8 @@ package testCases;
 import org.testng.annotations.Test;
 import pageObjects.FinancialAssessment_Page;
 import utility.Constant;
+import utility.Helper;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 import appModules.SetFinancialAssessment_Action;
 
@@ -217,4 +219,33 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 				System.out.println("Field validation for Anticipated Account Turnover is working");
 			}
 	  }
+
+	  //Test Method to start browser session and launch site
+	  @BeforeTest
+	  public void launchApplication() {
+		  if(Constant.testExeEnv.equals("Local"))
+	    	{
+	    		ChromeDriverManager.getInstance().setup();
+	    		driver = new ChromeDriver();
+	    	}
+	    	else
+	    	{
+	    		driver = Helper.BrowserStackConfigurations();
+	    	}
+	    	driver.manage().window().maximize();
+	    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	    	//driver.get(Constant.URL);
+	    	Helper helperutility = new Helper();//get current ticks
+	      	helperutility.AddCookieOfQaServer(driver);
+	      	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+	      	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+	        driver.get(Constant.URL+"/en/endpoint.html");
+			
+	  }
+	  //Test Method to close browser session
+	  @AfterTest
+	  public void endSession() {
+		  driver.quit();
+	  }
+
 }

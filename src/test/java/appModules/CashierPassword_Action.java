@@ -11,6 +11,13 @@ public class CashierPassword_Action {
 
     //Method to perform set cashier password action
     public static void Execute(WebDriver driver, String sPass, String sconfirmPass) {
+    	driver.navigate().refresh();
+    	try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         CashierPassword_Page.cashierPassword(driver).clear();
         CashierPassword_Page.cashierPassword(driver).sendKeys(sPass);
         CashierPassword_Page.confirmPassword(driver).clear();
@@ -36,20 +43,26 @@ public class CashierPassword_Action {
     //Method to check deposit page while cashier is locked
     public static void depositPage(WebDriver driver) {
         MainMenu_Tab.click_cashiermenu(driver).click();
-        Assert.assertTrue(Cashier_Page.page_title(driver).isDisplayed());
-        Assert.assertTrue(Cashier_Page.sub_title(driver).isDisplayed());
+        System.out.println("cashier menu done");
+        Assert.assertTrue(Cashier_Page.page_title(driver).isEnabled());
+        System.out.println("cashier title done");
+        Assert.assertTrue(Cashier_Page.sub_title(driver).isEnabled());
+        System.out.println("cashier sub_title done");
         Cashier_Page.deposit(driver).click();
+        System.out.println("Deposit page opened");
         Assert.assertEquals(Cashier_Page.title(driver).getText(),"Deposit"); 
+
         if(Cashier_Page.lock_msg(driver).isDisplayed()){
             Assert.assertEquals(Cashier_Page.lock_msg(driver).getText(),"Your cashier is locked as per your request - to unlock it, please click here.");  
             System.out.println("Deposit Page is Locked");
         }
+
     } 
     //Method to check withdraw page while cashier is locked
     public static void withdrawPage(WebDriver driver) {
         MainMenu_Tab.click_cashiermenu(driver).click();
-        Assert.assertTrue(Cashier_Page.page_title(driver).isDisplayed());
-        Assert.assertTrue(Cashier_Page.sub_title(driver).isDisplayed());
+        Assert.assertTrue(Cashier_Page.page_title(driver).isEnabled());
+        Assert.assertTrue(Cashier_Page.sub_title(driver).isEnabled());
         Cashier_Page.withdraw(driver).click();
         Assert.assertEquals(Cashier_Page.title(driver).getText(),"Withdraw"); 
         if(Cashier_Page.lock_msg(driver).isDisplayed()){

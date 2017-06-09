@@ -3,7 +3,9 @@ package testCases;
 
 import org.testng.annotations.Test;
 import utility.Constant;
+import utility.Helper;
 import appModules.CashierPassword_Action;
+import appModules.Endpoint_Action;
 import appModules.Navigation_Action;
 
 public class Validate_CashierPassword extends BaseClass {
@@ -20,7 +22,16 @@ public class Validate_CashierPassword extends BaseClass {
     }
     @Test(priority=2,description="Check empty field validation")
     public void check_emptyField() {
+
+    	if(CashierPassword_Page.submitButtom(driver).getText().equals("Unlock Cashier"))
+    		UnlockCashier();
+        CashierPassword_Action.Execute(driver, Constant.emptyString, Constant.emptyString);
+        //Check the error message 
+        Assert.assertEquals(CashierPassword_Page.errMsg_1(driver).getText(),"This field is required.");
+        Assert.assertEquals(CashierPassword_Page.errMsg_2(driver).getText(),"This field is required.");
+
          CashierPassword_Action.checkErrorEmptyFields(driver);
+
     }
     @Test(priority=3,description="Check validation for minimum cashier password")
     public void check_minpass() {
@@ -50,8 +61,51 @@ public class Validate_CashierPassword extends BaseClass {
     public void check_withdrawlock() {
         CashierPassword_Action.withdrawPage(driver);
     }
+
+  //unlock cashier password
+    @Test(priority=10)
+    //Update cashier password
+    public void unlock() {
+        CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
+        if(CashierPassword_Page.success_msg(driver).isDisplayed()){
+            Assert.assertTrue(CashierPassword_Page.success_msg(driver).isDisplayed());
+            System.out.println("Cashier Page Unlocked");
+        }
+    }
+    private void UnlockCashier()
+    {
+    	CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
+    }
+    //Test Method to start browser session and launch site
+    @BeforeTest
+    public void launchApplication() {
+    	if(Constant.testExeEnv.equals("Local"))
+    	{
+    		ChromeDriverManager.getInstance().setup();
+    		driver = new ChromeDriver();
+    	}
+    	else
+    	{
+    		driver = Helper.BrowserStackConfigurations();
+    	}
+        driver.manage().window().maximize();
+        driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+        //driver.get(Constant.URL);
+        Helper helperutility = new Helper();//get current ticks
+      	helperutility.AddCookieOfQaServer(driver);
+      	Navigation_Action.Navigate_To_HomePage(driver,Constant.URL+"/en/endpoint.html");
+      	Endpoint_Action.SetServer(driver,Constant.targetserver,Constant.appId);
+        driver.get(Constant.URL+"/en/endpoint.html");
+	
+    }
+    //Test Method to close browser session
+    @AfterTest
+    public void endSession() {
+        driver.quit();
+
     @Test(priority=10,description="Update cashier password")
     public void unlock() {
         CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
+
     }
 }

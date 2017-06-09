@@ -1,9 +1,14 @@
 package appModules;
 
+
 import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import pageObjects.APIToken_Page;
 import pageObjects.AuthorisedApplications_page;
@@ -20,6 +25,7 @@ public class Navigation_Action {
 		
 	public static void Navigate_To_HomePage(WebDriver driver,String URL){
 		driver.get(URL); 
+		
 	}
 	public static void Navigate_To_LoginPage(WebDriver driver){ 
 		Home_Page.btn_Login(driver).click();
@@ -34,6 +40,12 @@ public class Navigation_Action {
 	public static void Navigate_To_SecurityPage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Security(driver).click();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
@@ -52,6 +64,12 @@ public class Navigation_Action {
 		Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
 	}
 	public static void Navigate_To_APITokenPage(WebDriver driver){
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Actions builder = new Actions(driver);
 		Action clickAPIToken = builder
 				.moveToElement(Security_Page.link_APITokenPage(driver))
@@ -77,6 +95,7 @@ public class Navigation_Action {
         Assert.assertTrue(CashierPassword_Page.title_form(driver).isDisplayed());
         CashierPassword_Action.checkTitle(driver);
 	}
+
 	public static void Navigate_To_AuthenticationPage(WebDriver driver){
 		driver.get("https://staging.binary.com/en/user/authenticate.html");
 	}
@@ -93,14 +112,38 @@ public class Navigation_Action {
 				.click()
 				.build();
 		clickAuthorizedApps.perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
         Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
         Assert.assertTrue(AuthorisedApplications_page.sub_title(driver).isDisplayed());
     }
+
+    public static void NavigateToAuthorisedApplicationsPage(WebDriver driver){
+		Actions builder = new Actions(driver);
+		Action clickAuthorizedApps = builder
+				.moveToElement(Security_Page.link_AuthorisedApplication(driver))
+				.click()
+				.build();
+		clickAuthorizedApps.perform();
+		try {
+			Thread.sleep(2000);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+        Assert.assertTrue(AuthorisedApplications_page.title_page(driver).isDisplayed());
+        Assert.assertTrue(AuthorisedApplications_page.subtitle(driver).isDisplayed());
+
 	  // navigates to self exclution page
     public static void Navigate_To_SelfExclusionPage_ValidateInput(WebDriver driver) {
         MainAccount_Menu.link_MainAccount(driver).click();
         MainAccount_Menu.link_Security(driver).click();
         Security_Page.link_SelfExclusionPage(driver).click();
+
     }
     public static void Navigate_To_ChangeAPIEndpointPage(WebDriver driver,String URL){
     	driver.get(URL);
@@ -109,4 +152,15 @@ public class Navigation_Action {
     	MainMenu_Tab.link_TradeMenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+  //go to home page
+  	public static void Go_Home_Page(WebDriver driver)
+  	{
+  	    Home_Page.logo(driver).click();
+  	}
+  	//navigate to upgrade real account page
+  	public static void Navigate_To_UpgradeAccount(WebDriver driver)
+  	{
+  		Home_Page.link_UpgradeToRealAccount(driver).click();
+  	}
+
 }

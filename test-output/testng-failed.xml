@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="CheckCashierPassword(failed)">
+    <classes>
+      <class name="testCases.Validate_Limits">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- testCases.Validate_Limits -->
+      <class name="testCases.Validate_NewAccount">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccount -->
+      <class name="testCases.Validate_CashierPassword">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+          <include name="check_depositLock"/>
+        </methods>
+      </class> <!-- testCases.Validate_CashierPassword -->
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+      <class name="testCases.Validate_APITokenPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_APITokenPage -->
+      <class name="testCases.Validate_NewAccountOnQaServer">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccountOnQaServer -->
+      <class name="testCases.Validate_ChangePasswordPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+      <class name="testCases.Validate_LoginPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginPage -->
+      <class name="testCases.Validate_AuthorisedApplications">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+      <class name="testCases.Validate_LoginHistoryPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+    </classes>
+  </test> <!-- CheckCashierPassword(failed) -->
+  <test name="CheckAuthorisedApplication(failed)">
+    <classes>
+      <class name="testCases.Validate_Limits">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- testCases.Validate_Limits -->
+      <class name="testCases.Validate_NewAccount">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccount -->
+      <class name="testCases.Validate_CashierPassword">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_CashierPassword -->
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+      <class name="testCases.Validate_APITokenPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_APITokenPage -->
+      <class name="testCases.Validate_NewAccountOnQaServer">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccountOnQaServer -->
+      <class name="testCases.Validate_ChangePasswordPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+      <class name="testCases.Validate_AuthorisedApplications">
+        <methods>
+          <include name="reject"/>
+          <include name="endSession"/>
+          <include name="checkReviewPage"/>
+          <include name="grant"/>
+          <include name="login"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+      <class name="testCases.Validate_LoginPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginPage -->
+      <class name="testCases.Validate_LoginHistoryPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+    </classes>
+  </test> <!-- CheckAuthorisedApplication(failed) -->
+  <test name="CheckLimitsPage(failed)">
+    <classes>
+      <class name="testCases.Validate_Limits">
+        <methods>
+          <include name="Test_Lower_MaxAccountBalance"/>
+          <include name="NavigateToPersonalDetailsPage"/>
+          <include name="Test_Lower_MaxOpenPos"/>
+          <include name="Test_Exceed_MaxOpenPos"/>
+          <include name="launchApplication"/>
+          <include name="NavigateToLimitsPage"/>
+          <include name="Test_Limits_Message"/>
+          <include name="Test_Limits_MaxAccountBalance"/>
+          <include name="Test_Exceed_MaxAccountBalance"/>
+          <include name="Test_Limits_MaxOpenPosition"/>
+          <include name="logout"/>
+        </methods>
+      </class> <!-- testCases.Validate_Limits -->
+      <class name="testCases.Validate_NewAccount">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccount -->
+      <class name="testCases.Validate_CashierPassword">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_CashierPassword -->
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+      <class name="testCases.Validate_APITokenPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_APITokenPage -->
+      <class name="testCases.Validate_NewAccountOnQaServer">
+        <methods>
+          <include name="endSession"/>
+          <include name="setUp"/>
+        </methods>
+      </class> <!-- testCases.Validate_NewAccountOnQaServer -->
+      <class name="testCases.Validate_ChangePasswordPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+      <class name="testCases.Validate_LoginPage">
+        <methods>
+          <include name="setUp"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginPage -->
+      <class name="testCases.Validate_AuthorisedApplications">
+        <methods>
+          <include name="endSession"/>
+          <include name="launchApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+      <class name="testCases.Validate_LoginHistoryPage">
+        <methods>
+          <include name="launchApplication"/>
+          <include name="endSession"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+    </classes>
+  </test> <!-- CheckLimitsPage(failed) -->
+</suite> <!-- Failed suite [Suite] -->

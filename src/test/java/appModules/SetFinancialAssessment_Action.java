@@ -54,6 +54,9 @@ public class SetFinancialAssessment_Action {
 		//Select value for Education field
 		Select oSelect_education = new Select(FinancialAssessment_Page.select_Education(driver));
 		oSelect_education.selectByValue(education);
+		//Select value for Education field
+		Select oSelect_incomeSource = new Select(FinancialAssessment_Page.select_IncomeSource(driver));
+		oSelect_incomeSource.selectByValue(income_source);
 		//Select value for Annual Income field
 		Select oSelect_annual_income = new Select(FinancialAssessment_Page.select_AnnualIncome(driver));
 		oSelect_annual_income.selectByValue(annual_income);

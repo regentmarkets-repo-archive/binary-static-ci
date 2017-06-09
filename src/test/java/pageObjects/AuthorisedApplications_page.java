@@ -1,6 +1,7 @@
 package pageObjects;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -21,7 +22,14 @@ public class AuthorisedApplications_page {
     public static WebElement sub_title(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='description']")));
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.className("logged_out_title_container")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    public static WebElement subtitle(WebDriver driver)
+    {
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("applications-title")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -30,7 +38,12 @@ public class AuthorisedApplications_page {
         int element= driver.findElements(By.xpath("//*[@id='applications-table']/tbody/tr[*]")).size();
         return element;
     }
-    
+    public static boolean BtnGrant(WebDriver driver)
+    {
+    		if(driver.findElements(By.name("confirm_scopes")).size()!=0)
+    	       return true;
+    		return false;
+    }
     //Method to find authorize application name element 
     public static WebElement App_Name(WebDriver driver)
     {
@@ -43,7 +56,7 @@ public class AuthorisedApplications_page {
     public static WebElement revoke_button(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='applications-table']/tbody/tr[contains(.,'Binary-Staging')]/td[4]/button ")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='applications-table']/tbody/tr/td[4]/button")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
@@ -75,7 +88,7 @@ public class AuthorisedApplications_page {
     public static WebElement grant_btn(WebDriver driver)
     {
         WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='wrapper']/div[2]/form/div/button[1]")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.name("confirm_scopes")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }

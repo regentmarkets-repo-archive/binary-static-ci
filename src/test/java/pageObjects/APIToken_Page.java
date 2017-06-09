@@ -113,6 +113,7 @@ public class APIToken_Page {
     }
     //Method to find error message same token name
     public static WebElement nameerror_msg(WebDriver driver) {
+    	 APIToken_Page.admin_scope(driver).submit();
         WebDriverWait wait = new WebDriverWait(driver,30);
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='msg_form']")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
