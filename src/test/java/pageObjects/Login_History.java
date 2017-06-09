@@ -8,6 +8,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 
 public class Login_History {
+
     private static WebElement element = null;
     //Method to find element of Login History
     public static WebElement title_page(WebDriver driver) {
