@@ -14,7 +14,5 @@ public class Portfolio_Action {
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
 		Trade_Page.btn_SellAtMarket(driver).click();
 		Assert.assertTrue(Trade_Page.txt_ContractSellMessage(driver).isDisplayed());
-		System.out.println(Portfolio_Page.txt_PortfolioBalance(driver).getText());
 	}
-
 }
