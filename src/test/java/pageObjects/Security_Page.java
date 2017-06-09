@@ -9,6 +9,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class Security_Page {
+
     private static WebElement element = null;
     //Method to find Login History link
     public static WebElement link_LoginHistoryPage(WebDriver driver)
@@ -78,4 +79,3 @@ public class Security_Page {
         return element;
     }
 }
-	
