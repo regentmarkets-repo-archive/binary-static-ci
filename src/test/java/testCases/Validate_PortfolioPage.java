@@ -10,6 +10,8 @@ import appModules.Trading_Action;
 
 public class Validate_PortfolioPage extends BaseClass {
 	
+	 String referenceNumber;
+	
 	@Test(priority=0,description="Test Method to Login to binary site")
 	public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
@@ -21,7 +23,7 @@ public class Validate_PortfolioPage extends BaseClass {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
 	@Test(priority=2,description="Test Method to validate contract purchase for Volatility Indices")
-	public void ValidateContractPurchase(){
+	public void TestContractPurchase(){
 		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 50 Index");
 		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","1","h","10");
 		Trading_Action.CloseViewPopup(driver);
@@ -30,7 +32,7 @@ public class Validate_PortfolioPage extends BaseClass {
 	  public void NavigateToPortfolioPage() {
 		Navigation_Action.Navigate_To_PortfolioPage(driver);
 	  }
-	@Test(priority=4,description="Test Method to validate sell contract")
+	@Test(priority=5,description="Test Method to validate sell contract")
 	  public void ValidateSellContractPortfolio() {
 		Portfolio_Action.ValidatePortfolioSellContract(driver,"Volatility 50 Index","1","h","10");
 	  }

@@ -6,8 +6,7 @@ import org.testng.Assert;
 import pageObjects.Portfolio_Page;
 import pageObjects.Trade_Page;
 
-public class Portfolio_Action {
-	
+public class Portfolio_Action {	
 	//Check Sell Contract in Portfolio
 	public static void ValidatePortfolioSellContract(WebDriver driver,String submarket,String duration,String durationType,String amount) {
 		Portfolio_Page.btn_View(driver).click();
