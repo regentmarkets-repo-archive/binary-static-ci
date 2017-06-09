@@ -19,7 +19,7 @@ public class Validate_BuySellTrades extends BaseClass {
 	  public void NavigateToTradePage() {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
-	@Test(priority=2,description="Test Method to validate contract purchase for Forex")
+	@Test(priority=2,description="Test Method to validate contract purchase for Volatility Indices")
 	public void validateContractPurchase(){
 		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 50 Index");
 		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","15","m","10");

@@ -8,7 +8,6 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 public class MainMenu_Tab {
-    //Check find cashier page menu 
     private static WebElement element = null;
     
     public static WebElement click_cashiermenu(WebDriver driver){
@@ -23,4 +22,23 @@ public class MainMenu_Tab {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    public static WebElement link_Portfolio(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='topMenuPortfolio']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    public static WebElement link_ProfitTable(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='topMenuProfitTable']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    public static WebElement link_Statement(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='topMenuStatement']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    
 }
