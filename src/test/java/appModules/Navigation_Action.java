@@ -17,6 +17,7 @@ import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Portfolio_Page;
 import pageObjects.Profile_Page;
+import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
 
 public class Navigation_Action {
@@ -115,5 +116,10 @@ public class Navigation_Action {
     	MainMenu_Tab.link_Portfolio(driver).click();
     	System.out.println(Portfolio_Page.txt_Header(driver).getText());
     	Assert.assertTrue(Portfolio_Page.txt_Header(driver).getText().equals("Portfolio"));
+    }
+    public static void Navigate_To_ProfitTablePage(WebDriver driver){
+    	MainMenu_Tab.link_ProfitTable(driver).click();
+    	System.out.println(ProfitTable_Page.txt_Header(driver).getText());
+    	Assert.assertTrue(ProfitTable_Page.txt_Header(driver).getText().equals("Profit Table"));
     }
 }
