@@ -79,5 +79,12 @@ public class CashierPassword_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    //Check find lock info
+    public static WebElement lock_info(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='lockInfo']")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
   
 }

@@ -208,7 +208,6 @@ public class Trading_Action {
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
 			SelectEnterDuration(driver,"999",durationType);
 			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
-			System.out.println(Trade_Page.err_BottomPurchase(driver).getText());
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
@@ -268,8 +267,7 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
 }
-	
-	public static void GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
+	public static String GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
 		Actions builder = new Actions(driver);
@@ -295,13 +293,13 @@ public class Trading_Action {
 		String [] arrSplit = purchaseReference.split(" ");
 		String referenceNumber = arrSplit[4];
 		System.out.println("Transaction reference number is: " + referenceNumber);
+		return referenceNumber;
 	}
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
 		GetTradeConfirmationDetails(driver,submarket,duration,durationType,amount);
 		Trade_Page.btn_View(driver).click();
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
-		
 	}
 	public static void ValidateViewPopupWindow(WebDriver driver,String purchaseDesc,String referenceNumber,String amount){
 		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver).getText(), purchaseDesc);
@@ -322,8 +320,6 @@ public class Trading_Action {
 	public static void ValidateContractSell(WebDriver driver){
 		Trade_Page.btn_SellAtMarket(driver).click();
 		Assert.assertTrue(Trade_Page.txt_ContractSellMessage(driver).isDisplayed());
-		System.out.println(Trade_Page.txt_ContractSellMessage(driver).getText());
-		
 	}
 	public static void CloseViewPopup(WebDriver driver){
 		Trade_Page.btn_PopupCloseButton(driver).click();
