@@ -22,8 +22,9 @@ public class Validate_ProfitTable extends BaseClass{
 	  }
 	@Test(priority=2,description="Test Method to validate contract purchase for Volatility Indices")
 	public void TestContractPurchase(){
-		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","1","h","10");
+		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 100 Index");
+		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 100 Index","15","m","10");
+		Trading_Action.ValidateContractSell(driver);
 		Trading_Action.CloseViewPopup(driver);
 	}
 	@Test(priority=3,description="Test Method to navigate to profit table page")
@@ -35,6 +36,8 @@ public class Validate_ProfitTable extends BaseClass{
 		ProfitTable_Action.ValidateViewContract(driver);
 		Trading_Action.CloseViewPopup(driver);
 	  }
-	
-
+	@Test(priority=5,description="Test Method to count number of rows in Profit Table")
+	  public void ValidateProfitTableRows() {
+		ProfitTable_Action.ValidateProfitTableEntry(driver);
+	  }
 }
