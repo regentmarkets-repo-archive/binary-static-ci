@@ -96,8 +96,6 @@ public class Validate_TradePage extends BaseClass {
 	public void CheckErrorValidationForPayout() {	
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Commodities", "Gold/USD");
-		Trading_Action.ValidateAmountField(driver,"Commodities","Payout");
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
 		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
 	}
