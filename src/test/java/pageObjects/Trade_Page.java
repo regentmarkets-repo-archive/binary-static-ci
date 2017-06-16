@@ -272,42 +272,42 @@ public class Trade_Page {
 	//Method to find contract error for Top Purchase when payout < 0.5 or >5000
 	public static WebElement err_Payout5000Top(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 5,000.00.')])[1]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 5000.00.')])[1]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find contract error for Bottom Purchase when payout < 0.5 or >5000
 	public static WebElement err_Payout5000Bottom(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 5,000.00.')])[2]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 5000.00.')])[2]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find contract error for Top Purchase when payout < 0.5 or >1000
 	public static WebElement err_Payout1000Top(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 1,000.00.')])[1]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 1000.00.')])[1]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find contract error for Bottom Purchase when payout < 0.5 or >1000
 	public static WebElement err_Payout1000Bottom(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 1,000.00.')])[2]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.50 and maximum payout of 1000.00.')])[2]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find contract error for Top Purchase when payout < 0.35 or >50000
 	public static WebElement err_Payout50000Top(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.35 and maximum payout of 50,000.00.')])[1]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.35 and maximum payout of 50000.00.')])[1]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find contract error for Bottom Purchase when payout < 0.35 or >50000
 	public static WebElement err_Payout50000Bottom(WebDriver driver) {
 		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.35 and maximum payout of 50,000.00.')])[2]")));
+		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("(.//div[contains(text(),'Minimum stake of 0.35 and maximum payout of 50000.00.')])[2]")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}

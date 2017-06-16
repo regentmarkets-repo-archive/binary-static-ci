@@ -60,15 +60,20 @@
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
-		</test>
+	</test>
 	<test name="CheckTradingPage">
 		<classes>
 			<class name="testCases.Validate_TradePage" />
 		</classes>
-		</test>
+	</test>
 	<test name="CheckPortfolioPage">
 		<classes>
 			<class name="testCases.Validate_PortfolioPage" />
 		</classes>
-		</test>
+	</test>
+			<test name="CheckProfitTablePage">
+		<classes>
+			<class name="testCases.Validate_ProfitTable" />
+		</classes>
+	</test>
 </suite>
