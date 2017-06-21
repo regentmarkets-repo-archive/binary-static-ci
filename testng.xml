@@ -78,7 +78,7 @@
 	</test>
 		<test name="CheckStatementPage">
 		<classes>
-			<class name="testCases.Validate_StatementPage />
+			<class name="testCases.Validate_StatementPage" />
 		</classes>
 	</test>
 </suite>
