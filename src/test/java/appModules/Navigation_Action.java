@@ -19,6 +19,7 @@ import pageObjects.Portfolio_Page;
 import pageObjects.Profile_Page;
 import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
+import pageObjects.Statement_Page;
 
 public class Navigation_Action {
 		
@@ -48,7 +49,6 @@ public class Navigation_Action {
 	public static void Navigate_To_AccountPasswordPage(WebDriver driver){
 	    Security_Page.link_AccountPassword(driver).click();
 	    Assert.assertTrue(ChangePassword_Page.PageTitle(driver).isDisplayed());
-		System.out.println("The title of the page is : "+ChangePassword_Page.PageTitle(driver).getText());
 		Assert.assertEquals(ChangePassword_Page.PageTitle(driver).getText(), "Change Password");
 	}
 	public static void Navigate_To_LogoutPage(WebDriver driver){
@@ -114,12 +114,14 @@ public class Navigation_Action {
     }
     public static void Navigate_To_PortfolioPage(WebDriver driver){
     	MainMenu_Tab.link_Portfolio(driver).click();
-    	System.out.println(Portfolio_Page.txt_Header(driver).getText());
     	Assert.assertTrue(Portfolio_Page.txt_Header(driver).getText().equals("Portfolio"));
     }
     public static void Navigate_To_ProfitTablePage(WebDriver driver){
     	MainMenu_Tab.link_ProfitTable(driver).click();
-    	System.out.println(ProfitTable_Page.txt_Header(driver).getText());
     	Assert.assertTrue(ProfitTable_Page.txt_Header(driver).getText().equals("Profit Table"));
+    }
+    public static void Navigate_To_StatementPage(WebDriver driver){
+    	MainMenu_Tab.link_Statement(driver).click();
+    	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
     }
 }
