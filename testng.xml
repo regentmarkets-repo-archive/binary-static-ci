@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<<<<<<< HEAD
+
 	<test name="CheckLoginPage">
 		<classes>
 			<class name="testCases.Validate_LoginPage" />
@@ -99,5 +99,9 @@
       <class name="testCases.Validate_LoginHistoryPage"/>
       </classes>
       </test>
+        <test name="CheckResourcesPage">
+    <classes>
+      <class name="testCases.Validate_ResourcesPage"/>
+      </classes>
+      </test>
 </suite>
->>>>>>> 401ecba31c467b2f7f9343dcd9f9ae00455e28b0

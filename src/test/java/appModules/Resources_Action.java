@@ -1,6 +1,6 @@
 package appModules;
 
-import static org.testng.Assert.assertEquals;
+
 
 import java.util.List;
 import org.openqa.selenium.WebDriver;
@@ -30,6 +30,11 @@ public class Resources_Action {
     public static void checkMarket(WebDriver driver) {
         String[] expectedList = {"Forex","Indices","OTC Stocks","Commodities","Volatility Indices"};
         List<WebElement> actualList = Resources_Page.asset_list(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkMarketTradingTimes(WebDriver driver) {
+        String[] expectedList = {"Forex","Indices","OTC Stocks","Commodities","Volatility Indices"};
+        List<WebElement> actualList = Resources_Page.asset_listTradingTimes(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
     public static void checkMajorPairs(WebDriver driver) {
@@ -73,9 +78,53 @@ public class Resources_Action {
         List<WebElement> actualList = Resources_Page.list_GermanyStocks(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
+    public static void checkIndiaStocks(WebDriver driver) {
+        String[] expectedList ={"Bharti Airtel","Maruti Suzuki","Reliance Industries","Tata Steel"};
+        List<WebElement> actualList = Resources_Page.list_IndiaStocks(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkUKStocks(WebDriver driver) {
+        String[] expectedList ={"BP","Barclays","British American Tobacco","HSBC","Lloyds Bank","Rio Tinto","Standard Chartered","Tesco"};
+        List<WebElement> actualList = Resources_Page.list_UKStocks(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkUSStocks(WebDriver driver) {
+        String[] expectedList ={"Alibaba","Alphabet","Amazon.com","American Express","Apple","Berkshire Hathaway","Boeing","Caterpillar",
+                "Citigroup","Electronic Arts","Exxon Mobil","Facebook","Goldman Sachs","IBM","Johnson & Johnson","MasterCard","McDonald's","Microsoft",
+                "PepsiCo","Procter & Gamble"};
+        List<WebElement> actualList = Resources_Page.list_USStocks(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkMetalCOMM(WebDriver driver) {
+        String[] expectedList ={"Gold/USD","Palladium/USD","Platinum/USD","Silver/USD"};
+        List<WebElement> actualList = Resources_Page.list_MetalCOMM(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkEnergyCOMM(WebDriver driver) {
+        Assert.assertEquals("Oil/USD",Resources_Page.energyCOMM(driver).getText());
+     }
+    public static void checkCIVol(WebDriver driver) {
+        String[] expectedList ={"Volatility 10 Index","Volatility 100 Index","Volatility 25 Index","Volatility 50 Index","Volatility 75 Index"};
+        List<WebElement> actualList = Resources_Page.list_CIVol(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkDailyVol(WebDriver driver) {
+        String[] expectedList ={"Bear Market Index","Bull Market Index"};
+        List<WebElement> actualList = Resources_Page.list_DailyVol(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
     public static void clickNext(WebDriver driver , int i) {
         List<WebElement> NextMarket = Resources_Page.asset_list(driver);
         NextMarket.get(i).click();
     }
-    
+    public static void checkFinancialMarket(WebDriver driver) {
+        String[] expectedList = {"Forex","Indices","OTC Stocks","Commodities"};
+        List<WebElement> actualList = Resources_Page.asset_list(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkGamingMarket(WebDriver driver) {
+        String[] expectedList = {"Volatility Indices"};
+        List<WebElement> actualList = Resources_Page.asset_list(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
 }
