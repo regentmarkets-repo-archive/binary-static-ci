@@ -52,6 +52,9 @@ public class Validate_AuthorisedApplications extends BaseClass {
     @Test(priority=7,description="Test method to check grant permission page")
     public void grant() {
         AuthorisedApplications_Action.grantPermission(driver);
+        Navigation_Action.Navigate_To_SecurityPage(driver);
+        Navigation_Action.Navigate_To_AuthorisedApplicationsPage(driver);
+        AuthorisedApplications_Action.checkSuccessgrant(driver);
     }
 
 }
