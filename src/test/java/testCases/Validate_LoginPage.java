@@ -10,16 +10,16 @@ import appModules.Navigation_Action;
 public class Validate_LoginPage extends BaseClass{
 
   @Test(description="Test Method to login to the site with valid credentials")
-  public void B_Login() {
+  public void A_Login() {
 	  Navigation_Action.Navigate_To_LoginPage(driver);
 	  Navigation_Action.Navigate_To_MainPage(driver,Constant.Email,Constant.Password);
   }
   @Test(description="Test Method to logout from the site and validate login button is present")
-  public void C_Logout() {
+  public void B_Logout() {
 	  Navigation_Action.Navigate_To_LogoutPage(driver);
   }
   @Test(description="Test Method to login with incorrect password")
-  public void D_Login_IncorrectPassword() {
+  public void C_Login_IncorrectPassword() {
 	  
 	     String inv_password = "Pass1234";
 		 Navigation_Action.Navigate_To_LoginPage(driver);

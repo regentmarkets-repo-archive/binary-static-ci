@@ -15,6 +15,14 @@
 - Change Password Page
 - Cashier Password Page
 - API Token Page
+- Authorized Applications Page
+- Limits Page
+- Login History Page
+- Self Exclusion Page
+- Trading Page
+- Portfolio Page
+- Profit Table Page
+- Links Validation
 
 <b>Running the tests:</b>
 
