@@ -208,7 +208,6 @@ public class Trading_Action {
 			Assert.assertEquals(Trade_Page.err_ExpiryTimeBottom(driver).getText(), "Expiry time cannot be equal to start time.");
 			SelectEnterDuration(driver,"999",durationType);
 			System.out.println(Trade_Page.err_TopPurchase(driver).getText());
-			System.out.println(Trade_Page.err_BottomPurchase(driver).getText());
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			//Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
@@ -225,30 +224,30 @@ public class Trading_Action {
 		//Method to validate amount fields
 		if(market=="Volatility Indices"){
 			SelectEnterAmount(driver,"0.34",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50000.00.");
 			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
 			SelectEnterAmount(driver,"51000",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout50000Top(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout50000Bottom(driver).getText(), "Minimum stake of 0.35 and maximum payout of 50000.00.");
 			System.out.println(Trade_Page.err_Payout50000Top(driver).getText());
 		}
 		else if (market=="Forex"){
 			SelectEnterAmount(driver,"0.49",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
 			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
 			SelectEnterAmount(driver,"21000",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
 		}
 		else if (market=="Commodities"){
 			SelectEnterAmount(driver,"0.49",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
 			SelectEnterAmount(driver,"5100",amount_type,"5","m");
-			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
-			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5,000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Top(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
+			Assert.assertEquals(Trade_Page.err_Payout5000Bottom(driver).getText(), "Minimum stake of 0.50 and maximum payout of 5000.00.");
 			System.out.println(Trade_Page.err_Payout5000Top(driver).getText());
 		}
 	}
@@ -268,8 +267,7 @@ public class Trading_Action {
 		Assert.assertEquals(Trade_Page.err_BarrierRangeBottom(driver).getText(), "Barrier is out of acceptable range.");
 	}
 }
-	
-	public static void GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
+	public static String GetTradeConfirmationDetails(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		String durationUnits;
 		SelectEnterDuration(driver,duration,durationType);
 		Actions builder = new Actions(driver);
@@ -295,13 +293,13 @@ public class Trading_Action {
 		String [] arrSplit = purchaseReference.split(" ");
 		String referenceNumber = arrSplit[4];
 		System.out.println("Transaction reference number is: " + referenceNumber);
+		return referenceNumber;
 	}
 	public static void ValidateContractTopPurchase(WebDriver driver,String submarket,String duration,String durationType,String amount){
 		//Method to validate top contract purchase
 		GetTradeConfirmationDetails(driver,submarket,duration,durationType,amount);
 		Trade_Page.btn_View(driver).click();
 		Assert.assertTrue(Trade_Page.window_SellPopup(driver).isDisplayed());
-		
 	}
 	public static void ValidateViewPopupWindow(WebDriver driver,String purchaseDesc,String referenceNumber,String amount){
 		Assert.assertEquals(Trade_Page.txt_SellPopupDescription(driver).getText(), purchaseDesc);
@@ -322,8 +320,6 @@ public class Trading_Action {
 	public static void ValidateContractSell(WebDriver driver){
 		Trade_Page.btn_SellAtMarket(driver).click();
 		Assert.assertTrue(Trade_Page.txt_ContractSellMessage(driver).isDisplayed());
-		System.out.println(Trade_Page.txt_ContractSellMessage(driver).getText());
-		
 	}
 	public static void CloseViewPopup(WebDriver driver){
 		Trade_Page.btn_PopupCloseButton(driver).click();
