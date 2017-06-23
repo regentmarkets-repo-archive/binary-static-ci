@@ -2,6 +2,7 @@ package testCases;
 
 import org.testng.annotations.Test;
 import utility.Constant;
+import appModules.Login_Action;
 import appModules.Navigation_Action;
 import appModules.Resources_Action;
 import appModules.Trading_Action;
@@ -48,6 +49,53 @@ public class Validate_ResourcesPage extends BaseClass{
     public void check_OTCMarket() {
         Resources_Action.clickNext(driver,2);
         Resources_Action.checkGermanyStocks(driver);
+        Resources_Action.checkIndiaStocks(driver);
+        Resources_Action.checkUKStocks(driver);
+        Resources_Action.checkUSStocks(driver);
     }
-      
+    @Test(priority=6, description="Test method to check Commodities Market")
+    public void check_CommoditiesMarket() {
+        Resources_Action.clickNext(driver,3);
+        Resources_Action.checkMetalCOMM(driver);
+        Resources_Action.checkEnergyCOMM(driver);
+        Resources_Action.checkEnergyCOMM(driver);
+    } 
+    @Test(priority=6, description="Test method to check Volatility Market")
+    public void check_VolatilityMarket() {
+        Resources_Action.clickNext(driver,4);
+        Resources_Action.checkCIVol(driver);
+        Resources_Action.checkDailyVol(driver);
+    } 
+    @Test(priority=7,description="Test Method to Login using CR and check the market")
+    public void Login() {
+        Navigation_Action.Navigate_To_LoginPage(driver);
+        Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+        Resources_Action.checkMarket(driver);
+        Navigation_Action.Navigate_To_LogoutPage(driver);
+    }
+    
+    @Test(priority=8,description="Test Method to login to MF/MLT account ")
+    public void loginMF() {
+        Navigation_Action.Navigate_To_LoginPage(driver);
+        Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMF, Constant.PassMF);
+        Login_Action.continueTrading(driver);
+        Resources_Action.checkFinancialMarket(driver);
+        Login_Action.SwitchToMLTAccount(driver);
+        Login_Action.continueTrading(driver);
+        Resources_Action.checkGamingMarket(driver); 
+        Navigation_Action.Navigate_To_LogoutPage(driver);
+    }
+    @Test(priority=9,description="Test Method to login to MX account ")
+    public void loginMX() {
+        Navigation_Action.Navigate_To_LoginPage(driver);
+        Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMX, Constant.PassMx);
+        Login_Action.continueTrading(driver);
+        Resources_Action.checkMarket(driver);
+        Navigation_Action.Navigate_To_LogoutPage(driver);
+    }
+    @Test(priority=10,description="Test Method to login to MX account ")
+    public void checkTradingTimes() {
+        Resources_Action.link_TradingTimes(driver);
+        Resources_Action.checkMarketTradingTimes(driver);
+    }
 }

@@ -43,8 +43,14 @@ public class Resources_Page {
     // Method to find list of market asset list 
     public static List<WebElement> asset_list(WebDriver driver){
         List<WebElement> element= driver.findElements(By.xpath("//*[@id='asset-index']/ul/li"));
-        return element;
+        return element; 
     }
+    // Method to find list of market asset list 
+    public static List<WebElement> asset_listTradingTimes(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='trading-times']/ul/li"));
+        return element; 
+    }
+    
     // Method to find list of Forex-major pairs underlying list 
     public static List<WebElement> list_MajorPairsUnderlying(WebDriver driver){
         List<WebElement> element= driver.findElements(By.xpath(".//*[@id='submarket-major_pairs']/tbody/tr[*]/td[1]"));
@@ -91,6 +97,42 @@ public class Resources_Page {
     // Method to find list of OTC Stocks - Germany underlying list 
     public static List<WebElement> list_GermanyStocks(WebDriver driver){
         List<WebElement> element= driver.findElements(By.xpath(".//*[@id='submarket-ge_otc_stock']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    // Method to find list of OTC Stocks - India underlying list 
+    public static List<WebElement> list_IndiaStocks(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-india_otc_stock']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    // Method to find list of OTC Stocks - UK underlying list 
+    public static List<WebElement> list_UKStocks(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-uk_otc_stock']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    // Method to find list of OTC Stocks - US underlying list 
+    public static List<WebElement> list_USStocks(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-us_otc_stock']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    // Method to find list of Commodities- Metal  underlying list 
+    public static List<WebElement> list_MetalCOMM(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-metals']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    public static WebElement energyCOMM(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='submarket-energy']/tbody/tr/td[1]")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    // Method to find list of Continues Indices Volatility- Metal  underlying list 
+    public static List<WebElement> list_CIVol(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-random_index']/tbody/tr[*]/td[1]"));
+        return element;
+    }
+    // Method to find list of Daily Reset Volatility- Metal  underlying list 
+    public static List<WebElement> list_DailyVol(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-random_daily']/tbody/tr[*]/td[1]"));
         return element;
     }
 }

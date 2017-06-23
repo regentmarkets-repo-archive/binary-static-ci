@@ -29,4 +29,11 @@ public class Home_Page {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    public static WebElement acceptRealityCheck(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='reality_check_nav']/button")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+    
 }
