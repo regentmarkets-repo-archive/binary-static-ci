@@ -20,10 +20,11 @@ public class Validate_CashierPassword extends BaseClass {
     }
     @Test(priority=2,description="Check empty field validation")
     public void check_emptyField() {
-         CashierPassword_Action.checkErrorEmptyFields(driver);
+    	 CashierPassword_Action.checkErrorEmptyFields(driver);
     }
     @Test(priority=3,description="Check validation for minimum cashier password")
     public void check_minpass() {
+    	
           CashierPassword_Action.checkErrorMinChr(driver);
     } 
     @Test(priority=4,description="Check validation for invalid cashier password")
@@ -42,16 +43,18 @@ public class Validate_CashierPassword extends BaseClass {
     public void update_cshrPass() {
     	CashierPassword_Action.updateCashierPwd(driver);
     }
-    @Test(priority=8,description="Check deposit/withdraw cashier lock")
+    @Test(priority=8,description="Check deposit cashier lock")
     public void check_depositLock() {
         CashierPassword_Action.depositPage(driver);
     }
-    @Test(priority=9,description="Check deposit/withdraw cashier lock")
+    @Test(priority=9,description="Check withdraw cashier lock")
     public void check_withdrawlock() {
         CashierPassword_Action.withdrawPage(driver);
     }
     @Test(priority=10,description="Update cashier password")
     public void unlock() {
+    	Navigation_Action.Navigate_To_SecurityPage(driver);
+    	Navigation_Action.Navigate_To_CashierPasswordPage(driver);
         CashierPassword_Action.unlockCashier(driver, Constant.cashierPass);
     }
 }
