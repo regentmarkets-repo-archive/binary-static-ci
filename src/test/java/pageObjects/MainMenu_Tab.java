@@ -40,5 +40,11 @@ public class MainMenu_Tab {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    public static WebElement link_ResourcesMenu(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='topMenuResources']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
     
 }

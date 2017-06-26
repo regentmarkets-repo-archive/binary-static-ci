@@ -32,13 +32,13 @@ public class Navigation_Action {
 	public static void Navigate_To_MainPage(WebDriver driver,String Email,String Password){
 		Login_Action.Execute(driver,Email,Password);
 	}
-	public static void Navigate_To_ProfilePage(WebDriver driver){
-		MainAccount_Menu.link_MainAccount(driver).click();
-		MainAccount_Menu.link_Profile(driver).click();
-	}
 	public static void Navigate_To_SecurityPage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Security(driver).click();
+	}
+	public static void Navigate_To_ProfilePage(WebDriver driver){
+		MainAccount_Menu.link_MainAccount(driver).click();
+		MainAccount_Menu.link_Profile(driver).click();
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
@@ -123,5 +123,9 @@ public class Navigation_Action {
     public static void Navigate_To_StatementPage(WebDriver driver){
     	MainMenu_Tab.link_Statement(driver).click();
     	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
+    }
+    public static void Navigate_To_ResourcesPage(WebDriver driver){
+    	MainMenu_Tab.link_ResourcesMenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 }
