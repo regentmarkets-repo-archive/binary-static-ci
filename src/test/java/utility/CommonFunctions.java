@@ -14,7 +14,7 @@ public class CommonFunctions {
 		LogEntries logEntries = driver.manage().logs().get(LogType.BROWSER);
 	        for (LogEntry entry : logEntries) {
 	        	if(entry.getLevel().toString()=="SEVERE"){
-	        	System.out.println(driver.getTitle());
+	        	System.out.println(driver.getCurrentUrl());
 	            System.out.println(new Date(entry.getTimestamp()) + " " + entry.getLevel() + " " + entry.getMessage());
 	        }
 	     }
