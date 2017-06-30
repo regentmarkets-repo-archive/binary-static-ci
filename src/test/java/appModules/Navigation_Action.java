@@ -20,11 +20,12 @@ import pageObjects.Profile_Page;
 import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
 import pageObjects.Statement_Page;
+import utility.CommonFunctions;
 
 public class Navigation_Action {
 		
 	public static void Navigate_To_HomePage(WebDriver driver,String URL){
-		driver.get(URL); 
+		driver.get(URL);
 	}
 	public static void Navigate_To_LoginPage(WebDriver driver){ 
 		Home_Page.btn_Login(driver).click();
@@ -35,10 +36,12 @@ public class Navigation_Action {
 	public static void Navigate_To_SecurityPage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Security(driver).click();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 	public static void Navigate_To_ProfilePage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Profile(driver).click();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
