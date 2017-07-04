@@ -61,6 +61,11 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
+		<test name="ValidateLostPassword">
+		<classes>
+			<class name="testCases.Validate_LostPassword" />
+		</classes>
+	</test>
 	<test name="CheckTradingPage">
 		<classes>
 			<class name="testCases.Validate_TradePage" />
