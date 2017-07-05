@@ -1,9 +1,14 @@
 package pageObjects;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.FluentWait;
+import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
@@ -173,14 +178,14 @@ public class Trade_Page {
 	}
 	//Method to find Top Purchase button 
 	public static WebElement btn_TopPurchase(WebDriver driver){
-		WebDriverWait wait = new WebDriverWait(driver,30);
+		WebDriverWait wait = new WebDriverWait(driver,60);
 		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='purchase_button_top']")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;
 	}
 	//Method to find Bottom Purchase button 
 	public static WebElement btn_BottomPurchase(WebDriver driver){
-		WebDriverWait wait = new WebDriverWait(driver,30);
+		WebDriverWait wait = new WebDriverWait(driver,60);
 		element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath(".//*[@id='purchase_button_bottom']")));
 		Assert.assertTrue(element.isDisplayed());
 		return element;

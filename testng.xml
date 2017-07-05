@@ -66,24 +66,4 @@
 			<class name="testCases.Validate_LostPassword" />
 		</classes>
 	</test>
-	<test name="CheckTradingPage">
-		<classes>
-			<class name="testCases.Validate_TradePage" />
-		</classes>
-	</test>
-	<test name="CheckPortfolioPage">
-		<classes>
-			<class name="testCases.Validate_PortfolioPage" />
-		</classes>
-	</test>
-	<test name="CheckProfitTablePage">
-		<classes>
-			<class name="testCases.Validate_ProfitTable" />
-		</classes>
-	</test>
-		<test name="CheckStatementPage">
-		<classes>
-			<class name="testCases.Validate_StatementPage" />
-		</classes>
-	</test>
 </suite>
