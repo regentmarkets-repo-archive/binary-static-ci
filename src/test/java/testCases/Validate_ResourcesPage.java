@@ -93,7 +93,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkMarket(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
     }
-    @Test(priority=10,description="Test Method to login to MX account ")
+    @Test(priority=10,description="Test Method to check Trading Times")
     public void checkTradingTimes() {
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkMarketTradingTimes(driver);
