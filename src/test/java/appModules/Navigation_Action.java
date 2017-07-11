@@ -17,9 +17,13 @@ import pageObjects.MainAccount_Menu;
 import pageObjects.MainMenu_Tab;
 import pageObjects.Portfolio_Page;
 import pageObjects.Profile_Page;
+import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
+import pageObjects.Statement_Page;
+import utility.CommonFunctions;
 
 public class Navigation_Action {
+
 
     public static void Navigate_To_HomePage(WebDriver driver,String URL){
         driver.get(URL); 
@@ -54,13 +58,15 @@ public class Navigation_Action {
         Logout_Action.Execute(driver);
         Assert.assertTrue(Home_Page.btn_Login(driver).isDisplayed());
     }
-    public static void Navigate_To_APITokenPage(WebDriver driver){
-        Actions builder = new Actions(driver);
-        Action clickAPIToken = builder
-                .moveToElement(Security_Page.link_APITokenPage(driver))
-                .click()
-                .build();
-        clickAPIToken.perform();
+   
+	
+	public static void Navigate_To_APITokenPage(WebDriver driver){
+		Actions builder = new Actions(driver);
+		Action clickAPIToken = builder
+				.moveToElement(Security_Page.link_APITokenPage(driver))
+				.click()
+				.build();
+		clickAPIToken.perform();
         Assert.assertTrue(APIToken_Page.title_page(driver).isDisplayed());
         APIToken_Action.checkTitle(driver);
     }
@@ -128,9 +134,17 @@ public class Navigation_Action {
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }   
     public static void Navigate_To_PortfolioPage(WebDriver driver){
+
         MainMenu_Tab.link_Portfolio(driver).click();
         System.out.println(Portfolio_Page.txt_Header(driver).getText());
         Assert.assertTrue(Portfolio_Page.txt_Header(driver).getText().equals("Portfolio"));
-
+    }
+    public static void Navigate_To_ProfitTablePage(WebDriver driver){
+    	MainMenu_Tab.link_ProfitTable(driver).click();
+    	Assert.assertTrue(ProfitTable_Page.txt_Header(driver).getText().equals("Profit Table"));
+    }
+    public static void Navigate_To_StatementPage(WebDriver driver){
+    	MainMenu_Tab.link_Statement(driver).click();
+    	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
     }
 }

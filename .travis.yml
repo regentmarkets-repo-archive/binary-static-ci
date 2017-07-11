@@ -35,10 +35,9 @@ notifications:
       - mohammad@binary.com
       - bijan@binary.com
       - ridho@binary.com
-      - izuan@binary.com
       - dmytro@binary.com
       - ehtesham@binary.com
-      - parashuram@binary.com
+      - munsei@binary.com
       - negar@binary.com
       - kelly@binary.com
     on_success: never
