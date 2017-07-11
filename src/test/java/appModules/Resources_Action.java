@@ -37,6 +37,7 @@ public class Resources_Action {
         List<WebElement> actualList = Resources_Page.asset_listTradingTimes(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
+
     public static void checkMajorPairs(WebDriver driver) {
         String[] expectedList = {"AUD/JPY","AUD/USD","EUR/AUD","EUR/CAD","EUR/CHF","EUR/GBP","EUR/JPY","EUR/USD","GBP/AUD","GBP/JPY","GBP/USD","USD/CAD","USD/CHF","USD/JPY"};
         List<WebElement> actualList = Resources_Page.list_MajorPairsUnderlying(driver);
@@ -122,9 +123,19 @@ public class Resources_Action {
         List<WebElement> actualList = Resources_Page.asset_list(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
+    public static void checkFinancialMarketTradingTimes(WebDriver driver) {
+        String[] expectedList = {"Forex","Indices","OTC Stocks","Commodities"};
+        List<WebElement> actualList = Resources_Page.asset_listTradingTimes(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
     public static void checkGamingMarket(WebDriver driver) {
         String[] expectedList = {"Volatility Indices"};
         List<WebElement> actualList = Resources_Page.asset_list(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
+    public static void checkGamingMarketTradingTimes(WebDriver driver) {
+        String[] expectedList = {"Volatility Indices"};
+        List<WebElement> actualList = Resources_Page.asset_listTradingTimes(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
 }

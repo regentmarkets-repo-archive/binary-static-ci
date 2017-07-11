@@ -70,7 +70,11 @@ public class Validate_ResourcesPage extends BaseClass{
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
+        Navigation_Action.Navigate_To_ResourcesPage(driver);
+        Resources_Action.link_AssetIndex(driver);
         Resources_Action.checkMarket(driver);
+        Resources_Action.link_TradingTimes(driver);
+        Resources_Action.checkMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
     }
     
@@ -79,10 +83,18 @@ public class Validate_ResourcesPage extends BaseClass{
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMF, Constant.PassMF);
         Login_Action.continueTrading(driver);
+        Navigation_Action.Navigate_To_ResourcesPage(driver);
+        Resources_Action.link_AssetIndex(driver);
         Resources_Action.checkFinancialMarket(driver);
+        Resources_Action.link_TradingTimes(driver);
+        Resources_Action.checkFinancialMarketTradingTimes(driver);
         Login_Action.SwitchToMLTAccount(driver);
         Login_Action.continueTrading(driver);
-        Resources_Action.checkGamingMarket(driver); 
+        Navigation_Action.Navigate_To_ResourcesPage(driver);
+        Resources_Action.link_AssetIndex(driver);
+        Resources_Action.checkGamingMarket(driver);
+        Resources_Action.link_TradingTimes(driver);
+        Resources_Action.checkGamingMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
     }
     @Test(priority=9,description="Test Method to login to MX account ")
@@ -90,12 +102,11 @@ public class Validate_ResourcesPage extends BaseClass{
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMX, Constant.PassMx);
         Login_Action.continueTrading(driver);
+        Navigation_Action.Navigate_To_ResourcesPage(driver);
+        Resources_Action.link_AssetIndex(driver);
         Resources_Action.checkMarket(driver);
-        Navigation_Action.Navigate_To_LogoutPage(driver);
-    }
-    @Test(priority=10,description="Test Method to check Trading Times")
-    public void checkTradingTimes() {
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkMarketTradingTimes(driver);
+        Navigation_Action.Navigate_To_LogoutPage(driver);
     }
 }
