@@ -47,4 +47,10 @@ public class MainAccount_Menu {
 			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='all-accounts']/li/ul/div[2]/div/a"));
 			return element;
         }
+        public static WebElement link_MLTAccount(WebDriver driver){
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='all-accounts']/li/ul/div[2]/div/a[1]/li")));
+            Assert.assertTrue(element.isDisplayed());
+            return element;
+        }
 }
