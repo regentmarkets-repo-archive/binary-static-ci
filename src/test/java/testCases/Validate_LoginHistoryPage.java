@@ -1,7 +1,6 @@
 //Test case to check error validation of each field on the Financial Assessment page
 package testCases;
 
-
 import org.testng.annotations.Test;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.testng.Assert;
@@ -11,7 +10,7 @@ import appModules.LoginHistory_Action;
 import appModules.Navigation_Action;
 
 public class Validate_LoginHistoryPage extends BaseClass {
-
+    
     @Test(priority=0,description="Test method to  login  page")
     public void reset_Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
