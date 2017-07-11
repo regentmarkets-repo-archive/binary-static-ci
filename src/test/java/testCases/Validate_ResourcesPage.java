@@ -66,7 +66,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkCIVol(driver);
         Resources_Action.checkDailyVol(driver);
     } 
-    @Test(priority=8,description="Test Method to Login using CR and check the market")
+    @Test(enabled=false,description="Test Method to Login using CR and check the market")
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
