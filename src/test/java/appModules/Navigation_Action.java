@@ -2,12 +2,9 @@ package appModules;
 
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Action;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.FluentWait;
-import org.openqa.selenium.support.ui.Wait;
 import org.testng.Assert;
 
 import pageObjects.APIToken_Page;
@@ -23,7 +20,7 @@ import pageObjects.Profile_Page;
 import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
 import pageObjects.Statement_Page;
-import utility.CommonFunctions;
+import utility.Constant;
 
 public class Navigation_Action {
 		
@@ -132,6 +129,10 @@ public class Navigation_Action {
     }
     public static void Navigate_To_ResourcesPage(WebDriver driver){
     	MainMenu_Tab.link_ResourcesMenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    public static void Navigate_To_LostPasswordPage(WebDriver driver){
+    	driver.get(Constant.URL_LostPass);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 }
