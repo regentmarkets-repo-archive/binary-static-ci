@@ -5,41 +5,31 @@ import java.util.List;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
+import utility.CommonFunctions;
 
 public class Resources_Page {
 
     private static WebElement element = null;
     //Method to find Title Page 
     public static WebElement title_page(WebDriver driver) {
-        WebDriverWait wait = new WebDriverWait(driver,30);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='content']/div[2]/h1")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath("//*[@id='content']/div[2]/h1")));
+		return element;
     }
     //Method to find Asset Index link
     public static WebElement link_AssetIndex(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='content']/div[2]/div/div[1]/div[2]/h4/a")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='topMenuAssetIndex']/a")));
+		return element;
     }
     // Method to find Trading Time link
     public static WebElement link_TradingTimes(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='topMenuTradingTimes']/a")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath("//*[@id='topMenuTradingTimes']/a")));
+		return element;
     }
     
     // Method to find asset index page 
     public static WebElement assetIndexPage(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='content']/div[2]/div")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath("//*[@id='content']/div[2]/div")));
+		return element;
     }
     // Method to find list of market asset list 
     public static List<WebElement> asset_list(WebDriver driver){
@@ -51,7 +41,6 @@ public class Resources_Page {
         List<WebElement> element= driver.findElements(By.xpath("//*[@id='trading-times']/ul/li"));
         return element; 
     }
-    
     
     // Method to find list of Forex-major pairs underlying list 
     public static List<WebElement> list_MajorPairsUnderlying(WebDriver driver){
@@ -80,16 +69,12 @@ public class Resources_Page {
     }
     
     public static WebElement IndicesAmerica(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='submarket-americas']/tbody/tr/td[1]")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='submarket-americas']/tbody/tr/td[1]")));
+		return element;
     }
     public static WebElement IndicesMiddleEast(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='submarket-middle_east']/tbody/tr/td[1]")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='submarket-middle_east']/tbody/tr/td[1]")));
+		return element;
     }
     // Method to find list of OTC Indices underlying list 
     public static List<WebElement> list_OTCIndices(WebDriver driver){
@@ -122,10 +107,8 @@ public class Resources_Page {
         return element;
     }
     public static WebElement energyCOMM(WebDriver driver){
-        WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='submarket-energy']/tbody/tr/td[1]")));
-        Assert.assertTrue(element.isDisplayed());
-        return element;
+		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath("//*[@id='submarket-energy']/tbody/tr/td[1]")));
+		return element;
     }
     // Method to find list of Continues Indices Volatility- Metal  underlying list 
     public static List<WebElement> list_CIVol(WebDriver driver){
