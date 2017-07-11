@@ -29,10 +29,11 @@ public class Resources_Page {
     // Method to find Trading Time link
     public static WebElement link_TradingTimes(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,60);
-        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='content']/div[2]/div/div[2]/div[2]/h4/a")));
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='topMenuTradingTimes']/a")));
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
+    
     // Method to find asset index page 
     public static WebElement assetIndexPage(WebDriver driver){
         WebDriverWait wait = new WebDriverWait(driver,60);
@@ -45,11 +46,12 @@ public class Resources_Page {
         List<WebElement> element= driver.findElements(By.xpath("//*[@id='asset-index']/ul/li"));
         return element; 
     }
-    // Method to find list of market asset list 
+    // Method to find list of market trading times
     public static List<WebElement> asset_listTradingTimes(WebDriver driver){
         List<WebElement> element= driver.findElements(By.xpath("//*[@id='trading-times']/ul/li"));
         return element; 
     }
+    
     
     // Method to find list of Forex-major pairs underlying list 
     public static List<WebElement> list_MajorPairsUnderlying(WebDriver driver){
