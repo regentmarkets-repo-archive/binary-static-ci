@@ -64,6 +64,10 @@
 		<test name="ValidateLostPassword">
 		<classes>
 			<class name="testCases.Validate_LostPassword" />
+		<test name="checkResourcePage">
+		<classes>
+			<class name="testCases.Validate_ResourcesPage" />
 		</classes>
 	</test>
 </suite>
+

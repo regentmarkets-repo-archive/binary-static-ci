@@ -6,16 +6,28 @@ import org.openqa.selenium.WebElement;
 import utility.CommonFunctions;
 
 public class MainMenu_Tab {
+
     private static WebElement element = null;
-    
+
+    //Check to find cashier page menu 
     public static WebElement click_cashiermenu(WebDriver driver){
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='topMenuCashier']/a"));
 		return element;
     }
+    // check to find trading menu
     public static WebElement link_TradeMenu(WebDriver driver){
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='topMenuTrading']/a"));
 		return element;
     }
+
+    //check to find resources menu
+    public static WebElement link_ResourcesMenu(WebDriver driver){
+        WebDriverWait wait = new WebDriverWait(driver,30);
+        element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='topMenuResources']/a")));
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+    }
+
     public static WebElement link_Portfolio(WebDriver driver){
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='topMenuPortfolio']/a"));
 		return element;
@@ -32,5 +44,5 @@ public class MainMenu_Tab {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='topMenuResources']/a"));
 		return element;
     }
-    
+
 }
