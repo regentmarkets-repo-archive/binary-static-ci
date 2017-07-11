@@ -61,7 +61,12 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
-		<test name="checkResourcePage">
+		<test name="ValidateLostPassword">
+		<classes>
+	      <class name="testCases.Validate_LostPassword" />
+	     </classes>
+	     </test>
+	<test name="checkResourcePage">
 		<classes>
 			<class name="testCases.Validate_ResourcesPage" />
 		</classes>

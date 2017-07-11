@@ -38,10 +38,6 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.ValidateDurationFields(driver,"t");
 		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver, "t");
-		Trading_Action.NavigateToDigitsOverUnder(driver, "Volatility Indices", "Volatility 25 Index");
-		Trading_Action.ValidateDurationFields(driver, "t");
-		Trading_Action.NavigateToDigitsEvenOdd(driver, "Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateDurationFields(driver, "t");
 	}
 	//Test Method to check error validation for all seconds duration fields
 	@Test(priority=5)
@@ -58,10 +54,6 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.ValidateDurationFields(driver,"m");
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver,"m");
-		Trading_Action.NavigateToTouchNoTouch(driver, "Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateDurationFields(driver,"m");
-		Trading_Action.NavigateToInOutEndsInOut(driver, "Volatility Indices", "Volatility 75 Index");
-		Trading_Action.ValidateDurationFields(driver,"m");
 	}
 	//Test Method to check error validation for all hours duration fields
 	@Test(priority=7)
@@ -70,8 +62,6 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.ValidateDurationFields(driver,"h");
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
 		Trading_Action.ValidateDurationFields(driver,"h");
-		Trading_Action.NavigateToInOutStaysInGoesOut(driver, "Volatility Indices", "Volatility 25 Index");
-		Trading_Action.ValidateDurationFields(driver,"h");
 	}
 	//Test Method to check error validation for all day duration fields
 	@Test(priority=8)
@@ -79,8 +69,6 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "USD/CAD");
 		Trading_Action.ValidateDurationFields(driver,"d");
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 10 Index");
-		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 25 Index");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields

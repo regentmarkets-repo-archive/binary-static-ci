@@ -60,13 +60,13 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkEnergyCOMM(driver);
         Resources_Action.checkEnergyCOMM(driver);
     } 
-    @Test(priority=6, description="Test method to check Volatility Market")
+    @Test(priority=7, description="Test method to check Volatility Market")
     public void check_VolatilityMarket() {
         Resources_Action.clickNext(driver,4);
         Resources_Action.checkCIVol(driver);
         Resources_Action.checkDailyVol(driver);
     } 
-    @Test(priority=7,description="Test Method to Login using CR and check the market")
+    @Test(enabled=false,description="Test Method to Login using CR and check the market")
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
@@ -78,7 +78,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Navigation_Action.Navigate_To_LogoutPage(driver);
     }
     
-    @Test(priority=8,description="Test Method to login to MF/MLT account ")
+    @Test(enabled=false,description="Test Method to login to MF/MLT account ")
     public void loginMF() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMF, Constant.PassMF);
@@ -97,7 +97,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkGamingMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
     }
-    @Test(priority=9,description="Test Method to login to MX account ")
+    @Test(enabled=false,description="Test Method to login to MX account ")
     public void loginMX() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMX, Constant.PassMx);
