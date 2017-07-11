@@ -65,4 +65,10 @@ public class MainAccount_Menu {
             Assert.assertTrue(element.isDisplayed());
             return element;
         }
+        public static WebElement link_MLTAccount(WebDriver driver){
+            WebDriverWait wait = new WebDriverWait(driver,30);
+            element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//*[@id='all-accounts']/li/ul/div[2]/div/a[1]/li")));
+            Assert.assertTrue(element.isDisplayed());
+            return element;
+        }
 }

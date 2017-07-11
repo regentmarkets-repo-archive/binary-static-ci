@@ -61,4 +61,10 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
+		<test name="checkResourcePage">
+		<classes>
+			<class name="testCases.Validate_ResourcesPage" />
+		</classes>
+	</test>
 </suite>
+
