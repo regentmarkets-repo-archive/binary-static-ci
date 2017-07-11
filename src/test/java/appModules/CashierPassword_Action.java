@@ -20,7 +20,6 @@ public class CashierPassword_Action {
     //Method to check title page
     public static void checkTitle(WebDriver driver) {
         String j= CashierPassword_Page.title_page(driver).getText();
-        System.out.println("Result : "+ j);
         Assert.assertEquals("Cashier Password",j); 
     }
     //Method to unlock cashier password 

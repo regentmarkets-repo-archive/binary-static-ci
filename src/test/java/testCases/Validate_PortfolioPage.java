@@ -10,8 +10,6 @@ import appModules.Trading_Action;
 
 public class Validate_PortfolioPage extends BaseClass {
 	
-	 String referenceNumber;
-	
 	@Test(priority=0,description="Test Method to Login to binary site")
 	public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);

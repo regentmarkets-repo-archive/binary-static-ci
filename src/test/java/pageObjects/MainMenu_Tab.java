@@ -52,6 +52,4 @@ public class MainMenu_Tab {
         Assert.assertTrue(element.isDisplayed());
         return element;
     }
-
-
 }
