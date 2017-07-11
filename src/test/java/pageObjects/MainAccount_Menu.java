@@ -47,4 +47,8 @@ public class MainAccount_Menu {
 			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='all-accounts']/li/ul/div[2]/div/a"));
 			return element;
         }
+        public static WebElement link_MLTAccount(WebDriver driver){
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='all-accounts']/li/ul/div[2]/div/a[1]/li"));
+			return element;
+        }
 }
