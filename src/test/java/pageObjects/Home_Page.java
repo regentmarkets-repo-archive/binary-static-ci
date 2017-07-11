@@ -6,6 +6,7 @@ import org.openqa.selenium.WebElement;
 import utility.CommonFunctions;
 
 public class Home_Page {
+
     private static WebElement element = null;
     //Method to find login button on the home page
     public static WebElement btn_Login(WebDriver driver){

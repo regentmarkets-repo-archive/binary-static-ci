@@ -127,12 +127,7 @@ public class Navigation_Action {
     public static void Navigate_To_TradePage(WebDriver driver){
         Home_Page.tradeNowLink(driver).click();
         driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-    }
-    // Navigates to Resources Page
-    public static void Navigate_To_ResourcesPage(WebDriver driver){
-        MainMenu_Tab.link_ResourcesMenu(driver).click();
-        driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
-    }   
+    } 
     public static void Navigate_To_PortfolioPage(WebDriver driver){
 
         MainMenu_Tab.link_Portfolio(driver).click();
@@ -147,8 +142,13 @@ public class Navigation_Action {
     	MainMenu_Tab.link_Statement(driver).click();
     	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
     }
+    public static void Navigate_To_ResourcesPage(WebDriver driver){
+    	MainMenu_Tab.link_ResourcesMenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
     public static void Navigate_To_LostPasswordPage(WebDriver driver){
     	driver.get(Constant.URL_LostPass);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+
 }
