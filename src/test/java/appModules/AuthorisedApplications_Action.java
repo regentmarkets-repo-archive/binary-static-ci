@@ -29,8 +29,10 @@ public class AuthorisedApplications_Action {
     }
     //Method to grant permission
     public static  void grantPermission(WebDriver driver) {
-        AuthorisedApplications_page.grant_btn(driver).click();
+        AuthorisedApplications_page.grant_btn(driver).click();  
+    }
+    public static  void checkSuccessgrant(WebDriver driver) {
         Assert.assertEquals(AuthorisedApplications_page.sub_title(driver).getText(),"Keep track of your authorised applications.");
-        
+
     }
 }

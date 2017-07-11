@@ -19,11 +19,13 @@ import pageObjects.Portfolio_Page;
 import pageObjects.Profile_Page;
 import pageObjects.ProfitTable_Page;
 import pageObjects.Security_Page;
+import pageObjects.Statement_Page;
+import utility.CommonFunctions;
 
 public class Navigation_Action {
 		
 	public static void Navigate_To_HomePage(WebDriver driver,String URL){
-		driver.get(URL); 
+		driver.get(URL);
 	}
 	public static void Navigate_To_LoginPage(WebDriver driver){ 
 		Home_Page.btn_Login(driver).click();
@@ -31,13 +33,15 @@ public class Navigation_Action {
 	public static void Navigate_To_MainPage(WebDriver driver,String Email,String Password){
 		Login_Action.Execute(driver,Email,Password);
 	}
-	public static void Navigate_To_ProfilePage(WebDriver driver){
-		MainAccount_Menu.link_MainAccount(driver).click();
-		MainAccount_Menu.link_Profile(driver).click();
-	}
 	public static void Navigate_To_SecurityPage(WebDriver driver){
 		MainAccount_Menu.link_MainAccount(driver).click();
 		MainAccount_Menu.link_Security(driver).click();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+	}
+	public static void Navigate_To_ProfilePage(WebDriver driver){
+		MainAccount_Menu.link_MainAccount(driver).click();
+		MainAccount_Menu.link_Profile(driver).click();
+		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 	}
 	public static void Navigate_To_FinancialAssessmentPage(WebDriver driver){
 		Profile_Page.link_FinancialAssessment(driver).click();
@@ -48,7 +52,6 @@ public class Navigation_Action {
 	public static void Navigate_To_AccountPasswordPage(WebDriver driver){
 	    Security_Page.link_AccountPassword(driver).click();
 	    Assert.assertTrue(ChangePassword_Page.PageTitle(driver).isDisplayed());
-		System.out.println("The title of the page is : "+ChangePassword_Page.PageTitle(driver).getText());
 		Assert.assertEquals(ChangePassword_Page.PageTitle(driver).getText(), "Change Password");
 	}
 	public static void Navigate_To_LogoutPage(WebDriver driver){
@@ -114,12 +117,18 @@ public class Navigation_Action {
     }
     public static void Navigate_To_PortfolioPage(WebDriver driver){
     	MainMenu_Tab.link_Portfolio(driver).click();
-    	System.out.println(Portfolio_Page.txt_Header(driver).getText());
     	Assert.assertTrue(Portfolio_Page.txt_Header(driver).getText().equals("Portfolio"));
     }
     public static void Navigate_To_ProfitTablePage(WebDriver driver){
     	MainMenu_Tab.link_ProfitTable(driver).click();
-    	System.out.println(ProfitTable_Page.txt_Header(driver).getText());
     	Assert.assertTrue(ProfitTable_Page.txt_Header(driver).getText().equals("Profit Table"));
+    }
+    public static void Navigate_To_StatementPage(WebDriver driver){
+    	MainMenu_Tab.link_Statement(driver).click();
+    	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
+    }
+    public static void Navigate_To_ResourcesPage(WebDriver driver){
+    	MainMenu_Tab.link_ResourcesMenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
 }
