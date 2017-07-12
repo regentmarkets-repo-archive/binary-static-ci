@@ -7,6 +7,7 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
+import utility.CommonFunctions;
 import utility.GetUtil;
 
 public class SelfExclusionPage {
@@ -14,81 +15,61 @@ public class SelfExclusionPage {
 	
 	public static WebElement input_MaxBalance(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_balance")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_balance"));
 		return element;
 	}
 	
 	public static WebElement input_MaxTurnover(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_turnover")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_turnover"));
 		return element;
 	}
 	
 	public static WebElement input_MaxLosses(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_losses")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_losses"));
 		return element;
 	}
 	
 	public static WebElement input_Max7DaysTurnover(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_7day_turnover")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_7day_turnover"));
 		return element;
 	}
 	
 	public static WebElement input_Max7DaysLosses(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_7day_losses")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_7day_losses"));
 		return element;
 	}
 	
 	public static WebElement input_Max30DaysTurnover(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_30day_turnover")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_30day_turnover"));
 		return element;
 	}
 
 	public static WebElement input_Max30DaysLosses(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_30day_losses")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_30day_losses"));
 		return element;
 	}
 	
 	public static WebElement input_MaxOpenBets(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("max_open_bets")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("max_open_bets"));
 		return element;
 	}
 	
 	public static WebElement input_SessionDurationLimit(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("session_duration_limit")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("session_duration_limit"));
 		return element;
 	}
 	
 	public static WebElement date_TimeOutUntilDate(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("timeout_until_date")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("timeout_until_date"));
 		return element;
 	}
 	
@@ -101,25 +82,19 @@ public class SelfExclusionPage {
 	
 	public static WebElement date_ExcludeUntil(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("exclude_until")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("exclude_until"));
 		return element;
 	}
 
 	public static WebElement time_TimeOutUntilTime(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("timeout_until_time")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("timeout_until_time"));
 		return element;
 	}
 	
 	public static WebElement btn_Submit(WebDriver driver)
 	{
-		WebDriverWait wait = new WebDriverWait(driver,30);
-		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.id("btn_submit")));
-		Assert.assertTrue(element.isDisplayed());
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("btn_submit"));
 		return element;
 	}
 	

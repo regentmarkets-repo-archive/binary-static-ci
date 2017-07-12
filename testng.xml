@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-<<<<<<< HEAD
 	<test name="CheckLoginPage">
 		<classes>
 			<class name="testCases.Validate_LoginPage" />
@@ -62,32 +61,15 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
+		<test name="ValidateLostPassword">
+		<classes>
+	      <class name="testCases.Validate_LostPassword" />
+	     </classes>
+	     </test>
+	<test name="checkResourcePage">
+		<classes>
+			<class name="testCases.Validate_ResourcesPage" />
+		</classes>
+	</test>
 </suite>
-=======
-  <test name="LoginAndLogout">
-    <classes>
-      <class name="testCases.Validate_LoginAndLogout"/>
-      </classes>
-  </test>
-  <test name="LoginWithIncorrectPassword">
-    <classes>
-      <class name="testCases.Validate_LoginWithIncorrectPassword"/>
-      </classes>
-  </test>  
-   <test name="SetFinancialAssessment">
-    <classes>
-      <class name="testCases.Validate_SetFinancialAssessment"/>
-      </classes>
-  </test> 
-      <test name="FinancialAssessmentFields">
-    <classes>
-      <class name="testCases.Validate_FinancialAssessmentFields"/>
-      </classes>
-  </test> 
-     <test name="CheckLoginHistoryPage">
-    <classes>
-      <class name="testCases.Validate_LoginHistoryPage"/>
-      </classes>
-      </test>
-</suite>
->>>>>>> 401ecba31c467b2f7f9343dcd9f9ae00455e28b0
+
