@@ -61,24 +61,14 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
-	<test name="CheckTradingPage">
+		<test name="ValidateLostPassword">
 		<classes>
-			<class name="testCases.Validate_TradePage" />
-		</classes>
-	</test>
-	<test name="CheckPortfolioPage">
+	      <class name="testCases.Validate_LostPassword" />
+	     </classes>
+	     </test>
+	<test name="checkResourcePage">
 		<classes>
-			<class name="testCases.Validate_PortfolioPage" />
-		</classes>
-	</test>
-	<test name="CheckProfitTablePage">
-		<classes>
-			<class name="testCases.Validate_ProfitTable" />
-		</classes>
-	</test>
-		<test name="CheckStatementPage">
-		<classes>
-			<class name="testCases.Validate_StatementPage" />
+			<class name="testCases.Validate_ResourcesPage" />
 		</classes>
 	</test>
 	<test name="NewAccountOnQaServer">
@@ -97,3 +87,4 @@
 		</classes>
 	</test>
 </suite>
+

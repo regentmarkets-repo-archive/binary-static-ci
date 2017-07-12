@@ -37,7 +37,7 @@ notifications:
       - ridho@binary.com
       - dmytro@binary.com
       - ehtesham@binary.com
-      - parashuram@binary.com
+      - munsei@binary.com
       - negar@binary.com
       - kelly@binary.com
     on_success: never
