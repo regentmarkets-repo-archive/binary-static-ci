@@ -81,4 +81,19 @@
 			<class name="testCases.Validate_StatementPage" />
 		</classes>
 	</test>
+	<test name="NewAccountOnQaServer">
+		<classes>
+			<class name="testCases.Validate_NewAccountOnQaServer" />
+		</classes>
+	</test>
+	<test name="NewAccountOnQaServer">
+		<classes>
+			<class name="testCases.Validate_NewAccountOnQaServer" />
+		</classes>
+	</test>
+	<test name="NewAccountOnBlueServer">
+		<classes>
+			<class name="testCases.Validate_NewAccount" />
+		</classes>
+	</test>
 </suite>
