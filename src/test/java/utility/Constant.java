@@ -6,8 +6,14 @@ public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
 	public static final String Email = "bijan+autotest@binary.com";
+	public static final String EmailMF = "ridho+mlt@binary.com";
+	public static final String EmailMX = "ridho+mx@binary.com";
+	public static final String PassMF = "Abcd1234";
+	public static final String PassMx = "abcd1234";
+	public static final String tradeURL = "https://staging.binary.com/en/trading.html";
 	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
+	public static final String URL_LostPass = "https://staging.binary.com/en/user/lost_passwordws.html";
 	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
 	public static final String Server = "blue.binaryws.com";
 	public static final String AppID = "1098";
