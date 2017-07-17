@@ -23,7 +23,7 @@ public class ListenerClass extends TestListenerAdapter{
 		// If the priority is not defined it will print the default priority as 0
 		log("Priority of this method is " + tr.getMethod().getPriority());
 
-		System.out.println(".....End of Test Case.....");
+		System.out.println(".....");
 	}
 
 	@Override
@@ -31,13 +31,13 @@ public class ListenerClass extends TestListenerAdapter{
 
 		log("Test '" + tr.getName() + "' FAILED");
 		log("Priority of this method is " + tr.getMethod().getPriority());
-		System.out.println(".....End of Test Case.....");
+		System.out.println(".....");
 	}
 
 	@Override
 	public void onTestSkipped(ITestResult tr) {
 		log("Test '" + tr.getName() + "' SKIPPED");
-		System.out.println(".....End Of Test Case.....");
+		System.out.println(".....");
 	}
 
 	private void log(String methodName) {
