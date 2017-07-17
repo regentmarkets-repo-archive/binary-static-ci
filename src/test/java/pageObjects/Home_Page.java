@@ -24,5 +24,39 @@ public class Home_Page {
     public static WebElement acceptRealityCheck(WebDriver driver){
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='reality_check_nav']/button"));
 		return element;
+
+	}
+	//method to go find logo 
+		public static WebElement logo(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,60);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.id("logo")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find Email text box on home page
+		public static WebElement txt_Email(WebDriver driver)
+		{
+			WebDriverWait wait = new WebDriverWait(driver,60);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.id("email")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find create free account button on home page
+		public static WebElement btn_CreateFreeAccount(WebDriver driver){
+			WebDriverWait wait = new WebDriverWait(driver,60);
+			element = wait.until(ExpectedConditions.elementToBeClickable(By.id("btn_verify_email")));
+			Assert.assertTrue(element.isDisplayed());
+			return element;
+		}
+		//Method to find upgrade to a real account link on home page
+			public static WebElement link_UpgradeToRealAccount(WebDriver driver){
+				WebDriverWait wait = new WebDriverWait(driver,60);
+				element = wait.until(ExpectedConditions.elementToBeClickable(By.id("topbar-msg")));
+				Assert.assertTrue(element.isDisplayed());
+				WebElement link = element.findElement(By.linkText("Upgrade to a Real Account"));
+				return link;
+			}
+
     }
+
 }

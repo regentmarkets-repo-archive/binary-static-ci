@@ -28,7 +28,13 @@ public class Login_Page {
 	//Method to find error message on the login page
 	public static WebElement err_Login(WebDriver driver)
 	{
+
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id='wrapper']/p[2]")));
+		Assert.assertTrue(element.isDisplayed());
+
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//p[contains(text(),'Incorrect email or password.')]"));
+
 		return element;
 	}
 }

@@ -11,8 +11,16 @@ public class Security_Page {
     //Method to find Login History link
     public static WebElement link_LoginHistoryPage(WebDriver driver)
     {
+
+        WebDriverWait wait = new WebDriverWait(driver,60);
+        element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[5]/div[1]/a")));
+        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
+        Assert.assertTrue(element.isDisplayed());
+        return element;
+
 		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='settings_container']/div/div[5]/div[1]/a")));
 		return element;
+
     }
     //Method to find Self Exclusion link
     public static WebElement link_SelfExclusionPage(WebDriver driver)

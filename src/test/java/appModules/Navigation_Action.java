@@ -142,6 +142,18 @@ public class Navigation_Action {
     	MainMenu_Tab.link_Statement(driver).click();
     	Assert.assertTrue(Statement_Page.txt_Header(driver).getText().equals("Statement"));
     }
+
+  //go to home page
+  	public static void Go_Home_Page(WebDriver driver)
+  	{
+  	    Home_Page.logo(driver).click();
+  	}
+  	//navigate to upgrade real account page
+  	public static void Navigate_To_UpgradeAccount(WebDriver driver)
+  	{
+  		Home_Page.link_UpgradeToRealAccount(driver).click();
+  	}
+
     public static void Navigate_To_ResourcesPage(WebDriver driver){
     	MainMenu_Tab.link_ResourcesMenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
@@ -150,5 +162,6 @@ public class Navigation_Action {
     	driver.get(Constant.URL_LostPass);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+
 
 }
