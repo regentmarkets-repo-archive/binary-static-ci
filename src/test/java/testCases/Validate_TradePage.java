@@ -1,6 +1,7 @@
 package testCases;
 
 import org.testng.annotations.Test;
+
 import utility.Constant;
 import appModules.Navigation_Action;
 import appModules.Trading_Action;
@@ -33,58 +34,44 @@ public class Validate_TradePage extends BaseClass {
 	}
 	//Test Method to check error validation for all ticks duration fields
 	@Test(priority=4)
-	public void CheckErrorValidationForDurationTicks() {
+	public void CheckErrorValidationForDurationTicks()  {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"t");
-		Trading_Action.NavigateToDigitsMatchesDiffers(driver, "Volatility Indices", "Volatility 10 Index");
-		Trading_Action.ValidateDurationFields(driver, "t");
 	}
 	//Test Method to check error validation for all seconds duration fields
 	@Test(priority=5)
-	public void CheckErrorValidationForDurationSeconds() {
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
-		Trading_Action.ValidateDurationFields(driver, "s");
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
+	public void CheckErrorValidationForDurationSeconds()  {
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
 	//Test Method to check error validation for all minutes duration fields
 	@Test(priority=6)
 	public void CheckErrorValidationForDurationMins() {
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
-		Trading_Action.ValidateDurationFields(driver,"m");
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"m");
 	}
 	//Test Method to check error validation for all hours duration fields
 	@Test(priority=7)
 	public void CheckErrorValidationForDurationHours() {
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "USD/CAD");
-		Trading_Action.ValidateDurationFields(driver,"h");
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 10 Index");
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"h");
 	}
 	//Test Method to check error validation for all day duration fields
 	@Test(priority=8)
-	public void CheckErrorValidationForDurationDays() {
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "USD/CAD");
-		Trading_Action.ValidateDurationFields(driver,"d");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 10 Index");
+	public void CheckErrorValidationForDurationDays()  {
+		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
 	//Test Method to check error validation for barrier offset fields
 	@Test(priority=9)
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
-		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");
-		Trading_Action.NavigateToUpDownHigherLower(driver, "Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");		
+		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");	
 	}
 	//Test Method to check error validation for payout amount fields
 	@Test(priority=10)
-	public void CheckErrorValidationForPayout() {	
+	public void CheckErrorValidationForPayout()  {	
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
-		Trading_Action.NavigateToUpDownRiseFall(driver, "Volatility Indices", "Volatility 100 Index");
-		Trading_Action.ValidateAmountField(driver, "Volatility Indices","Payout");
 	}
 }
