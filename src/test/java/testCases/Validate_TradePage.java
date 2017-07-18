@@ -7,24 +7,20 @@ import appModules.Navigation_Action;
 import appModules.Trading_Action;
 
 public class Validate_TradePage extends BaseClass {	
-	//Test Method to Login to binary site
-	@Test(priority=0)
+	@Test(priority=0,description="Test Method to Login to binary site")
 	public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
 	}
-	//Test Method to navigate to financial assessment page
-	@Test(priority=1)
+	@Test(priority=1,description="Test Method to navigate to financial assessment page")
 	  public void NavigateToTradePage() {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
-	//Test Method to check all Markets options
-	@Test(priority=2)
+	@Test(priority=2,description="Test Method to check all Markets options")
 	public void CheckMarketOptions() {
 		Trading_Action.CheckMarketOptions(driver);
 	}
-	//Test Method to check all underlying assets for selected market
-	@Test(priority=3)
+	@Test(priority=3,description="Test Method to check all underlying assets for selected market")
 	public void CheckUnderlyingAssets() {
 		Trading_Action.CheckForexAssets(driver);
 		Trading_Action.CheckIndicesAssets(driver);
@@ -32,44 +28,37 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.CheckCommoditiesAssets(driver);
 		Trading_Action.CheckVolatilityIndicesAssets(driver);
 	}
-	//Test Method to check error validation for all ticks duration fields
-	@Test(priority=4)
+	@Test(priority=4,description="Test Method to check error validation for all ticks duration fields")
 	public void CheckErrorValidationForDurationTicks()  {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"t");
 	}
-	//Test Method to check error validation for all seconds duration fields
-	@Test(priority=5)
+	@Test(priority=5,description="Test Method to check error validation for all seconds duration fields")
 	public void CheckErrorValidationForDurationSeconds()  {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver, "s");
 	}
-	//Test Method to check error validation for all minutes duration fields
-	@Test(priority=6)
+	@Test(priority=6,description="Test Method to check error validation for all minutes duration fields")
 	public void CheckErrorValidationForDurationMins() {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"m");
 	}
-	//Test Method to check error validation for all hours duration fields
-	@Test(priority=7)
+	@Test(priority=7,description="Test Method to check error validation for all hours duration fields")
 	public void CheckErrorValidationForDurationHours() {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"h");
 	}
-	//Test Method to check error validation for all day duration fields
-	@Test(priority=8)
+	@Test(priority=8,description="Test Method to check error validation for all day duration fields")
 	public void CheckErrorValidationForDurationDays()  {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateDurationFields(driver,"d");
 	}
-	//Test Method to check error validation for barrier offset fields
-	@Test(priority=9)
+	@Test(priority=9,description="Test Method to check error validation for barrier offset fields")
 	public void CheckErrorValidationForBarrierOffset() {
 		Trading_Action.NavigateToUpDownHigherLower(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateBarrierField(driver,"HigherLower","Payout");	
 	}
-	//Test Method to check error validation for payout amount fields
-	@Test(priority=10)
+	@Test(priority=10,description="Test Method to check error validation for payout amount fields")
 	public void CheckErrorValidationForPayout()  {	
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
