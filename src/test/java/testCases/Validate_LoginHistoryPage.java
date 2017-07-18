@@ -1,8 +1,10 @@
 //Test case to check error validation of each field on the Financial Assessment page
 package testCases;
 
+
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
+
 import org.testng.annotations.Test;
 
 import java.util.concurrent.TimeUnit;
@@ -19,7 +21,7 @@ import appModules.Navigation_Action;
 import io.github.bonigarcia.wdm.ChromeDriverManager;
 
 public class Validate_LoginHistoryPage extends BaseClass {
-    
+
     @Test(priority=0,description="Test method to  login  page")
     public void reset_Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
@@ -55,5 +57,7 @@ public class Validate_LoginHistoryPage extends BaseClass {
         Assert.assertTrue(Login_History.title_page(driver).isDisplayed());
         LoginHistory_Action.ExecuteCount(driver); 
     }
+
     
 }
+

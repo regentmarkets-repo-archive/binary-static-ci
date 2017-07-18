@@ -43,11 +43,11 @@ public class Validate_CashierPassword extends BaseClass {
     public void update_cshrPass() {
     	CashierPassword_Action.updateCashierPwd(driver);
     }
-    @Test(priority=8,description="Check deposit cashier lock")
+    @Test(enabled=false,description="Check deposit cashier lock")
     public void check_depositLock() {
         CashierPassword_Action.depositPage(driver);
     }
-    @Test(priority=9,description="Check withdraw cashier lock")
+    @Test(enabled=false,description="Check withdraw cashier lock")
     public void check_withdrawlock() {
         CashierPassword_Action.withdrawPage(driver);
     }
