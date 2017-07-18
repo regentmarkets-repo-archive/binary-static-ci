@@ -54,9 +54,9 @@ public class Constant {
 	public static final String targetserver="www.binaryqa12.com";
 	public static final String emailSubjectContainServer = "qa12.com";//server name which ll be in subjectline
 	public static final String appId="1003";//qa server app id
-	public static final String qaserver_duoBypass = "6bc9db85fd844d3fe06f9cb095ecbb652cdee6499b0586fd464d66b4d9e59f8d";
+	public static final String qaserver_duoBypass = "cff5eefd936a283bd5b46a9e41447f117ec42f701dc2a35a1308a1ce92e0a24a";
 	public static final String devQaServer = "dev.binaryqa12.com";
-	public static final String dev_duoBypass="01addc09bc9d98c6cb40575e0040a1a1bf1fb13fcbac240404c3e107911bd004";
+	public static final String dev_duoBypass="aa5827fb5d59689d0d9aab476922c9b6610778e5c1c05c069512f9f06b0cd092";
 	public static final String countryCode = "pk";
 	public static final String UpgradeTitle = "Mr";
 	public static final String accountReason = "Income Earning";
