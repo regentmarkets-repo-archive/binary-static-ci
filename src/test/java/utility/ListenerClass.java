@@ -9,7 +9,7 @@ public class ListenerClass extends TestListenerAdapter{
 	
 	@Override
 	public void onTestStart(ITestResult tr) {
-		log("Test Method Started....");
+		log("Test Method '" + tr.getName() + "' Started....");
 	}
 	
 	@Override
@@ -24,7 +24,6 @@ public class ListenerClass extends TestListenerAdapter{
 
 	@Override
 	public void onTestSuccess(ITestResult tr) {
-
 		log("Test Method '" + tr.getName() + "' PASSED");
 
 		// This will print the class name in which the method is present
