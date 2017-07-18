@@ -20,6 +20,7 @@ public class ListenerClass extends TestListenerAdapter{
 	@Override
 	public void onFinish(ITestContext Result) {
 		log("Completed executing test....");
+		System.out.println("..................");
 	}
 
 	@Override
