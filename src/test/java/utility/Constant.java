@@ -5,15 +5,15 @@ import org.apache.commons.lang3.RandomStringUtils;
 public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
-//	public static final String Email = "bijan+autotest@binary.com";
-	public static final String Email = "b_notify@mailinator.com";
+	public static final String Email = "bijan+autotest@binary.com";
+	public static final String NotificationEmail = "b_notify@mailinator.com";
 	public static final String EmailMF = "ridho+mlt@binary.com";
 	public static final String EmailMX = "ridho+mx@binary.com";
 	public static final String PassMF = "Abcd1234";
 	public static final String PassMx = "abcd1234";
 	public static final String tradeURL = "https://staging.binary.com/en/trading.html";
-//	public static final String Password = "Test1234";
-	public static final String Password = "P@ssw0rd";
+	public static final String Password = "Test1234";
+	public static final String NotificationPassword = "P@ssw0rd";
 	public static final String NewPassword = "NewPassword123";
 	public static final String URL_LostPass = "https://staging.binary.com/en/user/lost_passwordws.html";
 	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
@@ -59,4 +59,5 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
+	public static final String NotificationMailbox="https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv";
 }

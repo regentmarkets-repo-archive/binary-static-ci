@@ -4,10 +4,8 @@ Description: To Perform cashier actions
 Development start: July 18, 2017
 Development end: 
 */
-import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
-
 import pageObjects.Cashier_Page;
 
 public class Cashier_Action {

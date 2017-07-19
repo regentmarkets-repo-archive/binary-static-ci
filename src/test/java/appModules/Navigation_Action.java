@@ -152,13 +152,14 @@ public class Navigation_Action {
     }
     
     public static void Navigate_To_Cashier(WebDriver driver){
-    	driver.get("https://staging.binary.com/en/cashier.html");//Need to remove hardcoding here
+    	MainMenu_Tab.click_cashiermenu(driver).click();
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
     
     public static void Navigate_To_Mailinator(WebDriver driver){
-    	driver.get("https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv");//Need to remove hardcoding here
+    	driver.get(Constant.NotificationMailbox);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    	
     }
 
 }
