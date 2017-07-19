@@ -1,7 +1,5 @@
 package appModules;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Action;
@@ -186,11 +184,9 @@ public class Trading_Action {
 		}
 		else if(durationType=="s") {
 			SelectEnterDuration(driver,"2",durationType);
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			Assert.assertEquals(Trade_Page.err_TradingOfferTop(driver).getText(), "Trading is not offered for this duration.");
 			Assert.assertEquals(Trade_Page.err_TradingOfferBottom(driver).getText(), "Trading is not offered for this duration.");
 			SelectEnterDuration(driver,"99999",durationType);
-			driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsTop(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 			Assert.assertEquals(Trade_Page.err_GreaterThan24HrsBottom(driver).getText(), "Contracts on this market with a duration of more than 24 hours must expire at the end of a trading day.");
 		}
