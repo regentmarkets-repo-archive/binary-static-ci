@@ -3,15 +3,15 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="testCases.Validate_NewAccountOnQaServer">
+      <class name="testCases.Validate_NewAccount">
         <methods>
-          <include name="NewClientRegistrationOnQaServer"/>
-          <include name="GrantUpgradedUserPermissons"/>
           <include name="endSession"/>
+          <include name="Validate_VerificationInfo"/>
+          <include name="Validate_EmailField"/>
+          <include name="NewClientRegistration"/>
           <include name="setUp"/>
-          <include name="UpgradeToRealAccount"/>
         </methods>
-      </class> <!-- testCases.Validate_NewAccountOnQaServer -->
+      </class> <!-- testCases.Validate_NewAccount -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

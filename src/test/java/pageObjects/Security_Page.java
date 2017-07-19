@@ -3,6 +3,11 @@ package pageObjects;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.JavascriptExecutor;
+import org.testng.Assert;
+
 import utility.CommonFunctions;
 
 public class Security_Page {
@@ -16,7 +21,7 @@ public class Security_Page {
         element = wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath(".//*[@id='settings_container']/div/div[5]/div[1]/a")));
         ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
         Assert.assertTrue(element.isDisplayed());
-        return element;
+       // return element;
 
 		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='settings_container']/div/div[5]/div[1]/a")));
 		return element;
