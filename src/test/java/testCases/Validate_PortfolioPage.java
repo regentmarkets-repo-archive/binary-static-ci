@@ -21,9 +21,8 @@ public class Validate_PortfolioPage extends BaseClass {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
 	@Test(priority=2,description="Test Method to validate contract purchase for Volatility Indices")
-	public void TestContractPurchase(){
-		Trading_Action.NavigateToUpDownRiseFall(driver,"Volatility Indices", "Volatility 50 Index");
-		Trading_Action.ValidateContractTopPurchase(driver,"Volatility 50 Index","1","h","10");
+	public void TestContractPurchase() {
+		Trading_Action.ValidateContractTopPurchase(driver,"AUD/JPY","1","h","10");
 		Trading_Action.CloseViewPopup(driver);
 	}
 	@Test(priority=3,description="Test Method to navigate to portfolio page")
@@ -32,6 +31,6 @@ public class Validate_PortfolioPage extends BaseClass {
 	  }
 	@Test(priority=5,description="Test Method to validate sell contract")
 	  public void ValidateSellContractPortfolio() {
-		Portfolio_Action.ValidatePortfolioSellContract(driver,"Volatility 50 Index","1","h","10");
+		Portfolio_Action.ValidatePortfolioSellContract(driver,"AUD/JPY","1","h","10");
 	  }
 }

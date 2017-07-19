@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
+	<listeners>
+		<listener class-name="utility.ListenerClass" />
+	</listeners>
 	<test name="CheckLoginPage">
 		<classes>
 			<class name="testCases.Validate_LoginPage" />
@@ -71,6 +74,21 @@
 	      <class name="testCases.Validate_LostPassword" />
 	     </classes>
 	     </test>
+		<test name="ValidatePortfolioPage">
+		<classes>
+	      <class name="testCases.Validate_PortfolioPage" />
+	     </classes>
+	     </test>
+	  <test name="ValidateProfitTable">
+		<classes>
+	      <class name="testCases.Validate_ProfitTable" />
+	     </classes>
+	     </test>
+	  <test name="ValidateStatementPage">
+		<classes>
+	      <class name="testCases.Validate_StatementPage" />
+	     </classes>
+	   </test>
 	<test name="checkResourcePage">
 		<classes>
 			<class name="testCases.Validate_ResourcesPage" />

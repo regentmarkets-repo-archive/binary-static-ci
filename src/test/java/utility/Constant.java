@@ -60,4 +60,5 @@ public class Constant {
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
 	public static final String NotificationMailbox="https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv";
+	public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
 }
