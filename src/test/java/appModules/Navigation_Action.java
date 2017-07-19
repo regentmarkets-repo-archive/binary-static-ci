@@ -150,5 +150,15 @@ public class Navigation_Action {
     	driver.get(Constant.URL_LostPass);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+    
+    public static void Navigate_To_Cashier(WebDriver driver){
+    	driver.get("https://staging.binary.com/en/cashier.html");//Need to remove hardcoding here
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    
+    public static void Navigate_To_Mailinator(WebDriver driver){
+    	driver.get("https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv");//Need to remove hardcoding here
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
 
 }
