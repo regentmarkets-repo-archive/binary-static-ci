@@ -1,15 +1,197 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
+  <test name="CheckLimits(failed)">
     <classes>
+      <class name="testCases.Validate_LostPassword">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LostPassword -->
+      <class name="testCases.Validate_APITokenPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_APITokenPage -->
+      <class name="testCases.Validate_AuthorisedApplications">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+      <class name="testCases.Validate_Limits">
+        <methods>
+          <include name="Test_Lower_MaxAccountBalance"/>
+          <include name="closeApplication"/>
+          <include name="Test_Lower_MaxOpenPos"/>
+          <include name="setupApplication"/>
+          <include name="Test_Exceed_MaxOpenPos"/>
+          <include name="Test_Exceed_MaxAccountBalance"/>
+        </methods>
+      </class> <!-- testCases.Validate_Limits -->
+      <class name="testCases.Validate_ResourcesPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_ResourcesPage -->
+      <class name="testCases.Validate_LoginHistoryPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+      <class name="testCases.Validate_SelfExclusionPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_SelfExclusionPage -->
+      <class name="testCases.Validate_CashierPassword">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_CashierPassword -->
+      <class name="testCases.Validate_LoginPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginPage -->
+      <class name="testCases.Validate_Links">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_Links -->
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+      <class name="testCases.Validate_ChangePasswordPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
       <class name="testCases.Validate_WithdrawalToken">
         <methods>
-          <include name="A_TestWithdrawal"/>
           <include name="closeApplication"/>
           <include name="setupApplication"/>
         </methods>
       </class> <!-- testCases.Validate_WithdrawalToken -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- CheckLimits(failed) -->
+  <test name="ValidateLostPassword(failed)">
+    <classes>
+      <class name="testCases.Validate_LostPassword">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="testEmptyFields"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LostPassword -->
+      <class name="testCases.Validate_APITokenPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_APITokenPage -->
+      <class name="testCases.Validate_AuthorisedApplications">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+      <class name="testCases.Validate_ResourcesPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_ResourcesPage -->
+      <class name="testCases.Validate_Limits">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_Limits -->
+      <class name="testCases.Validate_LoginHistoryPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+      <class name="testCases.Validate_SelfExclusionPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_SelfExclusionPage -->
+      <class name="testCases.Validate_CashierPassword">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_CashierPassword -->
+      <class name="testCases.Validate_LoginPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_LoginPage -->
+      <class name="testCases.Validate_Links">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_Links -->
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+      <class name="testCases.Validate_ChangePasswordPage">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
+      <class name="testCases.Validate_WithdrawalToken">
+        <methods>
+          <include name="closeApplication"/>
+          <include name="setupApplication"/>
+        </methods>
+      </class> <!-- testCases.Validate_WithdrawalToken -->
+    </classes>
+  </test> <!-- ValidateLostPassword(failed) -->
+</suite> <!-- Failed suite [Suite] -->
