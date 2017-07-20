@@ -2,71 +2,99 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Suite">
 	<test name="CheckLoginPage">
+	 	<parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
 	<test name="CheckLoginHistoryPage">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="firefox"/>
 		<classes>
 			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
 	</test>
 	<test name="SetFinancialAssessment">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_SetFinancialAssessment" />
 		</classes>
 	</test>
 	<test name="FinancialAssessmentFields">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_FinancialAssessmentFields" />
 		</classes>
 	</test>
 	<test name="CheckPersonalDetailsPage">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_PersonalDetailsPage" />
 		</classes>
 	</test>
 	<test name="ChangePasswordPage">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_ChangePasswordPage" />
 		</classes>
 	</test>
 	<test name="CashierPassword">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_CashierPassword" />
 		</classes>
 	</test>
 	<test name="CheckLimits">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_Limits" />
 		</classes>
 	</test>
 	<test name="CheckLinks">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_Links" />
 		</classes>
 	</test>
 	<test name="ValidateSelfExclusionInput">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_SelfExclusionPage" />
 		</classes>
 	</test>
 	<test name="CheckAuthorisedApplication">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_AuthorisedApplications" />
 		</classes>
 	</test>
 	<test name="checkTokenAPI">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
-		<test name="ValidateLostPassword">
+	<test name="ValidateLostPassword">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 	      <class name="testCases.Validate_LostPassword" />
 	     </classes>
 	     </test>
 	<test name="checkResourcePage">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_ResourcesPage" />
 		</classes>

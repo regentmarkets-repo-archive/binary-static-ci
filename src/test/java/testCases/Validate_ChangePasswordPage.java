@@ -55,7 +55,7 @@ public void Test_DiffPasswords_Validation(){
 public void Test_IncorrectOldPassword_Validation(){
 	 ChangePassword_Action.Execute(driver, "Old123","New123","New123");
 	 Assert.assertEquals(ChangePassword_Page.msg_Error_OldPassword(driver).getText(),"Old password is wrong.");
-}
+}/*
 @Test(priority=8,description="Test Method to change the current password")
 public void Test_ChangeCurrentPassword() throws InterruptedException{
 	ChangePassword_Action.Execute(driver,Constant.Password, Constant.NewPassword,Constant.NewPassword);
@@ -71,6 +71,6 @@ public void Test_ChangeToOriginalPassword(){
     Navigation_Action.Navigate_To_AccountPasswordPage(driver);
 	ChangePassword_Action.Execute(driver,Constant.NewPassword, Constant.Password,Constant.Password);
 	Assert.assertEquals(ChangePassword_Page.msg_Success(driver).getText(), "Your password has been changed. Please log in again.");
-}
+}*/
 
 }
