@@ -65,48 +65,48 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.clickNext(driver,4);
         Resources_Action.checkCIVol(driver);
         Resources_Action.checkDailyVol(driver);
+        System.out.println("Asset Index is working properly");
     } 
-    @Test(enabled=false,description="Test Method to Login using CR and check the market")
+    @Test(priority=8,description="Test Method to Login using CR and check the market")
     public void Login() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
-        Navigation_Action.Navigate_To_ResourcesPage(driver);
-        Resources_Action.link_AssetIndex(driver);
+        driver.navigate().to(Constant.assetURL);
         Resources_Action.checkMarket(driver);
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
+        System.out.println("Asset Index & Trading times for CR account is working properly");
     }
     
-    @Test(enabled=false,description="Test Method to login to MF/MLT account ")
+    @Test(priority=9,description="Test Method to login to MF/MLT account ")
     public void loginMF() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMF, Constant.PassMF);
         Login_Action.continueTrading(driver);
-        Navigation_Action.Navigate_To_ResourcesPage(driver);
-        Resources_Action.link_AssetIndex(driver);
+        driver.navigate().to(Constant.assetURL);
         Resources_Action.checkFinancialMarket(driver);
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkFinancialMarketTradingTimes(driver);
         Login_Action.SwitchToMLTAccount(driver);
         Login_Action.continueTrading(driver);
-        Navigation_Action.Navigate_To_ResourcesPage(driver);
-        Resources_Action.link_AssetIndex(driver);
+        driver.navigate().to(Constant.assetURL);
         Resources_Action.checkGamingMarket(driver);
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkGamingMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
+        System.out.println("Asset Index & Trading times for MLT/MF account is working properly");
     }
-    @Test(enabled=false,description="Test Method to login to MX account ")
+    @Test(priority=10,description="Test Method to login to MX account ")
     public void loginMX() {
         Navigation_Action.Navigate_To_LoginPage(driver);
         Navigation_Action.Navigate_To_MainPage(driver, Constant.EmailMX, Constant.PassMx);
         Login_Action.continueTrading(driver);
-        Navigation_Action.Navigate_To_ResourcesPage(driver);
-        Resources_Action.link_AssetIndex(driver);
+        driver.navigate().to(Constant.assetURL);
         Resources_Action.checkMarket(driver);
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
+        System.out.println("Asset Index & Trading times for MX account is working properly");
     }
 }
