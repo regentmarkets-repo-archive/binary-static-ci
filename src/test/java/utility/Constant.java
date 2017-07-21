@@ -6,17 +6,17 @@ public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
 	public static final String Email = "bijan+autotest@binary.com";
+	public static final String Password = "Test1234";
 	public static final String EmailMF = "ridho+mlt@binary.com";
 	public static final String EmailMX = "ridho+mx@binary.com";
 	public static final String PassMF = "Abcd1234";
 	public static final String PassMx = "abcd1234";
 	public static final String tradeURL = "https://staging.binary.com/en/trading.html";
-	public static final String Password = "Test1234";
 	public static final String NewPassword = "NewPassword123";
 	public static final String URL_LostPass = "https://staging.binary.com/en/user/lost_passwordws.html";
 	public static final String Endpoint_url = "https://staging.binary.com/en/endpoint.html";
 	public static final String Server = "blue.binaryws.com";
-	public static final String AppID = "1098";
+	public static final String AppID = "1097";
 	public static final String select_value = "";
 	public static final String fx_trading_exerience = "Over 3 years";
 	public static final String fx_trading_frequency = "40 transactions or more in the past 12 months";
@@ -57,4 +57,8 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
+  public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
+	public static final String browser="remote"; //set to "remote" for browserstack execution
+
+	
 }
