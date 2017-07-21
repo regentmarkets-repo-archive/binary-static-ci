@@ -57,7 +57,7 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
-  public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
+    public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
 	public static final String browser="local"; //set to "remote" for browserstack execution
 
 }
