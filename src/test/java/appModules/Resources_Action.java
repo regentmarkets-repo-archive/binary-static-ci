@@ -138,4 +138,9 @@ public class Resources_Action {
         List<WebElement> actualList = Resources_Page.asset_listTradingTimes(driver);
         ListsUtil.compareWebElementList(expectedList, actualList);
     }
+    public static void checkTradingTimeforJPMarkets(WebDriver driver) {
+        String[] expectedList = {"AUD/JPY","AUD/USD","EUR/GBP","EUR/JPY","EUR/USD","GBP/JPY","GBP/USD","USD/CAD","USD/JPY"};
+        List<WebElement> actualList = Resources_Page.list_JpMarket(driver);
+        ListsUtil.compareWebElementList(expectedList, actualList);
+    }
 }

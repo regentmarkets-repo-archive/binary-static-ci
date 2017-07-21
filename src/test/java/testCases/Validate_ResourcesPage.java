@@ -109,4 +109,10 @@ public class Validate_ResourcesPage extends BaseClass{
         Navigation_Action.Navigate_To_LogoutPage(driver);
         System.out.println("Asset Index & Trading times for MX account is working properly");
     }
+    @Test(priority=11,description="Test Method to login to MX account ")
+    public void jpMarketTimes() {
+        driver.navigate().to(Constant.JP_assetURL);
+        Resources_Action.checkTradingTimeforJPMarkets(driver);
+        System.out.println("Trading times for JP account is working properly");
+    }
 }

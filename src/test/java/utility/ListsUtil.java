@@ -36,12 +36,10 @@ public class ListsUtil {
 
         for(int i = 0;i<expectedList.length;i++) {
             newExpectedList.add(expectedList[i]); 
-           // System.out.println(newExpectedList);
         }
 
         for (WebElement element: actualList) {
             newActualList.add(element.getText().trim());
-            //System.out.println(newActualList);
         }
         // Verify both the lists having same size
         Assert.assertTrue(newExpectedList.size() == newActualList.size());
