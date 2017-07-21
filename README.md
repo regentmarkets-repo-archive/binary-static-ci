@@ -23,6 +23,7 @@
 - Portfolio Page
 - Profit Table Page
 - Links Validation
+- Resources Page
 
 <b>Running the tests:</b>
 
