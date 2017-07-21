@@ -60,5 +60,4 @@ public class Constant {
   public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
 	public static final String browser="local"; //set to "remote" for browserstack execution
 
-	
 }
