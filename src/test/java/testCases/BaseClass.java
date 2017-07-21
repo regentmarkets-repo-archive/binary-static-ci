@@ -32,6 +32,7 @@ public class BaseClass {
 	 private Local l;
 	 
 	@BeforeClass
+
 //	@BeforeMethod(alwaysRun=true)
 	@org.testng.annotations.Parameters(value={"config", "environment"})
     public void setupApplication(String config_file, String environment) throws Exception {
