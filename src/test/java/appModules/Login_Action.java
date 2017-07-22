@@ -1,7 +1,6 @@
 package appModules;
 
 import org.openqa.selenium.WebDriver;
-import pageObjects.AuthorisedApplications_page;
 import pageObjects.Home_Page;
 import pageObjects.Login_Page;
 import pageObjects.MainAccount_Menu;
@@ -14,10 +13,6 @@ public class Login_Action {
         Login_Page.txt_Password(driver).clear();
         Login_Page.txt_Password(driver).sendKeys(sPassword);
         Login_Page.btn_Login(driver).click();
-        int num = AuthorisedApplications_page.authorize_title(driver);
-        if(num >0){
-        	AuthorisedApplications_page.grant_btn(driver).click();
-        }
     }
     public static void SwitchToVirtualAccount(WebDriver driver) {
         MainAccount_Menu.link_MainAccount(driver).click();
