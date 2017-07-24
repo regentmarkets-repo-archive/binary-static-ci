@@ -1,0 +1,854 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="4" failed="1" ignored="8" total="126" passed="113">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="374303" started-at="2017-07-19T09:18:00Z" finished-at="2017-07-19T09:24:14Z">
+    <groups>
+    </groups>
+    <test name="CheckLoginPage" duration-ms="22067" started-at="2017-07-19T09:18:00Z" finished-at="2017-07-19T09:18:22Z">
+      <class name="testCases.Validate_LoginPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_LoginPage@5649fd9b]" name="setupApplication" is-config="true" duration-ms="4519" started-at="2017-07-19T17:18:00Z" finished-at="2017-07-19T17:18:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="A_Login()[pri:0, instance:testCases.Validate_LoginPage@5649fd9b]" name="A_Login" duration-ms="9752" started-at="2017-07-19T17:18:04Z" description="Test Method to login to the site with valid credentials" finished-at="2017-07-19T17:18:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_Login -->
+        <test-method status="PASS" signature="B_Logout()[pri:0, instance:testCases.Validate_LoginPage@5649fd9b]" name="B_Logout" duration-ms="4515" started-at="2017-07-19T17:18:14Z" description="Test Method to logout from the site and validate login button is present" finished-at="2017-07-19T17:18:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- B_Logout -->
+        <test-method status="PASS" signature="C_Login_IncorrectPassword()[pri:0, instance:testCases.Validate_LoginPage@5649fd9b]" name="C_Login_IncorrectPassword" duration-ms="3178" started-at="2017-07-19T17:18:18Z" description="Test Method to login with incorrect password" finished-at="2017-07-19T17:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C_Login_IncorrectPassword -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_LoginPage@5649fd9b]" name="closeApplication" is-config="true" duration-ms="75" started-at="2017-07-19T17:18:22Z" finished-at="2017-07-19T17:18:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_LoginPage -->
+    </test> <!-- CheckLoginPage -->
+    <test name="CheckWithdrawalNotification" duration-ms="42145" started-at="2017-07-19T09:18:22Z" finished-at="2017-07-19T09:19:04Z">
+      <class name="testCases.Validate_WithdrawalToken">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_WithdrawalToken@5ce81285]" name="setupApplication" is-config="true" duration-ms="3358" started-at="2017-07-19T17:18:22Z" finished-at="2017-07-19T17:18:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="A_TestWithdrawalNotification()[pri:0, instance:testCases.Validate_WithdrawalToken@5ce81285]" name="A_TestWithdrawalNotification" duration-ms="38713" started-at="2017-07-19T17:18:25Z" description="Validate withdrawal token" finished-at="2017-07-19T17:19:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_TestWithdrawalNotification -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_WithdrawalToken@5ce81285]" name="closeApplication" is-config="true" duration-ms="71" started-at="2017-07-19T17:19:04Z" finished-at="2017-07-19T17:19:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_WithdrawalToken -->
+    </test> <!-- CheckWithdrawalNotification -->
+    <test name="CheckLoginHistoryPage" duration-ms="22939" started-at="2017-07-19T09:19:04Z" finished-at="2017-07-19T09:19:27Z">
+      <class name="testCases.Validate_LoginHistoryPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="setupApplication" is-config="true" duration-ms="2724" started-at="2017-07-19T17:19:04Z" finished-at="2017-07-19T17:19:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="reset_Login()[pri:0, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="reset_Login" duration-ms="7654" started-at="2017-07-19T17:19:07Z" description="Test method to  login  page" finished-at="2017-07-19T17:19:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reset_Login -->
+        <test-method status="PASS" signature="logout()[pri:1, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="logout" duration-ms="4216" started-at="2017-07-19T17:19:14Z" description="Test method to logout" finished-at="2017-07-19T17:19:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logout -->
+        <test-method status="PASS" signature="A_Login_IncorrectPassword()[pri:2, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="A_Login_IncorrectPassword" duration-ms="2287" started-at="2017-07-19T17:19:18Z" description="Test Method to login into the site" finished-at="2017-07-19T17:19:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_Login_IncorrectPassword -->
+        <test-method status="PASS" signature="Login()[pri:3, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="Login" duration-ms="1676" started-at="2017-07-19T17:19:21Z" finished-at="2017-07-19T17:19:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToLoginHistoryPage()[pri:4, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="NavigateToLoginHistoryPage" duration-ms="3596" started-at="2017-07-19T17:19:22Z" description="Test Method to navigate to Login History page" finished-at="2017-07-19T17:19:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToLoginHistoryPage -->
+        <test-method status="PASS" signature="Check_NewEntries()[pri:5, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="Check_NewEntries" duration-ms="605" started-at="2017-07-19T17:19:26Z" description="Check new entries" finished-at="2017-07-19T17:19:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Check_NewEntries -->
+        <test-method status="PASS" signature="CheckTotalRows()[pri:6, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="CheckTotalRows" duration-ms="99" started-at="2017-07-19T17:19:27Z" description="Check number of records" finished-at="2017-07-19T17:19:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckTotalRows -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_LoginHistoryPage@56235b8e]" name="closeApplication" is-config="true" duration-ms="68" started-at="2017-07-19T17:19:27Z" finished-at="2017-07-19T17:19:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_LoginHistoryPage -->
+    </test> <!-- CheckLoginHistoryPage -->
+    <test name="SetFinancialAssessment" duration-ms="20352" started-at="2017-07-19T09:19:27Z" finished-at="2017-07-19T09:19:47Z">
+      <class name="testCases.Validate_SetFinancialAssessment">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="setupApplication" is-config="true" duration-ms="2670" started-at="2017-07-19T17:19:27Z" finished-at="2017-07-19T17:19:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="A_Login()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="A_Login" duration-ms="8502" started-at="2017-07-19T17:19:29Z" finished-at="2017-07-19T17:19:38Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_Login -->
+        <test-method status="PASS" signature="B_NavigateToFinancialAssessmentPage()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="B_NavigateToFinancialAssessmentPage" duration-ms="3026" started-at="2017-07-19T17:19:38Z" finished-at="2017-07-19T17:19:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- B_NavigateToFinancialAssessmentPage -->
+        <test-method status="PASS" signature="C_Set_FinancialAssessment()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="C_Set_FinancialAssessment" duration-ms="4782" started-at="2017-07-19T17:19:41Z" finished-at="2017-07-19T17:19:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- C_Set_FinancialAssessment -->
+        <test-method status="PASS" signature="D_Logout()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="D_Logout" duration-ms="1299" started-at="2017-07-19T17:19:46Z" finished-at="2017-07-19T17:19:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- D_Logout -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_SetFinancialAssessment@3108bc]" name="closeApplication" is-config="true" duration-ms="68" started-at="2017-07-19T17:19:47Z" finished-at="2017-07-19T17:19:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_SetFinancialAssessment -->
+    </test> <!-- SetFinancialAssessment -->
+    <test name="FinancialAssessmentFields" duration-ms="40796" started-at="2017-07-19T09:19:47Z" finished-at="2017-07-19T09:20:28Z">
+      <class name="testCases.Validate_FinancialAssessmentFields">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="setupApplication" is-config="true" duration-ms="2559" started-at="2017-07-19T17:19:47Z" finished-at="2017-07-19T17:19:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Login" duration-ms="8046" started-at="2017-07-19T17:19:50Z" description="Test Method to login into the site" finished-at="2017-07-19T17:19:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToFinancialAssessmentPage()[pri:1, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="NavigateToFinancialAssessmentPage" duration-ms="2256" started-at="2017-07-19T17:19:58Z" description="Test Method to navigate to Financial Assessment page" finished-at="2017-07-19T17:20:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToFinancialAssessmentPage -->
+        <test-method status="PASS" signature="Test_ForexTradingExperience()[pri:2, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_ForexTradingExperience" duration-ms="3170" started-at="2017-07-19T17:20:00Z" description="Test Method to test the error message displayed when forex trading experience field is not set" finished-at="2017-07-19T17:20:03Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_ForexTradingExperience -->
+        <test-method status="PASS" signature="Test_ForexTradingFrequency()[pri:3, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_ForexTradingFrequency" duration-ms="1568" started-at="2017-07-19T17:20:03Z" description="Test Method to test the error message displayed when forex trading frequency field is not set" finished-at="2017-07-19T17:20:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_ForexTradingFrequency -->
+        <test-method status="PASS" signature="Test_IndicesTradingExperience()[pri:4, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_IndicesTradingExperience" duration-ms="1637" started-at="2017-07-19T17:20:05Z" description="Test Method to test the error message displayed when indices trading experience field is not set" finished-at="2017-07-19T17:20:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_IndicesTradingExperience -->
+        <test-method status="PASS" signature="Test_IndicesTradingFrequency()[pri:5, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_IndicesTradingFrequency" duration-ms="1436" started-at="2017-07-19T17:20:06Z" description="Test Method to test the error message displayed when indices trading frequency field is not set" finished-at="2017-07-19T17:20:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_IndicesTradingFrequency -->
+        <test-method status="PASS" signature="Test_CommoditiesTradingExperience()[pri:6, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_CommoditiesTradingExperience" duration-ms="1510" started-at="2017-07-19T17:20:08Z" description="Test Method to test the error message displayed when commodities trading experience field is not set" finished-at="2017-07-19T17:20:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_CommoditiesTradingExperience -->
+        <test-method status="PASS" signature="Test_CommoditiesTradingFrequency()[pri:7, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_CommoditiesTradingFrequency" duration-ms="1489" started-at="2017-07-19T17:20:09Z" description="Test Method to test the error message displayed when commodities trading frequency field is not set" finished-at="2017-07-19T17:20:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_CommoditiesTradingFrequency -->
+        <test-method status="PASS" signature="Test_StocksTradingExperience()[pri:8, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_StocksTradingExperience" duration-ms="1373" started-at="2017-07-19T17:20:11Z" description="Test Method to test the error message displayed when stocks trading experience field is not set" finished-at="2017-07-19T17:20:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_StocksTradingExperience -->
+        <test-method status="PASS" signature="Test_StocksTradingFrequency()[pri:9, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_StocksTradingFrequency" duration-ms="1434" started-at="2017-07-19T17:20:12Z" description="Test Method to test the error message displayed when stocks trading frequency field is not set" finished-at="2017-07-19T17:20:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_StocksTradingFrequency -->
+        <test-method status="PASS" signature="Test_OtherTradingExperience()[pri:10, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_OtherTradingExperience" duration-ms="1488" started-at="2017-07-19T17:20:14Z" description="Test Method to test the error message displayed when other trading experience field is not set" finished-at="2017-07-19T17:20:15Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_OtherTradingExperience -->
+        <test-method status="PASS" signature="Test_OtherTradingFrequency()[pri:11, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_OtherTradingFrequency" duration-ms="1446" started-at="2017-07-19T17:20:15Z" description="Test Method to test the error message displayed when other trading frequency field is not set" finished-at="2017-07-19T17:20:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_OtherTradingFrequency -->
+        <test-method status="PASS" signature="Test_OtherDerivativesTradingExperience()[pri:12, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_OtherDerivativesTradingExperience" duration-ms="1398" started-at="2017-07-19T17:20:17Z" description="Test Method to test the error message displayed when other derivatives trading experience field is not set" finished-at="2017-07-19T17:20:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_OtherDerivativesTradingExperience -->
+        <test-method status="PASS" signature="Test_OtherDerivatiesTradingFrequency()[pri:13, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_OtherDerivatiesTradingFrequency" duration-ms="1469" started-at="2017-07-19T17:20:18Z" description="Test Method to test the error message displayed when other derivatives trading frequency field is not set" finished-at="2017-07-19T17:20:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_OtherDerivatiesTradingFrequency -->
+        <test-method status="PASS" signature="Test_IndustryEmployment()[pri:14, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_IndustryEmployment" duration-ms="1421" started-at="2017-07-19T17:20:19Z" description="Test Method to test the error message displayed when Industry Employment field is not set" finished-at="2017-07-19T17:20:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_IndustryEmployment -->
+        <test-method status="PASS" signature="Test_Occupation()[pri:15, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_Occupation" duration-ms="1365" started-at="2017-07-19T17:20:21Z" description="Test Method to test the error message displayed when occupation field is not set" finished-at="2017-07-19T17:20:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Occupation -->
+        <test-method status="PASS" signature="Test_Education()[pri:16, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_Education" duration-ms="1431" started-at="2017-07-19T17:20:22Z" description="Test Method to test the error message displayed when education field is not set" finished-at="2017-07-19T17:20:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Education -->
+        <test-method status="PASS" signature="Test_AnnualIncome()[pri:17, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_AnnualIncome" duration-ms="1426" started-at="2017-07-19T17:20:24Z" description="Test Method to test the error message displayed when annual income field is not set" finished-at="2017-07-19T17:20:25Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AnnualIncome -->
+        <test-method status="PASS" signature="Test_NetWorth()[pri:18, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_NetWorth" duration-ms="1445" started-at="2017-07-19T17:20:25Z" description="Test Method to test the error message displayed when net worth field is not set" finished-at="2017-07-19T17:20:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_NetWorth -->
+        <test-method status="PASS" signature="Test_AnticipatedAccountTurnover()[pri:19, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="Test_AnticipatedAccountTurnover" duration-ms="1338" started-at="2017-07-19T17:20:27Z" description="Test Method to test the error message displayed when anticipated income field is not set" finished-at="2017-07-19T17:20:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AnticipatedAccountTurnover -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_FinancialAssessmentFields@3e9b1010]" name="closeApplication" is-config="true" duration-ms="67" started-at="2017-07-19T17:20:28Z" finished-at="2017-07-19T17:20:28Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_FinancialAssessmentFields -->
+    </test> <!-- FinancialAssessmentFields -->
+    <test name="CheckPersonalDetailsPage" duration-ms="22556" started-at="2017-07-19T09:20:28Z" finished-at="2017-07-19T09:20:51Z">
+      <class name="testCases.Validate_PersonalDetailsPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="setupApplication" is-config="true" duration-ms="3071" started-at="2017-07-19T17:20:28Z" finished-at="2017-07-19T17:20:31Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Login" duration-ms="8916" started-at="2017-07-19T17:20:31Z" description="Test Method to Login to binary site" finished-at="2017-07-19T17:20:40Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToPersonalDetailsPage()[pri:1, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="NavigateToPersonalDetailsPage" duration-ms="4231" started-at="2017-07-19T17:20:40Z" description="Test Method to navigate to personal details page" finished-at="2017-07-19T17:20:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToPersonalDetailsPage -->
+        <test-method status="PASS" signature="Test_TaxResidence_EmptyField()[pri:2, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_TaxResidence_EmptyField" duration-ms="1742" started-at="2017-07-19T17:20:44Z" description="Test Method to test error message when Tax Residence field is left empty" finished-at="2017-07-19T17:20:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_TaxResidence_EmptyField -->
+        <test-method status="PASS" signature="Test_TaxId_EmptyField()[pri:3, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_TaxId_EmptyField" duration-ms="334" started-at="2017-07-19T17:20:46Z" description="Test Method to test error message when Tax Id field is left empty" finished-at="2017-07-19T17:20:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_TaxId_EmptyField -->
+        <test-method status="PASS" signature="Test_AddressLine1_InvalidChars()[pri:4, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_AddressLine1_InvalidChars" duration-ms="421" started-at="2017-07-19T17:20:46Z" description="Test Method to test error message when invalid chars are entered in Address Line1" finished-at="2017-07-19T17:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AddressLine1_InvalidChars -->
+        <test-method status="PASS" signature="Test_AddressLine1_EmptyField()[pri:5, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_AddressLine1_EmptyField" duration-ms="207" started-at="2017-07-19T17:20:47Z" description="Test Method to test error message when Address Line1 is left empty" finished-at="2017-07-19T17:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AddressLine1_EmptyField -->
+        <test-method status="PASS" signature="Test_AddressCity_InvalidChars()[pri:6, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_AddressCity_InvalidChars" duration-ms="392" started-at="2017-07-19T17:20:47Z" description="Test Method to test error message when invalid chars are entered in Address City" finished-at="2017-07-19T17:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AddressCity_InvalidChars -->
+        <test-method status="PASS" signature="Test_AddressCity_EmptyField()[pri:7, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_AddressCity_EmptyField" duration-ms="223" started-at="2017-07-19T17:20:47Z" description="Test Method to test error message when Address City is left empty" finished-at="2017-07-19T17:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_AddressCity_EmptyField -->
+        <test-method status="PASS" signature="Test_ZipCode_InvalidChars()[pri:8, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_ZipCode_InvalidChars" duration-ms="351" started-at="2017-07-19T17:20:48Z" description="Test Method to test error message when invalid chars are entered in Zip Code" finished-at="2017-07-19T17:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_ZipCode_InvalidChars -->
+        <test-method status="PASS" signature="Test_Telephone_InvalidChars()[pri:9, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_Telephone_InvalidChars" duration-ms="316" started-at="2017-07-19T17:20:48Z" description="Test Method to test error message when invalid chars are entered in Telephone" finished-at="2017-07-19T17:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Telephone_InvalidChars -->
+        <test-method status="PASS" signature="Test_Telephone_EmptyField()[pri:10, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_Telephone_EmptyField" duration-ms="211" started-at="2017-07-19T17:20:48Z" description="Test Method to test error message when Telephone is left empty" finished-at="2017-07-19T17:20:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Telephone_EmptyField -->
+        <test-method status="PASS" signature="Test_Telephone_LessChars()[pri:11, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="Test_Telephone_LessChars" duration-ms="207" started-at="2017-07-19T17:20:48Z" description="Test Method to test error message when value of Telephone is less than 6 chars" finished-at="2017-07-19T17:20:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Telephone_LessChars -->
+        <test-method status="PASS" signature="SetPersonalDetailsFields()[pri:12, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="SetPersonalDetailsFields" duration-ms="1852" started-at="2017-07-19T17:20:49Z" description="Test Method to set all personal details fields" finished-at="2017-07-19T17:20:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- SetPersonalDetailsFields -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_PersonalDetailsPage@2b2948e2]" name="closeApplication" is-config="true" duration-ms="70" started-at="2017-07-19T17:20:50Z" finished-at="2017-07-19T17:20:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_PersonalDetailsPage -->
+    </test> <!-- CheckPersonalDetailsPage -->
+    <test name="ChangePasswordPage" duration-ms="27891" started-at="2017-07-19T09:20:51Z" finished-at="2017-07-19T09:21:18Z">
+      <class name="testCases.Validate_ChangePasswordPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="setupApplication" is-config="true" duration-ms="2590" started-at="2017-07-19T17:20:51Z" finished-at="2017-07-19T17:20:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Login" duration-ms="8144" started-at="2017-07-19T17:20:53Z" description="Test Method to login into the site" finished-at="2017-07-19T17:21:01Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToChangePasswordPage()[pri:1, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="NavigateToChangePasswordPage" duration-ms="3350" started-at="2017-07-19T17:21:01Z" description="Test Method to navigate to the Change Password page" finished-at="2017-07-19T17:21:05Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToChangePasswordPage -->
+        <test-method status="PASS" signature="Test_RequiredFields_Validation()[pri:2, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_RequiredFields_Validation" duration-ms="1048" started-at="2017-07-19T17:21:05Z" description="Test Method to check error message when no values are entered in the fields" finished-at="2017-07-19T17:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_RequiredFields_Validation -->
+        <test-method status="PASS" signature="Test_MinChars_Validation()[pri:3, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_MinChars_Validation" duration-ms="493" started-at="2017-07-19T17:21:06Z" description="Test Method to check error message when less than 6 characters are entered" finished-at="2017-07-19T17:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_MinChars_Validation -->
+        <test-method status="PASS" signature="Test_HintMessage_Validation()[pri:4, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_HintMessage_Validation" duration-ms="138" started-at="2017-07-19T17:21:06Z" description="Test Method to check hint message is displayed for new password field" finished-at="2017-07-19T17:21:06Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_HintMessage_Validation -->
+        <test-method status="PASS" signature="Test_WeakPassword_Validation()[pri:5, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_WeakPassword_Validation" duration-ms="561" started-at="2017-07-19T17:21:06Z" description="Test Method to check error message when weak password is entered" finished-at="2017-07-19T17:21:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_WeakPassword_Validation -->
+        <test-method status="PASS" signature="Test_DiffPasswords_Validation()[pri:6, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_DiffPasswords_Validation" duration-ms="552" started-at="2017-07-19T17:21:07Z" description="Test Method to check error message when new password doesn&#039;t match repeat password" finished-at="2017-07-19T17:21:07Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_DiffPasswords_Validation -->
+        <test-method status="PASS" signature="Test_IncorrectOldPassword_Validation()[pri:7, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_IncorrectOldPassword_Validation" duration-ms="1075" started-at="2017-07-19T17:21:07Z" description="Test Method to check error message when incorrect old password is entered" finished-at="2017-07-19T17:21:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_IncorrectOldPassword_Validation -->
+        <test-method status="PASS" signature="Test_ChangeCurrentPassword()[pri:8, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_ChangeCurrentPassword" duration-ms="3374" started-at="2017-07-19T17:21:08Z" description="Test Method to change the current password" finished-at="2017-07-19T17:21:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_ChangeCurrentPassword -->
+        <test-method status="PASS" signature="Test_ChangeToOriginalPassword()[pri:9, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="Test_ChangeToOriginalPassword" duration-ms="6484" started-at="2017-07-19T17:21:12Z" description="Test Method to change to original password" finished-at="2017-07-19T17:21:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_ChangeToOriginalPassword -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_ChangePasswordPage@1f28c152]" name="closeApplication" is-config="true" duration-ms="73" started-at="2017-07-19T17:21:18Z" finished-at="2017-07-19T17:21:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_ChangePasswordPage -->
+    </test> <!-- ChangePasswordPage -->
+    <test name="CashierPassword" duration-ms="20324" started-at="2017-07-19T09:21:18Z" finished-at="2017-07-19T09:21:39Z">
+      <class name="testCases.Validate_CashierPassword">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="setupApplication" is-config="true" duration-ms="2955" started-at="2017-07-19T17:21:18Z" finished-at="2017-07-19T17:21:21Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="Login" duration-ms="7558" started-at="2017-07-19T17:21:21Z" description="Test Method to login into the site" finished-at="2017-07-19T17:21:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToCashierPasswordPage()[pri:1, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="NavigateToCashierPasswordPage" duration-ms="3743" started-at="2017-07-19T17:21:29Z" description="Test Method to navigate to cashier password page" finished-at="2017-07-19T17:21:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToCashierPasswordPage -->
+        <test-method status="PASS" signature="check_emptyField()[pri:2, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="check_emptyField" duration-ms="784" started-at="2017-07-19T17:21:33Z" description="Check empty field validation" finished-at="2017-07-19T17:21:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_emptyField -->
+        <test-method status="PASS" signature="check_minpass()[pri:3, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="check_minpass" duration-ms="336" started-at="2017-07-19T17:21:33Z" description="Check validation for minimum cashier password" finished-at="2017-07-19T17:21:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_minpass -->
+        <test-method status="PASS" signature="check_invPass()[pri:4, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="check_invPass" duration-ms="403" started-at="2017-07-19T17:21:34Z" description="Check validation for invalid cashier password" finished-at="2017-07-19T17:21:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_invPass -->
+        <test-method status="PASS" signature="check_diffPass()[pri:5, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="check_diffPass" duration-ms="429" started-at="2017-07-19T17:21:34Z" description="Check validation for different cashier password" finished-at="2017-07-19T17:21:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_diffPass -->
+        <test-method status="PASS" signature="check_samePass()[pri:6, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="check_samePass" duration-ms="991" started-at="2017-07-19T17:21:35Z" description="Check validation for same cashier page and password" finished-at="2017-07-19T17:21:36Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_samePass -->
+        <test-method status="PASS" signature="update_cshrPass()[pri:7, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="update_cshrPass" duration-ms="972" started-at="2017-07-19T17:21:36Z" description="Update cashier password" finished-at="2017-07-19T17:21:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- update_cshrPass -->
+        <test-method status="PASS" signature="unlock()[pri:10, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="unlock" duration-ms="2068" started-at="2017-07-19T17:21:37Z" description="Update cashier password" finished-at="2017-07-19T17:21:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- unlock -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_CashierPassword@65e2dbf3]" name="closeApplication" is-config="true" duration-ms="72" started-at="2017-07-19T17:21:39Z" finished-at="2017-07-19T17:21:39Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_CashierPassword -->
+    </test> <!-- CashierPassword -->
+    <test name="CheckLimits" duration-ms="20716" started-at="2017-07-19T09:21:39Z" finished-at="2017-07-19T09:21:59Z">
+      <class name="testCases.Validate_Limits">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_Limits@5bc79255]" name="setupApplication" is-config="true" duration-ms="2687" started-at="2017-07-19T17:21:39Z" finished-at="2017-07-19T17:21:41Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_Limits@5bc79255]" name="Login" duration-ms="8354" started-at="2017-07-19T17:21:41Z" description="Test Method to login into the site" finished-at="2017-07-19T17:21:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToPersonalDetailsPage()[pri:1, instance:testCases.Validate_Limits@5bc79255]" name="NavigateToPersonalDetailsPage" duration-ms="2763" started-at="2017-07-19T17:21:50Z" description="Test Method to navigate to self exclusion page" finished-at="2017-07-19T17:21:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToPersonalDetailsPage -->
+        <test-method status="SKIP" signature="Test_Exceed_MaxAccountBalance()[pri:2, instance:testCases.Validate_Limits@5bc79255]" name="Test_Exceed_MaxAccountBalance" duration-ms="1537" started-at="2017-07-19T17:21:53Z" description="Test Method to test error message when the new amount exceed the current amount" finished-at="2017-07-19T17:21:54Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping this exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkExMaxAccBal(Limits_Action.java:19)
+	at testCases.Validate_Limits.Test_Exceed_MaxAccountBalance(Validate_Limits.java:23)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Exceed_MaxAccountBalance -->
+        <test-method status="SKIP" signature="Test_Lower_MaxAccountBalance()[pri:3, instance:testCases.Validate_Limits@5bc79255]" name="Test_Lower_MaxAccountBalance" duration-ms="66" started-at="2017-07-19T17:21:54Z" description="Test Method to test whether the update is saved when the new amount less than the current amount" finished-at="2017-07-19T17:21:54Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping this exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkLowMaxAccBal(Limits_Action.java:35)
+	at testCases.Validate_Limits.Test_Lower_MaxAccountBalance(Validate_Limits.java:27)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Lower_MaxAccountBalance -->
+        <test-method status="SKIP" signature="Test_Exceed_MaxOpenPos()[pri:4, instance:testCases.Validate_Limits@5bc79255]" name="Test_Exceed_MaxOpenPos" duration-ms="112" started-at="2017-07-19T17:21:54Z" description="Test Method to test error message when the new number exceed the current number" finished-at="2017-07-19T17:21:54Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping this exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkExMaxOpPo(Limits_Action.java:63)
+	at testCases.Validate_Limits.Test_Exceed_MaxOpenPos(Validate_Limits.java:31)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Exceed_MaxOpenPos -->
+        <test-method status="SKIP" signature="Test_Lower_MaxOpenPos()[pri:5, instance:testCases.Validate_Limits@5bc79255]" name="Test_Lower_MaxOpenPos" duration-ms="94" started-at="2017-07-19T17:21:54Z" description="Test Method to test whether the update is saved when the new number less than the current number" finished-at="2017-07-19T17:21:54Z">
+          <exception class="org.testng.SkipException">
+            <message>
+              <![CDATA[Skipping this exception]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkLowMaxOpPo(Limits_Action.java:79)
+	at testCases.Validate_Limits.Test_Lower_MaxOpenPos(Validate_Limits.java:35)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.testng.SkipException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Lower_MaxOpenPos -->
+        <test-method status="PASS" signature="NavigateToLimitsPage()[pri:6, instance:testCases.Validate_Limits@5bc79255]" name="NavigateToLimitsPage" duration-ms="2900" started-at="2017-07-19T17:21:54Z" description="Test Method to check is it authenticated and navigate to limits page" finished-at="2017-07-19T17:21:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToLimitsPage -->
+        <test-method status="PASS" signature="Test_Limits_MaxOpenPosition()[pri:8, instance:testCases.Validate_Limits@5bc79255]" name="Test_Limits_MaxOpenPosition" duration-ms="1730" started-at="2017-07-19T17:21:57Z" description="Test Method to check whether the number displayed correctly" finished-at="2017-07-19T17:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Limits_MaxOpenPosition -->
+        <test-method status="PASS" signature="Test_Limits_Message()[pri:9, instance:testCases.Validate_Limits@5bc79255]" name="Test_Limits_Message" duration-ms="397" started-at="2017-07-19T17:21:59Z" description="Test Method to check whether the limits message displayed correctly" finished-at="2017-07-19T17:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Test_Limits_Message -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_Limits@5bc79255]" name="closeApplication" is-config="true" duration-ms="71" started-at="2017-07-19T17:21:59Z" finished-at="2017-07-19T17:21:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_Limits -->
+    </test> <!-- CheckLimits -->
+    <test name="CheckLinks" duration-ms="17262" started-at="2017-07-19T09:21:59Z" finished-at="2017-07-19T09:22:17Z">
+      <class name="testCases.Validate_Links">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_Links@3701eaf6]" name="setupApplication" is-config="true" duration-ms="2487" started-at="2017-07-19T17:21:59Z" finished-at="2017-07-19T17:22:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="verify_allLinks()[pri:0, instance:testCases.Validate_Links@3701eaf6]" name="verify_allLinks" duration-ms="14702" started-at="2017-07-19T17:22:02Z" description="Test Method to verify all links" finished-at="2017-07-19T17:22:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verify_allLinks -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_Links@3701eaf6]" name="closeApplication" is-config="true" duration-ms="72" started-at="2017-07-19T17:22:17Z" finished-at="2017-07-19T17:22:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_Links -->
+    </test> <!-- CheckLinks -->
+    <test name="ValidateSelfExclusionInput" duration-ms="18184" started-at="2017-07-19T09:22:17Z" finished-at="2017-07-19T09:22:35Z">
+      <class name="testCases.Validate_SelfExclusionPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="setupApplication" is-config="true" duration-ms="2424" started-at="2017-07-19T17:22:17Z" finished-at="2017-07-19T17:22:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="Login" duration-ms="7837" started-at="2017-07-19T17:22:19Z" description="Test Method to login into the site" finished-at="2017-07-19T17:22:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToSelfExclusionPage()[pri:1, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="NavigateToSelfExclusionPage" duration-ms="2418" started-at="2017-07-19T17:22:27Z" description="Test Method to navigate to Self Exclusion page" finished-at="2017-07-19T17:22:29Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToSelfExclusionPage -->
+        <test-method status="PASS" signature="TestValidNumber()[pri:2, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="TestValidNumber" duration-ms="3859" started-at="2017-07-19T17:22:29Z" description="Test Method to test valid number" finished-at="2017-07-19T17:22:33Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestValidNumber -->
+        <test-method status="PASS" signature="TestRequiredFieldDate()[pri:3, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="TestRequiredFieldDate" duration-ms="571" started-at="2017-07-19T17:22:33Z" description="Test Method to test date field" finished-at="2017-07-19T17:22:34Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- TestRequiredFieldDate -->
+        <test-method status="PASS" signature="Refresh()[pri:4, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="Refresh" duration-ms="1004" started-at="2017-07-19T17:22:34Z" finished-at="2017-07-19T17:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Refresh -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_SelfExclusionPage@1dfe2924]" name="closeApplication" is-config="true" duration-ms="68" started-at="2017-07-19T17:22:35Z" finished-at="2017-07-19T17:22:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_SelfExclusionPage -->
+    </test> <!-- ValidateSelfExclusionInput -->
+    <test name="CheckAuthorisedApplication" duration-ms="26953" started-at="2017-07-19T09:22:35Z" finished-at="2017-07-19T09:23:02Z">
+      <class name="testCases.Validate_AuthorisedApplications">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="setupApplication" is-config="true" duration-ms="2408" started-at="2017-07-19T17:22:35Z" finished-at="2017-07-19T17:22:37Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="Login" duration-ms="8183" started-at="2017-07-19T17:22:37Z" description="Test method to login" finished-at="2017-07-19T17:22:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToAuthorisedAppsPage()[pri:1, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="NavigateToAuthorisedAppsPage" duration-ms="3143" started-at="2017-07-19T17:22:46Z" description="Test Method to navigate to Authorised Application page" finished-at="2017-07-19T17:22:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToAuthorisedAppsPage -->
+        <test-method status="PASS" signature="CheckPageLoad()[pri:2, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="CheckPageLoad" duration-ms="161" started-at="2017-07-19T17:22:49Z" description="Test method to check API Token Page is loaded" finished-at="2017-07-19T17:22:49Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckPageLoad -->
+        <test-method status="PASS" signature="revoke_authapps()[pri:3, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="revoke_authapps" duration-ms="743" started-at="2017-07-19T17:22:49Z" description="Test method to revoke authorized application" finished-at="2017-07-19T17:22:50Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- revoke_authapps -->
+        <test-method status="PASS" signature="login()[pri:4, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="login" duration-ms="4615" started-at="2017-07-19T17:22:50Z" description="Test method to check login" finished-at="2017-07-19T17:22:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- login -->
+        <test-method status="PASS" signature="checkReviewPage()[pri:5, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="checkReviewPage" duration-ms="230" started-at="2017-07-19T17:22:54Z" description="Test method to check review permission page" finished-at="2017-07-19T17:22:54Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkReviewPage -->
+        <test-method status="PASS" signature="reject()[pri:6, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="reject" duration-ms="3091" started-at="2017-07-19T17:22:54Z" description="Test method to check reject permission page" finished-at="2017-07-19T17:22:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- reject -->
+        <test-method status="PASS" signature="grant()[pri:7, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="grant" duration-ms="4305" started-at="2017-07-19T17:22:58Z" description="Test method to check grant permission page" finished-at="2017-07-19T17:23:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- grant -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_AuthorisedApplications@cd2dae5]" name="closeApplication" is-config="true" duration-ms="67" started-at="2017-07-19T17:23:02Z" finished-at="2017-07-19T17:23:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_AuthorisedApplications -->
+    </test> <!-- CheckAuthorisedApplication -->
+    <test name="checkTokenAPI" duration-ms="17434" started-at="2017-07-19T09:23:02Z" finished-at="2017-07-19T09:23:19Z">
+      <class name="testCases.Validate_APITokenPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_APITokenPage@3224f60b]" name="setupApplication" is-config="true" duration-ms="2458" started-at="2017-07-19T17:23:02Z" finished-at="2017-07-19T17:23:04Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="Login()[pri:0, instance:testCases.Validate_APITokenPage@3224f60b]" name="Login" duration-ms="7128" started-at="2017-07-19T17:23:04Z" description="Test method to login" finished-at="2017-07-19T17:23:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Login -->
+        <test-method status="PASS" signature="NavigateToAPITokenPage()[pri:1, instance:testCases.Validate_APITokenPage@3224f60b]" name="NavigateToAPITokenPage" duration-ms="4654" started-at="2017-07-19T17:23:11Z" description="Test Method to navigate to API Token page" finished-at="2017-07-19T17:23:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- NavigateToAPITokenPage -->
+        <test-method status="PASS" signature="CheckPageLoad()[pri:2, instance:testCases.Validate_APITokenPage@3224f60b]" name="CheckPageLoad" duration-ms="51" started-at="2017-07-19T17:23:16Z" description="Test Method to check title of the page" finished-at="2017-07-19T17:23:16Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckPageLoad -->
+        <test-method status="PASS" signature="CheckScopeValidation()[pri:3, instance:testCases.Validate_APITokenPage@3224f60b]" name="CheckScopeValidation" duration-ms="339" started-at="2017-07-19T17:23:16Z" description="Test method to check scope validation" finished-at="2017-07-19T17:23:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckScopeValidation -->
+        <test-method status="PASS" signature="CheckMinChar()[pri:4, instance:testCases.Validate_APITokenPage@3224f60b]" name="CheckMinChar" duration-ms="286" started-at="2017-07-19T17:23:17Z" description="Test method to check form validation for minimum token name" finished-at="2017-07-19T17:23:17Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckMinChar -->
+        <test-method status="PASS" signature="DuplicateName()[pri:5, instance:testCases.Validate_APITokenPage@3224f60b]" name="DuplicateName" duration-ms="1046" started-at="2017-07-19T17:23:17Z" description="Test method to check duplicate Token name" finished-at="2017-07-19T17:23:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DuplicateName -->
+        <test-method status="PASS" signature="CheckInvalidName()[pri:6, instance:testCases.Validate_APITokenPage@3224f60b]" name="CheckInvalidName" duration-ms="204" started-at="2017-07-19T17:23:18Z" description="Test method to check form validation for invalid token name" finished-at="2017-07-19T17:23:18Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- CheckInvalidName -->
+        <test-method status="PASS" signature="AddNewToken()[pri:7, instance:testCases.Validate_APITokenPage@3224f60b]" name="AddNewToken" duration-ms="1049" started-at="2017-07-19T17:23:18Z" description="Test method to Add New Token" finished-at="2017-07-19T17:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- AddNewToken -->
+        <test-method status="PASS" signature="DeleteToken()[pri:8, instance:testCases.Validate_APITokenPage@3224f60b]" name="DeleteToken" duration-ms="140" started-at="2017-07-19T17:23:19Z" description="Test method to delete newly created Token" finished-at="2017-07-19T17:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- DeleteToken -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_APITokenPage@3224f60b]" name="closeApplication" is-config="true" duration-ms="71" started-at="2017-07-19T17:23:19Z" finished-at="2017-07-19T17:23:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_APITokenPage -->
+    </test> <!-- checkTokenAPI -->
+    <test name="ValidateLostPassword" duration-ms="40515" started-at="2017-07-19T09:23:19Z" finished-at="2017-07-19T09:24:00Z">
+      <class name="testCases.Validate_LostPassword">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_LostPassword@7494e528]" name="setupApplication" is-config="true" duration-ms="2514" started-at="2017-07-19T17:23:19Z" finished-at="2017-07-19T17:23:22Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="A_navigateToLostPassword()[pri:0, instance:testCases.Validate_LostPassword@7494e528]" name="A_navigateToLostPassword" duration-ms="1728" started-at="2017-07-19T17:23:22Z" description="Test Method to navigate to reset passsword page" finished-at="2017-07-19T17:23:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- A_navigateToLostPassword -->
+        <test-method status="PASS" signature="testEmailInvalid()[pri:2, instance:testCases.Validate_LostPassword@7494e528]" name="testEmailInvalid" duration-ms="562" started-at="2017-07-19T17:23:24Z" description="Test method to validate invalid emails" finished-at="2017-07-19T17:23:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmailInvalid -->
+        <test-method status="PASS" signature="setEmail()[pri:3, instance:testCases.Validate_LostPassword@7494e528]" name="setEmail" duration-ms="359" started-at="2017-07-19T17:23:24Z" description="Use dummy email to send" finished-at="2017-07-19T17:23:24Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setEmail -->
+        <test-method status="FAIL" signature="testEmptyFields()[pri:4, instance:testCases.Validate_LostPassword@7494e528]" name="testEmptyFields" duration-ms="31240" started-at="2017-07-19T17:23:24Z" description="Test method to check if all fields are empty" finished-at="2017-07-19T17:23:56Z">
+          <exception class="org.openqa.selenium.TimeoutException">
+            <message>
+              <![CDATA[Expected condition failed: waiting for element to be clickable: By.className: error-msg (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ehtesham-HP-ProBook-4540s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-75-generic', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57), userDataDir=/tmp/.org.chromium.Chromium.SIJ1R8}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 18662609408eebfa72f84107a9ef4ee0]]>
+            </message>
+            <full-stacktrace>
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.className: error-msg (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: '3.4.0', revision: 'unknown', time: 'unknown'
+System info: host: 'ehtesham-HP-ProBook-4540s', ip: '127.0.1.1', os.name: 'Linux', os.arch: 'amd64', os.version: '4.4.0-75-generic', java.version: '1.8.0_131'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57), userDataDir=/tmp/.org.chromium.Chromium.SIJ1R8}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 18662609408eebfa72f84107a9ef4ee0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at utility.CommonFunctions.FindElementWithExplicitWait(CommonFunctions.java:32)
+	at pageObjects.ResetPassword_Page.errorReset(ResetPassword_Page.java:85)
+	at testCases.Validate_LostPassword.testEmptyFields(Validate_LostPassword.java:50)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.testng.internal.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:104)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:645)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:851)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1177)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:129)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:112)
+	at org.testng.TestRunner.privateRun(TestRunner.java:756)
+	at org.testng.TestRunner.run(TestRunner.java:610)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:387)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:382)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:340)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:289)
+	at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
+	at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:86)
+	at org.testng.TestNG.runSuitesSequentially(TestNG.java:1293)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:1218)
+	at org.testng.TestNG.runSuites(TestNG.java:1133)
+	at org.testng.TestNG.run(TestNG.java:1104)
+	at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:132)
+	at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:230)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:76)
+]]>
+            </full-stacktrace>
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testEmptyFields -->
+        <test-method status="PASS" signature="testValidPasswordLength()[pri:5, instance:testCases.Validate_LostPassword@7494e528]" name="testValidPasswordLength" duration-ms="343" started-at="2017-07-19T17:23:56Z" description="Check for length validity of password" finished-at="2017-07-19T17:23:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidPasswordLength -->
+        <test-method status="PASS" signature="testValidPasswordOverall()[pri:6, instance:testCases.Validate_LostPassword@7494e528]" name="testValidPasswordOverall" duration-ms="180" started-at="2017-07-19T17:23:56Z" description="Check for overall validity of password" finished-at="2017-07-19T17:23:56Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testValidPasswordOverall -->
+        <test-method status="PASS" signature="testPasswordMatch()[pri:7, instance:testCases.Validate_LostPassword@7494e528]" name="testPasswordMatch" duration-ms="453" started-at="2017-07-19T17:23:56Z" description="Check if passwords match" finished-at="2017-07-19T17:23:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testPasswordMatch -->
+        <test-method status="PASS" signature="setDOB()[pri:8, instance:testCases.Validate_LostPassword@7494e528]" name="setDOB" duration-ms="883" started-at="2017-07-19T17:23:57Z" description="Set the fields for Date of birth" finished-at="2017-07-19T17:23:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setDOB -->
+        <test-method status="PASS" signature="resetPassword()[pri:9, instance:testCases.Validate_LostPassword@7494e528]" name="resetPassword" duration-ms="708" started-at="2017-07-19T17:23:58Z" description="Test using valid input" finished-at="2017-07-19T17:23:58Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetPassword -->
+        <test-method status="PASS" signature="linkRetry()[pri:10, instance:testCases.Validate_LostPassword@7494e528]" name="linkRetry" duration-ms="648" started-at="2017-07-19T17:23:58Z" description="Test if went to different page" finished-at="2017-07-19T17:23:59Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- linkRetry -->
+        <test-method status="PASS" signature="resetEmailPage()[pri:11, instance:testCases.Validate_LostPassword@7494e528]" name="resetEmailPage" duration-ms="800" started-at="2017-07-19T17:23:59Z" description="Test to see if went back to &#039;send token by email&#039; page" finished-at="2017-07-19T17:24:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resetEmailPage -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_LostPassword@7494e528]" name="closeApplication" is-config="true" duration-ms="68" started-at="2017-07-19T17:24:00Z" finished-at="2017-07-19T17:24:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_LostPassword -->
+    </test> <!-- ValidateLostPassword -->
+    <test name="checkResourcePage" duration-ms="14103" started-at="2017-07-19T09:24:00Z" finished-at="2017-07-19T09:24:14Z">
+      <class name="testCases.Validate_ResourcesPage">
+        <test-method status="PASS" signature="setupApplication()[pri:0, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="setupApplication" is-config="true" duration-ms="2426" started-at="2017-07-19T17:24:00Z" finished-at="2017-07-19T17:24:02Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupApplication -->
+        <test-method status="PASS" signature="resourcePage()[pri:0, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="resourcePage" duration-ms="5453" started-at="2017-07-19T17:24:02Z" description="Test Method to go to trading page" finished-at="2017-07-19T17:24:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- resourcePage -->
+        <test-method status="PASS" signature="checkTitle()[pri:1, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="checkTitle" duration-ms="546" started-at="2017-07-19T17:24:08Z" description="Test Method to check resource page title" finished-at="2017-07-19T17:24:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkTitle -->
+        <test-method status="PASS" signature="check_AssetIndex()[pri:2, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_AssetIndex" duration-ms="238" started-at="2017-07-19T17:24:08Z" description="Test method to check Asset Index" finished-at="2017-07-19T17:24:09Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_AssetIndex -->
+        <test-method status="PASS" signature="check_ForexMarket()[pri:3, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_ForexMarket" duration-ms="2429" started-at="2017-07-19T17:24:09Z" description="Test method to check Forex Market" finished-at="2017-07-19T17:24:11Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_ForexMarket -->
+        <test-method status="PASS" signature="check_IndicesMarket()[pri:4, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_IndicesMarket" duration-ms="1056" started-at="2017-07-19T17:24:11Z" description="Test method to check Indices Market" finished-at="2017-07-19T17:24:12Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_IndicesMarket -->
+        <test-method status="PASS" signature="check_OTCMarket()[pri:5, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_OTCMarket" duration-ms="1210" started-at="2017-07-19T17:24:12Z" description="Test method to check OTC Stocks Market" finished-at="2017-07-19T17:24:13Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_OTCMarket -->
+        <test-method status="PASS" signature="check_CommoditiesMarket()[pri:6, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_CommoditiesMarket" duration-ms="363" started-at="2017-07-19T17:24:13Z" description="Test method to check Commodities Market" finished-at="2017-07-19T17:24:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_CommoditiesMarket -->
+        <test-method status="PASS" signature="check_VolatilityMarket()[pri:7, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="check_VolatilityMarket" duration-ms="308" started-at="2017-07-19T17:24:14Z" description="Test method to check Volatility Market" finished-at="2017-07-19T17:24:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- check_VolatilityMarket -->
+        <test-method status="PASS" signature="closeApplication()[pri:0, instance:testCases.Validate_ResourcesPage@7d0587f1]" name="closeApplication" is-config="true" duration-ms="66" started-at="2017-07-19T17:24:14Z" finished-at="2017-07-19T17:24:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeApplication -->
+      </class> <!-- testCases.Validate_ResourcesPage -->
+    </test> <!-- checkResourcePage -->
+  </suite> <!-- Suite -->
+</testng-results>

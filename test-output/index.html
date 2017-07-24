@@ -1,0 +1,3292 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+  <meta charset='utf-8'>
+  <title>TestNG reports</title>
+
+    <link type="text/css" href="testng-reports.css" rel="stylesheet" />  
+    <script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+    <script type="text/javascript" src="testng-reports.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type='text/javascript'>
+      google.load('visualization', '1', {packages:['table']});
+      google.setOnLoadCallback(drawTable);
+      var suiteTableInitFunctions = new Array();
+      var suiteTableData = new Array();
+    </script>
+    <!--
+      <script type="text/javascript" src="jquery-ui/js/jquery-ui-1.8.16.custom.min.js"></script>
+     -->
+  </head>
+
+  <body>
+    <div class="top-banner-root">
+      <span class="top-banner-title-font">Test results</span>
+      <br/>
+      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+    </div> <!-- top-banner-root -->
+    <div class="navigator-root">
+      <div class="navigator-suite-header">
+        <span>All suites</span>
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
+          </img> <!-- collapse-all-icon -->
+        </a> <!-- collapse-all-link -->
+      </div> <!-- navigator-suite-header -->
+      <div class="suite">
+        <div class="rounded-window">
+          <div class="suite-header light-rounded-window-top">
+            <a href="#" class="navigator-link" panel-name="suite-Suite">
+              <span class="suite-name border-failed">Suite</span>
+            </a> <!-- navigator-link -->
+          </div> <!-- suite-header light-rounded-window-top -->
+          <div class="navigator-suite-content">
+            <div class="suite-section-title">
+              <span>Info</span>
+            </div> <!-- suite-section-title -->
+            <div class="suite-section-content">
+              <ul>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Suite">
+                    <span>testng.xml</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="testlist-Suite">
+                    <span class="test-stats">15 tests</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="group-Suite">
+                    <span>0 groups</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="times-Suite">
+                    <span>Times</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="reporter-Suite">
+                    <span>Reporter output</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Suite">
+                    <span>Ignored methods</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+                <li>
+                  <a href="#" class="navigator-link " panel-name="chronological-Suite">
+                    <span>Chronological view</span>
+                  </a> <!-- navigator-link  -->
+                </li>
+              </ul>
+            </div> <!-- suite-section-content -->
+            <div class="result-section">
+              <div class="suite-section-title">
+                <span>Results</span>
+              </div> <!-- suite-section-title -->
+              <div class="suite-section-content">
+                <ul>
+                  <li>
+                    <span class="method-stats">118 methods, 1 failed,  4 skipped,  113 passed</span>
+                  </li>
+                  <li>
+                    <span class="method-list-title failed">Failed methods</span>
+                    <span class="show-or-hide-methods failed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods failed suite-Suite"> (hide)</a> <!-- hide-methods failed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods failed suite-Suite"> (show)</a> <!-- show-methods failed suite-Suite -->
+                    </span>
+                    <div class="method-list-content failed suite-Suite">
+                      <span>
+                        <img width="3%" src="failed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="testEmptyFields">testEmptyFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content failed suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title skipped">Skipped methods</span>
+                    <span class="show-or-hide-methods skipped">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods skipped suite-Suite"> (hide)</a> <!-- hide-methods skipped suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods skipped suite-Suite"> (show)</a> <!-- show-methods skipped suite-Suite -->
+                    </span>
+                    <div class="method-list-content skipped suite-Suite">
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Exceed_MaxAccountBalance">Test_Exceed_MaxAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Exceed_MaxOpenPos">Test_Exceed_MaxOpenPos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Lower_MaxAccountBalance">Test_Lower_MaxAccountBalance</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="skipped.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Lower_MaxOpenPos">Test_Lower_MaxOpenPos</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content skipped suite-Suite -->
+                  </li>
+                  <li>
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Suite" class="hide-methods passed suite-Suite"> (hide)</a> <!-- hide-methods passed suite-Suite -->
+                      <a href="#" panel-name="suite-Suite" class="show-methods passed suite-Suite"> (show)</a> <!-- show-methods passed suite-Suite -->
+                    </span>
+                    <div class="method-list-content passed suite-Suite">
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="A_Login">A_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="A_Login">A_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="A_Login_IncorrectPassword">A_Login_IncorrectPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_WithdrawalToken" hash-for-method="A_TestWithdrawalNotification">A_TestWithdrawalNotification</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="A_navigateToLostPassword">A_navigateToLostPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="AddNewToken">AddNewToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="B_Logout">B_Logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="B_NavigateToFinancialAssessmentPage">B_NavigateToFinancialAssessmentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginPage" hash-for-method="C_Login_IncorrectPassword">C_Login_IncorrectPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="C_Set_FinancialAssessment">C_Set_FinancialAssessment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckInvalidName">CheckInvalidName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckMinChar">CheckMinChar</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="CheckPageLoad">CheckPageLoad</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckPageLoad">CheckPageLoad</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="CheckScopeValidation">CheckScopeValidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="CheckTotalRows">CheckTotalRows</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="Check_NewEntries">Check_NewEntries</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SetFinancialAssessment" hash-for-method="D_Logout">D_Logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="DeleteToken">DeleteToken</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="DuplicateName">DuplicateName</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SelfExclusionPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="Login">Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_APITokenPage" hash-for-method="NavigateToAPITokenPage">NavigateToAPITokenPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="NavigateToAuthorisedAppsPage">NavigateToAuthorisedAppsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="NavigateToCashierPasswordPage">NavigateToCashierPasswordPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="NavigateToChangePasswordPage">NavigateToChangePasswordPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="NavigateToFinancialAssessmentPage">NavigateToFinancialAssessmentPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="NavigateToLimitsPage">NavigateToLimitsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="NavigateToLoginHistoryPage">NavigateToLoginHistoryPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="NavigateToPersonalDetailsPage">NavigateToPersonalDetailsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="NavigateToPersonalDetailsPage">NavigateToPersonalDetailsPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SelfExclusionPage" hash-for-method="NavigateToSelfExclusionPage">NavigateToSelfExclusionPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SelfExclusionPage" hash-for-method="Refresh">Refresh</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="SetPersonalDetailsFields">SetPersonalDetailsFields</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SelfExclusionPage" hash-for-method="TestRequiredFieldDate">TestRequiredFieldDate</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_SelfExclusionPage" hash-for-method="TestValidNumber">TestValidNumber</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressCity_EmptyField">Test_AddressCity_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressCity_InvalidChars">Test_AddressCity_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressLine1_EmptyField">Test_AddressLine1_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_AddressLine1_InvalidChars">Test_AddressLine1_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_AnnualIncome">Test_AnnualIncome</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_AnticipatedAccountTurnover">Test_AnticipatedAccountTurnover</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_ChangeCurrentPassword">Test_ChangeCurrentPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_ChangeToOriginalPassword">Test_ChangeToOriginalPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_CommoditiesTradingExperience">Test_CommoditiesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_CommoditiesTradingFrequency">Test_CommoditiesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_DiffPasswords_Validation">Test_DiffPasswords_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_Education">Test_Education</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_ForexTradingExperience">Test_ForexTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_ForexTradingFrequency">Test_ForexTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_HintMessage_Validation">Test_HintMessage_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_IncorrectOldPassword_Validation">Test_IncorrectOldPassword_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndicesTradingExperience">Test_IndicesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndicesTradingFrequency">Test_IndicesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_IndustryEmployment">Test_IndustryEmployment</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Limits_MaxOpenPosition">Test_Limits_MaxOpenPosition</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Limits" hash-for-method="Test_Limits_Message">Test_Limits_Message</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_MinChars_Validation">Test_MinChars_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_NetWorth">Test_NetWorth</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_Occupation">Test_Occupation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherDerivatiesTradingFrequency">Test_OtherDerivatiesTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherDerivativesTradingExperience">Test_OtherDerivativesTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherTradingExperience">Test_OtherTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_OtherTradingFrequency">Test_OtherTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_RequiredFields_Validation">Test_RequiredFields_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_StocksTradingExperience">Test_StocksTradingExperience</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_FinancialAssessmentFields" hash-for-method="Test_StocksTradingFrequency">Test_StocksTradingFrequency</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_TaxId_EmptyField">Test_TaxId_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_TaxResidence_EmptyField">Test_TaxResidence_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_EmptyField">Test_Telephone_EmptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_InvalidChars">Test_Telephone_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_Telephone_LessChars">Test_Telephone_LessChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ChangePasswordPage" hash-for-method="Test_WeakPassword_Validation">Test_WeakPassword_Validation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_PersonalDetailsPage" hash-for-method="Test_ZipCode_InvalidChars">Test_ZipCode_InvalidChars</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="checkReviewPage">checkReviewPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="checkTitle">checkTitle</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_AssetIndex">check_AssetIndex</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_CommoditiesMarket">check_CommoditiesMarket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_ForexMarket">check_ForexMarket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_IndicesMarket">check_IndicesMarket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_OTCMarket">check_OTCMarket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="check_VolatilityMarket">check_VolatilityMarket</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_diffPass">check_diffPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_emptyField">check_emptyField</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_invPass">check_invPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_minpass">check_minpass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="check_samePass">check_samePass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="grant">grant</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="linkRetry">linkRetry</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="login">login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="logout">logout</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="reject">reject</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="resetEmailPage">resetEmailPage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="resetPassword">resetPassword</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LoginHistoryPage" hash-for-method="reset_Login">reset_Login</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_ResourcesPage" hash-for-method="resourcePage">resourcePage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_AuthorisedApplications" hash-for-method="revoke_authapps">revoke_authapps</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="setDOB">setDOB</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="setEmail">setEmail</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="testEmailInvalid">testEmailInvalid</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="testPasswordMatch">testPasswordMatch</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="testValidPasswordLength">testValidPasswordLength</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_LostPassword" hash-for-method="testValidPasswordOverall">testValidPasswordOverall</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="unlock">unlock</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_CashierPassword" hash-for-method="update_cshrPass">update_cshrPass</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Suite" title="testCases.Validate_Links" hash-for-method="verify_allLinks">verify_allLinks</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Suite -->
+                  </li>
+                </ul>
+              </div> <!-- suite-section-content -->
+            </div> <!-- result-section -->
+          </div> <!-- navigator-suite-content -->
+        </div> <!-- rounded-window -->
+      </div> <!-- suite -->
+    </div> <!-- navigator-root -->
+    <div class="wrapper">
+      <div class="main-panel-root">
+        <div panel-name="suite-Suite" class="panel Suite">
+          <div class="suite-Suite-class-failed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="failed.png"/>
+              <span class="class-name">testCases.Validate_LostPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmptyFields">
+                  </a> <!-- testEmptyFields -->
+                  <span class="method-name">testEmptyFields</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: By.className: error-msg (tried for 30 second(s) with 500 MILLISECONDS interval)
+Build info: version: &apos;3.4.0&apos;, revision: &apos;unknown&apos;, time: &apos;unknown&apos;
+System info: host: &apos;ehtesham-HP-ProBook-4540s&apos;, ip: &apos;127.0.1.1&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;4.4.0-75-generic&apos;, java.version: &apos;1.8.0_131&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities [{applicationCacheEnabled=false, rotatable=false, mobileEmulationEnabled=false, networkConnectionEnabled=false, chrome={chromedriverVersion=2.30.477691 (6ee44a7247c639c0703f291d320bdf05c1531b57), userDataDir=/tmp/.org.chromium.Chromium.SIJ1R8}, takesHeapSnapshot=true, pageLoadStrategy=normal, databaseEnabled=false, handlesAlerts=true, hasTouchScreen=false, version=59.0.3071.115, platform=LINUX, browserConnectionEnabled=false, nativeEvents=true, acceptSslCerts=true, locationContextEnabled=true, webStorageEnabled=true, browserName=chrome, takesScreenshot=true, javascriptEnabled=true, cssSelectorsEnabled=true, unexpectedAlertBehaviour=}]
+Session ID: 18662609408eebfa72f84107a9ef4ee0
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:80)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:232)
+	at utility.CommonFunctions.FindElementWithExplicitWait(CommonFunctions.java:32)
+	at pageObjects.ResetPassword_Page.errorReset(ResetPassword_Page.java:85)
+	at testCases.Validate_LostPassword.testEmptyFields(Validate_LostPassword.java:50)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test method to check if all fields are empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-failed -->
+          <div class="suite-Suite-class-skipped">
+            <div class="main-panel-header rounded-window-top">
+              <img src="skipped.png"/>
+              <span class="class-name">testCases.Validate_Limits</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Exceed_MaxAccountBalance">
+                  </a> <!-- Test_Exceed_MaxAccountBalance -->
+                  <span class="method-name">Test_Exceed_MaxAccountBalance</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkExMaxAccBal(Limits_Action.java:19)
+	at testCases.Validate_Limits.Test_Exceed_MaxAccountBalance(Validate_Limits.java:23)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test Method to test error message when the new amount exceed the current amount)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Exceed_MaxOpenPos">
+                  </a> <!-- Test_Exceed_MaxOpenPos -->
+                  <span class="method-name">Test_Exceed_MaxOpenPos</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkExMaxOpPo(Limits_Action.java:63)
+	at testCases.Validate_Limits.Test_Exceed_MaxOpenPos(Validate_Limits.java:31)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test Method to test error message when the new number exceed the current number)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Lower_MaxAccountBalance">
+                  </a> <!-- Test_Lower_MaxAccountBalance -->
+                  <span class="method-name">Test_Lower_MaxAccountBalance</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkLowMaxAccBal(Limits_Action.java:35)
+	at testCases.Validate_Limits.Test_Lower_MaxAccountBalance(Validate_Limits.java:27)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test Method to test whether the update is saved when the new amount less than the current amount)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Lower_MaxOpenPos">
+                  </a> <!-- Test_Lower_MaxOpenPos -->
+                  <span class="method-name">Test_Lower_MaxOpenPos</span>
+                  <div class="stack-trace">org.testng.SkipException: Skipping this exception
+	at appModules.Limits_Action.checkLowMaxOpPo(Limits_Action.java:79)
+	at testCases.Validate_Limits.Test_Lower_MaxOpenPos(Validate_Limits.java:35)
+... Removed 25 stack frames
+</div> <!-- stack-trace -->
+                  <em>
+(Test Method to test whether the update is saved when the new number less than the current number)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-skipped -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_LostPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_navigateToLostPassword">
+                  </a> <!-- A_navigateToLostPassword -->
+                  <span class="method-name">A_navigateToLostPassword</span>
+                  <em>
+(Test Method to navigate to reset passsword page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="linkRetry">
+                  </a> <!-- linkRetry -->
+                  <span class="method-name">linkRetry</span>
+                  <em>
+(Test if went to different page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="resetEmailPage">
+                  </a> <!-- resetEmailPage -->
+                  <span class="method-name">resetEmailPage</span>
+                  <em>
+(Test to see if went back to 'send token by email' page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="resetPassword">
+                  </a> <!-- resetPassword -->
+                  <span class="method-name">resetPassword</span>
+                  <em>
+(Test using valid input)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setDOB">
+                  </a> <!-- setDOB -->
+                  <span class="method-name">setDOB</span>
+                  <em>
+(Set the fields for Date of birth)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="setEmail">
+                  </a> <!-- setEmail -->
+                  <span class="method-name">setEmail</span>
+                  <em>
+(Use dummy email to send)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testEmailInvalid">
+                  </a> <!-- testEmailInvalid -->
+                  <span class="method-name">testEmailInvalid</span>
+                  <em>
+(Test method to validate invalid emails)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testPasswordMatch">
+                  </a> <!-- testPasswordMatch -->
+                  <span class="method-name">testPasswordMatch</span>
+                  <em>
+(Check if passwords match)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidPasswordLength">
+                  </a> <!-- testValidPasswordLength -->
+                  <span class="method-name">testValidPasswordLength</span>
+                  <em>
+(Check for length validity of password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="testValidPasswordOverall">
+                  </a> <!-- testValidPasswordOverall -->
+                  <span class="method-name">testValidPasswordOverall</span>
+                  <em>
+(Check for overall validity of password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_APITokenPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="AddNewToken">
+                  </a> <!-- AddNewToken -->
+                  <span class="method-name">AddNewToken</span>
+                  <em>
+(Test method to Add New Token)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckInvalidName">
+                  </a> <!-- CheckInvalidName -->
+                  <span class="method-name">CheckInvalidName</span>
+                  <em>
+(Test method to check form validation for invalid token name)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckMinChar">
+                  </a> <!-- CheckMinChar -->
+                  <span class="method-name">CheckMinChar</span>
+                  <em>
+(Test method to check form validation for minimum token name)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckPageLoad">
+                  </a> <!-- CheckPageLoad -->
+                  <span class="method-name">CheckPageLoad</span>
+                  <em>
+(Test Method to check title of the page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckScopeValidation">
+                  </a> <!-- CheckScopeValidation -->
+                  <span class="method-name">CheckScopeValidation</span>
+                  <em>
+(Test method to check scope validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DeleteToken">
+                  </a> <!-- DeleteToken -->
+                  <span class="method-name">DeleteToken</span>
+                  <em>
+(Test method to delete newly created Token)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="DuplicateName">
+                  </a> <!-- DuplicateName -->
+                  <span class="method-name">DuplicateName</span>
+                  <em>
+(Test method to check duplicate Token name)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test method to login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToAPITokenPage">
+                  </a> <!-- NavigateToAPITokenPage -->
+                  <span class="method-name">NavigateToAPITokenPage</span>
+                  <em>
+(Test Method to navigate to API Token page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_AuthorisedApplications</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckPageLoad">
+                  </a> <!-- CheckPageLoad -->
+                  <span class="method-name">CheckPageLoad</span>
+                  <em>
+(Test method to check API Token Page is loaded)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test method to login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToAuthorisedAppsPage">
+                  </a> <!-- NavigateToAuthorisedAppsPage -->
+                  <span class="method-name">NavigateToAuthorisedAppsPage</span>
+                  <em>
+(Test Method to navigate to Authorised Application page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkReviewPage">
+                  </a> <!-- checkReviewPage -->
+                  <span class="method-name">checkReviewPage</span>
+                  <em>
+(Test method to check review permission page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="grant">
+                  </a> <!-- grant -->
+                  <span class="method-name">grant</span>
+                  <em>
+(Test method to check grant permission page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="login">
+                  </a> <!-- login -->
+                  <span class="method-name">login</span>
+                  <em>
+(Test method to check login)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reject">
+                  </a> <!-- reject -->
+                  <span class="method-name">reject</span>
+                  <em>
+(Test method to check reject permission page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="revoke_authapps">
+                  </a> <!-- revoke_authapps -->
+                  <span class="method-name">revoke_authapps</span>
+                  <em>
+(Test method to revoke authorized application)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_Limits</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToLimitsPage">
+                  </a> <!-- NavigateToLimitsPage -->
+                  <span class="method-name">NavigateToLimitsPage</span>
+                  <em>
+(Test Method to check is it authenticated and navigate to limits page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToPersonalDetailsPage">
+                  </a> <!-- NavigateToPersonalDetailsPage -->
+                  <span class="method-name">NavigateToPersonalDetailsPage</span>
+                  <em>
+(Test Method to navigate to self exclusion page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Limits_MaxOpenPosition">
+                  </a> <!-- Test_Limits_MaxOpenPosition -->
+                  <span class="method-name">Test_Limits_MaxOpenPosition</span>
+                  <em>
+(Test Method to check whether the number displayed correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Limits_Message">
+                  </a> <!-- Test_Limits_Message -->
+                  <span class="method-name">Test_Limits_Message</span>
+                  <em>
+(Test Method to check whether the limits message displayed correctly)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_ResourcesPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="checkTitle">
+                  </a> <!-- checkTitle -->
+                  <span class="method-name">checkTitle</span>
+                  <em>
+(Test Method to check resource page title)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_AssetIndex">
+                  </a> <!-- check_AssetIndex -->
+                  <span class="method-name">check_AssetIndex</span>
+                  <em>
+(Test method to check Asset Index)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_CommoditiesMarket">
+                  </a> <!-- check_CommoditiesMarket -->
+                  <span class="method-name">check_CommoditiesMarket</span>
+                  <em>
+(Test method to check Commodities Market)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_ForexMarket">
+                  </a> <!-- check_ForexMarket -->
+                  <span class="method-name">check_ForexMarket</span>
+                  <em>
+(Test method to check Forex Market)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_IndicesMarket">
+                  </a> <!-- check_IndicesMarket -->
+                  <span class="method-name">check_IndicesMarket</span>
+                  <em>
+(Test method to check Indices Market)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_OTCMarket">
+                  </a> <!-- check_OTCMarket -->
+                  <span class="method-name">check_OTCMarket</span>
+                  <em>
+(Test method to check OTC Stocks Market)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_VolatilityMarket">
+                  </a> <!-- check_VolatilityMarket -->
+                  <span class="method-name">check_VolatilityMarket</span>
+                  <em>
+(Test method to check Volatility Market)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="resourcePage">
+                  </a> <!-- resourcePage -->
+                  <span class="method-name">resourcePage</span>
+                  <em>
+(Test Method to go to trading page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_LoginHistoryPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Login_IncorrectPassword">
+                  </a> <!-- A_Login_IncorrectPassword -->
+                  <span class="method-name">A_Login_IncorrectPassword</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="CheckTotalRows">
+                  </a> <!-- CheckTotalRows -->
+                  <span class="method-name">CheckTotalRows</span>
+                  <em>
+(Check number of records)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Check_NewEntries">
+                  </a> <!-- Check_NewEntries -->
+                  <span class="method-name">Check_NewEntries</span>
+                  <em>
+(Check new entries)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToLoginHistoryPage">
+                  </a> <!-- NavigateToLoginHistoryPage -->
+                  <span class="method-name">NavigateToLoginHistoryPage</span>
+                  <em>
+(Test Method to navigate to Login History page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="logout">
+                  </a> <!-- logout -->
+                  <span class="method-name">logout</span>
+                  <em>
+(Test method to logout)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="reset_Login">
+                  </a> <!-- reset_Login -->
+                  <span class="method-name">reset_Login</span>
+                  <em>
+(Test method to  login  page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_PersonalDetailsPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to Login to binary site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToPersonalDetailsPage">
+                  </a> <!-- NavigateToPersonalDetailsPage -->
+                  <span class="method-name">NavigateToPersonalDetailsPage</span>
+                  <em>
+(Test Method to navigate to personal details page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="SetPersonalDetailsFields">
+                  </a> <!-- SetPersonalDetailsFields -->
+                  <span class="method-name">SetPersonalDetailsFields</span>
+                  <em>
+(Test Method to set all personal details fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressCity_EmptyField">
+                  </a> <!-- Test_AddressCity_EmptyField -->
+                  <span class="method-name">Test_AddressCity_EmptyField</span>
+                  <em>
+(Test Method to test error message when Address City is left empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressCity_InvalidChars">
+                  </a> <!-- Test_AddressCity_InvalidChars -->
+                  <span class="method-name">Test_AddressCity_InvalidChars</span>
+                  <em>
+(Test Method to test error message when invalid chars are entered in Address City)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressLine1_EmptyField">
+                  </a> <!-- Test_AddressLine1_EmptyField -->
+                  <span class="method-name">Test_AddressLine1_EmptyField</span>
+                  <em>
+(Test Method to test error message when Address Line1 is left empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AddressLine1_InvalidChars">
+                  </a> <!-- Test_AddressLine1_InvalidChars -->
+                  <span class="method-name">Test_AddressLine1_InvalidChars</span>
+                  <em>
+(Test Method to test error message when invalid chars are entered in Address Line1)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_TaxId_EmptyField">
+                  </a> <!-- Test_TaxId_EmptyField -->
+                  <span class="method-name">Test_TaxId_EmptyField</span>
+                  <em>
+(Test Method to test error message when Tax Id field is left empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_TaxResidence_EmptyField">
+                  </a> <!-- Test_TaxResidence_EmptyField -->
+                  <span class="method-name">Test_TaxResidence_EmptyField</span>
+                  <em>
+(Test Method to test error message when Tax Residence field is left empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_EmptyField">
+                  </a> <!-- Test_Telephone_EmptyField -->
+                  <span class="method-name">Test_Telephone_EmptyField</span>
+                  <em>
+(Test Method to test error message when Telephone is left empty)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_InvalidChars">
+                  </a> <!-- Test_Telephone_InvalidChars -->
+                  <span class="method-name">Test_Telephone_InvalidChars</span>
+                  <em>
+(Test Method to test error message when invalid chars are entered in Telephone)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Telephone_LessChars">
+                  </a> <!-- Test_Telephone_LessChars -->
+                  <span class="method-name">Test_Telephone_LessChars</span>
+                  <em>
+(Test Method to test error message when value of Telephone is less than 6 chars)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ZipCode_InvalidChars">
+                  </a> <!-- Test_ZipCode_InvalidChars -->
+                  <span class="method-name">Test_ZipCode_InvalidChars</span>
+                  <em>
+(Test Method to test error message when invalid chars are entered in Zip Code)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_SelfExclusionPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToSelfExclusionPage">
+                  </a> <!-- NavigateToSelfExclusionPage -->
+                  <span class="method-name">NavigateToSelfExclusionPage</span>
+                  <em>
+(Test Method to navigate to Self Exclusion page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Refresh">
+                  </a> <!-- Refresh -->
+                  <span class="method-name">Refresh</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestRequiredFieldDate">
+                  </a> <!-- TestRequiredFieldDate -->
+                  <span class="method-name">TestRequiredFieldDate</span>
+                  <em>
+(Test Method to test date field)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="TestValidNumber">
+                  </a> <!-- TestValidNumber -->
+                  <span class="method-name">TestValidNumber</span>
+                  <em>
+(Test Method to test valid number)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_CashierPassword</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToCashierPasswordPage">
+                  </a> <!-- NavigateToCashierPasswordPage -->
+                  <span class="method-name">NavigateToCashierPasswordPage</span>
+                  <em>
+(Test Method to navigate to cashier password page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_diffPass">
+                  </a> <!-- check_diffPass -->
+                  <span class="method-name">check_diffPass</span>
+                  <em>
+(Check validation for different cashier password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_emptyField">
+                  </a> <!-- check_emptyField -->
+                  <span class="method-name">check_emptyField</span>
+                  <em>
+(Check empty field validation)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_invPass">
+                  </a> <!-- check_invPass -->
+                  <span class="method-name">check_invPass</span>
+                  <em>
+(Check validation for invalid cashier password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_minpass">
+                  </a> <!-- check_minpass -->
+                  <span class="method-name">check_minpass</span>
+                  <em>
+(Check validation for minimum cashier password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="check_samePass">
+                  </a> <!-- check_samePass -->
+                  <span class="method-name">check_samePass</span>
+                  <em>
+(Check validation for same cashier page and password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="unlock">
+                  </a> <!-- unlock -->
+                  <span class="method-name">unlock</span>
+                  <em>
+(Update cashier password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="update_cshrPass">
+                  </a> <!-- update_cshrPass -->
+                  <span class="method-name">update_cshrPass</span>
+                  <em>
+(Update cashier password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_LoginPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Login">
+                  </a> <!-- A_Login -->
+                  <span class="method-name">A_Login</span>
+                  <em>
+(Test Method to login to the site with valid credentials)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="B_Logout">
+                  </a> <!-- B_Logout -->
+                  <span class="method-name">B_Logout</span>
+                  <em>
+(Test Method to logout from the site and validate login button is present)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="C_Login_IncorrectPassword">
+                  </a> <!-- C_Login_IncorrectPassword -->
+                  <span class="method-name">C_Login_IncorrectPassword</span>
+                  <em>
+(Test Method to login with incorrect password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_Links</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="verify_allLinks">
+                  </a> <!-- verify_allLinks -->
+                  <span class="method-name">verify_allLinks</span>
+                  <em>
+(Test Method to verify all links)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_SetFinancialAssessment</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_Login">
+                  </a> <!-- A_Login -->
+                  <span class="method-name">A_Login</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="B_NavigateToFinancialAssessmentPage">
+                  </a> <!-- B_NavigateToFinancialAssessmentPage -->
+                  <span class="method-name">B_NavigateToFinancialAssessmentPage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="C_Set_FinancialAssessment">
+                  </a> <!-- C_Set_FinancialAssessment -->
+                  <span class="method-name">C_Set_FinancialAssessment</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="D_Logout">
+                  </a> <!-- D_Logout -->
+                  <span class="method-name">D_Logout</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_FinancialAssessmentFields</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToFinancialAssessmentPage">
+                  </a> <!-- NavigateToFinancialAssessmentPage -->
+                  <span class="method-name">NavigateToFinancialAssessmentPage</span>
+                  <em>
+(Test Method to navigate to Financial Assessment page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AnnualIncome">
+                  </a> <!-- Test_AnnualIncome -->
+                  <span class="method-name">Test_AnnualIncome</span>
+                  <em>
+(Test Method to test the error message displayed when annual income field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_AnticipatedAccountTurnover">
+                  </a> <!-- Test_AnticipatedAccountTurnover -->
+                  <span class="method-name">Test_AnticipatedAccountTurnover</span>
+                  <em>
+(Test Method to test the error message displayed when anticipated income field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_CommoditiesTradingExperience">
+                  </a> <!-- Test_CommoditiesTradingExperience -->
+                  <span class="method-name">Test_CommoditiesTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when commodities trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_CommoditiesTradingFrequency">
+                  </a> <!-- Test_CommoditiesTradingFrequency -->
+                  <span class="method-name">Test_CommoditiesTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when commodities trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Education">
+                  </a> <!-- Test_Education -->
+                  <span class="method-name">Test_Education</span>
+                  <em>
+(Test Method to test the error message displayed when education field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ForexTradingExperience">
+                  </a> <!-- Test_ForexTradingExperience -->
+                  <span class="method-name">Test_ForexTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when forex trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ForexTradingFrequency">
+                  </a> <!-- Test_ForexTradingFrequency -->
+                  <span class="method-name">Test_ForexTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when forex trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndicesTradingExperience">
+                  </a> <!-- Test_IndicesTradingExperience -->
+                  <span class="method-name">Test_IndicesTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when indices trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndicesTradingFrequency">
+                  </a> <!-- Test_IndicesTradingFrequency -->
+                  <span class="method-name">Test_IndicesTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when indices trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IndustryEmployment">
+                  </a> <!-- Test_IndustryEmployment -->
+                  <span class="method-name">Test_IndustryEmployment</span>
+                  <em>
+(Test Method to test the error message displayed when Industry Employment field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_NetWorth">
+                  </a> <!-- Test_NetWorth -->
+                  <span class="method-name">Test_NetWorth</span>
+                  <em>
+(Test Method to test the error message displayed when net worth field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_Occupation">
+                  </a> <!-- Test_Occupation -->
+                  <span class="method-name">Test_Occupation</span>
+                  <em>
+(Test Method to test the error message displayed when occupation field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherDerivatiesTradingFrequency">
+                  </a> <!-- Test_OtherDerivatiesTradingFrequency -->
+                  <span class="method-name">Test_OtherDerivatiesTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when other derivatives trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherDerivativesTradingExperience">
+                  </a> <!-- Test_OtherDerivativesTradingExperience -->
+                  <span class="method-name">Test_OtherDerivativesTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when other derivatives trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherTradingExperience">
+                  </a> <!-- Test_OtherTradingExperience -->
+                  <span class="method-name">Test_OtherTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when other trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_OtherTradingFrequency">
+                  </a> <!-- Test_OtherTradingFrequency -->
+                  <span class="method-name">Test_OtherTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when other trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_StocksTradingExperience">
+                  </a> <!-- Test_StocksTradingExperience -->
+                  <span class="method-name">Test_StocksTradingExperience</span>
+                  <em>
+(Test Method to test the error message displayed when stocks trading experience field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_StocksTradingFrequency">
+                  </a> <!-- Test_StocksTradingFrequency -->
+                  <span class="method-name">Test_StocksTradingFrequency</span>
+                  <em>
+(Test Method to test the error message displayed when stocks trading frequency field is not set)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_ChangePasswordPage</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="Login">
+                  </a> <!-- Login -->
+                  <span class="method-name">Login</span>
+                  <em>
+(Test Method to login into the site)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="NavigateToChangePasswordPage">
+                  </a> <!-- NavigateToChangePasswordPage -->
+                  <span class="method-name">NavigateToChangePasswordPage</span>
+                  <em>
+(Test Method to navigate to the Change Password page)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ChangeCurrentPassword">
+                  </a> <!-- Test_ChangeCurrentPassword -->
+                  <span class="method-name">Test_ChangeCurrentPassword</span>
+                  <em>
+(Test Method to change the current password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_ChangeToOriginalPassword">
+                  </a> <!-- Test_ChangeToOriginalPassword -->
+                  <span class="method-name">Test_ChangeToOriginalPassword</span>
+                  <em>
+(Test Method to change to original password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_DiffPasswords_Validation">
+                  </a> <!-- Test_DiffPasswords_Validation -->
+                  <span class="method-name">Test_DiffPasswords_Validation</span>
+                  <em>
+(Test Method to check error message when new password doesn't match repeat password)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_HintMessage_Validation">
+                  </a> <!-- Test_HintMessage_Validation -->
+                  <span class="method-name">Test_HintMessage_Validation</span>
+                  <em>
+(Test Method to check hint message is displayed for new password field)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_IncorrectOldPassword_Validation">
+                  </a> <!-- Test_IncorrectOldPassword_Validation -->
+                  <span class="method-name">Test_IncorrectOldPassword_Validation</span>
+                  <em>
+(Test Method to check error message when incorrect old password is entered)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_MinChars_Validation">
+                  </a> <!-- Test_MinChars_Validation -->
+                  <span class="method-name">Test_MinChars_Validation</span>
+                  <em>
+(Test Method to check error message when less than 6 characters are entered)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_RequiredFields_Validation">
+                  </a> <!-- Test_RequiredFields_Validation -->
+                  <span class="method-name">Test_RequiredFields_Validation</span>
+                  <em>
+(Test Method to check error message when no values are entered in the fields)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Test_WeakPassword_Validation">
+                  </a> <!-- Test_WeakPassword_Validation -->
+                  <span class="method-name">Test_WeakPassword_Validation</span>
+                  <em>
+(Test Method to check error message when weak password is entered)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+          <div class="suite-Suite-class-passed">
+            <div class="main-panel-header rounded-window-top">
+              <img src="passed.png"/>
+              <span class="class-name">testCases.Validate_WithdrawalToken</span>
+            </div> <!-- main-panel-header rounded-window-top -->
+            <div class="main-panel-content rounded-window-bottom">
+              <div class="method">
+                <div class="method-content">
+                  <a name="A_TestWithdrawalNotification">
+                  </a> <!-- A_TestWithdrawalNotification -->
+                  <span class="method-name">A_TestWithdrawalNotification</span>
+                  <em>
+(Validate withdrawal token)                  </em>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+            </div> <!-- main-panel-content rounded-window-bottom -->
+          </div> <!-- suite-Suite-class-passed -->
+        </div> <!-- panel Suite -->
+        <div panel-name="test-xml-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">/home/ehtesham/git/binary-static-ci/testng.xml</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <pre>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
+&lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; name=&quot;Suite&quot;&gt;
+  &lt;test name=&quot;CheckLoginPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_LoginPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLoginPage --&gt;
+  &lt;test name=&quot;CheckWithdrawalNotification&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_WithdrawalToken&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckWithdrawalNotification --&gt;
+  &lt;test name=&quot;CheckLoginHistoryPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_LoginHistoryPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLoginHistoryPage --&gt;
+  &lt;test name=&quot;SetFinancialAssessment&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_SetFinancialAssessment&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- SetFinancialAssessment --&gt;
+  &lt;test name=&quot;FinancialAssessmentFields&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_FinancialAssessmentFields&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- FinancialAssessmentFields --&gt;
+  &lt;test name=&quot;CheckPersonalDetailsPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_PersonalDetailsPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckPersonalDetailsPage --&gt;
+  &lt;test name=&quot;ChangePasswordPage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_ChangePasswordPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ChangePasswordPage --&gt;
+  &lt;test name=&quot;CashierPassword&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_CashierPassword&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CashierPassword --&gt;
+  &lt;test name=&quot;CheckLimits&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_Limits&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLimits --&gt;
+  &lt;test name=&quot;CheckLinks&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_Links&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckLinks --&gt;
+  &lt;test name=&quot;ValidateSelfExclusionInput&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_SelfExclusionPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ValidateSelfExclusionInput --&gt;
+  &lt;test name=&quot;CheckAuthorisedApplication&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_AuthorisedApplications&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- CheckAuthorisedApplication --&gt;
+  &lt;test name=&quot;checkTokenAPI&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_APITokenPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- checkTokenAPI --&gt;
+  &lt;test name=&quot;ValidateLostPassword&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_LostPassword&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- ValidateLostPassword --&gt;
+  &lt;test name=&quot;checkResourcePage&quot;&gt;
+    &lt;classes&gt;
+      &lt;class name=&quot;testCases.Validate_ResourcesPage&quot;/&gt;
+    &lt;/classes&gt;
+  &lt;/test&gt; &lt;!-- checkResourcePage --&gt;
+&lt;/suite&gt; &lt;!-- Suite --&gt;
+            </pre>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="testlist-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Tests for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <ul>
+              <li>
+                <span class="test-name">CheckLoginPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckWithdrawalNotification (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLoginHistoryPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">SetFinancialAssessment (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">FinancialAssessmentFields (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckPersonalDetailsPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ChangePasswordPage (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CashierPassword (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLimits (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckLinks (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ValidateSelfExclusionInput (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">CheckAuthorisedApplication (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">checkTokenAPI (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">ValidateLostPassword (1 class)</span>
+              </li>
+              <li>
+                <span class="test-name">checkResourcePage (1 class)</span>
+              </li>
+            </ul>
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="group-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Groups for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="times-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Times for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="times-div">
+              <script type="text/javascript">
+suiteTableInitFunctions.push('tableData_Suite');
+function tableData_Suite() {
+var data = new google.visualization.DataTable();
+data.addColumn('number', 'Number');
+data.addColumn('string', 'Method');
+data.addColumn('string', 'Class');
+data.addColumn('number', 'Time (ms)');
+data.addRows(118);
+data.setCell(0, 0, 0)
+data.setCell(0, 1, 'A_TestWithdrawalNotification')
+data.setCell(0, 2, 'testCases.Validate_WithdrawalToken')
+data.setCell(0, 3, 38713);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'testEmptyFields')
+data.setCell(1, 2, 'testCases.Validate_LostPassword')
+data.setCell(1, 3, 31240);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'verify_allLinks')
+data.setCell(2, 2, 'testCases.Validate_Links')
+data.setCell(2, 3, 14702);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'A_Login')
+data.setCell(3, 2, 'testCases.Validate_LoginPage')
+data.setCell(3, 3, 9752);
+data.setCell(4, 0, 4)
+data.setCell(4, 1, 'Login')
+data.setCell(4, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(4, 3, 8916);
+data.setCell(5, 0, 5)
+data.setCell(5, 1, 'A_Login')
+data.setCell(5, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(5, 3, 8502);
+data.setCell(6, 0, 6)
+data.setCell(6, 1, 'Login')
+data.setCell(6, 2, 'testCases.Validate_Limits')
+data.setCell(6, 3, 8354);
+data.setCell(7, 0, 7)
+data.setCell(7, 1, 'Login')
+data.setCell(7, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(7, 3, 8183);
+data.setCell(8, 0, 8)
+data.setCell(8, 1, 'Login')
+data.setCell(8, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(8, 3, 8144);
+data.setCell(9, 0, 9)
+data.setCell(9, 1, 'Login')
+data.setCell(9, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(9, 3, 8046);
+data.setCell(10, 0, 10)
+data.setCell(10, 1, 'Login')
+data.setCell(10, 2, 'testCases.Validate_SelfExclusionPage')
+data.setCell(10, 3, 7837);
+data.setCell(11, 0, 11)
+data.setCell(11, 1, 'reset_Login')
+data.setCell(11, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(11, 3, 7654);
+data.setCell(12, 0, 12)
+data.setCell(12, 1, 'Login')
+data.setCell(12, 2, 'testCases.Validate_CashierPassword')
+data.setCell(12, 3, 7558);
+data.setCell(13, 0, 13)
+data.setCell(13, 1, 'Login')
+data.setCell(13, 2, 'testCases.Validate_APITokenPage')
+data.setCell(13, 3, 7128);
+data.setCell(14, 0, 14)
+data.setCell(14, 1, 'Test_ChangeToOriginalPassword')
+data.setCell(14, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(14, 3, 6484);
+data.setCell(15, 0, 15)
+data.setCell(15, 1, 'resourcePage')
+data.setCell(15, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(15, 3, 5453);
+data.setCell(16, 0, 16)
+data.setCell(16, 1, 'C_Set_FinancialAssessment')
+data.setCell(16, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(16, 3, 4782);
+data.setCell(17, 0, 17)
+data.setCell(17, 1, 'NavigateToAPITokenPage')
+data.setCell(17, 2, 'testCases.Validate_APITokenPage')
+data.setCell(17, 3, 4654);
+data.setCell(18, 0, 18)
+data.setCell(18, 1, 'login')
+data.setCell(18, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(18, 3, 4615);
+data.setCell(19, 0, 19)
+data.setCell(19, 1, 'B_Logout')
+data.setCell(19, 2, 'testCases.Validate_LoginPage')
+data.setCell(19, 3, 4515);
+data.setCell(20, 0, 20)
+data.setCell(20, 1, 'grant')
+data.setCell(20, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(20, 3, 4305);
+data.setCell(21, 0, 21)
+data.setCell(21, 1, 'NavigateToPersonalDetailsPage')
+data.setCell(21, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(21, 3, 4231);
+data.setCell(22, 0, 22)
+data.setCell(22, 1, 'logout')
+data.setCell(22, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(22, 3, 4216);
+data.setCell(23, 0, 23)
+data.setCell(23, 1, 'TestValidNumber')
+data.setCell(23, 2, 'testCases.Validate_SelfExclusionPage')
+data.setCell(23, 3, 3859);
+data.setCell(24, 0, 24)
+data.setCell(24, 1, 'NavigateToCashierPasswordPage')
+data.setCell(24, 2, 'testCases.Validate_CashierPassword')
+data.setCell(24, 3, 3743);
+data.setCell(25, 0, 25)
+data.setCell(25, 1, 'NavigateToLoginHistoryPage')
+data.setCell(25, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(25, 3, 3596);
+data.setCell(26, 0, 26)
+data.setCell(26, 1, 'Test_ChangeCurrentPassword')
+data.setCell(26, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(26, 3, 3374);
+data.setCell(27, 0, 27)
+data.setCell(27, 1, 'NavigateToChangePasswordPage')
+data.setCell(27, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(27, 3, 3350);
+data.setCell(28, 0, 28)
+data.setCell(28, 1, 'C_Login_IncorrectPassword')
+data.setCell(28, 2, 'testCases.Validate_LoginPage')
+data.setCell(28, 3, 3178);
+data.setCell(29, 0, 29)
+data.setCell(29, 1, 'Test_ForexTradingExperience')
+data.setCell(29, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(29, 3, 3170);
+data.setCell(30, 0, 30)
+data.setCell(30, 1, 'NavigateToAuthorisedAppsPage')
+data.setCell(30, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(30, 3, 3143);
+data.setCell(31, 0, 31)
+data.setCell(31, 1, 'reject')
+data.setCell(31, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(31, 3, 3091);
+data.setCell(32, 0, 32)
+data.setCell(32, 1, 'B_NavigateToFinancialAssessmentPage')
+data.setCell(32, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(32, 3, 3026);
+data.setCell(33, 0, 33)
+data.setCell(33, 1, 'NavigateToLimitsPage')
+data.setCell(33, 2, 'testCases.Validate_Limits')
+data.setCell(33, 3, 2900);
+data.setCell(34, 0, 34)
+data.setCell(34, 1, 'NavigateToPersonalDetailsPage')
+data.setCell(34, 2, 'testCases.Validate_Limits')
+data.setCell(34, 3, 2763);
+data.setCell(35, 0, 35)
+data.setCell(35, 1, 'check_ForexMarket')
+data.setCell(35, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(35, 3, 2429);
+data.setCell(36, 0, 36)
+data.setCell(36, 1, 'NavigateToSelfExclusionPage')
+data.setCell(36, 2, 'testCases.Validate_SelfExclusionPage')
+data.setCell(36, 3, 2418);
+data.setCell(37, 0, 37)
+data.setCell(37, 1, 'A_Login_IncorrectPassword')
+data.setCell(37, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(37, 3, 2287);
+data.setCell(38, 0, 38)
+data.setCell(38, 1, 'NavigateToFinancialAssessmentPage')
+data.setCell(38, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(38, 3, 2256);
+data.setCell(39, 0, 39)
+data.setCell(39, 1, 'unlock')
+data.setCell(39, 2, 'testCases.Validate_CashierPassword')
+data.setCell(39, 3, 2068);
+data.setCell(40, 0, 40)
+data.setCell(40, 1, 'SetPersonalDetailsFields')
+data.setCell(40, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(40, 3, 1852);
+data.setCell(41, 0, 41)
+data.setCell(41, 1, 'Test_TaxResidence_EmptyField')
+data.setCell(41, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(41, 3, 1742);
+data.setCell(42, 0, 42)
+data.setCell(42, 1, 'Test_Limits_MaxOpenPosition')
+data.setCell(42, 2, 'testCases.Validate_Limits')
+data.setCell(42, 3, 1730);
+data.setCell(43, 0, 43)
+data.setCell(43, 1, 'A_navigateToLostPassword')
+data.setCell(43, 2, 'testCases.Validate_LostPassword')
+data.setCell(43, 3, 1728);
+data.setCell(44, 0, 44)
+data.setCell(44, 1, 'Login')
+data.setCell(44, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(44, 3, 1676);
+data.setCell(45, 0, 45)
+data.setCell(45, 1, 'Test_IndicesTradingExperience')
+data.setCell(45, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(45, 3, 1637);
+data.setCell(46, 0, 46)
+data.setCell(46, 1, 'Test_ForexTradingFrequency')
+data.setCell(46, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(46, 3, 1568);
+data.setCell(47, 0, 47)
+data.setCell(47, 1, 'Test_Exceed_MaxAccountBalance')
+data.setCell(47, 2, 'testCases.Validate_Limits')
+data.setCell(47, 3, 1537);
+data.setCell(48, 0, 48)
+data.setCell(48, 1, 'Test_CommoditiesTradingExperience')
+data.setCell(48, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(48, 3, 1510);
+data.setCell(49, 0, 49)
+data.setCell(49, 1, 'Test_CommoditiesTradingFrequency')
+data.setCell(49, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(49, 3, 1489);
+data.setCell(50, 0, 50)
+data.setCell(50, 1, 'Test_OtherTradingExperience')
+data.setCell(50, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(50, 3, 1488);
+data.setCell(51, 0, 51)
+data.setCell(51, 1, 'Test_OtherDerivatiesTradingFrequency')
+data.setCell(51, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(51, 3, 1469);
+data.setCell(52, 0, 52)
+data.setCell(52, 1, 'Test_OtherTradingFrequency')
+data.setCell(52, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(52, 3, 1446);
+data.setCell(53, 0, 53)
+data.setCell(53, 1, 'Test_NetWorth')
+data.setCell(53, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(53, 3, 1445);
+data.setCell(54, 0, 54)
+data.setCell(54, 1, 'Test_IndicesTradingFrequency')
+data.setCell(54, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(54, 3, 1436);
+data.setCell(55, 0, 55)
+data.setCell(55, 1, 'Test_StocksTradingFrequency')
+data.setCell(55, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(55, 3, 1434);
+data.setCell(56, 0, 56)
+data.setCell(56, 1, 'Test_Education')
+data.setCell(56, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(56, 3, 1431);
+data.setCell(57, 0, 57)
+data.setCell(57, 1, 'Test_AnnualIncome')
+data.setCell(57, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(57, 3, 1426);
+data.setCell(58, 0, 58)
+data.setCell(58, 1, 'Test_IndustryEmployment')
+data.setCell(58, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(58, 3, 1421);
+data.setCell(59, 0, 59)
+data.setCell(59, 1, 'Test_OtherDerivativesTradingExperience')
+data.setCell(59, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(59, 3, 1398);
+data.setCell(60, 0, 60)
+data.setCell(60, 1, 'Test_StocksTradingExperience')
+data.setCell(60, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(60, 3, 1373);
+data.setCell(61, 0, 61)
+data.setCell(61, 1, 'Test_Occupation')
+data.setCell(61, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(61, 3, 1365);
+data.setCell(62, 0, 62)
+data.setCell(62, 1, 'Test_AnticipatedAccountTurnover')
+data.setCell(62, 2, 'testCases.Validate_FinancialAssessmentFields')
+data.setCell(62, 3, 1338);
+data.setCell(63, 0, 63)
+data.setCell(63, 1, 'D_Logout')
+data.setCell(63, 2, 'testCases.Validate_SetFinancialAssessment')
+data.setCell(63, 3, 1299);
+data.setCell(64, 0, 64)
+data.setCell(64, 1, 'check_OTCMarket')
+data.setCell(64, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(64, 3, 1210);
+data.setCell(65, 0, 65)
+data.setCell(65, 1, 'Test_IncorrectOldPassword_Validation')
+data.setCell(65, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(65, 3, 1075);
+data.setCell(66, 0, 66)
+data.setCell(66, 1, 'check_IndicesMarket')
+data.setCell(66, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(66, 3, 1056);
+data.setCell(67, 0, 67)
+data.setCell(67, 1, 'AddNewToken')
+data.setCell(67, 2, 'testCases.Validate_APITokenPage')
+data.setCell(67, 3, 1049);
+data.setCell(68, 0, 68)
+data.setCell(68, 1, 'Test_RequiredFields_Validation')
+data.setCell(68, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(68, 3, 1048);
+data.setCell(69, 0, 69)
+data.setCell(69, 1, 'DuplicateName')
+data.setCell(69, 2, 'testCases.Validate_APITokenPage')
+data.setCell(69, 3, 1046);
+data.setCell(70, 0, 70)
+data.setCell(70, 1, 'Refresh')
+data.setCell(70, 2, 'testCases.Validate_SelfExclusionPage')
+data.setCell(70, 3, 1004);
+data.setCell(71, 0, 71)
+data.setCell(71, 1, 'check_samePass')
+data.setCell(71, 2, 'testCases.Validate_CashierPassword')
+data.setCell(71, 3, 991);
+data.setCell(72, 0, 72)
+data.setCell(72, 1, 'update_cshrPass')
+data.setCell(72, 2, 'testCases.Validate_CashierPassword')
+data.setCell(72, 3, 972);
+data.setCell(73, 0, 73)
+data.setCell(73, 1, 'setDOB')
+data.setCell(73, 2, 'testCases.Validate_LostPassword')
+data.setCell(73, 3, 883);
+data.setCell(74, 0, 74)
+data.setCell(74, 1, 'resetEmailPage')
+data.setCell(74, 2, 'testCases.Validate_LostPassword')
+data.setCell(74, 3, 800);
+data.setCell(75, 0, 75)
+data.setCell(75, 1, 'check_emptyField')
+data.setCell(75, 2, 'testCases.Validate_CashierPassword')
+data.setCell(75, 3, 784);
+data.setCell(76, 0, 76)
+data.setCell(76, 1, 'revoke_authapps')
+data.setCell(76, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(76, 3, 743);
+data.setCell(77, 0, 77)
+data.setCell(77, 1, 'resetPassword')
+data.setCell(77, 2, 'testCases.Validate_LostPassword')
+data.setCell(77, 3, 708);
+data.setCell(78, 0, 78)
+data.setCell(78, 1, 'linkRetry')
+data.setCell(78, 2, 'testCases.Validate_LostPassword')
+data.setCell(78, 3, 648);
+data.setCell(79, 0, 79)
+data.setCell(79, 1, 'Check_NewEntries')
+data.setCell(79, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(79, 3, 605);
+data.setCell(80, 0, 80)
+data.setCell(80, 1, 'TestRequiredFieldDate')
+data.setCell(80, 2, 'testCases.Validate_SelfExclusionPage')
+data.setCell(80, 3, 571);
+data.setCell(81, 0, 81)
+data.setCell(81, 1, 'testEmailInvalid')
+data.setCell(81, 2, 'testCases.Validate_LostPassword')
+data.setCell(81, 3, 562);
+data.setCell(82, 0, 82)
+data.setCell(82, 1, 'Test_WeakPassword_Validation')
+data.setCell(82, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(82, 3, 561);
+data.setCell(83, 0, 83)
+data.setCell(83, 1, 'Test_DiffPasswords_Validation')
+data.setCell(83, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(83, 3, 552);
+data.setCell(84, 0, 84)
+data.setCell(84, 1, 'checkTitle')
+data.setCell(84, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(84, 3, 546);
+data.setCell(85, 0, 85)
+data.setCell(85, 1, 'Test_MinChars_Validation')
+data.setCell(85, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(85, 3, 493);
+data.setCell(86, 0, 86)
+data.setCell(86, 1, 'testPasswordMatch')
+data.setCell(86, 2, 'testCases.Validate_LostPassword')
+data.setCell(86, 3, 453);
+data.setCell(87, 0, 87)
+data.setCell(87, 1, 'check_diffPass')
+data.setCell(87, 2, 'testCases.Validate_CashierPassword')
+data.setCell(87, 3, 429);
+data.setCell(88, 0, 88)
+data.setCell(88, 1, 'Test_AddressLine1_InvalidChars')
+data.setCell(88, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(88, 3, 421);
+data.setCell(89, 0, 89)
+data.setCell(89, 1, 'check_invPass')
+data.setCell(89, 2, 'testCases.Validate_CashierPassword')
+data.setCell(89, 3, 403);
+data.setCell(90, 0, 90)
+data.setCell(90, 1, 'Test_Limits_Message')
+data.setCell(90, 2, 'testCases.Validate_Limits')
+data.setCell(90, 3, 397);
+data.setCell(91, 0, 91)
+data.setCell(91, 1, 'Test_AddressCity_InvalidChars')
+data.setCell(91, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(91, 3, 392);
+data.setCell(92, 0, 92)
+data.setCell(92, 1, 'check_CommoditiesMarket')
+data.setCell(92, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(92, 3, 363);
+data.setCell(93, 0, 93)
+data.setCell(93, 1, 'setEmail')
+data.setCell(93, 2, 'testCases.Validate_LostPassword')
+data.setCell(93, 3, 359);
+data.setCell(94, 0, 94)
+data.setCell(94, 1, 'Test_ZipCode_InvalidChars')
+data.setCell(94, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(94, 3, 351);
+data.setCell(95, 0, 95)
+data.setCell(95, 1, 'testValidPasswordLength')
+data.setCell(95, 2, 'testCases.Validate_LostPassword')
+data.setCell(95, 3, 343);
+data.setCell(96, 0, 96)
+data.setCell(96, 1, 'CheckScopeValidation')
+data.setCell(96, 2, 'testCases.Validate_APITokenPage')
+data.setCell(96, 3, 339);
+data.setCell(97, 0, 97)
+data.setCell(97, 1, 'check_minpass')
+data.setCell(97, 2, 'testCases.Validate_CashierPassword')
+data.setCell(97, 3, 336);
+data.setCell(98, 0, 98)
+data.setCell(98, 1, 'Test_TaxId_EmptyField')
+data.setCell(98, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(98, 3, 334);
+data.setCell(99, 0, 99)
+data.setCell(99, 1, 'Test_Telephone_InvalidChars')
+data.setCell(99, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(99, 3, 316);
+data.setCell(100, 0, 100)
+data.setCell(100, 1, 'check_VolatilityMarket')
+data.setCell(100, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(100, 3, 308);
+data.setCell(101, 0, 101)
+data.setCell(101, 1, 'CheckMinChar')
+data.setCell(101, 2, 'testCases.Validate_APITokenPage')
+data.setCell(101, 3, 286);
+data.setCell(102, 0, 102)
+data.setCell(102, 1, 'check_AssetIndex')
+data.setCell(102, 2, 'testCases.Validate_ResourcesPage')
+data.setCell(102, 3, 238);
+data.setCell(103, 0, 103)
+data.setCell(103, 1, 'checkReviewPage')
+data.setCell(103, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(103, 3, 230);
+data.setCell(104, 0, 104)
+data.setCell(104, 1, 'Test_AddressCity_EmptyField')
+data.setCell(104, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(104, 3, 223);
+data.setCell(105, 0, 105)
+data.setCell(105, 1, 'Test_Telephone_EmptyField')
+data.setCell(105, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(105, 3, 211);
+data.setCell(106, 0, 106)
+data.setCell(106, 1, 'Test_AddressLine1_EmptyField')
+data.setCell(106, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(106, 3, 207);
+data.setCell(107, 0, 107)
+data.setCell(107, 1, 'Test_Telephone_LessChars')
+data.setCell(107, 2, 'testCases.Validate_PersonalDetailsPage')
+data.setCell(107, 3, 207);
+data.setCell(108, 0, 108)
+data.setCell(108, 1, 'CheckInvalidName')
+data.setCell(108, 2, 'testCases.Validate_APITokenPage')
+data.setCell(108, 3, 204);
+data.setCell(109, 0, 109)
+data.setCell(109, 1, 'testValidPasswordOverall')
+data.setCell(109, 2, 'testCases.Validate_LostPassword')
+data.setCell(109, 3, 180);
+data.setCell(110, 0, 110)
+data.setCell(110, 1, 'CheckPageLoad')
+data.setCell(110, 2, 'testCases.Validate_AuthorisedApplications')
+data.setCell(110, 3, 161);
+data.setCell(111, 0, 111)
+data.setCell(111, 1, 'DeleteToken')
+data.setCell(111, 2, 'testCases.Validate_APITokenPage')
+data.setCell(111, 3, 140);
+data.setCell(112, 0, 112)
+data.setCell(112, 1, 'Test_HintMessage_Validation')
+data.setCell(112, 2, 'testCases.Validate_ChangePasswordPage')
+data.setCell(112, 3, 138);
+data.setCell(113, 0, 113)
+data.setCell(113, 1, 'Test_Exceed_MaxOpenPos')
+data.setCell(113, 2, 'testCases.Validate_Limits')
+data.setCell(113, 3, 112);
+data.setCell(114, 0, 114)
+data.setCell(114, 1, 'CheckTotalRows')
+data.setCell(114, 2, 'testCases.Validate_LoginHistoryPage')
+data.setCell(114, 3, 99);
+data.setCell(115, 0, 115)
+data.setCell(115, 1, 'Test_Lower_MaxOpenPos')
+data.setCell(115, 2, 'testCases.Validate_Limits')
+data.setCell(115, 3, 94);
+data.setCell(116, 0, 116)
+data.setCell(116, 1, 'Test_Lower_MaxAccountBalance')
+data.setCell(116, 2, 'testCases.Validate_Limits')
+data.setCell(116, 3, 66);
+data.setCell(117, 0, 117)
+data.setCell(117, 1, 'CheckPageLoad')
+data.setCell(117, 2, 'testCases.Validate_APITokenPage')
+data.setCell(117, 3, 51);
+window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
+return data;
+}
+              </script>
+              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <div id="times-div-Suite">
+              </div> <!-- times-div-Suite -->
+            </div> <!-- times-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="reporter-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Reporter output for Suite</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="ignored-methods-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">8 ignored methods</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Validate_LostPassword</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">testEmailEmpty</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Validate_Limits</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Test_Limits_MaxAccountBalance</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Validate_ResourcesPage</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">Login</span>
+                <br/>
+                <span class="ignored-method-name">loginMF</span>
+                <br/>
+                <span class="ignored-method-name">loginMX</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Validate_SelfExclusionPage</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">TestNotMoreThanPrevious</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+            <div class="ignored-class-div">
+              <span class="ignored-class-name">testCases.Validate_CashierPassword</span>
+              <div class="ignored-methods-div">
+                <span class="ignored-method-name">check_withdrawlock</span>
+                <br/>
+                <span class="ignored-method-name">check_depositLock</span>
+                <br/>
+              </div> <!-- ignored-methods-div -->
+            </div> <!-- ignored-class-div -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+        <div panel-name="chronological-Suite" class="panel">
+          <div class="main-panel-header rounded-window-top">
+            <span class="header-content">Methods in chronological order</span>
+          </div> <!-- main-panel-header rounded-window-top -->
+          <div class="main-panel-content rounded-window-bottom">
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_LoginPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">0 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">A_Login</span>
+                <span class="method-start">4532 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">B_Logout</span>
+                <span class="method-start">14285 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">C_Login_IncorrectPassword</span>
+                <span class="method-start">18802 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">21981 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_WithdrawalToken</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">22069 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">A_TestWithdrawalNotification</span>
+                <span class="method-start">25428 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">64142 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_LoginHistoryPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">64217 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">reset_Login</span>
+                <span class="method-start">66941 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">logout</span>
+                <span class="method-start">74597 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">A_Login_IncorrectPassword</span>
+                <span class="method-start">78815 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">81103 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToLoginHistoryPage</span>
+                <span class="method-start">82783 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Check_NewEntries</span>
+                <span class="method-start">86379 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckTotalRows</span>
+                <span class="method-start">86985 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">87086 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_SetFinancialAssessment</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">87157 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">A_Login</span>
+                <span class="method-start">89827 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">B_NavigateToFinancialAssessmentPage</span>
+                <span class="method-start">98330 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">C_Set_FinancialAssessment</span>
+                <span class="method-start">101357 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">D_Logout</span>
+                <span class="method-start">106140 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">107440 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_FinancialAssessmentFields</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">107512 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">110071 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToFinancialAssessmentPage</span>
+                <span class="method-start">118118 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ForexTradingExperience</span>
+                <span class="method-start">120375 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ForexTradingFrequency</span>
+                <span class="method-start">123548 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndicesTradingExperience</span>
+                <span class="method-start">125117 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndicesTradingFrequency</span>
+                <span class="method-start">126754 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_CommoditiesTradingExperience</span>
+                <span class="method-start">128191 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_CommoditiesTradingFrequency</span>
+                <span class="method-start">129701 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_StocksTradingExperience</span>
+                <span class="method-start">131191 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_StocksTradingFrequency</span>
+                <span class="method-start">132565 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherTradingExperience</span>
+                <span class="method-start">134000 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherTradingFrequency</span>
+                <span class="method-start">135489 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherDerivativesTradingExperience</span>
+                <span class="method-start">136936 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_OtherDerivatiesTradingFrequency</span>
+                <span class="method-start">138335 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IndustryEmployment</span>
+                <span class="method-start">139805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Occupation</span>
+                <span class="method-start">141228 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Education</span>
+                <span class="method-start">142595 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AnnualIncome</span>
+                <span class="method-start">144027 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_NetWorth</span>
+                <span class="method-start">145454 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AnticipatedAccountTurnover</span>
+                <span class="method-start">146900 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">148239 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_PersonalDetailsPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">148311 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">151382 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToPersonalDetailsPage</span>
+                <span class="method-start">160299 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_TaxResidence_EmptyField</span>
+                <span class="method-start">164531 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_TaxId_EmptyField</span>
+                <span class="method-start">166274 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressLine1_InvalidChars</span>
+                <span class="method-start">166609 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressLine1_EmptyField</span>
+                <span class="method-start">167031 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressCity_InvalidChars</span>
+                <span class="method-start">167239 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_AddressCity_EmptyField</span>
+                <span class="method-start">167632 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ZipCode_InvalidChars</span>
+                <span class="method-start">167856 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_InvalidChars</span>
+                <span class="method-start">168207 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_EmptyField</span>
+                <span class="method-start">168524 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Telephone_LessChars</span>
+                <span class="method-start">168736 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">SetPersonalDetailsFields</span>
+                <span class="method-start">168943 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">170796 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_ChangePasswordPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">170869 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">173459 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToChangePasswordPage</span>
+                <span class="method-start">181604 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_RequiredFields_Validation</span>
+                <span class="method-start">184955 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_MinChars_Validation</span>
+                <span class="method-start">186004 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_HintMessage_Validation</span>
+                <span class="method-start">186498 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_WeakPassword_Validation</span>
+                <span class="method-start">186637 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_DiffPasswords_Validation</span>
+                <span class="method-start">187199 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_IncorrectOldPassword_Validation</span>
+                <span class="method-start">187752 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ChangeCurrentPassword</span>
+                <span class="method-start">188828 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_ChangeToOriginalPassword</span>
+                <span class="method-start">192202 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">198686 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_CashierPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">198762 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">201717 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToCashierPasswordPage</span>
+                <span class="method-start">209276 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_emptyField</span>
+                <span class="method-start">213020 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_minpass</span>
+                <span class="method-start">213805 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_invPass</span>
+                <span class="method-start">214146 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_diffPass</span>
+                <span class="method-start">214550 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_samePass</span>
+                <span class="method-start">214980 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">update_cshrPass</span>
+                <span class="method-start">215972 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">unlock</span>
+                <span class="method-start">216945 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">219014 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_Limits</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">219090 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">221777 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToPersonalDetailsPage</span>
+                <span class="method-start">230132 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Exceed_MaxAccountBalance</span>
+                <span class="method-start">232895 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Lower_MaxAccountBalance</span>
+                <span class="method-start">234432 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Exceed_MaxOpenPos</span>
+                <span class="method-start">234499 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Lower_MaxOpenPos</span>
+                <span class="method-start">234612 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToLimitsPage</span>
+                <span class="method-start">234706 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Limits_MaxOpenPosition</span>
+                <span class="method-start">237606 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Test_Limits_Message</span>
+                <span class="method-start">239337 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">239734 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_Links</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">239828 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">verify_allLinks</span>
+                <span class="method-start">242315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">257018 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_SelfExclusionPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">257092 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">259516 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToSelfExclusionPage</span>
+                <span class="method-start">267354 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestValidNumber</span>
+                <span class="method-start">269773 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">TestRequiredFieldDate</span>
+                <span class="method-start">273632 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">Refresh</span>
+                <span class="method-start">274204 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">275208 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_AuthorisedApplications</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">275278 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">277686 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToAuthorisedAppsPage</span>
+                <span class="method-start">285869 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckPageLoad</span>
+                <span class="method-start">289012 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">revoke_authapps</span>
+                <span class="method-start">289174 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">login</span>
+                <span class="method-start">289918 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkReviewPage</span>
+                <span class="method-start">294534 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">reject</span>
+                <span class="method-start">294765 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">grant</span>
+                <span class="method-start">297857 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">302163 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_APITokenPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">302233 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">Login</span>
+                <span class="method-start">304691 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">NavigateToAPITokenPage</span>
+                <span class="method-start">311820 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckPageLoad</span>
+                <span class="method-start">316475 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckScopeValidation</span>
+                <span class="method-start">316527 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckMinChar</span>
+                <span class="method-start">316867 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DuplicateName</span>
+                <span class="method-start">317154 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">CheckInvalidName</span>
+                <span class="method-start">318201 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">AddNewToken</span>
+                <span class="method-start">318406 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">DeleteToken</span>
+                <span class="method-start">319455 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">319595 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_LostPassword</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">319669 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">A_navigateToLostPassword</span>
+                <span class="method-start">322183 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testEmailInvalid</span>
+                <span class="method-start">323912 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setEmail</span>
+                <span class="method-start">324477 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <img src="failed.png">
+                </img>
+                <span class="method-name">testEmptyFields</span>
+                <span class="method-start">324837 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testValidPasswordLength</span>
+                <span class="method-start">356092 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testValidPasswordOverall</span>
+                <span class="method-start">356435 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">testPasswordMatch</span>
+                <span class="method-start">356615 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">setDOB</span>
+                <span class="method-start">357069 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">resetPassword</span>
+                <span class="method-start">357957 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">linkRetry</span>
+                <span class="method-start">358666 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">resetEmailPage</span>
+                <span class="method-start">359315 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">360116 ms</span>
+              </div> <!-- configuration-class after -->
+            </div> <!-- chronological-class -->
+            <div class="chronological-class">
+              <div class="chronological-class-name">testCases.Validate_ResourcesPage</div> <!-- chronological-class-name -->
+              <div class="configuration-class before">
+                <span class="method-name">setupApplication</span>
+                <span class="method-start">360190 ms</span>
+              </div> <!-- configuration-class before -->
+              <div class="test-method">
+                <span class="method-name">resourcePage</span>
+                <span class="method-start">362617 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">checkTitle</span>
+                <span class="method-start">368071 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_AssetIndex</span>
+                <span class="method-start">368620 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_ForexMarket</span>
+                <span class="method-start">368859 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_IndicesMarket</span>
+                <span class="method-start">371288 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_OTCMarket</span>
+                <span class="method-start">372344 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_CommoditiesMarket</span>
+                <span class="method-start">373555 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">check_VolatilityMarket</span>
+                <span class="method-start">373919 ms</span>
+              </div> <!-- test-method -->
+              <div class="configuration-class after">
+                <span class="method-name">closeApplication</span>
+                <span class="method-start">374227 ms</span>
+              </div> <!-- configuration-class after -->
+          </div> <!-- main-panel-content rounded-window-bottom -->
+        </div> <!-- panel -->
+      </div> <!-- main-panel-root -->
+    </div> <!-- wrapper -->
+  </body>
+</html>

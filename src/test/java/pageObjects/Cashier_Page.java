@@ -25,7 +25,7 @@ public class Cashier_Page {
     }
     //Method  find  withdraw button   
     public static WebElement withdraw(WebDriver driver){
-		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='content']/div[2]/div[3]/div/div[3]/div[2]/a"));
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='content']/div[2]/div[3]/div/div[3]/div[2]/a/span"));
 		return element;
     }
     

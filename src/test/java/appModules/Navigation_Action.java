@@ -150,5 +150,16 @@ public class Navigation_Action {
     	driver.get(Constant.URL_LostPass);
     	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
     }
+    
+    public static void Navigate_To_Cashier(WebDriver driver){
+    	MainMenu_Tab.click_cashiermenu(driver).click();
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    }
+    
+    public static void Navigate_To_Mailinator(WebDriver driver){
+    	driver.get(Constant.NotificationMailbox);
+    	driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
+    	
+    }
 
 }
