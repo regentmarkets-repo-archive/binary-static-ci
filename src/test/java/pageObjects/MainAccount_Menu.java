@@ -29,7 +29,7 @@ public class MainAccount_Menu {
 		}
 		//Method to find Main Account link
 		public static WebElement link_MainAccount(WebDriver driver){
-			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='main-account']/li/a/div[2]"));
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='main-account']"));
 			return element;
 		}
 		//Method to find scroll up button
@@ -44,7 +44,7 @@ public class MainAccount_Menu {
         }
 	      //Method try check virtual account message 
         public static WebElement link_VirtualAccount(WebDriver driver){
-			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='all-accounts']/li/ul/div[2]/div/a"));
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='all-accounts']/li/ul/div[1]/div/a"));
 			return element;
         }
         public static WebElement link_MLTAccount(WebDriver driver){
