@@ -11,6 +11,7 @@ import appModules.Navigation_Action;
 import appModules.SetFinancialAssessment_Action;
 
 public class Validate_SetFinancialAssessment extends BaseClass{	
+
 	
 	@Test(priority=0,description="Test Method to Login to binary site")
 	public void A_Login() {
@@ -33,6 +34,7 @@ public class Validate_SetFinancialAssessment extends BaseClass{
 				System.out.println(FinancialAssessment_Page.msg_Success(driver).getText());
 			}	
 	  }
+
 	 @Test(priority=3,description="Test Method to logout")
 	  public void D_Logout() {
 			Logout_Action.Execute(driver);

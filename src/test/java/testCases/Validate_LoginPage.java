@@ -11,6 +11,7 @@ import appModules.Navigation_Action;
 
 public class Validate_LoginPage extends BaseClass{
 
+
   @Test(priority=0,description="Test Method to login to the site with valid credentials")
   public void Login() {
 	  Navigation_Action.Navigate_To_LoginPage(driver);

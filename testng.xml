@@ -9,6 +9,11 @@
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
+	<test name="CheckWithdrawalNotification">
+		<classes>
+			<class name="testCases.Validate_WithdrawalToken" />
+		</classes>
+	</test>
 	<test name="CheckLoginHistoryPage">
 		<classes>
 			<class name="testCases.Validate_LoginHistoryPage" />

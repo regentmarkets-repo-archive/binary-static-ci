@@ -79,6 +79,7 @@ public class Validate_ResourcesPage extends BaseClass{
         System.out.println("Asset Index & Trading times for CR account is working properly");
     }
     
+
     @Test(enabled=false,description="Test Method to login to MF/MLT account ")
     public void loginMF() {
         Navigation_Action.Navigate_To_LoginPage(driver);
@@ -96,6 +97,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkGamingMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
         System.out.println("Asset Index & Trading times for MLT/MF account is working properly");
+
     }
     @Test(enabled=false,description="Test Method to login to MX account ")
     public void loginMX() {
@@ -108,5 +110,6 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.checkMarketTradingTimes(driver);
         Navigation_Action.Navigate_To_LogoutPage(driver);
         System.out.println("Asset Index & Trading times for MX account is working properly");
+
     }
 }

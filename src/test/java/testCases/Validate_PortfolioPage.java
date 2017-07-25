@@ -32,5 +32,6 @@ public class Validate_PortfolioPage extends BaseClass {
 	@Test(priority=5,description="Test Method to validate sell contract")
 	  public void ValidateSellContractPortfolio() {
 		Portfolio_Action.ValidatePortfolioSellContract(driver,"AUD/JPY","1","h","10");
+
 	  }
 }
