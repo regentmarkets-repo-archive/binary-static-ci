@@ -23,7 +23,10 @@
 - Portfolio Page
 - Profit Table Page
 - Links Validation
+<<<<<<< HEAD
 - Resources Page
+=======
+>>>>>>> master
 
 <b>Running the tests:</b>
 
