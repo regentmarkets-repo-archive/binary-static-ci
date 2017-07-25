@@ -1,8 +1,11 @@
 package pageObjects;
 
+import java.util.List;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+
 import utility.CommonFunctions;
 
 public class AuthorisedApplications_page {
@@ -66,5 +69,11 @@ public class AuthorisedApplications_page {
     {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='wrapper']/div[2]/form/div/button[2]"));
 		return element;
+    }
+    //Method to check Authorize page title
+    public static int authorize_title(WebDriver driver)
+    {
+		List <WebElement> elements = driver.findElements(By.xpath(".//*[@id='wrapper']/div[2]/h1"));
+		return elements.size();
     }
 }
