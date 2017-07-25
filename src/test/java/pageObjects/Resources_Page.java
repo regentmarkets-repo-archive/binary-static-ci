@@ -120,4 +120,9 @@ public class Resources_Page {
         List<WebElement> element= driver.findElements(By.xpath("//*[@id='submarket-random_daily']/tbody/tr[*]/td[1]"));
         return element;
     }
+    // Method to find list of market times for JP Account 
+    public static List<WebElement> list_JpMarket(WebDriver driver){
+        List<WebElement> element= driver.findElements(By.xpath("//*[@id='外国為替-0']/tbody/tr[*]/td[1]"));
+        return element;
+    }
 }
