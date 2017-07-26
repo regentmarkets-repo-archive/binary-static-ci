@@ -3,11 +3,7 @@ language: java
 dist: trusty
 
 addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
+  chrome:stable
 
 cache:
   directories:
@@ -16,29 +12,7 @@ cache:
 script: mvn test -B
 
 before_install:
- - sudo apt-get update
- - sudo apt-get install chromium-chromedriver
+  - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9222 http://localhost &
  
-before_script:
-  - "export PATH=$PATH:/usr/lib/chromium-browser/"
-  - "export DISPLAY=:99.0"
-  - "sh -e /etc/init.d/xvfb start"
-  - sleep 3 # give xvfb some time to start
-  
 after_script:
   - cat target/surefire-reports/TestSuite.txt
-  
-notifications:
-  email:
-    recipients:
-      - ashkan@binary.com
-      - mohammad@binary.com
-      - bijan@binary.com
-      - ridho@binary.com
-      - dmytro@binary.com
-      - ehtesham@binary.com
-      - munsei@binary.com
-      - negar@binary.com
-      - kelly@binary.com
-    on_success: never
-    on_failure: always
