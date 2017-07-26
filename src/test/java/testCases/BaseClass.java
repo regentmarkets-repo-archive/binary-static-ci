@@ -25,7 +25,6 @@ public class BaseClass {
     	ChromeOptions options = new ChromeOptions();
     	options.setExperimentalOption("prefs", prefs);
     	driver = new ChromeDriver(options);
-    	driver.manage().window().maximize();
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.get(Constant.URL);
     	}
