@@ -1,7 +1,7 @@
 {
   "server": "hub-cloud.browserstack.com",
   "user": "jeanyvessireau1",
-  "key": "yaCwKpSDnNp7zTxqLzDf",
+  "key": "REPLACE-WITH-ACTUAL-KEY",
 
   "capabilities": {
     "browserstack.debug": true
