@@ -12,6 +12,8 @@
 		</classes>
 	</test>
 	<test name="CheckWithdrawalNotification">
+		<parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
 		<classes>
 			<class name="testCases.Validate_WithdrawalToken" />
 		</classes>
