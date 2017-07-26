@@ -7,6 +7,8 @@ public class Constant {
 	public static final String URL = "https://staging.binary.com";
 	public static final String Email = "bijan+autotest@binary.com";
 	public static final String Password = "Test1234";
+	public static final String NotificationEmail = "b_notify@mailinator.com";
+	public static final String NotificationPassword = "P@ssw0rd";
 	public static final String EmailMF = "ridho+mlt@binary.com";
 	public static final String EmailMX = "ridho+mx@binary.com";
 	public static final String PassMF = "Abcd1234";
@@ -57,7 +59,9 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
-    public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
-	public static final String browser="local"; //set to "remote" for browserstack execution
+	public static final String NotificationMailbox="https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv";
+	public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
+  public static final String browser="local"; //set to "remote" for browserstack execution
+
 
 }

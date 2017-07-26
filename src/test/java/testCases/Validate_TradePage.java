@@ -1,17 +1,18 @@
 package testCases;
 
-import org.testng.annotations.Test;
-
+import org.testng.annotations.Test;	
 import utility.Constant;
 import appModules.Navigation_Action;
 import appModules.Trading_Action;
 
 public class Validate_TradePage extends BaseClass {	
+
 	@Test(priority=0,description="Test Method to Login to binary site")
 	public void Login() {
 		Navigation_Action.Navigate_To_LoginPage(driver);
 	  	Navigation_Action.Navigate_To_MainPage(driver, Constant.Email, Constant.Password);
 	}
+
 	@Test(priority=1,description="Test Method to navigate to financial assessment page")
 	  public void NavigateToTradePage() {
 		Navigation_Action.Navigate_To_TradingPage(driver);
@@ -21,6 +22,7 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.CheckMarketOptions(driver);
 	}
 	@Test(priority=3,description="Test Method to check all underlying assets for selected market")
+
 	public void CheckUnderlyingAssets() {
 		Trading_Action.CheckForexAssets(driver);
 		Trading_Action.CheckIndicesAssets(driver);
@@ -28,6 +30,7 @@ public class Validate_TradePage extends BaseClass {
 		Trading_Action.CheckCommoditiesAssets(driver);
 		Trading_Action.CheckVolatilityIndicesAssets(driver);
 	}
+
 	@Test(priority=4,description="Test Method to check error validation for all ticks duration fields")
 	public void CheckErrorValidationForDurationTicks()  {
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
@@ -62,5 +65,6 @@ public class Validate_TradePage extends BaseClass {
 	public void CheckErrorValidationForPayout()  {	
 		Trading_Action.NavigateToUpDownRiseFall(driver, "Forex", "AUD/JPY");
 		Trading_Action.ValidateAmountField(driver, "Forex","Payout");
+
 	}
 }
