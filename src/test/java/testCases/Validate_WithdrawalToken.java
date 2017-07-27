@@ -30,6 +30,7 @@ public class Validate_WithdrawalToken extends BaseClass {
 	  Assert.assertEquals("Verify your withdrawal request - Binary.com",WithdrawalToken_Action.checkEmail(driver));
 	  WithdrawalToken_Action.openEmail(driver);
 	  WithdrawalToken_Action.readToken(driver);
+	  WithdrawalToken_Action.deleteNotification(driver);
 	  
   }
 
