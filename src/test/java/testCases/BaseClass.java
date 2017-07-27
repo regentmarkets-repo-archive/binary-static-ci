@@ -44,8 +44,9 @@ public class BaseClass {
 		        prefs.put("profile.password_manager_enabled", false);
 		    	ChromeOptions options = new ChromeOptions();
 		    	options.setExperimentalOption("prefs", prefs);
+		    	options.addArguments("start-maximized");//workaround for driver.manage().window.maximize() as it breaks on Chrome 60x on TravisCI
 		    	driver = new ChromeDriver(options); 
-		    	driver.manage().window().maximize();
+		    	//driver.manage().window().maximize();
 		    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		    	driver.get(Constant.URL);
 		    	
