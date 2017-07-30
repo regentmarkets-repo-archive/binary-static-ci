@@ -3,16 +3,12 @@ package testCases;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
-
 import io.github.bonigarcia.wdm.ChromeDriverManager;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-
 import utility.Constant;
 
 public class BaseClass {
@@ -27,16 +23,8 @@ public class BaseClass {
         prefs.put("credentials_enable_service", false);
         prefs.put("profile.password_manager_enabled", false);
     	ChromeOptions options = new ChromeOptions();
-    	options.addArguments("--headless");
-    	options.addArguments("--disable-gpu");
     	options.setExperimentalOption("prefs", prefs);
-    	
-        final DesiredCapabilities dc = new DesiredCapabilities();
-        dc.setJavascriptEnabled(true);
-        dc.setCapability(
-            ChromeOptions.CAPABILITY, options
-        );
-        
+    	options.addArguments("start-maximized");
     	driver = new ChromeDriver(options);
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.get(Constant.URL);
