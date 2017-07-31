@@ -93,7 +93,7 @@ public class Navigation_Action {
         Security_Page.link_Limits(driver).click();
     }
     public static void Navigate_To_SelfExclusionPage(WebDriver driver){
-        Security_Page.link_SelfExclusion(driver).click();
+        Security_Page.link_SelfExclusionPage(driver).click();
     }
     public static void Navigate_To_AuthorisedApplicationsPage(WebDriver driver){
         Actions builder = new Actions(driver);
