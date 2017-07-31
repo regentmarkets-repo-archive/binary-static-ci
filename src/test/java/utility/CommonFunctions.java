@@ -28,7 +28,7 @@ public class CommonFunctions {
 	     }
 	}
 	  public static WebElement FindElementWithExplicitWait(WebDriver driver,By locator) {
-	        WebDriverWait wait = new WebDriverWait(driver,30);
+	        WebDriverWait wait = new WebDriverWait(driver,45);
 	        element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 	        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 	        Assert.assertTrue(element.isDisplayed());
