@@ -25,4 +25,8 @@ public class Home_Page {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='reality_check_nav']/button"));
 		return element;
     }
+    public static WebElement btn_hellobar(WebDriver driver){
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id(".//*[@id='hellobar-bar']/div[3]/a"));
+		return element;
+    } 
 }

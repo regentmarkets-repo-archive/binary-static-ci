@@ -9,11 +9,6 @@
 			<class name="testCases.Validate_LoginPage" />
 		</classes>
 	</test>
-	<test name="CheckWithdrawalNotification">
-		<classes>
-			<class name="testCases.Validate_WithdrawalToken" />
-		</classes>
-	</test>
 	<test name="CheckLoginHistoryPage">
 		<classes>
 			<class name="testCases.Validate_LoginHistoryPage" />
@@ -74,21 +69,6 @@
 	      <class name="testCases.Validate_LostPassword" />
 	     </classes>
 	     </test>
-		<test name="ValidatePortfolioPage">
-		<classes>
-	      <class name="testCases.Validate_PortfolioPage" />
-	     </classes>
-	     </test>
-	  <test name="ValidateProfitTable">
-		<classes>
-	      <class name="testCases.Validate_ProfitTable" />
-	     </classes>
-	     </test>
-	  <test name="ValidateStatementPage">
-		<classes>
-	      <class name="testCases.Validate_StatementPage" />
-	     </classes>
-	   </test>
 	<test name="checkResourcePage">
 		<classes>
 			<class name="testCases.Validate_ResourcesPage" />

@@ -66,7 +66,7 @@ public class APIToken_Page {
     }
     //Method to find success message field
     public static WebElement succes_msg(WebDriver driver) {
-		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='msg_form']/ul/li"));
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//li[contains(text(),'New token created.')]"));
 		return element;
     }
     //Method to find delete button
