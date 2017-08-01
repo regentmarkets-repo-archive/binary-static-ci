@@ -19,11 +19,6 @@
 			<class name="testCases.Validate_SetFinancialAssessment" />
 		</classes>
 	</test>
-	<test name="FinancialAssessmentFields">
-		<classes>
-			<class name="testCases.Validate_FinancialAssessmentFields" />
-		</classes>
-	</test>
 	<test name="CheckPersonalDetailsPage">
 		<classes>
 			<class name="testCases.Validate_PersonalDetailsPage" />
