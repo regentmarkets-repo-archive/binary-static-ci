@@ -29,7 +29,7 @@ public class Validate_SetFinancialAssessment extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.source_wealth,Constant.employment_status);
 			if(FinancialAssessment_Page.msg_Success(driver).isDisplayed()){
 				System.out.println(FinancialAssessment_Page.msg_Success(driver).getText());
 			}	
