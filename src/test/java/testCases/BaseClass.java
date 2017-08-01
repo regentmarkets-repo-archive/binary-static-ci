@@ -32,6 +32,7 @@ public class BaseClass {
 	 private Local l;
 	 
 	@BeforeClass
+
 	@org.testng.annotations.Parameters(value={"config", "environment"})
     public void setupApplication(String config_file, String environment) throws Exception {
 		
@@ -97,6 +98,7 @@ public class BaseClass {
 		        driver.get(Constant.URL);
     		}
 		}
+
 	
 	  @AfterClass
 	  public void closeApplication() {

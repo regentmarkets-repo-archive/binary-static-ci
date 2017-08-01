@@ -7,13 +7,10 @@ Development end:
 
 import org.testng.Assert;
 import org.testng.annotations.Test;
-
 import utility.Constant;
 import appModules.Cashier_Action;
 import appModules.Navigation_Action;
 import appModules.WithdrawalToken_Action;
-
-
 
 public class Validate_WithdrawalToken extends BaseClass {
 	
