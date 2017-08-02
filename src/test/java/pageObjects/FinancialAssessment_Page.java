@@ -97,6 +97,16 @@ public class FinancialAssessment_Page {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("estimated_worth"));
 		return element;
 	}
+	//Method to find employment status select field
+	public static WebElement select_EmpStatus(WebDriver driver){
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("employment_status"));
+		return element;
+	}
+	//Method to find source of wealth select field
+	public static WebElement select_SourceOfWealth(WebDriver driver){
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("source_of_wealth"));
+		return element;
+	}
 	//Method to find update button
 	public static WebElement btn_Update(WebDriver driver) {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("btn_submit"));
@@ -210,6 +220,10 @@ public class FinancialAssessment_Page {
 	//Method to find Anticipated Account Turnover error message text field
 	public static WebElement error_AnticipatedAccountTurnover(WebDriver driver){
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[19]/div[2]/div"));
+		return element;
+	}
+	public static WebElement error_Text(WebDriver driver){
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//div[contains(text(),'This field is required.')]"));
 		return element;
 	}
 	

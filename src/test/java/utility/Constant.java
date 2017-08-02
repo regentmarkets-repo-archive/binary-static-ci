@@ -6,6 +6,8 @@ public class Constant {
 	//Create constant variables
 	public static final String URL = "https://staging.binary.com";
 	public static final String Email = "bijan+autotest@binary.com";
+	public static final String NotificationEmail = "b_notify@mailinator.com";
+	public static final String NotificationPassword = "P@ssw0rd";
 	public static final String EmailMF = "ridho+mlt@binary.com";
 	public static final String EmailMX = "ridho+mx@binary.com";
 	public static final String PassMF = "Abcd1234";
@@ -37,6 +39,8 @@ public class Constant {
 	public static final String annual_income = "$100,001 - $500,000";
 	public static final String net_worth = "$250,001 - $500,000";
 	public static final String anticipated_account = "$100,001 - $500,000";
+	public static final String source_wealth = "Inheritance";
+	public static final String employment_status = "Employed";
 	public static final String v_tokenName = "TestToken";
 	public static final String inv_tokenName = "a";
 	public static final String inv_tokenName2 = "R12&%&";
@@ -57,5 +61,7 @@ public class Constant {
 	public static final String minPassword=RandomStringUtils.randomAlphabetic(2);
 	public static final String weakPassword=RandomStringUtils.randomAlphabetic(6);
 	public static final String inv_cashierPass="Abcd123456";
+	public static final String NotificationMailbox="https://www.mailinator.com/inbox2.jsp?to=b_notify#/#public_maildirdiv";
 	public static final String assetURL="https://staging.binary.com/en/resources/asset_indexws.html";
+
 }

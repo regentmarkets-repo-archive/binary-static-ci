@@ -44,11 +44,23 @@ public class MainAccount_Menu {
         }
 	      //Method try check virtual account message 
         public static WebElement link_VirtualAccount(WebDriver driver){
-			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='all-accounts']/li/ul/div[1]/div/a"));
-			return element;
+        	element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//li[contains(text(),'Virtual Account')]"));
+        	return element;
         }
         public static WebElement link_MLTAccount(WebDriver driver){
-			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//*[@id='all-accounts']/li/ul/div[2]/div/a[1]/li"));
+        	element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//li[contains(text(),'Gaming Account')]"));
+			return element;
+        }
+        public static WebElement link_MFAccount(WebDriver driver){
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//div[contains(text(),'Investment Account')]"));
+			return element;
+        }
+        public static WebElement link_GBPAccount(WebDriver driver){
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//div[contains(text(),'GBP Account')]"));
+			return element;
+        }
+        public static WebElement link_USDAccount(WebDriver driver){
+			element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//div[contains(text(),'USD Account')]"));
 			return element;
         }
 }

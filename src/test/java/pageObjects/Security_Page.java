@@ -43,12 +43,6 @@ public class Security_Page {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='change_password']/div[2]/h4/a")));
 		return element;
     }
-    //Method to find Self Exclusion link
-    public static WebElement link_SelfExclusion(WebDriver driver)
-    {
-		element = CommonFunctions.FindElementWithExplicitWait(driver, (By.xpath(".//*[@id='settings_container']/div/div[3]/div[1]/a")));
-		return element;
-    }
     //Method to find Limits link
     public static WebElement link_Limits(WebDriver driver)
     {

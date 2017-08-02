@@ -25,6 +25,7 @@
 - Links Validation
 - Resources Page
 
+
 <b>Running the tests:</b>
 
 Project can be cloned/downloaded from github url https://github.com/binary-com/binary-static-ci.git.

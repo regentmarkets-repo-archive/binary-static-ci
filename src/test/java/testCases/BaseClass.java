@@ -24,8 +24,8 @@ public class BaseClass {
         prefs.put("profile.password_manager_enabled", false);
     	ChromeOptions options = new ChromeOptions();
     	options.setExperimentalOption("prefs", prefs);
+    	options.addArguments("start-maximized");
     	driver = new ChromeDriver(options);
-    	driver.manage().window().maximize();
     	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
     	driver.get(Constant.URL);
     	}
