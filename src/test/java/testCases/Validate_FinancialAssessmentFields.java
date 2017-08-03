@@ -25,7 +25,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_ForexTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for forex trading experience is working");
 			}
@@ -36,7 +36,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_ForexTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for forex trading frequency is working");
 			}
@@ -47,7 +47,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_IndicesTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for Indices trading Experience is working");
 			}
@@ -58,7 +58,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.select_value, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_IndicesTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for Indices trading frequency is working");
 			}
@@ -69,7 +69,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.select_value, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_CommoditiesTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for Commodities trading experience is working");
 			}
@@ -80,7 +80,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.select_value, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_CommoditiesTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for Commodities trading frequency is working");
 			}
@@ -91,7 +91,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.select_value, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_StocksTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for Stocks trading experience is working");
 			}
@@ -102,7 +102,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.select_value, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_StocksTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for Stocks trading frequency is working");
 			}
@@ -113,7 +113,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.select_value, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_OtherTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for Binary options or other financial derivatives trading experience is working");
 			}
@@ -124,7 +124,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.select_value, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_OtherTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for Binary options or other financial derivatives trading frequency is working");
 			}
@@ -135,7 +135,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.select_value, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_OtherDerivativesTradingExperience(driver).isDisplayed()){
 				System.out.println("Field validation for Other financial instruments trading experience is working");
 			}
@@ -146,7 +146,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.select_value, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_OtherDerivativesTradingFrequency(driver).isDisplayed()){
 				System.out.println("Field validation for Other financial instruments trading frequency is working");
 			}
@@ -157,7 +157,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.select_value, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_IndustryEmployment(driver).isDisplayed()){
 				System.out.println("Field validation for Industry of Employment is working");
 			}
@@ -168,7 +168,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.select_value,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_Occupation(driver).isDisplayed()){
 				System.out.println("Field validation for Occupation is working");
 			}
@@ -179,7 +179,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.select_value, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account);
+					Constant.select_value, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_Education(driver).isDisplayed()){
 				System.out.println("Field validation for Education is working");
 			}
@@ -190,7 +190,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.select_value, Constant.net_worth,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.select_value, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_AnnualIncome(driver).isDisplayed()){
 				System.out.println("Field validation for Annual Income is working");
 			}
@@ -201,7 +201,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.select_value,Constant.anticipated_account);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.select_value,Constant.anticipated_account,Constant.income_source,Constant.employment_status);
 			if(FinancialAssessment_Page.error_NetWorth(driver).isDisplayed()){
 				System.out.println("Field validation for Net Worth is working");
 			}
@@ -212,9 +212,31 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
 					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
 					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
-					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.select_value);
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.select_value,Constant.employment_status);
 			if(FinancialAssessment_Page.error_AnticipatedAccountTurnover(driver).isDisplayed()){
 				System.out.println("Field validation for Anticipated Account Turnover is working");
+			}
+	  }
+	  @Test(priority=20,description="Test Method to test the error message displayed when source of income is not set")
+	  public void Test_SourceofIncome() {
+		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
+					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
+					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
+					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.anticipated_account,Constant.income_source,Constant.select_value);
+			if(FinancialAssessment_Page.error_Text(driver).isDisplayed()){
+				System.out.println("Field validation for Source of income is working");
+			}
+	  }
+	  @Test(priority=21,description="Test Method to test the error message displayed when employment status field is not set")
+	  public void Test_EmploymentStatus() {
+		  SetFinancialAssessment_Action.Execute(driver,Constant.fx_trading_exerience, Constant.fx_trading_frequency, Constant.indices_trading_experience, 
+					Constant.indices_trading_frequency, Constant.commodities_trading_experience, Constant.commodities_trading_frequency, 
+					Constant.stocks_trading_experience, Constant.stocks_trading_frequency, Constant.other_trading_experience, Constant.other_trading_frequency, 
+					Constant.other_derivative_trading_experience, Constant.other_derivative_trading_frequency, Constant.employment_industry, Constant.occupation,
+					Constant.education, Constant.income_source, Constant.annual_income, Constant.net_worth,Constant.select_value,Constant.income_source,Constant.employment_status);
+			if(FinancialAssessment_Page.error_Text(driver).isDisplayed()){
+				System.out.println("Field validation for Employment status is working");
 			}
 	  }
 }
