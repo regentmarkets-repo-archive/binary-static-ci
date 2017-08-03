@@ -16,8 +16,8 @@ public class Mailinator_Page {
 	//Method to find withdrawal email in mailinator mailbox
     public static WebElement withdrawal_email(WebDriver driver) {
     	
-       	//element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/div/div/div[1]/div/div/div/div[2]/div[3]/div/div[1]/div[2]/div[5]/div"));//commenting out this line as javascriptexecutor is causing the page to scroll up un necessarily
-     	element = driver.findElement(By.xpath("/html/body/div/div/div[1]/div/div/div/div[2]/div[3]/div/div[1]/div[2]/div[5]/div"));
+       	//element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/main/section/ul/li[1]/div/div[4]"));//commenting out this line as javascriptexecutor is causing the page to scroll up un necessarily
+     	element = driver.findElement(By.xpath("/html/body/main/section/ul/li[1]/div/div[4]"));
        	return element;                                                         
     }
 	
@@ -25,8 +25,8 @@ public class Mailinator_Page {
     //Method to locate withdrawal token
     public static WebElement withdrawal_token(WebDriver driver) {
     	//Switching frame as token is in another frame
-    	driver.switchTo().frame("publicshowmaildivcontent");
-		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/p[3]"));
+    	driver.switchTo().frame("msg_body");
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/p[3]/span"));
 		return element;
     }
 	
@@ -34,7 +34,7 @@ public class Mailinator_Page {
     public static WebElement deleteMail(WebDriver driver){
     	//switching back from iframe
     	driver.switchTo().defaultContent(); 
-    	element = CommonFunctions.FindElementWithExplicitWait(driver, By.id("public_delete_button"));
+    	element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/header/div[3]/div[5]/span[3]/i[2]"));
     	return element;
     }
 }
