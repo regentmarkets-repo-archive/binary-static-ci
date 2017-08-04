@@ -44,6 +44,6 @@ Tests are running against binary staging site and whenever any tests fail on bin
 
 <b>Execution by pointing to QA environment</b>
 
-Supported only when execution is on local machine in Binary's network otherwise it will be blocked by duo
+Supported only when execution is on local machine in Binary's network otherwise it will be blocked by duo. All test accounts mentioned in `Constants.java` should exist in QA environment.
 
 
