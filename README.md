@@ -42,4 +42,8 @@ Whenever any change is pushed to binary-static/gh-pages it automatically submits
 
 Tests are running against binary staging site and whenever any tests fail on binary-static-ci it will send an email notification to concerned persons.Front-end team will make the fix the issues in staging itself before any release to production.
 
+<b>Execution by pointing to QA environment</b>
+
+Supported only when execution is on local machine in Binary's network otherwise it will be blocked by duo
+
 
