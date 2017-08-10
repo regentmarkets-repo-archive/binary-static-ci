@@ -10,7 +10,6 @@ import org.testng.annotations.Test;
 import pageObjects.FinancialAssessment_Page;
 import utility.Constant;
 import appModules.Navigation_Action;
-import appModules.SetFinancialAssessment_Action;
 
 public class Validate_FinancialAssessmentFields extends BaseClass{
 	

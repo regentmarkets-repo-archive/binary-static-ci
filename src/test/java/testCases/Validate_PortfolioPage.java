@@ -20,7 +20,7 @@ public class Validate_PortfolioPage extends BaseClass {
 	  public void NavigateToTradePage() {
 		Navigation_Action.Navigate_To_TradingPage(driver);
 	  }
-	@Test(priority=2,description="Test Method to validate contract purchase for Volatility Indices")
+	@Test(enabled=false,description="Test Method to validate contract purchase for Volatility Indices")
 	public void TestContractPurchase() {
 		Trading_Action.ValidateContractTopPurchase(driver,"AUD/JPY","1","h","10");
 		Trading_Action.CloseViewPopup(driver);
