@@ -28,7 +28,7 @@ public class Validate_FinancialAssessmentFields extends BaseClass{
 	  public void Test_FinancialAssessmentFields() {
 		  SetFinancialAssessment_Action.CheckErrorValidation(driver);
 		  List <WebElement> allErrors = driver.findElements(By.xpath("//div[contains(text(),'This field is required.')]"));
-		  System.out.println(allErrors.size());
+		  System.out.println("Total number of field errors: "+allErrors.size());
 		  Assert.assertTrue(allErrors.size()==21);
 		  
 	  }
