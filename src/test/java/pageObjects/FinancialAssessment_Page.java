@@ -222,10 +222,6 @@ public class FinancialAssessment_Page {
 		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath(".//*[@id='frm_assessment']/fieldset[1]/div[19]/div[2]/div"));
 		return element;
 	}
-	public static WebElement error_Text(WebDriver driver){
-		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("//div[contains(text(),'This field is required.')]"));
-		return element;
-	}
 	
 
 }
