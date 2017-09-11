@@ -1,0 +1,48 @@
+{
+  "server": "hub-cloud.browserstack.com",
+  "user": "bijankumar1",
+  "key": "XkBxp72yKdcq5p3PNDFJ",
+
+  "capabilities": {
+    "build": "version1",
+    "project": "binary-static-ci",
+    "browserstack.debug": true,
+    "acceptSslCerts": true,
+    "browserstack.edge.enablePopups": true
+  },
+
+  "environments": {
+    "chrome": {
+    "os": "Windows",
+    "os_version": "10",
+    "browser": "Chrome",
+    "browser_version": "60.0",
+    "resolution": "1024x768"
+    },
+    "edge": {
+    "os": "Windows",
+    "os_version": "10",
+    "browser": "Edge",
+    "browser_version": "15.0",
+    "resolution": "1024x768"
+    },
+    "firefox": {
+    "os": "Windows",
+    "os_version": "10",
+    "browser": "Firefox",
+    "browser_version": "55.0",
+    "resolution": "1024x768"
+  },
+    "ios": {
+    "device": "iPhone 7",
+    "realMobile": "true",
+    "os_version": "10.0"
+  },
+    "android": {
+    "device": "Samsung Galaxy S8 Plus",
+    "realMobile": "true",
+    "os_version": "7.0"
+    }
+    
+  }
+}

@@ -1,7 +1,14 @@
 package appModules;
 
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.Select;
+
 import pageObjects.FinancialAssessment_Page;
 
 public class SetFinancialAssessment_Action {
@@ -45,6 +52,9 @@ public class SetFinancialAssessment_Action {
 		//Select value for OtherDerivative Trading Frequency field
 		Select oSelect_other_derivatives_frequency = new Select(FinancialAssessment_Page.select_OtherDerivativesTradingFrequency(driver));
 		oSelect_other_derivatives_frequency.selectByValue(other_derivative_trading_frequency);
+		//Select value for Income Source field
+		Select oSelect_income_source = new Select(FinancialAssessment_Page.select_IncomeSource(driver));
+		oSelect_income_source.selectByValue(income_source);
 		//Select value for Employment Industry field
 		Select oSelect_employment_status = new Select(FinancialAssessment_Page.select_EmpStatus(driver));
 		oSelect_employment_status.selectByValue(employment_status);
@@ -71,5 +81,19 @@ public class SetFinancialAssessment_Action {
 		oSelect_anticipated_account_turnover.selectByValue(anticipated_account);
 		//Click on Update button
 		FinancialAssessment_Page.select_NetWorth(driver).submit();
+	}
+	public static void CheckErrorValidation(WebDriver driver){
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		List<WebElement> elements = driver.findElements(By.xpath("//select"));
+		for(int i=0;i<elements.size();i++){
+			{
+				Actions action = new Actions(driver);
+				action.moveToElement(elements.get(i)).build().perform();
+				Select oSelect = new Select(elements.get(i));				
+				oSelect.selectByVisibleText("Please select");				
+			}
+		}
+		FinancialAssessment_Page.btn_Update(driver).click();
+				
 	}
 }

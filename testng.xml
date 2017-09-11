@@ -27,6 +27,13 @@
 			<class name="testCases.Validate_LoginHistoryPage" />
 		</classes>
 	</test>
+	<test name="CheckFinancialAssessmentFields">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
+		<classes>
+			<class name="testCases.Validate_FinancialAssessmentFields" />
+		</classes>
+	</test>
 	<test name="SetFinancialAssessment">
 	    <parameter name="config" value="binary-static-ci.conf.json"/>
         <parameter name="environment" value="chrome"/>
