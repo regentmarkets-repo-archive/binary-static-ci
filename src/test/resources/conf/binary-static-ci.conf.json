@@ -1,7 +1,7 @@
 {
   "server": "hub-cloud.browserstack.com",
-  "user": "bijankumar1",
-  "key": "XkBxp72yKdcq5p3PNDFJ",
+  "user": "",
+  "key": "",
 
   "capabilities": {
     "build": "version1",
