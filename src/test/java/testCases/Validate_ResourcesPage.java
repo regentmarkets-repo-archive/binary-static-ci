@@ -90,7 +90,7 @@ public class Validate_ResourcesPage extends BaseClass{
         Resources_Action.link_TradingTimes(driver);
         Resources_Action.checkFinancialMarketTradingTimes(driver);
         Login_Action.SwitchToMLTAccount(driver);
-        Login_Action.continueTrading(driver);
+        //Login_Action.continueTrading(driver);
         driver.navigate().to(Constant.assetURL);
         Resources_Action.checkGamingMarket(driver);
         Resources_Action.link_TradingTimes(driver);
