@@ -42,4 +42,9 @@ Whenever any change is pushed to binary-static/gh-pages it automatically submits
 
 Tests are running against binary staging site and whenever any tests fail on binary-static-ci it will send an email notification to concerned persons.Front-end team will make the fix the issues in staging itself before any release to production.
 
+<b>Integration with Browserstack.com</b>
 
+Tests can be executed on Browserstack.com by making following changes:
+- Update `browser` constant to `remote` in `utility.Constant.java`
+- Provide real browserstack key in `binary-static-ci.cong.json` config file
+- Optional - update browser per test in `testng.xml` if you want to execute tests on different browsers
