@@ -15,6 +15,9 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import appModules.ChangeAPIEndpoint_Action;
+
+
 import utility.Constant;
 import com.browserstack.local.Local;
 import org.json.simple.JSONObject;
@@ -42,7 +45,8 @@ public class BaseClass {
 		    	options.setExperimentalOption("prefs", prefs);
 		    	options.addArguments("start-maximized");//workaround for driver.manage().window.maximize() as it breaks on Chrome 60x on TravisCI
 		    	driver = new ChromeDriver(options); 
-		    	//driver.manage().window().maximize();
+		    	driver.get(Constant.Endpoint_url);
+		    	ChangeAPIEndpoint_Action.Execute(driver, Constant.AppID, Constant.Server);
 		    	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		    	driver.get(Constant.URL);
 		    	

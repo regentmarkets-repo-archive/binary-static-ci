@@ -26,7 +26,7 @@ public class Mailinator_Page {
     public static WebElement withdrawal_token(WebDriver driver) {
     	//Switching frame as token is in another frame
     	driver.switchTo().frame("msg_body");
-		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/div/p[3]/span"));
+		element = CommonFunctions.FindElementWithExplicitWait(driver, By.xpath("/html/body/center/table/tbody/tr/td/table/tbody/tr[2]/td/table/tbody/tr/td/p[3]/span"));
 		return element;
     }
 	
