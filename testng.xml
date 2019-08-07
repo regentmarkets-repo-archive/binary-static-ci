@@ -97,4 +97,11 @@
 			<class name="testCases.Validate_APITokenPage" />
 		</classes>
 	</test>
+		<test name="checkResourcesPage">
+	    <parameter name="config" value="binary-static-ci.conf.json"/>
+        <parameter name="environment" value="chrome"/>
+		<classes>
+			<class name="testCases.Validate_ResourcesPage" />
+		</classes>
+	</test>
 </suite>

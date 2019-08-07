@@ -10,9 +10,9 @@ public class Constant {
 	public static final String NotificationEmail = "b_notify@mailinator.com";
 	public static final String NotificationPassword = "P@ssw0rd";
 	public static final String EmailMF = "ridho+mlt@binary.com";
-	public static final String EmailMX = "ridho+mx@binary.com";
+	public static final String EmailMX = "bijan+mx11@binary.com";
 	public static final String PassMF = "Abcd1234";
-	public static final String PassMx = "abcd1234";
+	public static final String PassMx = "Test1234";
 	public static final String tradeURL = "https://staging.binary.com/en/trading.html";
 	public static final String NewPassword = "NewPassword123";
 	public static final String URL_LostPass = "https://staging.binary.com/en/user/lost_passwordws.html";

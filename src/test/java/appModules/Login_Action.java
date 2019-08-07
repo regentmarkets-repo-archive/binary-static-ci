@@ -25,7 +25,7 @@ public class Login_Action {
         Home_Page.acceptRealityCheck(driver).click();
     }
     public static void SwitchToMLTAccount(WebDriver driver) {
-        MainAccount_Menu.link_MainAccount(driver).click();
+        MainAccount_Menu.link_MFAccount(driver).click();
         MainAccount_Menu.link_MLTAccount(driver).click();
     }
     public static void checkAuthorizedPageAndLogin(WebDriver driver, String sEmail,String sPassword){
